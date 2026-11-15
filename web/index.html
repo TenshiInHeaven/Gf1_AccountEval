@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2474E5">
+  <meta name="description" content="少女前线账号四维强度评估 PWA">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>GF Account Forge</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">GF</span>
+        <span class="brand-text">
+          <strong>ACCOUNT FORGE</strong>
+          <small>少前账号强度工坊 · PWA</small>
+        </span>
+      </div>
+      <div class="top-actions">
+        <span id="accountChip" class="account-chip">未载入</span>
+        <button id="exampleButton" class="btn ghost" type="button" title="恢复内置示例快照">示例</button>
+        <button id="importButton" class="btn primary" type="button">导入快照</button>
+        <input id="fileInput" type="file" accept=".json,application/json" hidden>
+      </div>
+    </header>
+
+    <nav id="topNav" class="topnav" aria-label="主导航">
+      <button class="tab" data-tab="dashboard">总览</button>
+      <button class="tab" data-tab="doll">人形</button>
+      <button class="tab" data-tab="fairy">妖精</button>
+      <button class="tab" data-tab="sangvis">融合势力</button>
+      <button class="tab" data-tab="equipment">装备</button>
+      <button class="tab" data-tab="codex">图鉴</button>
+    </nav>
+
+    <main id="main" class="main"></main>
+
+    <nav id="bottomNav" class="bottomnav" aria-label="移动端导航">
+      <button class="bottom-tab" data-tab="dashboard"><span class="nav-dot"></span>总览</button>
+      <button class="bottom-tab" data-tab="doll"><span class="nav-dot"></span>人形</button>
+      <button class="bottom-tab" data-tab="fairy"><span class="nav-dot"></span>妖精</button>
+      <button class="bottom-tab" data-tab="sangvis"><span class="nav-dot"></span>融合</button>
+      <button class="bottom-tab" data-tab="equipment"><span class="nav-dot"></span>装备</button>
+      <button class="bottom-tab" data-tab="codex"><span class="nav-dot"></span>图鉴</button>
+    </nav>
+  </div>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-backdrop" data-action="close-modal"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-action="close-modal" aria-label="关闭">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

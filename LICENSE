@@ -1,0 +1,49 @@
+MIT License
+
+Copyright (c) 2026 TenshiInHeaven
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+ASSETS EXCEPTION
+================================================================================
+
+The MIT license above applies to the source code, build scripts, data tables
+and documentation of this repository, but NOT to the artwork assets.
+
+The following paths are artwork / third-party assets and are NOT MIT licensed:
+
+  - assets/
+  - web/assets/
+  - web/icons/
+  - docs/screenshots/
+  - 人形强度榜.jpeg
+  - 妖精强度榜.png
+  - 机动装甲武器.png
+  - 装备需求一图流.jpeg
+  - 铁血强度榜.png
+
+Those files are from Girls' Frontline (少女前线), copyright Sunborn Network
+Technology / 散爆网络 and their respective rights holders. They are included
+only for personal, non-commercial reference and preservation. Do not use them
+for commercial redistribution, resale, or claim them as your own work.
+
+If you fork or redistribute this repository, keep this exception notice and
+the original rights notices intact. If you do not need the artwork, remove
+the paths listed above; the code remains MIT licensed.

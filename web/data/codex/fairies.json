@@ -1,0 +1,703 @@
+[
+ {
+  "id": 1,
+  "code": "fighting",
+  "name": "勇士妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/fighting.webp",
+  "kind": "fairy",
+  "aliases": [
+   "fighting",
+   "勇士妖精"
+  ]
+ },
+ {
+  "id": 2,
+  "code": "crit",
+  "name": "暴怒妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/crit.webp",
+  "kind": "fairy",
+  "aliases": [
+   "crit",
+   "暴怒妖精"
+  ]
+ },
+ {
+  "id": 3,
+  "code": "armor",
+  "name": "盾甲妖精",
+  "type": 3,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/armor.webp",
+  "kind": "fairy",
+  "aliases": [
+   "armor",
+   "盾甲妖精"
+  ]
+ },
+ {
+  "id": 4,
+  "code": "shield",
+  "name": "护盾妖精",
+  "type": 3,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/shield.webp",
+  "kind": "fairy",
+  "aliases": [
+   "shield",
+   "护盾妖精"
+  ]
+ },
+ {
+  "id": 5,
+  "code": "defense",
+  "name": "防御妖精",
+  "type": 5,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/defense.webp",
+  "kind": "fairy",
+  "aliases": [
+   "defense",
+   "防御妖精"
+  ]
+ },
+ {
+  "id": 6,
+  "code": "target",
+  "name": "嘲讽妖精",
+  "type": 3,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/target.webp",
+  "kind": "fairy",
+  "aliases": [
+   "target",
+   "嘲讽妖精"
+  ]
+ },
+ {
+  "id": 7,
+  "code": "sniper",
+  "name": "狙击妖精",
+  "type": 4,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/sniper.webp",
+  "kind": "fairy",
+  "aliases": [
+   "sniper",
+   "狙击妖精"
+  ]
+ },
+ {
+  "id": 8,
+  "code": "bombard",
+  "name": "炮击妖精",
+  "type": 4,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/bombard.webp",
+  "kind": "fairy",
+  "aliases": [
+   "bombard",
+   "炮击妖精"
+  ]
+ },
+ {
+  "id": 9,
+  "code": "air_attack",
+  "name": "空袭妖精",
+  "type": 4,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/air_attack.webp",
+  "kind": "fairy",
+  "aliases": [
+   "air attack",
+   "air_attack",
+   "空袭妖精"
+  ]
+ },
+ {
+  "id": 10,
+  "code": "reinforce",
+  "name": "增援妖精",
+  "type": 5,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/reinforce.webp",
+  "kind": "fairy",
+  "aliases": [
+   "reinforce",
+   "增援妖精"
+  ]
+ },
+ {
+  "id": 11,
+  "code": "airborne",
+  "name": "空降妖精",
+  "type": 5,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/airborne.webp",
+  "kind": "fairy",
+  "aliases": [
+   "airborne",
+   "空降妖精"
+  ]
+ },
+ {
+  "id": 12,
+  "code": "Landmines",
+  "name": "布雷妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/Landmines.webp",
+  "kind": "fairy",
+  "aliases": [
+   "Landmines",
+   "布雷妖精"
+  ]
+ },
+ {
+  "id": 13,
+  "code": "position",
+  "name": "火箭妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/position.webp",
+  "kind": "fairy",
+  "aliases": [
+   "position",
+   "火箭妖精"
+  ]
+ },
+ {
+  "id": 14,
+  "code": "fortress",
+  "name": "工事妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/fortress.webp",
+  "kind": "fairy",
+  "aliases": [
+   "fortress",
+   "工事妖精"
+  ]
+ },
+ {
+  "id": 15,
+  "code": "command",
+  "name": "指挥妖精",
+  "type": 1,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/command.webp",
+  "kind": "fairy",
+  "aliases": [
+   "command",
+   "指挥妖精"
+  ]
+ },
+ {
+  "id": 16,
+  "code": "rescue",
+  "name": "搜救妖精",
+  "type": 1,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/rescue.webp",
+  "kind": "fairy",
+  "aliases": [
+   "rescue",
+   "搜救妖精"
+  ]
+ },
+ {
+  "id": 17,
+  "code": "illumine",
+  "name": "照明妖精",
+  "type": 1,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/illumine.webp",
+  "kind": "fairy",
+  "aliases": [
+   "illumine",
+   "照明妖精"
+  ]
+ },
+ {
+  "id": 18,
+  "code": "golden",
+  "name": "黄金妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/golden.webp",
+  "kind": "fairy",
+  "aliases": [
+   "golden",
+   "黄金妖精"
+  ]
+ },
+ {
+  "id": 19,
+  "code": "cooking",
+  "name": "炊事妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/cooking.webp",
+  "kind": "fairy",
+  "aliases": [
+   "cooking",
+   "炊事妖精"
+  ]
+ },
+ {
+  "id": 20,
+  "code": "petard",
+  "name": "花火妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/petard.webp",
+  "kind": "fairy",
+  "aliases": [
+   "petard",
+   "花火妖精"
+  ]
+ },
+ {
+  "id": 21,
+  "code": "Nian",
+  "name": "年兽妖精",
+  "type": 6,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/Nian.webp",
+  "kind": "fairy",
+  "aliases": [
+   "Nian",
+   "年兽妖精"
+  ]
+ },
+ {
+  "id": 22,
+  "code": "beach",
+  "name": "海滩妖精",
+  "type": 6,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/beach.webp",
+  "kind": "fairy",
+  "aliases": [
+   "beach",
+   "海滩妖精"
+  ]
+ },
+ {
+  "id": 23,
+  "code": "combo",
+  "name": "连击妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/combo.webp",
+  "kind": "fairy",
+  "aliases": [
+   "combo",
+   "连击妖精"
+  ]
+ },
+ {
+  "id": 24,
+  "code": "standshield",
+  "name": "立盾妖精",
+  "type": 3,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/standshield.webp",
+  "kind": "fairy",
+  "aliases": [
+   "standshield",
+   "立盾妖精"
+  ]
+ },
+ {
+  "id": 25,
+  "code": "twins",
+  "name": "双生妖精",
+  "type": 3,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/twins.webp",
+  "kind": "fairy",
+  "aliases": [
+   "twins",
+   "双生妖精"
+  ]
+ },
+ {
+  "id": 26,
+  "code": "origin",
+  "name": "原型妖精",
+  "type": 1,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/origin.webp",
+  "kind": "fairy",
+  "aliases": [
+   "origin",
+   "原型妖精"
+  ]
+ },
+ {
+  "id": 27,
+  "code": "auspicious",
+  "name": "祥瑞妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/auspicious.webp",
+  "kind": "fairy",
+  "aliases": [
+   "auspicious",
+   "祥瑞妖精"
+  ]
+ },
+ {
+  "id": 28,
+  "code": "sanddance",
+  "name": "沙舞妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/sanddance.webp",
+  "kind": "fairy",
+  "aliases": [
+   "sanddance",
+   "沙舞妖精"
+  ]
+ },
+ {
+  "id": 29,
+  "code": "cheeringteam",
+  "name": "应援妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/cheeringteam.webp",
+  "kind": "fairy",
+  "aliases": [
+   "cheeringteam",
+   "应援妖精"
+  ]
+ },
+ {
+  "id": 30,
+  "code": "curse",
+  "name": "魔女妖精",
+  "type": 6,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/curse.webp",
+  "kind": "fairy",
+  "aliases": [
+   "curse",
+   "魔女妖精"
+  ]
+ },
+ {
+  "id": 31,
+  "code": "trap",
+  "name": "陷阱妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/trap.webp",
+  "kind": "fairy",
+  "aliases": [
+   "trap",
+   "陷阱妖精"
+  ]
+ },
+ {
+  "id": 32,
+  "code": "peace",
+  "name": "和平妖精",
+  "type": 3,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/peace.webp",
+  "kind": "fairy",
+  "aliases": [
+   "peace",
+   "和平妖精"
+  ]
+ },
+ {
+  "id": 33,
+  "code": "doctor",
+  "name": "护理妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/doctor.webp",
+  "kind": "fairy",
+  "aliases": [
+   "doctor",
+   "护理妖精"
+  ]
+ },
+ {
+  "id": 34,
+  "code": "toy",
+  "name": "玩具妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/toy.webp",
+  "kind": "fairy",
+  "aliases": [
+   "toy",
+   "玩具妖精"
+  ]
+ },
+ {
+  "id": 35,
+  "code": "hero",
+  "name": "英雄妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/hero.webp",
+  "kind": "fairy",
+  "aliases": [
+   "hero",
+   "英雄妖精"
+  ]
+ },
+ {
+  "id": 36,
+  "code": "heal",
+  "name": "治愈妖精",
+  "type": 6,
+  "category": 2,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/heal.webp",
+  "kind": "fairy",
+  "aliases": [
+   "heal",
+   "治愈妖精"
+  ]
+ },
+ {
+  "id": 37,
+  "code": "em",
+  "name": "电磁妖精",
+  "type": 3,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/em.webp",
+  "kind": "fairy",
+  "aliases": [
+   "em",
+   "电磁妖精"
+  ]
+ },
+ {
+  "id": 38,
+  "code": "pirate",
+  "name": "海盗妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/pirate.webp",
+  "kind": "fairy",
+  "aliases": [
+   "pirate",
+   "海盗妖精"
+  ]
+ },
+ {
+  "id": 39,
+  "code": "sports",
+  "name": "疾跑妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/sports.webp",
+  "kind": "fairy",
+  "aliases": [
+   "sports",
+   "疾跑妖精"
+  ]
+ },
+ {
+  "id": 40,
+  "code": "blackhole",
+  "name": "黑洞妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/blackhole.webp",
+  "kind": "fairy",
+  "aliases": [
+   "blackhole",
+   "黑洞妖精"
+  ]
+ },
+ {
+  "id": 41,
+  "code": "space",
+  "name": "太空妖精",
+  "type": 2,
+  "category": 1,
+  "is_collab": false,
+  "avatar": "assets/avatars/fairies/space.webp",
+  "kind": "fairy",
+  "aliases": [
+   "space",
+   "太空妖精"
+  ]
+ },
+ {
+  "id": 1001,
+  "code": "Sakura",
+  "name": "八重樱",
+  "type": 4,
+  "category": 1,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/Sakura.webp",
+  "kind": "fairy",
+  "aliases": [
+   "Sakura",
+   "八重樱"
+  ]
+ },
+ {
+  "id": 1002,
+  "code": "Kaguya",
+  "name": "耀夜姬",
+  "type": 6,
+  "category": 2,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/Kaguya.webp",
+  "kind": "fairy",
+  "aliases": [
+   "Kaguya",
+   "耀夜姬"
+  ]
+ },
+ {
+  "id": 1003,
+  "code": "Chloe",
+  "name": "柯萝伊",
+  "type": 3,
+  "category": 1,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/Chloe.webp",
+  "kind": "fairy",
+  "aliases": [
+   "Chloe",
+   "柯萝伊"
+  ]
+ },
+ {
+  "id": 1004,
+  "code": "DJMAXSUEE",
+  "name": "希依",
+  "type": 6,
+  "category": 2,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/DJMAXSUEE.webp",
+  "kind": "fairy",
+  "aliases": [
+   "DJMAXSUEE",
+   "希依"
+  ]
+ },
+ {
+  "id": 1005,
+  "code": "DJMAXSEHRA",
+  "name": "世拉&妮娜",
+  "type": 2,
+  "category": 1,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/DJMAXSEHRA.webp",
+  "kind": "fairy",
+  "aliases": [
+   "DJMAXSEHRA",
+   "世拉&妮娜"
+  ]
+ },
+ {
+  "id": 1006,
+  "code": "DJMAXPREIYA",
+  "name": "普蕾娅&卡米莉娅",
+  "type": 2,
+  "category": 1,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/DJMAXPREIYA.webp",
+  "kind": "fairy",
+  "aliases": [
+   "DJMAXPREIYA",
+   "普蕾娅&卡米莉娅"
+  ]
+ },
+ {
+  "id": 1007,
+  "code": "Anna",
+  "name": "安娜·格雷姆",
+  "type": 2,
+  "category": 1,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/Anna.webp",
+  "kind": "fairy",
+  "aliases": [
+   "Anna",
+   "安娜·格雷姆"
+  ]
+ },
+ {
+  "id": 1008,
+  "code": "Koji",
+  "name": "浩二",
+  "type": 2,
+  "category": 1,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/Koji.webp",
+  "kind": "fairy",
+  "aliases": [
+   "Koji",
+   "浩二"
+  ]
+ },
+ {
+  "id": 1009,
+  "code": "DRBird",
+  "name": "DR鸡",
+  "type": 2,
+  "category": 1,
+  "is_collab": true,
+  "avatar": "assets/avatars/fairies/DRBird.webp",
+  "kind": "fairy",
+  "aliases": [
+   "DRBird",
+   "DR鸡"
+  ]
+ }
+]

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+snapshots/
+.cache/
+.idea/
+.vscode/
+_screenshot_*.png
+_tmp*
+Tmp/
+build/
+dist/
+*.spec

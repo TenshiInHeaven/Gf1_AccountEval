@@ -1,0 +1,160 @@
+from __future__ import annotations
+
+import json
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from app.capture.android import AndroidBridge, AndroidError, SNAPSHOT_CANDIDATES
+from app.capture.live import parse_capture
+from app.core.account import AccountLoader
+from app.core.codex import get_codex
+from app.core.equipment import get_equipment_engine
+from app.core.normalize import normalize_name, slugify, type_label
+from app.core.paths import SAMPLE_ACCOUNT
+from app.core.ratings import Evaluator, grade_for
+from app.core.tiers import get_tierlists
+
+
+class NormalizeTests(unittest.TestCase):
+    def test_name_variants(self):
+        self.assertEqual(normalize_name("Px4 风暴"), normalize_name("Px4风暴"))
+        self.assertEqual(normalize_name("M4 SOPMOD II"), normalize_name("M4SOPMODII"))
+        self.assertEqual(normalize_name("维尔德MkⅡ"), normalize_name("维尔德MkII"))
+        self.assertEqual(slugify("M4 SOPMOD II"), "M4_SOPMOD_II")
+
+    def test_type_labels(self):
+        self.assertEqual(type_label(4), "AR")
+        self.assertEqual(type_label(6), "SG")
+
+
+class CodexAndTierTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.codex = get_codex()
+        cls.tiers = get_tierlists()
+
+    def test_codex_sizes(self):
+        self.assertGreater(len(self.codex.dolls), 500)
+        self.assertEqual(len(self.codex.fairies), 50)
+        self.assertGreaterEqual(len(self.codex.sangvis), 50)
+
+    def test_tier_resolution(self):
+        self.assertEqual(self.tiers["doll"].tier_for(code="KP31", name="索米").id, "SS")
+        self.assertEqual(self.tiers["fairy"].tier_for(code="airborne", name="空降妖精").id, "SS")
+        self.assertEqual(self.tiers["sangvis"].tier_for(code="Scarecrow", name="稻草人").id, "SS")
+        self.assertEqual(self.tiers["sangvis"].tier_for(code="Architect", name="建筑师").id, "B")
+
+    def test_grade_thresholds(self):
+        self.assertEqual(grade_for(95), "SS")
+        self.assertEqual(grade_for(85), "S")
+        self.assertEqual(grade_for(75), "A")
+        self.assertEqual(grade_for(65), "B")
+        self.assertEqual(grade_for(10), "C")
+
+
+class SampleEvaluationTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.account = AccountLoader().load(SAMPLE_ACCOUNT)
+        cls.evaluation = Evaluator().evaluate(cls.account)
+
+    def test_sample_kind_counts(self):
+        self.assertEqual(len(self.account.dolls), 351)
+        self.assertEqual(len(self.account.fairies), 38)
+        self.assertEqual(len(self.account.sangvis), 10)
+
+    def test_fairy_copy_breakdown(self):
+        airborne = next(unit for unit in self.account.fairies if unit.code == "airborne")
+        self.assertEqual(airborne.count, 9)
+        self.assertEqual(len(airborne.copies), 9)
+        self.assertEqual(
+            {quality: sum(1 for copy in airborne.copies if copy["quality"] == quality) for quality in (5, 3, 1)},
+            {5: 2, 3: 1, 1: 6},
+        )
+        self.assertEqual(airborne.quality, 5)
+
+    def test_dimensions_present(self):
+        self.assertEqual(len(self.evaluation.dimensions()), 4)
+        self.assertIn(self.evaluation.overall_grade, {"SS", "S", "A", "B", "C"})
+        self.assertGreater(self.evaluation.doll.score, 0)
+        self.assertGreater(self.evaluation.equipment.score, 0)
+
+    def test_equipment_targets(self):
+        report = self.account.equipment
+        self.assertEqual(len(report.all_targets), 27)
+        self.assertEqual(report.target_total, 361)
+        by_name = report.by_name()
+        self.assertEqual(by_name["光喵"].target, 27)
+        self.assertEqual(by_name["高速"].target, 25)
+        self.assertEqual(by_name["T骨"].target, 16)
+        self.assertGreater(by_name["光喵"].current, 0)
+        self.assertEqual(by_name["高穿"].current, 0)
+
+
+class AndroidBridgeTests(unittest.TestCase):
+    def test_missing_adb_is_reported(self):
+        bridge = AndroidBridge(adb_path=Path("Z:/definitely-missing/adb.exe"))
+        self.assertFalse(bridge.available)
+        with self.assertRaises(AndroidError):
+            bridge.devices()
+
+    def test_snapshot_contract(self):
+        self.assertTrue(any("gf_account_snapshot.json" in path for path in SNAPSHOT_CANDIDATES))
+
+
+class WebDataTests(unittest.TestCase):
+    def test_pwa_files_and_icons_exist(self):
+        web = ROOT / "web"
+        for name in ("index.html", "styles.css", "app.js", "manifest.webmanifest", "sw.js", "serve.py"):
+            self.assertTrue((web / name).is_file(), name)
+        for size in (192, 512):
+            self.assertTrue((web / "icons" / f"icon-{size}.png").is_file())
+
+    def test_web_data_matches_app_data(self):
+        web = ROOT / "web" / "data"
+        app = ROOT / "app" / "data"
+        for kind in ("dolls", "fairies", "sangvis"):
+            web_rows = json.loads((web / "codex" / f"{kind}.json").read_text(encoding="utf-8"))
+            app_rows = json.loads((app / "codex" / f"{kind}.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(web_rows), len(app_rows))
+        self.assertTrue((web / "sample_account.json").is_file())
+        self.assertTrue((ROOT / "web" / "assets" / "avatars" / "dolls").is_dir())
+
+
+class LiveParserTests(unittest.TestCase):
+    def test_parse_sections(self):
+        text = (
+            "@@META\n"
+            "userId\tname\tlevel\tmaxGun\tmaxSangvisGun\tmaxFairy\tmaxEquip\n"
+            "123\t测试\t120\t500\t100\t60\t700\n"
+            "@@ROSTER\n"
+            "uid\tcode\tlevel\texp\tfavor\tteamId\tskinId\tlocation\tnumber\tmod\n"
+            "1\tM4A1\t120\t1\t2\t1\t0\t0\t5\t3\n"
+            "@@FAIRIES\n"
+            "id\tcode\tlevel\texp\tqualityLevel\tmainSkillLevel\tmod\tmodExp\tteamId\tequipId\tisCollect\n"
+            "1\tairborne_3\t100\t1\t5\t10\t0\t0\t0\t0\tfalse\n"
+            "@@EQUIPMENT\n"
+            "id\tgunId\tinfoId\townNumber\tequip_level\tequip_exp\n"
+            "1\t2\t32\t0\t10\t1\n"
+            "@@SANGVIS\n"
+            "infoId\tcode\tlevel\tadvance\tresolutionLevel\tsign\tskin\tbreakThroughLevel\tchip1\tchip2\n"
+            "1001\tScarecrow\t90\t4\t3\t1\t0\t0\t0\t0\n"
+            "@@VEHICLES\n"
+            "id\tinfoid\texp\tlife\n"
+            "1\t1\t100\t4000\n"
+        )
+        payload = parse_capture(text)
+        self.assertEqual(payload["meta"]["uid"], "123")
+        self.assertEqual(len(payload["dolls"]), 1)
+        self.assertEqual(len(payload["fairies"]), 1)
+        self.assertEqual(len(payload["equipment"]), 1)
+        self.assertEqual(len(payload["sangvis"]), 1)
+        self.assertEqual(len(payload["vehicles"]), 1)
+
+
+if __name__ == "__main__":
+    unittest.main()

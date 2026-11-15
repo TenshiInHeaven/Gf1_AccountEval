@@ -1,0 +1,879 @@
+[
+ {
+  "id": 1001,
+  "code": "Scarecrow",
+  "name": "稻草人",
+  "en_name": "Scarecrow",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Scarecrow.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Scarecrow",
+   "稻草人"
+  ]
+ },
+ {
+  "id": 1002,
+  "code": "Excutioner",
+  "name": "行裁者",
+  "en_name": "Excutioner",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Excutioner.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Excutioner",
+   "行裁者"
+  ]
+ },
+ {
+  "id": 1003,
+  "code": "Hunter",
+  "name": "猎手",
+  "en_name": "Hunter",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Hunter.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Hunter",
+   "猎手"
+  ]
+ },
+ {
+  "id": 1004,
+  "code": "Intruder",
+  "name": "干扰者",
+  "en_name": "Intruder",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Intruder.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Intruder",
+   "干扰者"
+  ]
+ },
+ {
+  "id": 1005,
+  "code": "Destroyer",
+  "name": "破坏者",
+  "en_name": "Destroyer",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Destroyer.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Destroyer",
+   "破坏者"
+  ]
+ },
+ {
+  "id": 1006,
+  "code": "BossArchitect",
+  "name": "建筑师",
+  "en_name": "Architect",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/BossArchitect.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Architect",
+   "BossArchitect",
+   "建筑师"
+  ]
+ },
+ {
+  "id": 1007,
+  "code": "Weaver",
+  "name": "衔尾蛇",
+  "en_name": "Weaver",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Weaver.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Weaver",
+   "衔尾蛇"
+  ]
+ },
+ {
+  "id": 1008,
+  "code": "Alchemist",
+  "name": "炼金术士",
+  "en_name": "Alchemist",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Alchemist.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Alchemist",
+   "炼金术士"
+  ]
+ },
+ {
+  "id": 1009,
+  "code": "Dreamer",
+  "name": "梦想家",
+  "en_name": "Dreamer",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Dreamer.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Dreamer",
+   "梦想家"
+  ]
+ },
+ {
+  "id": 1010,
+  "code": "BossGager",
+  "name": "计量官",
+  "en_name": "Gager",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/BossGager.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "BossGager",
+   "Gager",
+   "计量官"
+  ]
+ },
+ {
+  "id": 1011,
+  "code": "Justice",
+  "name": "法官",
+  "en_name": "Justice",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Justice.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Justice",
+   "法官"
+  ]
+ },
+ {
+  "id": 1012,
+  "code": "Agent",
+  "name": "代理人",
+  "en_name": "Agent",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Agent.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Agent",
+   "代理人"
+  ]
+ },
+ {
+  "id": 1015,
+  "code": "BossArchitect_Summer",
+  "name": "建筑师-NVW型",
+  "en_name": "Architect_Summer",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/BossArchitect_Summer.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Architect_Summer",
+   "BossArchitect_Summer",
+   "建筑师-NVW型"
+  ]
+ },
+ {
+  "id": 1016,
+  "code": "Intruder_Halloween",
+  "name": "干扰者-终幕魔女",
+  "en_name": "Intruder_Halloween",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Intruder_Halloween.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Intruder_Halloween",
+   "干扰者-终幕魔女"
+  ]
+ },
+ {
+  "id": 1017,
+  "code": "Destroyer_Christmas",
+  "name": "破坏者-浮掠麋影",
+  "en_name": "Destroyer_Christmas",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Destroyer_Christmas.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Destroyer_Christmas",
+   "破坏者-浮掠麋影"
+  ]
+ },
+ {
+  "id": 1018,
+  "code": "Hunter_WhiteDay",
+  "name": "猎手-裳夜落蛾",
+  "en_name": "Hunter_WhiteDay",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Hunter_WhiteDay.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Hunter_WhiteDay",
+   "猎手-裳夜落蛾"
+  ]
+ },
+ {
+  "id": 1019,
+  "code": "BossCerberus",
+  "name": "末日魔犬",
+  "en_name": "Cerberus",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/BossCerberus.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "BossCerberus",
+   "Cerberus",
+   "末日魔犬"
+  ]
+ },
+ {
+  "id": 1021,
+  "code": "Excutioner_Halloween",
+  "name": "行裁者-血魇猎狂",
+  "en_name": "Excutioner_Halloween",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Excutioner_Halloween.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Excutioner_Halloween",
+   "行裁者-血魇猎狂"
+  ]
+ },
+ {
+  "id": 1023,
+  "code": "Scarecrow_SpringFes",
+  "name": "稻草人-魇渊夕来",
+  "en_name": "Scarecrow_SpringFes",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Scarecrow_SpringFes.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Scarecrow_SpringFes",
+   "稻草人-魇渊夕来"
+  ]
+ },
+ {
+  "id": 1026,
+  "code": "Dreamer_Halloween",
+  "name": "梦想家-雾月翼手",
+  "en_name": "Dreamer_Halloween",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Dreamer_Halloween.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Dreamer_Halloween",
+   "梦想家-雾月翼手"
+  ]
+ },
+ {
+  "id": 1028,
+  "code": "GagerSwimwear",
+  "name": "计量官-VWV型",
+  "en_name": "GagerSwimwear",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/GagerSwimwear.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "GagerSwimwear",
+   "计量官-VWV型"
+  ]
+ },
+ {
+  "id": 1029,
+  "code": "Beluga",
+  "name": "白烨戈",
+  "en_name": "Beluga",
+  "forces": 1,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Beluga.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Beluga",
+   "白烨戈"
+  ]
+ },
+ {
+  "id": 2001,
+  "code": "Brute",
+  "name": "残兽",
+  "en_name": "Brute",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Brute.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Brute",
+   "残兽"
+  ]
+ },
+ {
+  "id": 2002,
+  "code": "Dragoon",
+  "name": "龙骑兵",
+  "en_name": "Dragoon",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Dragoon.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Dragoon",
+   "龙骑兵"
+  ]
+ },
+ {
+  "id": 2003,
+  "code": "Aegis",
+  "name": "圣盾",
+  "en_name": "Aegis",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Aegis.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Aegis",
+   "圣盾"
+  ]
+ },
+ {
+  "id": 2004,
+  "code": "Nemeum",
+  "name": "钢狮",
+  "en_name": "Nemeum",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Nemeum.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Nemeum",
+   "钢狮"
+  ]
+ },
+ {
+  "id": 2005,
+  "code": "Tarantula",
+  "name": "狼蛛",
+  "en_name": "Tarantula",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Tarantula.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Tarantula",
+   "狼蛛"
+  ]
+ },
+ {
+  "id": 2006,
+  "code": "Manticore",
+  "name": "蝎甲兽",
+  "en_name": "Manticore",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Manticore.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Manticore",
+   "蝎甲兽"
+  ]
+ },
+ {
+  "id": 2008,
+  "code": "Guard_SWAP",
+  "name": "护卫者SWAP",
+  "en_name": "Guard_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Guard_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Guard_SWAP",
+   "护卫者SWAP"
+  ]
+ },
+ {
+  "id": 2009,
+  "code": "Ripper_SWAP",
+  "name": "切割者SWAP",
+  "en_name": "Ripper_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Ripper_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Ripper_SWAP",
+   "切割者SWAP"
+  ]
+ },
+ {
+  "id": 2010,
+  "code": "Vespid_SWAP",
+  "name": "胡蜂SWAP",
+  "en_name": "Vespid_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Vespid_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Vespid_SWAP",
+   "胡蜂SWAP"
+  ]
+ },
+ {
+  "id": 2011,
+  "code": "Prowler_SWAP",
+  "name": "巡游者SWAP",
+  "en_name": "Prowler_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Prowler_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Prowler_SWAP",
+   "巡游者SWAP"
+  ]
+ },
+ {
+  "id": 2012,
+  "code": "Dragoon_SWAP",
+  "name": "龙骑兵SWAP",
+  "en_name": "Dragoon_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Dragoon_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Dragoon_SWAP",
+   "龙骑兵SWAP"
+  ]
+ },
+ {
+  "id": 2013,
+  "code": "Striker_SWAP",
+  "name": "痛击者SWAP",
+  "en_name": "Striker_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Striker_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Striker_SWAP",
+   "痛击者SWAP"
+  ]
+ },
+ {
+  "id": 2014,
+  "code": "Aegis_SWAP",
+  "name": "圣盾SWAP",
+  "en_name": "Aegis_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Aegis_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Aegis_SWAP",
+   "圣盾SWAP"
+  ]
+ },
+ {
+  "id": 2015,
+  "code": "Jaeger_SWAP",
+  "name": "猎鸥SWAP",
+  "en_name": "Jaeger_SWAP",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Jaeger_SWAP.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Jaeger_SWAP",
+   "猎鸥SWAP"
+  ]
+ },
+ {
+  "id": 2016,
+  "code": "Guard_chm",
+  "name": "姜饼护卫者",
+  "en_name": "Guard_chm",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Guard_chm.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Guard_chm",
+   "姜饼护卫者"
+  ]
+ },
+ {
+  "id": 2017,
+  "code": "Vespid_bride",
+  "name": "僵尸新娘",
+  "en_name": "Vespid_bride",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/Vespid_bride.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Vespid_bride",
+   "僵尸新娘"
+  ]
+ },
+ {
+  "id": 2018,
+  "code": "RecceCentreSwim_buhuo",
+  "name": "大白鲨乐园",
+  "en_name": "RecceCentreSwim",
+  "forces": 1,
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/sangvis/RecceCentreSwim_buhuo.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "RecceCentreSwim",
+   "RecceCentreSwim_buhuo",
+   "大白鲨乐园"
+  ]
+ },
+ {
+  "id": 90001,
+  "code": "ISC",
+  "name": "PPSh-41",
+  "en_name": "PPSh-41",
+  "forces": 1,
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/ISC.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "ISC",
+   "PPSh-41"
+  ]
+ },
+ {
+  "id": 3001,
+  "code": "Ripper",
+  "name": "切割者",
+  "en_name": "Ripper",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Ripper.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Ripper",
+   "切割者"
+  ]
+ },
+ {
+  "id": 3002,
+  "code": "Vespid",
+  "name": "胡蜂",
+  "en_name": "Vespid",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Vespid.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Vespid",
+   "胡蜂"
+  ]
+ },
+ {
+  "id": 3003,
+  "code": "Guard",
+  "name": "护卫者",
+  "en_name": "Guard",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Guard.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Guard",
+   "护卫者"
+  ]
+ },
+ {
+  "id": 3004,
+  "code": "Jaeger",
+  "name": "猎鸥",
+  "en_name": "Jaeger",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Jaeger.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Jaeger",
+   "猎鸥"
+  ]
+ },
+ {
+  "id": 3005,
+  "code": "Striker",
+  "name": "痛击者",
+  "en_name": "Striker",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Striker.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Striker",
+   "痛击者"
+  ]
+ },
+ {
+  "id": 3006,
+  "code": "Dinergate",
+  "name": "兵蚁",
+  "en_name": "Dinergate",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Dinergate.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Dinergate",
+   "兵蚁"
+  ]
+ },
+ {
+  "id": 3007,
+  "code": "Scouts",
+  "name": "侦察者",
+  "en_name": "Scouts",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Scouts.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Scouts",
+   "侦察者"
+  ]
+ },
+ {
+  "id": 3008,
+  "code": "Prowler",
+  "name": "巡游者",
+  "en_name": "Prowler",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Prowler.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Prowler",
+   "巡游者"
+  ]
+ },
+ {
+  "id": 3009,
+  "code": "Jaguar",
+  "name": "劫豹",
+  "en_name": "Jaguar",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Jaguar.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Jaguar",
+   "劫豹"
+  ]
+ },
+ {
+  "id": 3010,
+  "code": "Golyat_Factory",
+  "name": "歌利亚工厂",
+  "en_name": "Golyat_Factory",
+  "forces": 1,
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/sangvis/Golyat_Factory.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Golyat_Factory",
+   "歌利亚工厂"
+  ]
+ },
+ {
+  "id": 1013,
+  "code": "Nyto_black",
+  "name": "艾德琳",
+  "en_name": "Nyto_black",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Nyto_black.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Nyto_black",
+   "艾德琳"
+  ]
+ },
+ {
+  "id": 1014,
+  "code": "Nyto_white",
+  "name": "埃莉诺",
+  "en_name": "Nyto_white",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Nyto_white.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Nyto_white",
+   "埃莉诺"
+  ]
+ },
+ {
+  "id": 1020,
+  "code": "Nyto_White_Summer",
+  "name": "埃莉诺-沧龙掠骑者",
+  "en_name": "Nyto_White_Summer",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Nyto_White_Summer.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Nyto_White_Summer",
+   "埃莉诺-沧龙掠骑者"
+  ]
+ },
+ {
+  "id": 1022,
+  "code": "Nyto_tareus",
+  "name": "塔亚柔斯",
+  "en_name": "Nyto_tareus",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Nyto_tareus.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Nyto_tareus",
+   "塔亚柔斯"
+  ]
+ },
+ {
+  "id": 1024,
+  "code": "Nyto_mecha2",
+  "name": "纱那",
+  "en_name": "Sana",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Nyto_mecha2.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Nyto_mecha2",
+   "Sana",
+   "纱那"
+  ]
+ },
+ {
+  "id": 1025,
+  "code": "BossNarciss",
+  "name": "娜希斯",
+  "en_name": "Narciss",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/BossNarciss.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "BossNarciss",
+   "Narciss",
+   "娜希斯"
+  ]
+ },
+ {
+  "id": 1027,
+  "code": "Mrsgray",
+  "name": "格雷",
+  "en_name": "Mrsgray",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Mrsgray.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Mrsgray",
+   "格雷"
+  ]
+ },
+ {
+  "id": 1030,
+  "code": "Teal",
+  "name": "缇",
+  "en_name": "Teal",
+  "forces": 3,
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/sangvis/Teal.webp",
+  "kind": "sangvis",
+  "aliases": [
+   "Teal",
+   "缇"
+  ]
+ }
+]

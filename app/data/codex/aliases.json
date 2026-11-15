@@ -1,0 +1,8408 @@
+{
+ "m1911": [
+  {
+   "kind": "doll",
+   "code": "M1911",
+   "name": "M1911"
+  },
+  {
+   "kind": "doll",
+   "code": "M1911Mod",
+   "name": "M1911"
+  }
+ ],
+ "m1895": [
+  {
+   "kind": "doll",
+   "code": "M1895",
+   "name": "纳甘左轮"
+  },
+  {
+   "kind": "doll",
+   "code": "M1895Mod",
+   "name": "纳甘左轮"
+  },
+  {
+   "kind": "doll",
+   "code": "M1895MG",
+   "name": "M1895 CB"
+  }
+ ],
+ "纳甘左轮": [
+  {
+   "kind": "doll",
+   "code": "M1895",
+   "name": "纳甘左轮"
+  },
+  {
+   "kind": "doll",
+   "code": "M1895Mod",
+   "name": "纳甘左轮"
+  }
+ ],
+ "p38": [
+  {
+   "kind": "doll",
+   "code": "P38",
+   "name": "P38"
+  }
+ ],
+ "ppk": [
+  {
+   "kind": "doll",
+   "code": "PPK",
+   "name": "PPK"
+  },
+  {
+   "kind": "doll",
+   "code": "PPKMod",
+   "name": "PPK"
+  }
+ ],
+ "fnp9": [
+  {
+   "kind": "doll",
+   "code": "FNP9",
+   "name": "FNP-9"
+  }
+ ],
+ "mp446": [
+  {
+   "kind": "doll",
+   "code": "MP446",
+   "name": "MP-446"
+  },
+  {
+   "kind": "doll",
+   "code": "MP446Mod",
+   "name": "MP-446"
+  }
+ ],
+ "brenten": [
+  {
+   "kind": "doll",
+   "code": "BrenTen",
+   "name": "布伦·坦"
+  }
+ ],
+ "布伦坦": [
+  {
+   "kind": "doll",
+   "code": "BrenTen",
+   "name": "布伦·坦"
+  }
+ ],
+ "uspcompact": [
+  {
+   "kind": "doll",
+   "code": "USPCompact",
+   "name": "USP-C"
+  }
+ ],
+ "uspc": [
+  {
+   "kind": "doll",
+   "code": "USPCompact",
+   "name": "USP-C"
+  }
+ ],
+ "m9": [
+  {
+   "kind": "doll",
+   "code": "M9",
+   "name": "M9"
+  }
+ ],
+ "tt33": [
+  {
+   "kind": "doll",
+   "code": "TT33",
+   "name": "托卡列夫"
+  },
+  {
+   "kind": "doll",
+   "code": "TT33Mod",
+   "name": "托卡列夫"
+  }
+ ],
+ "托卡列夫": [
+  {
+   "kind": "doll",
+   "code": "TT33",
+   "name": "托卡列夫"
+  },
+  {
+   "kind": "doll",
+   "code": "TT33Mod",
+   "name": "托卡列夫"
+  }
+ ],
+ "pm": [
+  {
+   "kind": "doll",
+   "code": "PM",
+   "name": "马卡洛夫"
+  },
+  {
+   "kind": "doll",
+   "code": "PMMod",
+   "name": "马卡洛夫"
+  }
+ ],
+ "马卡洛夫": [
+  {
+   "kind": "doll",
+   "code": "PM",
+   "name": "马卡洛夫"
+  },
+  {
+   "kind": "doll",
+   "code": "PMMod",
+   "name": "马卡洛夫"
+  }
+ ],
+ "p08": [
+  {
+   "kind": "doll",
+   "code": "P08",
+   "name": "P08"
+  }
+ ],
+ "c96": [
+  {
+   "kind": "doll",
+   "code": "C96",
+   "name": "C96"
+  },
+  {
+   "kind": "doll",
+   "code": "C96Mod",
+   "name": "C96"
+  }
+ ],
+ "92type": [
+  {
+   "kind": "doll",
+   "code": "92type",
+   "name": "92式"
+  }
+ ],
+ "type92": [
+  {
+   "kind": "doll",
+   "code": "92type",
+   "name": "92式"
+  },
+  {
+   "kind": "doll",
+   "code": "92typeMod",
+   "name": "92式"
+  }
+ ],
+ "92式": [
+  {
+   "kind": "doll",
+   "code": "92type",
+   "name": "92式"
+  },
+  {
+   "kind": "doll",
+   "code": "92typeMod",
+   "name": "92式"
+  }
+ ],
+ "阿斯特拉左轮": [
+  {
+   "kind": "doll",
+   "code": "357",
+   "name": "阿斯特拉左轮"
+  }
+ ],
+ "357": [
+  {
+   "kind": "doll",
+   "code": "357",
+   "name": "阿斯特拉左轮"
+  }
+ ],
+ "格洛克17": [
+  {
+   "kind": "doll",
+   "code": "Glock17",
+   "name": "格洛克17"
+  }
+ ],
+ "glock17": [
+  {
+   "kind": "doll",
+   "code": "Glock17",
+   "name": "格洛克17"
+  }
+ ],
+ "谢尔久科夫": [
+  {
+   "kind": "doll",
+   "code": "SPS",
+   "name": "谢尔久科夫"
+  }
+ ],
+ "sps": [
+  {
+   "kind": "doll",
+   "code": "SPS",
+   "name": "谢尔久科夫"
+  }
+ ],
+ "p99": [
+  {
+   "kind": "doll",
+   "code": "P99",
+   "name": "P99"
+  }
+ ],
+ "59式": [
+  {
+   "kind": "doll",
+   "code": "59type",
+   "name": "59式"
+  }
+ ],
+ "59type": [
+  {
+   "kind": "doll",
+   "code": "59type",
+   "name": "59式"
+  }
+ ],
+ "type59": [
+  {
+   "kind": "doll",
+   "code": "59type",
+   "name": "59式"
+  }
+ ],
+ "psm": [
+  {
+   "kind": "doll",
+   "code": "PSM",
+   "name": "PSM"
+  }
+ ],
+ "hk45": [
+  {
+   "kind": "doll",
+   "code": "HK45",
+   "name": "HK45"
+  }
+ ],
+ "p226": [
+  {
+   "kind": "doll",
+   "code": "P226",
+   "name": "P226"
+  }
+ ],
+ "cz52": [
+  {
+   "kind": "doll",
+   "code": "CZ52",
+   "name": "CZ52"
+  }
+ ],
+ "mp443": [
+  {
+   "kind": "doll",
+   "code": "MP443",
+   "name": "MP-443"
+  },
+  {
+   "kind": "doll",
+   "code": "MP443Mod",
+   "name": "MP-443"
+  }
+ ],
+ "gsh18": [
+  {
+   "kind": "doll",
+   "code": "GSH18",
+   "name": "GSh-18"
+  },
+  {
+   "kind": "doll",
+   "code": "GSH18Mod",
+   "name": "GSh-18"
+  }
+ ],
+ "mp448": [
+  {
+   "kind": "doll",
+   "code": "MP448",
+   "name": "MP-448"
+  }
+ ],
+ "tec9": [
+  {
+   "kind": "doll",
+   "code": "TEC9",
+   "name": "TEC-9"
+  }
+ ],
+ "vp70": [
+  {
+   "kind": "doll",
+   "code": "VP70",
+   "name": "VP70"
+  }
+ ],
+ "wkp": [
+  {
+   "kind": "doll",
+   "code": "WKP",
+   "name": "WKp"
+  }
+ ],
+ "qsb91": [
+  {
+   "kind": "doll",
+   "code": "QSB91",
+   "name": "QSB-91"
+  }
+ ],
+ "hostagecommander": [
+  {
+   "kind": "doll",
+   "code": "HostageCommander",
+   "name": "指挥官"
+  },
+  {
+   "kind": "doll",
+   "code": "empty",
+   "name": "指挥官2"
+  }
+ ],
+ "指挥官": [
+  {
+   "kind": "doll",
+   "code": "HostageCommander",
+   "name": "指挥官"
+  },
+  {
+   "kind": "doll",
+   "code": "CommanderSelf",
+   "name": "指挥官"
+  }
+ ],
+ "指挥官2": [
+  {
+   "kind": "doll",
+   "code": "empty",
+   "name": "指挥官2"
+  }
+ ],
+ "empty": [
+  {
+   "kind": "doll",
+   "code": "empty",
+   "name": "指挥官2"
+  }
+ ],
+ "summercommander": [
+  {
+   "kind": "doll",
+   "code": "summer_commander",
+   "name": "泳装指挥官"
+  }
+ ],
+ "泳装指挥官": [
+  {
+   "kind": "doll",
+   "code": "summer_commander",
+   "name": "泳装指挥官"
+  }
+ ],
+ "commanderself": [
+  {
+   "kind": "doll",
+   "code": "CommanderSelf",
+   "name": "指挥官"
+  }
+ ],
+ "m1873": [
+  {
+   "kind": "doll",
+   "code": "M1873",
+   "name": "柯尔特左轮"
+  },
+  {
+   "kind": "doll",
+   "code": "M1873Mod",
+   "name": "柯尔特左轮"
+  }
+ ],
+ "柯尔特左轮": [
+  {
+   "kind": "doll",
+   "code": "M1873",
+   "name": "柯尔特左轮"
+  },
+  {
+   "kind": "doll",
+   "code": "M1873Mod",
+   "name": "柯尔特左轮"
+  }
+ ],
+ "aps": [
+  {
+   "kind": "doll",
+   "code": "APS",
+   "name": "斯捷奇金"
+  },
+  {
+   "kind": "doll",
+   "code": "APSMod",
+   "name": "斯捷奇金"
+  }
+ ],
+ "斯捷奇金": [
+  {
+   "kind": "doll",
+   "code": "APS",
+   "name": "斯捷奇金"
+  },
+  {
+   "kind": "doll",
+   "code": "APSMod",
+   "name": "斯捷奇金"
+  }
+ ],
+ "spp1": [
+  {
+   "kind": "doll",
+   "code": "SPP1",
+   "name": "SPP-1"
+  }
+ ],
+ "mk23": [
+  {
+   "kind": "doll",
+   "code": "Mk23",
+   "name": "Mk23"
+  }
+ ],
+ "p7": [
+  {
+   "kind": "doll",
+   "code": "P7",
+   "name": "P7"
+  }
+ ],
+ "喷火": [
+  {
+   "kind": "doll",
+   "code": "Spitfire",
+   "name": "喷火"
+  }
+ ],
+ "spitfire": [
+  {
+   "kind": "doll",
+   "code": "Spitfire",
+   "name": "喷火"
+  }
+ ],
+ "thunder50": [
+  {
+   "kind": "doll",
+   "code": "Thunder50",
+   "name": "雷电"
+  }
+ ],
+ "雷电": [
+  {
+   "kind": "doll",
+   "code": "Thunder50",
+   "name": "雷电"
+  }
+ ],
+ "k5": [
+  {
+   "kind": "doll",
+   "code": "K5",
+   "name": "K5"
+  },
+  {
+   "kind": "doll",
+   "code": "K5Mod",
+   "name": "K5"
+  }
+ ],
+ "杰里科": [
+  {
+   "kind": "doll",
+   "code": "Jericho",
+   "name": "杰里科"
+  }
+ ],
+ "jericho": [
+  {
+   "kind": "doll",
+   "code": "Jericho",
+   "name": "杰里科"
+  }
+ ],
+ "p30": [
+  {
+   "kind": "doll",
+   "code": "P30",
+   "name": "P30"
+  }
+ ],
+ "rex01": [
+  {
+   "kind": "doll",
+   "code": "RexZero1",
+   "name": "Rex-0-1"
+  },
+  {
+   "kind": "doll",
+   "code": "RexZero1Mod",
+   "name": "Rex-0-1"
+  }
+ ],
+ "rexzero1": [
+  {
+   "kind": "doll",
+   "code": "RexZero1",
+   "name": "Rex-0-1"
+  },
+  {
+   "kind": "doll",
+   "code": "RexZero1Mod",
+   "name": "Rex-0-1"
+  }
+ ],
+ "德林加": [
+  {
+   "kind": "doll",
+   "code": "Derringer",
+   "name": "德林加"
+  }
+ ],
+ "derringer": [
+  {
+   "kind": "doll",
+   "code": "Derringer",
+   "name": "德林加"
+  }
+ ],
+ "cz100": [
+  {
+   "kind": "doll",
+   "code": "CZ100",
+   "name": "CZ 100"
+  }
+ ],
+ "zip22": [
+  {
+   "kind": "doll",
+   "code": "ZIP22",
+   "name": "ZiP .22"
+  }
+ ],
+ "ppq": [
+  {
+   "kind": "doll",
+   "code": "PPQ",
+   "name": "PPQ"
+  }
+ ],
+ "p290": [
+  {
+   "kind": "doll",
+   "code": "P290",
+   "name": "P290"
+  }
+ ],
+ "p10c": [
+  {
+   "kind": "doll",
+   "code": "P10C",
+   "name": "P10C"
+  }
+ ],
+ "vp9": [
+  {
+   "kind": "doll",
+   "code": "VP9",
+   "name": "VP9"
+  }
+ ],
+ "maxim9": [
+  {
+   "kind": "doll",
+   "code": "Maxim9",
+   "name": "Maxim 9"
+  }
+ ],
+ "mandp9": [
+  {
+   "kind": "doll",
+   "code": "M&P9",
+   "name": "M&P9"
+  }
+ ],
+ "rexalpha": [
+  {
+   "kind": "doll",
+   "code": "RexAlpha",
+   "name": "Rex Alpha"
+  }
+ ],
+ "hipointc9": [
+  {
+   "kind": "doll",
+   "code": "HiPointC9",
+   "name": "Hi-Point C9"
+  }
+ ],
+ "refugeehg": [
+  {
+   "kind": "doll",
+   "code": "refugee_hg",
+   "name": "游荡难民"
+  }
+ ],
+ "游荡难民": [
+  {
+   "kind": "doll",
+   "code": "refugee_hg",
+   "name": "游荡难民"
+  }
+ ],
+ "refugeesmg": [
+  {
+   "kind": "doll",
+   "code": "refugee_smg",
+   "name": "暴走难民"
+  }
+ ],
+ "暴走难民": [
+  {
+   "kind": "doll",
+   "code": "refugee_smg",
+   "name": "暴走难民"
+  }
+ ],
+ "丹德莱": [
+  {
+   "kind": "doll",
+   "code": "Dandelion_TT33",
+   "name": "丹德莱"
+  },
+  {
+   "kind": "doll",
+   "code": "Dandelion_Gri",
+   "name": "丹德莱"
+  },
+  {
+   "kind": "doll",
+   "code": "Dandelion_M4",
+   "name": "丹德莱"
+  },
+  {
+   "kind": "doll",
+   "code": "Rogue_D",
+   "name": "丹德莱"
+  },
+  {
+   "kind": "doll",
+   "code": "Dandelion_Dinergate",
+   "name": "丹德莱"
+  }
+ ],
+ "dandeliontt33": [
+  {
+   "kind": "doll",
+   "code": "Dandelion_TT33",
+   "name": "丹德莱"
+  }
+ ],
+ "m1911mod": [
+  {
+   "kind": "doll",
+   "code": "M1911Mod",
+   "name": "M1911"
+  }
+ ],
+ "m1895mod": [
+  {
+   "kind": "doll",
+   "code": "M1895Mod",
+   "name": "纳甘左轮"
+  }
+ ],
+ "tt33mod": [
+  {
+   "kind": "doll",
+   "code": "TT33Mod",
+   "name": "托卡列夫"
+  }
+ ],
+ "pmmod": [
+  {
+   "kind": "doll",
+   "code": "PMMod",
+   "name": "马卡洛夫"
+  }
+ ],
+ "ppkmod": [
+  {
+   "kind": "doll",
+   "code": "PPKMod",
+   "name": "PPK"
+  }
+ ],
+ "c96mod": [
+  {
+   "kind": "doll",
+   "code": "C96Mod",
+   "name": "C96"
+  }
+ ],
+ "92typemod": [
+  {
+   "kind": "doll",
+   "code": "92typeMod",
+   "name": "92式"
+  }
+ ],
+ "mp446mod": [
+  {
+   "kind": "doll",
+   "code": "MP446Mod",
+   "name": "MP-446"
+  }
+ ],
+ "mp443mod": [
+  {
+   "kind": "doll",
+   "code": "MP443Mod",
+   "name": "MP-443"
+  }
+ ],
+ "gsh18mod": [
+  {
+   "kind": "doll",
+   "code": "GSH18Mod",
+   "name": "GSh-18"
+  }
+ ],
+ "蟒蛇": [
+  {
+   "kind": "doll",
+   "code": "Python",
+   "name": "蟒蛇"
+  }
+ ],
+ "python": [
+  {
+   "kind": "doll",
+   "code": "Python",
+   "name": "蟒蛇"
+  }
+ ],
+ "grizzly": [
+  {
+   "kind": "doll",
+   "code": "Grizzly",
+   "name": "灰熊MkⅤ"
+  }
+ ],
+ "灰熊mkv": [
+  {
+   "kind": "doll",
+   "code": "Grizzly",
+   "name": "灰熊MkⅤ"
+  }
+ ],
+ "m950a": [
+  {
+   "kind": "doll",
+   "code": "M950A",
+   "name": "M950A"
+  },
+  {
+   "kind": "doll",
+   "code": "M950AMod",
+   "name": "M950A"
+  }
+ ],
+ "welrod": [
+  {
+   "kind": "doll",
+   "code": "Welrod",
+   "name": "维尔德MkⅡ"
+  }
+ ],
+ "welrodmkii": [
+  {
+   "kind": "doll",
+   "code": "Welrod",
+   "name": "维尔德MkⅡ"
+  },
+  {
+   "kind": "doll",
+   "code": "WelrodMod",
+   "name": "维尔德MkⅡ"
+  }
+ ],
+ "维尔德mkii": [
+  {
+   "kind": "doll",
+   "code": "Welrod",
+   "name": "维尔德MkⅡ"
+  },
+  {
+   "kind": "doll",
+   "code": "WelrodMod",
+   "name": "维尔德MkⅡ"
+  }
+ ],
+ "nz75": [
+  {
+   "kind": "doll",
+   "code": "NZ75",
+   "name": "NZ75"
+  }
+ ],
+ "fn57": [
+  {
+   "kind": "doll",
+   "code": "FN57",
+   "name": "FN-57"
+  }
+ ],
+ "fiveseven": [
+  {
+   "kind": "doll",
+   "code": "FN57",
+   "name": "FN-57"
+  }
+ ],
+ "cz75": [
+  {
+   "kind": "doll",
+   "code": "CZ75",
+   "name": "CZ75"
+  }
+ ],
+ "contender": [
+  {
+   "kind": "doll",
+   "code": "Contender",
+   "name": "竞争者"
+  }
+ ],
+ "竞争者": [
+  {
+   "kind": "doll",
+   "code": "Contender",
+   "name": "竞争者"
+  }
+ ],
+ "px4风暴": [
+  {
+   "kind": "doll",
+   "code": "Px4Storm",
+   "name": "Px4 风暴"
+  },
+  {
+   "kind": "doll",
+   "code": "Px4StormMod",
+   "name": "Px4 风暴"
+  }
+ ],
+ "px4storm": [
+  {
+   "kind": "doll",
+   "code": "Px4Storm",
+   "name": "Px4 风暴"
+  },
+  {
+   "kind": "doll",
+   "code": "Px4StormMod",
+   "name": "Px4 风暴"
+  }
+ ],
+ "p22": [
+  {
+   "kind": "doll",
+   "code": "P22",
+   "name": "P22"
+  }
+ ],
+ "hs2000": [
+  {
+   "kind": "doll",
+   "code": "HS2000",
+   "name": "HS2000"
+  }
+ ],
+ "pa15": [
+  {
+   "kind": "doll",
+   "code": "PA15",
+   "name": "PA-15"
+  }
+ ],
+ "deserteagle": [
+  {
+   "kind": "doll",
+   "code": "DesertEagle",
+   "name": "沙漠之鹰"
+  },
+  {
+   "kind": "doll",
+   "code": "DesertEagle_6501",
+   "name": "沙漠之鹰"
+  }
+ ],
+ "沙漠之鹰": [
+  {
+   "kind": "doll",
+   "code": "DesertEagle",
+   "name": "沙漠之鹰"
+  },
+  {
+   "kind": "doll",
+   "code": "DesertEagle_6501",
+   "name": "沙漠之鹰"
+  }
+ ],
+ "c93": [
+  {
+   "kind": "doll",
+   "code": "C93",
+   "name": "C-93"
+  }
+ ],
+ "webley": [
+  {
+   "kind": "doll",
+   "code": "Webley",
+   "name": "韦伯利"
+  }
+ ],
+ "韦伯利": [
+  {
+   "kind": "doll",
+   "code": "Webley",
+   "name": "韦伯利"
+  }
+ ],
+ "browninghp": [
+  {
+   "kind": "doll",
+   "code": "BrowningHP",
+   "name": "HP-35"
+  }
+ ],
+ "hp35": [
+  {
+   "kind": "doll",
+   "code": "BrowningHP",
+   "name": "HP-35"
+  }
+ ],
+ "kolibri": [
+  {
+   "kind": "doll",
+   "code": "Kolibri",
+   "name": "蜂鸟"
+  }
+ ],
+ "蜂鸟": [
+  {
+   "kind": "doll",
+   "code": "Kolibri",
+   "name": "蜂鸟"
+  }
+ ],
+ "芮诺": [
+  {
+   "kind": "doll",
+   "code": "Rhino",
+   "name": "芮诺"
+  }
+ ],
+ "rhino": [
+  {
+   "kind": "doll",
+   "code": "Rhino",
+   "name": "芮诺"
+  }
+ ],
+ "m327": [
+  {
+   "kind": "doll",
+   "code": "M327",
+   "name": "M327"
+  }
+ ],
+ "coltwalker": [
+  {
+   "kind": "doll",
+   "code": "ColtWalker",
+   "name": "柯尔特沃克"
+  }
+ ],
+ "柯尔特沃克": [
+  {
+   "kind": "doll",
+   "code": "ColtWalker",
+   "name": "柯尔特沃克"
+  }
+ ],
+ "p2000": [
+  {
+   "kind": "doll",
+   "code": "P2000",
+   "name": "P2000"
+  }
+ ],
+ "m1851n": [
+  {
+   "kind": "doll",
+   "code": "M1851N",
+   "name": "柯尔特M1851N"
+  }
+ ],
+ "柯尔特m1851n": [
+  {
+   "kind": "doll",
+   "code": "M1851N",
+   "name": "柯尔特M1851N"
+  }
+ ],
+ "unica6": [
+  {
+   "kind": "doll",
+   "code": "Unica6",
+   "name": "Unica 6"
+  }
+ ],
+ "93r": [
+  {
+   "kind": "doll",
+   "code": "93R",
+   "name": "93R"
+  }
+ ],
+ "诺爱尔": [
+  {
+   "kind": "doll",
+   "code": "BB_Noel",
+   "name": "诺爱尔"
+  }
+ ],
+ "bbnoel": [
+  {
+   "kind": "doll",
+   "code": "BB_Noel",
+   "name": "诺爱尔"
+  }
+ ],
+ "noel": [
+  {
+   "kind": "doll",
+   "code": "BB_Noel",
+   "name": "诺爱尔"
+  }
+ ],
+ "kiana": [
+  {
+   "kind": "doll",
+   "code": "Kiana",
+   "name": "琪亚娜"
+  }
+ ],
+ "琪亚娜": [
+  {
+   "kind": "doll",
+   "code": "Kiana",
+   "name": "琪亚娜"
+  }
+ ],
+ "theresa": [
+  {
+   "kind": "doll",
+   "code": "Theresa",
+   "name": "德丽莎"
+  }
+ ],
+ "德丽莎": [
+  {
+   "kind": "doll",
+   "code": "Theresa",
+   "name": "德丽莎"
+  }
+ ],
+ "克莉尔": [
+  {
+   "kind": "doll",
+   "code": "CLEAR",
+   "name": "克莉尔"
+  }
+ ],
+ "clear": [
+  {
+   "kind": "doll",
+   "code": "CLEAR",
+   "name": "克莉尔"
+  }
+ ],
+ "菲尔": [
+  {
+   "kind": "doll",
+   "code": "FAIL",
+   "name": "菲尔"
+  }
+ ],
+ "fail": [
+  {
+   "kind": "doll",
+   "code": "FAIL",
+   "name": "菲尔"
+  }
+ ],
+ "jill": [
+  {
+   "kind": "doll",
+   "code": "Jill",
+   "name": "吉尔·斯汀雷"
+  }
+ ],
+ "吉尔斯汀雷": [
+  {
+   "kind": "doll",
+   "code": "Jill",
+   "name": "吉尔·斯汀雷"
+  }
+ ],
+ "jillstingray": [
+  {
+   "kind": "doll",
+   "code": "Jill",
+   "name": "吉尔·斯汀雷"
+  }
+ ],
+ "seiasagiri": [
+  {
+   "kind": "doll",
+   "code": "SEI",
+   "name": "赛伊·朝雾"
+  }
+ ],
+ "赛伊朝雾": [
+  {
+   "kind": "doll",
+   "code": "SEI",
+   "name": "赛伊·朝雾"
+  }
+ ],
+ "sei": [
+  {
+   "kind": "doll",
+   "code": "SEI",
+   "name": "赛伊·朝雾"
+  }
+ ],
+ "山田多惠": [
+  {
+   "kind": "doll",
+   "code": "Tae",
+   "name": "山田多惠"
+  }
+ ],
+ "tae": [
+  {
+   "kind": "doll",
+   "code": "Tae",
+   "name": "山田多惠"
+  }
+ ],
+ "motoko": [
+  {
+   "kind": "doll",
+   "code": "Motoko",
+   "name": "草薙素子"
+  }
+ ],
+ "草薙素子": [
+  {
+   "kind": "doll",
+   "code": "Motoko",
+   "name": "草薙素子"
+  }
+ ],
+ "evita": [
+  {
+   "kind": "doll",
+   "code": "Evita",
+   "name": "艾薇塔"
+  }
+ ],
+ "艾薇塔": [
+  {
+   "kind": "doll",
+   "code": "Evita",
+   "name": "艾薇塔"
+  }
+ ],
+ "稻草人": [
+  {
+   "kind": "doll",
+   "code": "Scarecrow_Ally",
+   "name": "稻草人"
+  },
+  {
+   "kind": "doll",
+   "code": "Scarecrow_shadow",
+   "name": "稻草人"
+  },
+  {
+   "kind": "sangvis",
+   "code": "Scarecrow",
+   "name": "稻草人"
+  }
+ ],
+ "scarecrowally": [
+  {
+   "kind": "doll",
+   "code": "Scarecrow_Ally",
+   "name": "稻草人"
+  }
+ ],
+ "excutionergriffin": [
+  {
+   "kind": "doll",
+   "code": "Excutioner_Griffin",
+   "name": "刽子手"
+  }
+ ],
+ "刽子手": [
+  {
+   "kind": "doll",
+   "code": "Excutioner_Griffin",
+   "name": "刽子手"
+  }
+ ],
+ "猎手": [
+  {
+   "kind": "doll",
+   "code": "Hunter_Ally",
+   "name": "猎手"
+  },
+  {
+   "kind": "sangvis",
+   "code": "Hunter",
+   "name": "猎手"
+  }
+ ],
+ "hunterally": [
+  {
+   "kind": "doll",
+   "code": "Hunter_Ally",
+   "name": "猎手"
+  }
+ ],
+ "scarecrowshadow": [
+  {
+   "kind": "doll",
+   "code": "Scarecrow_shadow",
+   "name": "稻草人"
+  }
+ ],
+ "angesuit": [
+  {
+   "kind": "doll",
+   "code": "Ange_Suit",
+   "name": "安洁"
+  }
+ ],
+ "ange": [
+  {
+   "kind": "doll",
+   "code": "Ange_Suit",
+   "name": "安洁"
+  },
+  {
+   "kind": "doll",
+   "code": "Ange_Jump",
+   "name": "安洁"
+  }
+ ],
+ "安洁": [
+  {
+   "kind": "doll",
+   "code": "Ange_Suit",
+   "name": "安洁"
+  },
+  {
+   "kind": "doll",
+   "code": "Ange_Jump",
+   "name": "安洁"
+  }
+ ],
+ "dandeliongri": [
+  {
+   "kind": "doll",
+   "code": "Dandelion_Gri",
+   "name": "丹德莱"
+  }
+ ],
+ "j": [
+  {
+   "kind": "doll",
+   "code": "NPC_Kevin",
+   "name": "J"
+  }
+ ],
+ "npckevin": [
+  {
+   "kind": "doll",
+   "code": "NPC_Kevin",
+   "name": "J"
+  }
+ ],
+ "k": [
+  {
+   "kind": "doll",
+   "code": "Jason",
+   "name": "K"
+  }
+ ],
+ "jason": [
+  {
+   "kind": "doll",
+   "code": "Jason",
+   "name": "K"
+  }
+ ],
+ "helianthus": [
+  {
+   "kind": "doll",
+   "code": "Helianthus",
+   "name": "赫里安"
+  }
+ ],
+ "赫里安": [
+  {
+   "kind": "doll",
+   "code": "Helianthus",
+   "name": "赫里安"
+  }
+ ],
+ "npcpersica": [
+  {
+   "kind": "doll",
+   "code": "NPC_Persica",
+   "name": "帕斯卡"
+  }
+ ],
+ "帕斯卡": [
+  {
+   "kind": "doll",
+   "code": "NPC_Persica",
+   "name": "帕斯卡"
+  }
+ ],
+ "奈乐": [
+  {
+   "kind": "doll",
+   "code": "Nele",
+   "name": "奈乐"
+  }
+ ],
+ "nele": [
+  {
+   "kind": "doll",
+   "code": "Nele",
+   "name": "奈乐"
+  }
+ ],
+ "dandelionm4": [
+  {
+   "kind": "doll",
+   "code": "Dandelion_M4",
+   "name": "丹德莱"
+  }
+ ],
+ "danacar": [
+  {
+   "kind": "doll",
+   "code": "Dana_Car",
+   "name": "Dana"
+  }
+ ],
+ "dana": [
+  {
+   "kind": "doll",
+   "code": "Dana_Car",
+   "name": "Dana"
+  },
+  {
+   "kind": "doll",
+   "code": "Dana",
+   "name": "达娜·赞恩"
+  }
+ ],
+ "deserteagle6501": [
+  {
+   "kind": "doll",
+   "code": "DesertEagle_6501",
+   "name": "沙漠之鹰"
+  }
+ ],
+ "coltwalkernpc": [
+  {
+   "kind": "doll",
+   "code": "ColtWalker_NPC",
+   "name": "玛姬"
+  }
+ ],
+ "玛姬": [
+  {
+   "kind": "doll",
+   "code": "ColtWalker_NPC",
+   "name": "玛姬"
+  }
+ ],
+ "angebattle01": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_01",
+   "name": "安洁莉娅"
+  }
+ ],
+ "ange01": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_01",
+   "name": "安洁莉娅"
+  }
+ ],
+ "安洁莉娅": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_01",
+   "name": "安洁莉娅"
+  },
+  {
+   "kind": "doll",
+   "code": "Ange_battle_02",
+   "name": "安洁莉娅"
+  },
+  {
+   "kind": "doll",
+   "code": "Ange_battle_03",
+   "name": "安洁莉娅"
+  },
+  {
+   "kind": "doll",
+   "code": "Ange_battle_04",
+   "name": "安洁莉娅"
+  }
+ ],
+ "ange02": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_02",
+   "name": "安洁莉娅"
+  }
+ ],
+ "angebattle02": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_02",
+   "name": "安洁莉娅"
+  }
+ ],
+ "angebattle03": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_03",
+   "name": "安洁莉娅"
+  }
+ ],
+ "ange03": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_03",
+   "name": "安洁莉娅"
+  }
+ ],
+ "angebattle04": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_04",
+   "name": "安洁莉娅"
+  }
+ ],
+ "ange04": [
+  {
+   "kind": "doll",
+   "code": "Ange_battle_04",
+   "name": "安洁莉娅"
+  }
+ ],
+ "npclaplace": [
+  {
+   "kind": "doll",
+   "code": "NPC_Laplace",
+   "name": "玛莎"
+  }
+ ],
+ "玛莎": [
+  {
+   "kind": "doll",
+   "code": "NPC_Laplace",
+   "name": "玛莎"
+  }
+ ],
+ "kalinaolbattle": [
+  {
+   "kind": "doll",
+   "code": "KalinaOL_battle",
+   "name": "格琳娜"
+  }
+ ],
+ "格琳娜": [
+  {
+   "kind": "doll",
+   "code": "KalinaOL_battle",
+   "name": "格琳娜"
+  },
+  {
+   "kind": "doll",
+   "code": "NPC_Kalina_Blazar1",
+   "name": "格琳娜"
+  }
+ ],
+ "kalina": [
+  {
+   "kind": "doll",
+   "code": "KalinaOL_battle",
+   "name": "格琳娜"
+  },
+  {
+   "kind": "doll",
+   "code": "NPC_Kalina_Blazar1",
+   "name": "格琳娜"
+  }
+ ],
+ "平平无奇的纸箱": [
+  {
+   "kind": "doll",
+   "code": "hideaway",
+   "name": "平平无奇的纸箱"
+  }
+ ],
+ "hideaway": [
+  {
+   "kind": "doll",
+   "code": "hideaway",
+   "name": "平平无奇的纸箱"
+  }
+ ],
+ "露尼西亚": [
+  {
+   "kind": "doll",
+   "code": "Lunasia",
+   "name": "露尼西亚(?)"
+  }
+ ],
+ "lunasia": [
+  {
+   "kind": "doll",
+   "code": "Lunasia",
+   "name": "露尼西亚(?)"
+  }
+ ],
+ "m1873mod": [
+  {
+   "kind": "doll",
+   "code": "M1873Mod",
+   "name": "柯尔特左轮"
+  }
+ ],
+ "apsmod": [
+  {
+   "kind": "doll",
+   "code": "APSMod",
+   "name": "斯捷奇金"
+  }
+ ],
+ "k5mod": [
+  {
+   "kind": "doll",
+   "code": "K5Mod",
+   "name": "K5"
+  }
+ ],
+ "rexzero1mod": [
+  {
+   "kind": "doll",
+   "code": "RexZero1Mod",
+   "name": "Rex-0-1"
+  }
+ ],
+ "m950amod": [
+  {
+   "kind": "doll",
+   "code": "M950AMod",
+   "name": "M950A"
+  }
+ ],
+ "welrodmod": [
+  {
+   "kind": "doll",
+   "code": "WelrodMod",
+   "name": "维尔德MkⅡ"
+  }
+ ],
+ "px4stormmod": [
+  {
+   "kind": "doll",
+   "code": "Px4StormMod",
+   "name": "Px4 风暴"
+  }
+ ],
+ "m3": [
+  {
+   "kind": "doll",
+   "code": "M3",
+   "name": "M3"
+  }
+ ],
+ "ppsh41": [
+  {
+   "kind": "doll",
+   "code": "PPsh41",
+   "name": "PPSh-41"
+  },
+  {
+   "kind": "doll",
+   "code": "PPsh41Mod",
+   "name": "PPSh-41"
+  },
+  {
+   "kind": "doll",
+   "code": "ISC",
+   "name": "PPSh-41"
+  },
+  {
+   "kind": "sangvis",
+   "code": "ISC",
+   "name": "PPSh-41"
+  }
+ ],
+ "pp2000": [
+  {
+   "kind": "doll",
+   "code": "PP2000",
+   "name": "PP-2000"
+  }
+ ],
+ "mp40": [
+  {
+   "kind": "doll",
+   "code": "MP40",
+   "name": "MP40"
+  }
+ ],
+ "伯莱塔38型": [
+  {
+   "kind": "doll",
+   "code": "MAB38",
+   "name": "伯莱塔38型"
+  },
+  {
+   "kind": "doll",
+   "code": "MAB38Mod",
+   "name": "伯莱塔38型"
+  }
+ ],
+ "mab38": [
+  {
+   "kind": "doll",
+   "code": "MAB38",
+   "name": "伯莱塔38型"
+  },
+  {
+   "kind": "doll",
+   "code": "MAB38Mod",
+   "name": "伯莱塔38型"
+  }
+ ],
+ "m45": [
+  {
+   "kind": "doll",
+   "code": "m45",
+   "name": "m45"
+  }
+ ],
+ "spectrem4": [
+  {
+   "kind": "doll",
+   "code": "SpectreM4",
+   "name": "幽灵M4"
+  }
+ ],
+ "幽灵m4": [
+  {
+   "kind": "doll",
+   "code": "SpectreM4",
+   "name": "幽灵M4"
+  }
+ ],
+ "idw": [
+  {
+   "kind": "doll",
+   "code": "IDW",
+   "name": "IDW"
+  },
+  {
+   "kind": "doll",
+   "code": "IDWMod",
+   "name": "IDW"
+  }
+ ],
+ "64type": [
+  {
+   "kind": "doll",
+   "code": "64type",
+   "name": "64式"
+  }
+ ],
+ "type64": [
+  {
+   "kind": "doll",
+   "code": "64type",
+   "name": "64式"
+  },
+  {
+   "kind": "doll",
+   "code": "64typeMod",
+   "name": "64式"
+  },
+  {
+   "kind": "doll",
+   "code": "Type64-AR",
+   "name": "64式自"
+  }
+ ],
+ "64式": [
+  {
+   "kind": "doll",
+   "code": "64type",
+   "name": "64式"
+  },
+  {
+   "kind": "doll",
+   "code": "64typeMod",
+   "name": "64式"
+  }
+ ],
+ "mac10": [
+  {
+   "kind": "doll",
+   "code": "MAC10",
+   "name": "MAC-10"
+  }
+ ],
+ "fmg9": [
+  {
+   "kind": "doll",
+   "code": "FMG9",
+   "name": "FMG-9"
+  }
+ ],
+ "pps43": [
+  {
+   "kind": "doll",
+   "code": "PPS43",
+   "name": "PPS-43"
+  }
+ ],
+ "vz61": [
+  {
+   "kind": "doll",
+   "code": "VZ61",
+   "name": "蝎式"
+  }
+ ],
+ "蝎式": [
+  {
+   "kind": "doll",
+   "code": "VZ61",
+   "name": "蝎式"
+  }
+ ],
+ "stenmkii": [
+  {
+   "kind": "doll",
+   "code": "StenMK2",
+   "name": "司登MkⅡ"
+  },
+  {
+   "kind": "doll",
+   "code": "StenMK2Mod",
+   "name": "司登MkⅡ"
+  }
+ ],
+ "stenmk2": [
+  {
+   "kind": "doll",
+   "code": "StenMK2",
+   "name": "司登MkⅡ"
+  }
+ ],
+ "司登mkii": [
+  {
+   "kind": "doll",
+   "code": "StenMK2",
+   "name": "司登MkⅡ"
+  },
+  {
+   "kind": "doll",
+   "code": "StenMK2Mod",
+   "name": "司登MkⅡ"
+  }
+ ],
+ "微型乌兹": [
+  {
+   "kind": "doll",
+   "code": "MicroUZI",
+   "name": "微型乌兹"
+  },
+  {
+   "kind": "doll",
+   "code": "MicroUZIMod",
+   "name": "微型乌兹"
+  }
+ ],
+ "microuzi": [
+  {
+   "kind": "doll",
+   "code": "MicroUZI",
+   "name": "微型乌兹"
+  },
+  {
+   "kind": "doll",
+   "code": "MicroUZIMod",
+   "name": "微型乌兹"
+  }
+ ],
+ "z62": [
+  {
+   "kind": "doll",
+   "code": "Z62",
+   "name": "Z-62"
+  }
+ ],
+ "evo3": [
+  {
+   "kind": "doll",
+   "code": "EVO3",
+   "name": "EVO 3"
+  },
+  {
+   "kind": "doll",
+   "code": "EVO3Mod",
+   "name": "EVO 3"
+  }
+ ],
+ "mt9": [
+  {
+   "kind": "doll",
+   "code": "MT9",
+   "name": "MT-9"
+  }
+ ],
+ "scw": [
+  {
+   "kind": "doll",
+   "code": "ColtSCW",
+   "name": "SCW"
+  }
+ ],
+ "coltscw": [
+  {
+   "kind": "doll",
+   "code": "ColtSCW",
+   "name": "SCW"
+  }
+ ],
+ "tmp": [
+  {
+   "kind": "doll",
+   "code": "TMP",
+   "name": "TMP"
+  }
+ ],
+ "f1": [
+  {
+   "kind": "doll",
+   "code": "F1",
+   "name": "F1"
+  },
+  {
+   "kind": "doll",
+   "code": "F1Mod",
+   "name": "F1"
+  }
+ ],
+ "m12": [
+  {
+   "kind": "doll",
+   "code": "M12",
+   "name": "M12"
+  }
+ ],
+ "ots39": [
+  {
+   "kind": "doll",
+   "code": "OTs39",
+   "name": "OTs-39"
+  }
+ ],
+ "t77": [
+  {
+   "kind": "doll",
+   "code": "T77",
+   "name": "T77"
+  }
+ ],
+ "mp41": [
+  {
+   "kind": "doll",
+   "code": "MP41",
+   "name": "MP41"
+  },
+  {
+   "kind": "doll",
+   "code": "MP41Mod",
+   "name": "MP41"
+  }
+ ],
+ "43m": [
+  {
+   "kind": "doll",
+   "code": "Danuvia43M",
+   "name": "43M"
+  }
+ ],
+ "danuvia43m": [
+  {
+   "kind": "doll",
+   "code": "Danuvia43M",
+   "name": "43M"
+  }
+ ],
+ "mas38": [
+  {
+   "kind": "doll",
+   "code": "MAS38",
+   "name": "MAS-38"
+  }
+ ],
+ "sub2000": [
+  {
+   "kind": "doll",
+   "code": "SUB2000",
+   "name": "SUB-2000"
+  }
+ ],
+ "pp90": [
+  {
+   "kind": "doll",
+   "code": "PP90",
+   "name": "PP-90"
+  }
+ ],
+ "mp5": [
+  {
+   "kind": "doll",
+   "code": "MP5",
+   "name": "MP5"
+  },
+  {
+   "kind": "doll",
+   "code": "MP5Mod",
+   "name": "MP5"
+  }
+ ],
+ "ump9": [
+  {
+   "kind": "doll",
+   "code": "UMP9",
+   "name": "UMP9"
+  },
+  {
+   "kind": "doll",
+   "code": "UMP9Mod",
+   "name": "UMP9"
+  }
+ ],
+ "ump40": [
+  {
+   "kind": "doll",
+   "code": "UMP40",
+   "name": "UMP40"
+  }
+ ],
+ "ump45": [
+  {
+   "kind": "doll",
+   "code": "UMP45",
+   "name": "UMP45"
+  },
+  {
+   "kind": "doll",
+   "code": "UMP45Mod",
+   "name": "UMP45"
+  }
+ ],
+ "pp19": [
+  {
+   "kind": "doll",
+   "code": "PP19",
+   "name": "PP-19"
+  },
+  {
+   "kind": "doll",
+   "code": "PP19Mod",
+   "name": "PP-19"
+  }
+ ],
+ "pp1901": [
+  {
+   "kind": "doll",
+   "code": "PP1901",
+   "name": "PP-19-01"
+  }
+ ],
+ "shipka": [
+  {
+   "kind": "doll",
+   "code": "Shipka",
+   "name": "希普卡"
+  }
+ ],
+ "希普卡": [
+  {
+   "kind": "doll",
+   "code": "Shipka",
+   "name": "希普卡"
+  }
+ ],
+ "klin": [
+  {
+   "kind": "doll",
+   "code": "KLIN",
+   "name": "KLIN"
+  }
+ ],
+ "蜜獾": [
+  {
+   "kind": "doll",
+   "code": "PDW",
+   "name": "蜜獾"
+  }
+ ],
+ "pdw": [
+  {
+   "kind": "doll",
+   "code": "PDW",
+   "name": "蜜獾"
+  }
+ ],
+ "cx4风暴": [
+  {
+   "kind": "doll",
+   "code": "Cx4Storm",
+   "name": "Cx4 风暴"
+  }
+ ],
+ "cx4storm": [
+  {
+   "kind": "doll",
+   "code": "Cx4Storm",
+   "name": "Cx4 风暴"
+  }
+ ],
+ "mat49": [
+  {
+   "kind": "doll",
+   "code": "MAT49",
+   "name": "MAT-49"
+  }
+ ],
+ "kpdw": [
+  {
+   "kind": "doll",
+   "code": "KAC",
+   "name": "KAC-PDW"
+  }
+ ],
+ "kacpdw": [
+  {
+   "kind": "doll",
+   "code": "KAC",
+   "name": "KAC-PDW"
+  }
+ ],
+ "kac": [
+  {
+   "kind": "doll",
+   "code": "KAC",
+   "name": "KAC-PDW"
+  }
+ ],
+ "cf05": [
+  {
+   "kind": "doll",
+   "code": "06TypeSMG",
+   "name": "CF05"
+  }
+ ],
+ "06typesmg": [
+  {
+   "kind": "doll",
+   "code": "06TypeSMG",
+   "name": "CF05"
+  }
+ ],
+ "saf": [
+  {
+   "kind": "doll",
+   "code": "SAF",
+   "name": "SAF"
+  }
+ ],
+ "ar57": [
+  {
+   "kind": "doll",
+   "code": "AR57",
+   "name": "AR-57"
+  }
+ ],
+ "ppd40": [
+  {
+   "kind": "doll",
+   "code": "PPD40",
+   "name": "PPD-40"
+  }
+ ],
+ "vigneronm2": [
+  {
+   "kind": "doll",
+   "code": "VigneronM2",
+   "name": "维涅龙M2"
+  }
+ ],
+ "维涅龙m2": [
+  {
+   "kind": "doll",
+   "code": "VigneronM2",
+   "name": "维涅龙M2"
+  }
+ ],
+ "mpl": [
+  {
+   "kind": "doll",
+   "code": "MPL",
+   "name": "MPL"
+  }
+ ],
+ "mpk": [
+  {
+   "kind": "doll",
+   "code": "MPK",
+   "name": "MPK"
+  }
+ ],
+ "apc9k": [
+  {
+   "kind": "doll",
+   "code": "APC9K",
+   "name": "APC9K"
+  }
+ ],
+ "欧文": [
+  {
+   "kind": "doll",
+   "code": "Owen",
+   "name": "欧文"
+  }
+ ],
+ "owen": [
+  {
+   "kind": "doll",
+   "code": "Owen",
+   "name": "欧文"
+  }
+ ],
+ "wz63": [
+  {
+   "kind": "doll",
+   "code": "wz63",
+   "name": "wz.63"
+  }
+ ],
+ "mx4storm": [
+  {
+   "kind": "doll",
+   "code": "Mx4Storm",
+   "name": "Mx4 风暴"
+  }
+ ],
+ "mx4风暴": [
+  {
+   "kind": "doll",
+   "code": "Mx4Storm",
+   "name": "Mx4 风暴"
+  }
+ ],
+ "bathhouseguest2": [
+  {
+   "kind": "doll",
+   "code": "Bathhouse_guest_2",
+   "name": "浴场客人"
+  }
+ ],
+ "浴场客人": [
+  {
+   "kind": "doll",
+   "code": "Bathhouse_guest_2",
+   "name": "浴场客人"
+  }
+ ],
+ "ppsh41mod": [
+  {
+   "kind": "doll",
+   "code": "PPsh41Mod",
+   "name": "PPSh-41"
+  }
+ ],
+ "stenmk2mod": [
+  {
+   "kind": "doll",
+   "code": "StenMK2Mod",
+   "name": "司登MkⅡ"
+  }
+ ],
+ "mab38mod": [
+  {
+   "kind": "doll",
+   "code": "MAB38Mod",
+   "name": "伯莱塔38型"
+  }
+ ],
+ "microuzimod": [
+  {
+   "kind": "doll",
+   "code": "MicroUZIMod",
+   "name": "微型乌兹"
+  }
+ ],
+ "idwmod": [
+  {
+   "kind": "doll",
+   "code": "IDWMod",
+   "name": "IDW"
+  }
+ ],
+ "64typemod": [
+  {
+   "kind": "doll",
+   "code": "64typeMod",
+   "name": "64式"
+  }
+ ],
+ "evo3mod": [
+  {
+   "kind": "doll",
+   "code": "EVO3Mod",
+   "name": "EVO 3"
+  }
+ ],
+ "f1mod": [
+  {
+   "kind": "doll",
+   "code": "F1Mod",
+   "name": "F1"
+  }
+ ],
+ "mp41mod": [
+  {
+   "kind": "doll",
+   "code": "MP41Mod",
+   "name": "MP41"
+  }
+ ],
+ "m1928a1": [
+  {
+   "kind": "doll",
+   "code": "M1928A1",
+   "name": "汤姆森"
+  }
+ ],
+ "汤姆森": [
+  {
+   "kind": "doll",
+   "code": "M1928A1",
+   "name": "汤姆森"
+  }
+ ],
+ "维克托": [
+  {
+   "kind": "doll",
+   "code": "Vector",
+   "name": "维克托"
+  }
+ ],
+ "vector": [
+  {
+   "kind": "doll",
+   "code": "Vector",
+   "name": "维克托"
+  },
+  {
+   "kind": "doll",
+   "code": "VectorAgent",
+   "name": "特工维克托"
+  }
+ ],
+ "mp7": [
+  {
+   "kind": "doll",
+   "code": "MP7",
+   "name": "MP7"
+  }
+ ],
+ "ak74u": [
+  {
+   "kind": "doll",
+   "code": "AK74U",
+   "name": "AK-74U"
+  }
+ ],
+ "aks74u": [
+  {
+   "kind": "doll",
+   "code": "AK74U",
+   "name": "AK-74U"
+  }
+ ],
+ "g36c": [
+  {
+   "kind": "doll",
+   "code": "G36C",
+   "name": "G36C"
+  },
+  {
+   "kind": "doll",
+   "code": "G36CMod",
+   "name": "G36C"
+  }
+ ],
+ "kp31": [
+  {
+   "kind": "doll",
+   "code": "KP31",
+   "name": "索米"
+  },
+  {
+   "kind": "doll",
+   "code": "KP31Mod",
+   "name": "索米"
+  }
+ ],
+ "索米": [
+  {
+   "kind": "doll",
+   "code": "KP31",
+   "name": "索米"
+  },
+  {
+   "kind": "doll",
+   "code": "KP31Mod",
+   "name": "索米"
+  }
+ ],
+ "type79": [
+  {
+   "kind": "doll",
+   "code": "79type",
+   "name": "79式"
+  },
+  {
+   "kind": "doll",
+   "code": "79typeMod",
+   "name": "79式"
+  }
+ ],
+ "79式": [
+  {
+   "kind": "doll",
+   "code": "79type",
+   "name": "79式"
+  },
+  {
+   "kind": "doll",
+   "code": "79typeMod",
+   "name": "79式"
+  }
+ ],
+ "79type": [
+  {
+   "kind": "doll",
+   "code": "79type",
+   "name": "79式"
+  }
+ ],
+ "sr3mp": [
+  {
+   "kind": "doll",
+   "code": "SR3MP",
+   "name": "SR-3MP"
+  }
+ ],
+ "ro635": [
+  {
+   "kind": "doll",
+   "code": "RO635",
+   "name": "RO635"
+  },
+  {
+   "kind": "doll",
+   "code": "RO635Mod",
+   "name": "RO635"
+  }
+ ],
+ "cbjms": [
+  {
+   "kind": "doll",
+   "code": "CBJMS",
+   "name": "C-MS"
+  }
+ ],
+ "cms": [
+  {
+   "kind": "doll",
+   "code": "CBJMS",
+   "name": "C-MS"
+  }
+ ],
+ "pm06": [
+  {
+   "kind": "doll",
+   "code": "PM06",
+   "name": "PM-06"
+  }
+ ],
+ "type100": [
+  {
+   "kind": "doll",
+   "code": "Type100",
+   "name": "樱花"
+  }
+ ],
+ "sakura": [
+  {
+   "kind": "doll",
+   "code": "Type100",
+   "name": "樱花"
+  },
+  {
+   "kind": "doll",
+   "code": "Type100Mod",
+   "name": "樱花"
+  },
+  {
+   "kind": "doll",
+   "code": "Sakura",
+   "name": "源樱"
+  },
+  {
+   "kind": "fairy",
+   "code": "Sakura",
+   "name": "八重樱"
+  }
+ ],
+ "樱花": [
+  {
+   "kind": "doll",
+   "code": "Type100",
+   "name": "樱花"
+  },
+  {
+   "kind": "doll",
+   "code": "Type100Mod",
+   "name": "樱花"
+  }
+ ],
+ "js9": [
+  {
+   "kind": "doll",
+   "code": "JS9mm",
+   "name": "JS 9"
+  }
+ ],
+ "js9mm": [
+  {
+   "kind": "doll",
+   "code": "JS9mm",
+   "name": "JS 9"
+  }
+ ],
+ "p90": [
+  {
+   "kind": "doll",
+   "code": "P90",
+   "name": "P90"
+  }
+ ],
+ "x95": [
+  {
+   "kind": "doll",
+   "code": "X95",
+   "name": "X95"
+  }
+ ],
+ "pm9": [
+  {
+   "kind": "doll",
+   "code": "PM9",
+   "name": "PM-9"
+  }
+ ],
+ "lusa": [
+  {
+   "kind": "doll",
+   "code": "Lusa",
+   "name": "卢萨"
+  }
+ ],
+ "卢萨": [
+  {
+   "kind": "doll",
+   "code": "Lusa",
+   "name": "卢萨"
+  }
+ ],
+ "augpara": [
+  {
+   "kind": "doll",
+   "code": "AUGPARA",
+   "name": "AUG SMG"
+  }
+ ],
+ "augsmg": [
+  {
+   "kind": "doll",
+   "code": "AUGPARA",
+   "name": "AUG SMG"
+  }
+ ],
+ "vp1915": [
+  {
+   "kind": "doll",
+   "code": "VP1915",
+   "name": "VP1915"
+  }
+ ],
+ "sp9": [
+  {
+   "kind": "doll",
+   "code": "SP9",
+   "name": "SP9"
+  }
+ ],
+ "sr2": [
+  {
+   "kind": "doll",
+   "code": "SR2",
+   "name": "SR-2"
+  }
+ ],
+ "sterling": [
+  {
+   "kind": "doll",
+   "code": "Sterling",
+   "name": "斯特林"
+  }
+ ],
+ "斯特林": [
+  {
+   "kind": "doll",
+   "code": "Sterling",
+   "name": "斯特林"
+  }
+ ],
+ "erma": [
+  {
+   "kind": "doll",
+   "code": "Erma",
+   "name": "Erma"
+  }
+ ],
+ "jatimatic": [
+  {
+   "kind": "doll",
+   "code": "Jatimatic",
+   "name": "Jatimatic"
+  }
+ ],
+ "82式": [
+  {
+   "kind": "doll",
+   "code": "Type82S",
+   "name": "82式"
+  }
+ ],
+ "type82s": [
+  {
+   "kind": "doll",
+   "code": "Type82S",
+   "name": "82式"
+  }
+ ],
+ "p50": [
+  {
+   "kind": "doll",
+   "code": "P50",
+   "name": "P50"
+  }
+ ],
+ "多萝西海兹": [
+  {
+   "kind": "doll",
+   "code": "Dorothy",
+   "name": "多萝西·海兹"
+  }
+ ],
+ "dorothyhaze": [
+  {
+   "kind": "doll",
+   "code": "Dorothy",
+   "name": "多萝西·海兹"
+  }
+ ],
+ "dorothy": [
+  {
+   "kind": "doll",
+   "code": "Dorothy",
+   "name": "多萝西·海兹"
+  }
+ ],
+ "海莉艾塔": [
+  {
+   "kind": "doll",
+   "code": "Henrietta",
+   "name": "海莉艾塔"
+  }
+ ],
+ "henrietta": [
+  {
+   "kind": "doll",
+   "code": "Henrietta",
+   "name": "海莉艾塔"
+  }
+ ],
+ "特工维克托": [
+  {
+   "kind": "doll",
+   "code": "VectorAgent",
+   "name": "特工维克托"
+  }
+ ],
+ "vectoragent": [
+  {
+   "kind": "doll",
+   "code": "VectorAgent",
+   "name": "特工维克托"
+  }
+ ],
+ "jashinchan": [
+  {
+   "kind": "doll",
+   "code": "Jashinchan",
+   "name": "邪神酱"
+  }
+ ],
+ "邪神酱": [
+  {
+   "kind": "doll",
+   "code": "Jashinchan",
+   "name": "邪神酱"
+  }
+ ],
+ "lily": [
+  {
+   "kind": "doll",
+   "code": "Lily",
+   "name": "星川莉莉"
+  }
+ ],
+ "星川莉莉": [
+  {
+   "kind": "doll",
+   "code": "Lily",
+   "name": "星川莉莉"
+  }
+ ],
+ "hecate": [
+  {
+   "kind": "doll",
+   "code": "Hecate",
+   "name": "黑卡蒂"
+  }
+ ],
+ "黑卡蒂": [
+  {
+   "kind": "doll",
+   "code": "Hecate",
+   "name": "黑卡蒂"
+  }
+ ],
+ "rogued": [
+  {
+   "kind": "doll",
+   "code": "Rogue_D",
+   "name": "丹德莱"
+  }
+ ],
+ "特工": [
+  {
+   "kind": "doll",
+   "code": "Plaincloth_Ally",
+   "name": "特工"
+  }
+ ],
+ "plainclothally": [
+  {
+   "kind": "doll",
+   "code": "Plaincloth_Ally",
+   "name": "特工"
+  }
+ ],
+ "dupijin": [
+  {
+   "kind": "doll",
+   "code": "Dupijin",
+   "name": "杜皮约"
+  }
+ ],
+ "杜皮约": [
+  {
+   "kind": "doll",
+   "code": "Dupijin",
+   "name": "杜皮约"
+  }
+ ],
+ "艾尔玛": [
+  {
+   "kind": "doll",
+   "code": "Erma_NPC",
+   "name": "艾尔玛"
+  }
+ ],
+ "ermanpc": [
+  {
+   "kind": "doll",
+   "code": "Erma_NPC",
+   "name": "艾尔玛"
+  }
+ ],
+ "ahmin": [
+  {
+   "kind": "doll",
+   "code": "Ahmin_battle",
+   "name": "艾赫明"
+  }
+ ],
+ "艾赫明": [
+  {
+   "kind": "doll",
+   "code": "Ahmin_battle",
+   "name": "艾赫明"
+  }
+ ],
+ "ahminbattle": [
+  {
+   "kind": "doll",
+   "code": "Ahmin_battle",
+   "name": "艾赫明"
+  }
+ ],
+ "拉姆赞": [
+  {
+   "kind": "doll",
+   "code": "Pamazan_Young_NPC",
+   "name": "拉姆赞"
+  }
+ ],
+ "pamzanyoung": [
+  {
+   "kind": "doll",
+   "code": "Pamazan_Young_NPC",
+   "name": "拉姆赞"
+  }
+ ],
+ "pamazanyoungnpc": [
+  {
+   "kind": "doll",
+   "code": "Pamazan_Young_NPC",
+   "name": "拉姆赞"
+  }
+ ],
+ "dandeliondinergate": [
+  {
+   "kind": "doll",
+   "code": "Dandelion_Dinergate",
+   "name": "丹德莱"
+  }
+ ],
+ "mp5mod": [
+  {
+   "kind": "doll",
+   "code": "MP5Mod",
+   "name": "MP5"
+  }
+ ],
+ "ump9mod": [
+  {
+   "kind": "doll",
+   "code": "UMP9Mod",
+   "name": "UMP9"
+  }
+ ],
+ "ump45mod": [
+  {
+   "kind": "doll",
+   "code": "UMP45Mod",
+   "name": "UMP45"
+  }
+ ],
+ "pp19mod": [
+  {
+   "kind": "doll",
+   "code": "PP19Mod",
+   "name": "PP-19"
+  }
+ ],
+ "isc": [
+  {
+   "kind": "doll",
+   "code": "ISC",
+   "name": "PPSh-41"
+  },
+  {
+   "kind": "sangvis",
+   "code": "ISC",
+   "name": "PPSh-41"
+  }
+ ],
+ "g36cmod": [
+  {
+   "kind": "doll",
+   "code": "G36CMod",
+   "name": "G36C"
+  }
+ ],
+ "kp31mod": [
+  {
+   "kind": "doll",
+   "code": "KP31Mod",
+   "name": "索米"
+  }
+ ],
+ "79typemod": [
+  {
+   "kind": "doll",
+   "code": "79typeMod",
+   "name": "79式"
+  }
+ ],
+ "ro635mod": [
+  {
+   "kind": "doll",
+   "code": "RO635Mod",
+   "name": "RO635"
+  }
+ ],
+ "type100mod": [
+  {
+   "kind": "doll",
+   "code": "Type100Mod",
+   "name": "樱花"
+  }
+ ],
+ "svt38": [
+  {
+   "kind": "doll",
+   "code": "SVT38",
+   "name": "SVT-38"
+  }
+ ],
+ "sks": [
+  {
+   "kind": "doll",
+   "code": "SKS",
+   "name": "西蒙诺夫"
+  }
+ ],
+ "西蒙诺夫": [
+  {
+   "kind": "doll",
+   "code": "SKS",
+   "name": "西蒙诺夫"
+  }
+ ],
+ "g43": [
+  {
+   "kind": "doll",
+   "code": "G43",
+   "name": "G43"
+  }
+ ],
+ "fn49": [
+  {
+   "kind": "doll",
+   "code": "FN49",
+   "name": "FN-49"
+  },
+  {
+   "kind": "doll",
+   "code": "FN49Mod",
+   "name": "FN-49"
+  }
+ ],
+ "bm59": [
+  {
+   "kind": "doll",
+   "code": "BM59",
+   "name": "BM59"
+  }
+ ],
+ "m1": [
+  {
+   "kind": "doll",
+   "code": "M1",
+   "name": "M1加兰德"
+  }
+ ],
+ "m1加兰德": [
+  {
+   "kind": "doll",
+   "code": "M1",
+   "name": "M1加兰德"
+  }
+ ],
+ "m1a1": [
+  {
+   "kind": "doll",
+   "code": "M1A1",
+   "name": "M1A1"
+  }
+ ],
+ "m14": [
+  {
+   "kind": "doll",
+   "code": "M14",
+   "name": "M14"
+  },
+  {
+   "kind": "doll",
+   "code": "M14Mod",
+   "name": "M14"
+  }
+ ],
+ "m21": [
+  {
+   "kind": "doll",
+   "code": "M21",
+   "name": "M21"
+  }
+ ],
+ "sv98": [
+  {
+   "kind": "doll",
+   "code": "SV98",
+   "name": "SV-98"
+  },
+  {
+   "kind": "doll",
+   "code": "SV98Mod",
+   "name": "SV-98"
+  }
+ ],
+ "56式半": [
+  {
+   "kind": "doll",
+   "code": "56typeR",
+   "name": "56式半"
+  },
+  {
+   "kind": "doll",
+   "code": "56typeRMod",
+   "name": "56式半"
+  }
+ ],
+ "56typer": [
+  {
+   "kind": "doll",
+   "code": "56typeR",
+   "name": "56式半"
+  }
+ ],
+ "type56r": [
+  {
+   "kind": "doll",
+   "code": "56typeR",
+   "name": "56式半"
+  },
+  {
+   "kind": "doll",
+   "code": "56typeRMod",
+   "name": "56式半"
+  }
+ ],
+ "type88": [
+  {
+   "kind": "doll",
+   "code": "88type",
+   "name": "汉阳造88式"
+  },
+  {
+   "kind": "doll",
+   "code": "88typeMod",
+   "name": "汉阳造88式"
+  },
+  {
+   "kind": "doll",
+   "code": "Type88",
+   "name": "88式"
+  }
+ ],
+ "88type": [
+  {
+   "kind": "doll",
+   "code": "88type",
+   "name": "汉阳造88式"
+  }
+ ],
+ "汉阳造88式": [
+  {
+   "kind": "doll",
+   "code": "88type",
+   "name": "汉阳造88式"
+  },
+  {
+   "kind": "doll",
+   "code": "88typeMod",
+   "name": "汉阳造88式"
+  }
+ ],
+ "supersass": [
+  {
+   "kind": "doll",
+   "code": "SuperSASS",
+   "name": "S-SASS"
+  },
+  {
+   "kind": "doll",
+   "code": "SuperSASSMod",
+   "name": "S-SASS"
+  }
+ ],
+ "ssass": [
+  {
+   "kind": "doll",
+   "code": "SuperSASS",
+   "name": "S-SASS"
+  },
+  {
+   "kind": "doll",
+   "code": "SuperSASSMod",
+   "name": "S-SASS"
+  }
+ ],
+ "ots44": [
+  {
+   "kind": "doll",
+   "code": "OC44",
+   "name": "OTs-44"
+  }
+ ],
+ "oc44": [
+  {
+   "kind": "doll",
+   "code": "OC44",
+   "name": "OTs-44"
+  }
+ ],
+ "ssg69": [
+  {
+   "kind": "doll",
+   "code": "SSG69",
+   "name": "SSG 69"
+  }
+ ],
+ "81typer": [
+  {
+   "kind": "doll",
+   "code": "81typeR",
+   "name": "八一式马"
+  }
+ ],
+ "八一式马": [
+  {
+   "kind": "doll",
+   "code": "81typeR",
+   "name": "八一式马"
+  }
+ ],
+ "type81r": [
+  {
+   "kind": "doll",
+   "code": "81typeR",
+   "name": "八一式马"
+  }
+ ],
+ "wz29": [
+  {
+   "kind": "doll",
+   "code": "wz29",
+   "name": "wz.29"
+  }
+ ],
+ "gepardm1": [
+  {
+   "kind": "doll",
+   "code": "GepardM1",
+   "name": "猎豹M1"
+  },
+  {
+   "kind": "doll",
+   "code": "GepardM1Mod",
+   "name": "猎豹M1"
+  }
+ ],
+ "猎豹m1": [
+  {
+   "kind": "doll",
+   "code": "GepardM1",
+   "name": "猎豹M1"
+  },
+  {
+   "kind": "doll",
+   "code": "GepardM1Mod",
+   "name": "猎豹M1"
+  }
+ ],
+ "hezism1": [
+  {
+   "kind": "doll",
+   "code": "HEZISM1",
+   "name": "SM-1"
+  }
+ ],
+ "sm1": [
+  {
+   "kind": "doll",
+   "code": "HEZISM1",
+   "name": "SM-1"
+  }
+ ],
+ "obr": [
+  {
+   "kind": "doll",
+   "code": "OBR",
+   "name": "OBR"
+  },
+  {
+   "kind": "doll",
+   "code": "OBRMod",
+   "name": "OBR"
+  }
+ ],
+ "rt20": [
+  {
+   "kind": "doll",
+   "code": "RT20",
+   "name": "RT-20"
+  }
+ ],
+ "scout": [
+  {
+   "kind": "doll",
+   "code": "scout",
+   "name": "侦察者"
+  }
+ ],
+ "侦察者": [
+  {
+   "kind": "doll",
+   "code": "scout",
+   "name": "侦察者"
+  },
+  {
+   "kind": "sangvis",
+   "code": "Scouts",
+   "name": "侦察者"
+  }
+ ],
+ "falcon": [
+  {
+   "kind": "doll",
+   "code": "Falcon",
+   "name": "隼"
+  },
+  {
+   "kind": "doll",
+   "code": "FalconMod",
+   "name": "隼"
+  }
+ ],
+ "隼": [
+  {
+   "kind": "doll",
+   "code": "Falcon",
+   "name": "隼"
+  },
+  {
+   "kind": "doll",
+   "code": "FalconMod",
+   "name": "隼"
+  }
+ ],
+ "tcms": [
+  {
+   "kind": "doll",
+   "code": "TCMS",
+   "name": "T-CMS"
+  }
+ ],
+ "zasm76": [
+  {
+   "kind": "doll",
+   "code": "ZasM76",
+   "name": "Zas M76"
+  }
+ ],
+ "c14": [
+  {
+   "kind": "doll",
+   "code": "C14",
+   "name": "C14"
+  }
+ ],
+ "gm6lynx": [
+  {
+   "kind": "doll",
+   "code": "Gm6Lynx",
+   "name": "GM6 Lynx"
+  }
+ ],
+ "m1903": [
+  {
+   "kind": "doll",
+   "code": "M1903",
+   "name": "春田"
+  }
+ ],
+ "春田": [
+  {
+   "kind": "doll",
+   "code": "M1903",
+   "name": "春田"
+  }
+ ],
+ "莫辛纳甘": [
+  {
+   "kind": "doll",
+   "code": "M1891",
+   "name": "莫辛-纳甘"
+  },
+  {
+   "kind": "doll",
+   "code": "M1891Mod",
+   "name": "莫辛-纳甘"
+  }
+ ],
+ "m1891": [
+  {
+   "kind": "doll",
+   "code": "M1891",
+   "name": "莫辛-纳甘"
+  },
+  {
+   "kind": "doll",
+   "code": "M1891Mod",
+   "name": "莫辛-纳甘"
+  }
+ ],
+ "ptrd": [
+  {
+   "kind": "doll",
+   "code": "PTRD",
+   "name": "PTRD"
+  }
+ ],
+ "svd": [
+  {
+   "kind": "doll",
+   "code": "SVD",
+   "name": "SVD"
+  }
+ ],
+ "psg1": [
+  {
+   "kind": "doll",
+   "code": "PSG1",
+   "name": "PSG-1"
+  }
+ ],
+ "g28": [
+  {
+   "kind": "doll",
+   "code": "G28",
+   "name": "G28"
+  }
+ ],
+ "pzb39": [
+  {
+   "kind": "doll",
+   "code": "PzB39",
+   "name": "PzB39"
+  }
+ ],
+ "t5000": [
+  {
+   "kind": "doll",
+   "code": "T5000",
+   "name": "T-5000"
+  }
+ ],
+ "xm3": [
+  {
+   "kind": "doll",
+   "code": "xm3",
+   "name": "XM3"
+  },
+  {
+   "kind": "doll",
+   "code": "XM3Mod",
+   "name": "XM3"
+  }
+ ],
+ "mk12": [
+  {
+   "kind": "doll",
+   "code": "Mk12",
+   "name": "Mk 12"
+  }
+ ],
+ "mk12mod01": [
+  {
+   "kind": "doll",
+   "code": "Mk12",
+   "name": "Mk 12"
+  }
+ ],
+ "spra3g": [
+  {
+   "kind": "doll",
+   "code": "FNSPR",
+   "name": "SPR A3G"
+  }
+ ],
+ "fnspr": [
+  {
+   "kind": "doll",
+   "code": "FNSPR",
+   "name": "SPR A3G"
+  }
+ ],
+ "k31": [
+  {
+   "kind": "doll",
+   "code": "K31",
+   "name": "K31"
+  }
+ ],
+ "ksvk": [
+  {
+   "kind": "doll",
+   "code": "KSVK",
+   "name": "KSVK"
+  },
+  {
+   "kind": "doll",
+   "code": "KSVKMod",
+   "name": "KSVK"
+  }
+ ],
+ "type4": [
+  {
+   "kind": "doll",
+   "code": "4type",
+   "name": "四式"
+  }
+ ],
+ "四式": [
+  {
+   "kind": "doll",
+   "code": "4type",
+   "name": "四式"
+  }
+ ],
+ "4type": [
+  {
+   "kind": "doll",
+   "code": "4type",
+   "name": "四式"
+  }
+ ],
+ "ssg3000": [
+  {
+   "kind": "doll",
+   "code": "SSG3000",
+   "name": "SSG3000"
+  }
+ ],
+ "tabuk": [
+  {
+   "kind": "doll",
+   "code": "Tabuk",
+   "name": "塔布克"
+  }
+ ],
+ "塔布克": [
+  {
+   "kind": "doll",
+   "code": "Tabuk",
+   "name": "塔布克"
+  }
+ ],
+ "蒙德拉贡m1908": [
+  {
+   "kind": "doll",
+   "code": "MondragonM1908",
+   "name": "蒙德拉贡M1908"
+  }
+ ],
+ "mondragonm1908": [
+  {
+   "kind": "doll",
+   "code": "MondragonM1908",
+   "name": "蒙德拉贡M1908"
+  }
+ ],
+ "tfq": [
+  {
+   "kind": "doll",
+   "code": "TFQ",
+   "name": "TF-Q"
+  }
+ ],
+ "saiga308": [
+  {
+   "kind": "doll",
+   "code": "Saiga308",
+   "name": "Saiga 308"
+  }
+ ],
+ "mini14": [
+  {
+   "kind": "doll",
+   "code": "Mini14",
+   "name": "Mini-14"
+  }
+ ],
+ "ssgm1": [
+  {
+   "kind": "doll",
+   "code": "SSGM1",
+   "name": "SSG M1"
+  }
+ ],
+ "m14mod": [
+  {
+   "kind": "doll",
+   "code": "M14Mod",
+   "name": "M14"
+  }
+ ],
+ "sv98mod": [
+  {
+   "kind": "doll",
+   "code": "SV98Mod",
+   "name": "SV-98"
+  }
+ ],
+ "56typermod": [
+  {
+   "kind": "doll",
+   "code": "56typeRMod",
+   "name": "56式半"
+  }
+ ],
+ "fn49mod": [
+  {
+   "kind": "doll",
+   "code": "FN49Mod",
+   "name": "FN-49"
+  }
+ ],
+ "88typemod": [
+  {
+   "kind": "doll",
+   "code": "88typeMod",
+   "name": "汉阳造88式"
+  }
+ ],
+ "supersassmod": [
+  {
+   "kind": "doll",
+   "code": "SuperSASSMod",
+   "name": "S-SASS"
+  }
+ ],
+ "gepardm1mod": [
+  {
+   "kind": "doll",
+   "code": "GepardM1Mod",
+   "name": "猎豹M1"
+  }
+ ],
+ "obrmod": [
+  {
+   "kind": "doll",
+   "code": "OBRMod",
+   "name": "OBR"
+  }
+ ],
+ "falconmod": [
+  {
+   "kind": "doll",
+   "code": "FalconMod",
+   "name": "隼"
+  }
+ ],
+ "kar98k": [
+  {
+   "kind": "doll",
+   "code": "98K",
+   "name": "Kar98k"
+  },
+  {
+   "kind": "doll",
+   "code": "98KMod",
+   "name": "Kar98k"
+  }
+ ],
+ "98k": [
+  {
+   "kind": "doll",
+   "code": "98K",
+   "name": "Kar98k"
+  }
+ ],
+ "wa2000": [
+  {
+   "kind": "doll",
+   "code": "WA2000",
+   "name": "WA2000"
+  }
+ ],
+ "李恩菲尔德": [
+  {
+   "kind": "doll",
+   "code": "MLEMK1",
+   "name": "李-恩菲尔德"
+  },
+  {
+   "kind": "doll",
+   "code": "MLEMK1Mod",
+   "name": "李-恩菲尔德"
+  }
+ ],
+ "mlemki": [
+  {
+   "kind": "doll",
+   "code": "MLEMK1",
+   "name": "李-恩菲尔德"
+  },
+  {
+   "kind": "doll",
+   "code": "MLEMK1Mod",
+   "name": "李-恩菲尔德"
+  }
+ ],
+ "mlemk1": [
+  {
+   "kind": "doll",
+   "code": "MLEMK1",
+   "name": "李-恩菲尔德"
+  }
+ ],
+ "ntw20": [
+  {
+   "kind": "doll",
+   "code": "NTW20",
+   "name": "NTW-20"
+  },
+  {
+   "kind": "doll",
+   "code": "NTW20Mod",
+   "name": "NTW-20"
+  }
+ ],
+ "m99": [
+  {
+   "kind": "doll",
+   "code": "M99",
+   "name": "M99"
+  }
+ ],
+ "iws2000": [
+  {
+   "kind": "doll",
+   "code": "IWS2000",
+   "name": "IWS 2000"
+  }
+ ],
+ "dsr50": [
+  {
+   "kind": "doll",
+   "code": "DSR50",
+   "name": "DSR-50"
+  }
+ ],
+ "js127": [
+  {
+   "kind": "doll",
+   "code": "JS-127",
+   "name": "JS05"
+  }
+ ],
+ "js05": [
+  {
+   "kind": "doll",
+   "code": "JS-127",
+   "name": "JS05"
+  }
+ ],
+ "carcano1891": [
+  {
+   "kind": "doll",
+   "code": "Carcano1891",
+   "name": "卡尔卡诺M1891"
+  }
+ ],
+ "carcanom1891": [
+  {
+   "kind": "doll",
+   "code": "Carcano1891",
+   "name": "卡尔卡诺M1891"
+  }
+ ],
+ "卡尔卡诺m1891": [
+  {
+   "kind": "doll",
+   "code": "Carcano1891",
+   "name": "卡尔卡诺M1891"
+  }
+ ],
+ "carcano1938": [
+  {
+   "kind": "doll",
+   "code": "Carcano1938",
+   "name": "卡尔卡诺M91/38"
+  }
+ ],
+ "carcanom9138": [
+  {
+   "kind": "doll",
+   "code": "Carcano1938",
+   "name": "卡尔卡诺M91/38"
+  }
+ ],
+ "卡尔卡诺m9138": [
+  {
+   "kind": "doll",
+   "code": "Carcano1938",
+   "name": "卡尔卡诺M91/38"
+  }
+ ],
+ "芭莉斯塔": [
+  {
+   "kind": "doll",
+   "code": "Ballista",
+   "name": "芭莉斯塔"
+  }
+ ],
+ "ballista": [
+  {
+   "kind": "doll",
+   "code": "Ballista",
+   "name": "芭莉斯塔"
+  }
+ ],
+ "srs": [
+  {
+   "kind": "doll",
+   "code": "DTASRS",
+   "name": "SRS"
+  }
+ ],
+ "dtasrs": [
+  {
+   "kind": "doll",
+   "code": "DTASRS",
+   "name": "SRS"
+  }
+ ],
+ "tac50": [
+  {
+   "kind": "doll",
+   "code": "TAC50",
+   "name": "TAC-50"
+  }
+ ],
+ "m82a1": [
+  {
+   "kind": "doll",
+   "code": "M82A1",
+   "name": "M82A1"
+  }
+ ],
+ "m200": [
+  {
+   "kind": "doll",
+   "code": "M200",
+   "name": "M200"
+  }
+ ],
+ "qbu88": [
+  {
+   "kind": "doll",
+   "code": "QBU88",
+   "name": "QBU-88"
+  }
+ ],
+ "r93": [
+  {
+   "kind": "doll",
+   "code": "R93",
+   "name": "R93"
+  }
+ ],
+ "sl8": [
+  {
+   "kind": "doll",
+   "code": "SL8",
+   "name": "SL8"
+  }
+ ],
+ "vsk94": [
+  {
+   "kind": "doll",
+   "code": "VSK",
+   "name": "VSK-94"
+  }
+ ],
+ "vsk": [
+  {
+   "kind": "doll",
+   "code": "VSK",
+   "name": "VSK-94"
+  }
+ ],
+ "generalliu": [
+  {
+   "kind": "doll",
+   "code": "GeneralLiu",
+   "name": "刘氏步枪"
+  }
+ ],
+ "刘氏步枪": [
+  {
+   "kind": "doll",
+   "code": "GeneralLiu",
+   "name": "刘氏步枪"
+  }
+ ],
+ "svch": [
+  {
+   "kind": "doll",
+   "code": "SVCh",
+   "name": "SVCh"
+  }
+ ],
+ "沙维奇99型": [
+  {
+   "kind": "doll",
+   "code": "Savage99",
+   "name": "沙维奇99型"
+  }
+ ],
+ "savage99": [
+  {
+   "kind": "doll",
+   "code": "Savage99",
+   "name": "沙维奇99型"
+  }
+ ],
+ "delisle": [
+  {
+   "kind": "doll",
+   "code": "Delisle",
+   "name": "德利尔"
+  }
+ ],
+ "德利尔": [
+  {
+   "kind": "doll",
+   "code": "Delisle",
+   "name": "德利尔"
+  }
+ ],
+ "hs50": [
+  {
+   "kind": "doll",
+   "code": "HS50",
+   "name": "HS.50"
+  }
+ ],
+ "scarh": [
+  {
+   "kind": "doll",
+   "code": "SCARH",
+   "name": "SCAR-H"
+  }
+ ],
+ "m110": [
+  {
+   "kind": "doll",
+   "code": "M110",
+   "name": "M110"
+  }
+ ],
+ "qbu191": [
+  {
+   "kind": "doll",
+   "code": "QBU191",
+   "name": "QBU-191"
+  }
+ ],
+ "boysantitank": [
+  {
+   "kind": "doll",
+   "code": "BoysAntiTank",
+   "name": "博斯"
+  }
+ ],
+ "博斯": [
+  {
+   "kind": "doll",
+   "code": "BoysAntiTank",
+   "name": "博斯"
+  }
+ ],
+ "boys": [
+  {
+   "kind": "doll",
+   "code": "BoysAntiTank",
+   "name": "博斯"
+  }
+ ],
+ "马提尼亨利": [
+  {
+   "kind": "doll",
+   "code": "MartiniHenry",
+   "name": "马提尼亨利"
+  }
+ ],
+ "martinihenry": [
+  {
+   "kind": "doll",
+   "code": "MartiniHenry",
+   "name": "马提尼亨利"
+  }
+ ],
+ "sigcross": [
+  {
+   "kind": "doll",
+   "code": "SIGCROSS",
+   "name": "SIG CROSS"
+  }
+ ],
+ "hti": [
+  {
+   "kind": "doll",
+   "code": "HTI",
+   "name": "HTI"
+  }
+ ],
+ "hecateii": [
+  {
+   "kind": "doll",
+   "code": "HecateII",
+   "name": "Hecate II"
+  }
+ ],
+ "type53": [
+  {
+   "kind": "doll",
+   "code": "Type53",
+   "name": "53式"
+  }
+ ],
+ "53式": [
+  {
+   "kind": "doll",
+   "code": "Type53",
+   "name": "53式"
+  }
+ ],
+ "雷电芽衣": [
+  {
+   "kind": "doll",
+   "code": "RaidenMei",
+   "name": "雷电芽衣"
+  }
+ ],
+ "mei": [
+  {
+   "kind": "doll",
+   "code": "RaidenMei",
+   "name": "雷电芽衣"
+  }
+ ],
+ "raidenmei": [
+  {
+   "kind": "doll",
+   "code": "RaidenMei",
+   "name": "雷电芽衣"
+  }
+ ],
+ "bronya": [
+  {
+   "kind": "doll",
+   "code": "Bronya",
+   "name": "布洛妮娅"
+  }
+ ],
+ "布洛妮娅": [
+  {
+   "kind": "doll",
+   "code": "Bronya",
+   "name": "布洛妮娅"
+  }
+ ],
+ "史黛拉星井": [
+  {
+   "kind": "doll",
+   "code": "Stella",
+   "name": "史黛拉·星井"
+  }
+ ],
+ "stellahoshii": [
+  {
+   "kind": "doll",
+   "code": "Stella",
+   "name": "史黛拉·星井"
+  }
+ ],
+ "stella": [
+  {
+   "kind": "doll",
+   "code": "Stella",
+   "name": "史黛拉·星井"
+  }
+ ],
+ "rico": [
+  {
+   "kind": "doll",
+   "code": "Rico",
+   "name": "莉可"
+  }
+ ],
+ "莉可": [
+  {
+   "kind": "doll",
+   "code": "Rico",
+   "name": "莉可"
+  }
+ ],
+ "佩可拉": [
+  {
+   "kind": "doll",
+   "code": "Pekora",
+   "name": "佩可拉"
+  }
+ ],
+ "pekora": [
+  {
+   "kind": "doll",
+   "code": "Pekora",
+   "name": "佩可拉"
+  }
+ ],
+ "pekola": [
+  {
+   "kind": "doll",
+   "code": "Pekora",
+   "name": "佩可拉"
+  }
+ ],
+ "源樱": [
+  {
+   "kind": "doll",
+   "code": "Sakura",
+   "name": "源樱"
+  }
+ ],
+ "建筑师": [
+  {
+   "kind": "doll",
+   "code": "Boss9_Ally",
+   "name": "建筑师"
+  },
+  {
+   "kind": "sangvis",
+   "code": "BossArchitect",
+   "name": "建筑师"
+  }
+ ],
+ "boss9ally": [
+  {
+   "kind": "doll",
+   "code": "Boss9_Ally",
+   "name": "建筑师"
+  }
+ ],
+ "m1891mod": [
+  {
+   "kind": "doll",
+   "code": "M1891Mod",
+   "name": "莫辛-纳甘"
+  }
+ ],
+ "xm3mod": [
+  {
+   "kind": "doll",
+   "code": "XM3Mod",
+   "name": "XM3"
+  }
+ ],
+ "ksvkmod": [
+  {
+   "kind": "doll",
+   "code": "KSVKMod",
+   "name": "KSVK"
+  }
+ ],
+ "98kmod": [
+  {
+   "kind": "doll",
+   "code": "98KMod",
+   "name": "Kar98k"
+  }
+ ],
+ "mlemk1mod": [
+  {
+   "kind": "doll",
+   "code": "MLEMK1Mod",
+   "name": "李-恩菲尔德"
+  }
+ ],
+ "ntw20mod": [
+  {
+   "kind": "doll",
+   "code": "NTW20Mod",
+   "name": "NTW-20"
+  }
+ ],
+ "g3": [
+  {
+   "kind": "doll",
+   "code": "G3",
+   "name": "G3"
+  },
+  {
+   "kind": "doll",
+   "code": "G3Mod",
+   "name": "G3"
+  }
+ ],
+ "l85a1": [
+  {
+   "kind": "doll",
+   "code": "L85A1",
+   "name": "L85A1"
+  }
+ ],
+ "ar": [
+  {
+   "kind": "doll",
+   "code": "AR",
+   "name": "加利尔"
+  },
+  {
+   "kind": "doll",
+   "code": "ARMod",
+   "name": "加利尔"
+  }
+ ],
+ "加利尔": [
+  {
+   "kind": "doll",
+   "code": "AR",
+   "name": "加利尔"
+  },
+  {
+   "kind": "doll",
+   "code": "ARMod",
+   "name": "加利尔"
+  }
+ ],
+ "sig510": [
+  {
+   "kind": "doll",
+   "code": "SIG510",
+   "name": "SIG-510"
+  }
+ ],
+ "f2000": [
+  {
+   "kind": "doll",
+   "code": "F2000",
+   "name": "F2000"
+  }
+ ],
+ "63式": [
+  {
+   "kind": "doll",
+   "code": "63type",
+   "name": "63式"
+  }
+ ],
+ "63type": [
+  {
+   "kind": "doll",
+   "code": "63type",
+   "name": "63式"
+  }
+ ],
+ "type63": [
+  {
+   "kind": "doll",
+   "code": "63type",
+   "name": "63式"
+  }
+ ],
+ "ak47": [
+  {
+   "kind": "doll",
+   "code": "AK47",
+   "name": "AK-47"
+  }
+ ],
+ "stg44": [
+  {
+   "kind": "doll",
+   "code": "STG44",
+   "name": "StG44"
+  },
+  {
+   "kind": "doll",
+   "code": "STG44Mod",
+   "name": "StG44"
+  }
+ ],
+ "fnc": [
+  {
+   "kind": "doll",
+   "code": "FNFNC",
+   "name": "FNC"
+  }
+ ],
+ "fnfnc": [
+  {
+   "kind": "doll",
+   "code": "FNFNC",
+   "name": "FNC"
+  }
+ ],
+ "ots12": [
+  {
+   "kind": "doll",
+   "code": "OTs12",
+   "name": "OTs-12"
+  }
+ ],
+ "cz805": [
+  {
+   "kind": "doll",
+   "code": "CZ805",
+   "name": "CZ-805"
+  }
+ ],
+ "arx160": [
+  {
+   "kind": "doll",
+   "code": "ARX160",
+   "name": "ARX-160"
+  }
+ ],
+ "ar70": [
+  {
+   "kind": "doll",
+   "code": "AR70",
+   "name": "AR70"
+  }
+ ],
+ "6p62": [
+  {
+   "kind": "doll",
+   "code": "6P62",
+   "name": "6P62"
+  }
+ ],
+ "ash127": [
+  {
+   "kind": "doll",
+   "code": "Ash127",
+   "name": "ASh-12.7"
+  }
+ ],
+ "t65": [
+  {
+   "kind": "doll",
+   "code": "T65",
+   "name": "T65"
+  }
+ ],
+ "modell": [
+  {
+   "kind": "doll",
+   "code": "CETME556",
+   "name": "Model L"
+  }
+ ],
+ "cetme556": [
+  {
+   "kind": "doll",
+   "code": "CETME556",
+   "name": "Model L"
+  }
+ ],
+ "type03": [
+  {
+   "kind": "doll",
+   "code": "Type03",
+   "name": "03式"
+  }
+ ],
+ "03式": [
+  {
+   "kind": "doll",
+   "code": "Type03",
+   "name": "03式"
+  }
+ ],
+ "马盖尔": [
+  {
+   "kind": "doll",
+   "code": "Magal",
+   "name": "马盖尔"
+  }
+ ],
+ "magal": [
+  {
+   "kind": "doll",
+   "code": "Magal",
+   "name": "马盖尔"
+  }
+ ],
+ "hk33": [
+  {
+   "kind": "doll",
+   "code": "HK33",
+   "name": "HK33"
+  }
+ ],
+ "insas": [
+  {
+   "kind": "doll",
+   "code": "INSAS",
+   "name": "英萨斯"
+  }
+ ],
+ "英萨斯": [
+  {
+   "kind": "doll",
+   "code": "INSAS",
+   "name": "英萨斯"
+  }
+ ],
+ "vepr": [
+  {
+   "kind": "doll",
+   "code": "VEPR",
+   "name": "Vepr"
+  }
+ ],
+ "stg940": [
+  {
+   "kind": "doll",
+   "code": "stg940",
+   "name": "StG-940"
+  }
+ ],
+ "m16a1": [
+  {
+   "kind": "doll",
+   "code": "M16A1",
+   "name": "M16A1"
+  },
+  {
+   "kind": "doll",
+   "code": "M16A1_NPC",
+   "name": "M16_BOSS"
+  },
+  {
+   "kind": "doll",
+   "code": "M16A1_533",
+   "name": "M16A1"
+  },
+  {
+   "kind": "doll",
+   "code": "Beak_M16_ally",
+   "name": "M16A1"
+  }
+ ],
+ "m4a1": [
+  {
+   "kind": "doll",
+   "code": "M4A1",
+   "name": "M4A1"
+  },
+  {
+   "kind": "doll",
+   "code": "M4A1Mod",
+   "name": "M4A1"
+  },
+  {
+   "kind": "doll",
+   "code": "M4A1Mod_Ogas",
+   "name": "M4A1"
+  }
+ ],
+ "m4sopmodii": [
+  {
+   "kind": "doll",
+   "code": "M4 SOPMOD II",
+   "name": "M4 SOPMODII"
+  },
+  {
+   "kind": "doll",
+   "code": "M4 SOPMOD IIMod",
+   "name": "M4 SOPMODII"
+  }
+ ],
+ "ar15": [
+  {
+   "kind": "doll",
+   "code": "AR15",
+   "name": "ST AR-15"
+  }
+ ],
+ "star15": [
+  {
+   "kind": "doll",
+   "code": "AR15",
+   "name": "ST AR-15"
+  },
+  {
+   "kind": "doll",
+   "code": "AR15Mod",
+   "name": "ST AR-15"
+  }
+ ],
+ "asval": [
+  {
+   "kind": "doll",
+   "code": "ASVAL",
+   "name": "AS Val"
+  },
+  {
+   "kind": "doll",
+   "code": "ASVALMod",
+   "name": "AS Val"
+  }
+ ],
+ "g36": [
+  {
+   "kind": "doll",
+   "code": "G36",
+   "name": "G36"
+  },
+  {
+   "kind": "doll",
+   "code": "G36Mod",
+   "name": "G36"
+  }
+ ],
+ "type561a": [
+  {
+   "kind": "doll",
+   "code": "56-1type",
+   "name": "56-1式"
+  },
+  {
+   "kind": "doll",
+   "code": "56-1typeMod",
+   "name": "56-1式"
+  }
+ ],
+ "561式": [
+  {
+   "kind": "doll",
+   "code": "56-1type",
+   "name": "56-1式"
+  },
+  {
+   "kind": "doll",
+   "code": "56-1typeMod",
+   "name": "56-1式"
+  }
+ ],
+ "561type": [
+  {
+   "kind": "doll",
+   "code": "56-1type",
+   "name": "56-1式"
+  }
+ ],
+ "famas": [
+  {
+   "kind": "doll",
+   "code": "FAMAS",
+   "name": "FAMAS"
+  }
+ ],
+ "tar21": [
+  {
+   "kind": "doll",
+   "code": "TAR21",
+   "name": "TAR-21"
+  }
+ ],
+ "9a91": [
+  {
+   "kind": "doll",
+   "code": "9A91",
+   "name": "9A-91"
+  }
+ ],
+ "ribeyrolles1918": [
+  {
+   "kind": "doll",
+   "code": "Ribeyrolles",
+   "name": "利贝罗勒"
+  },
+  {
+   "kind": "doll",
+   "code": "RibeyrollesMod",
+   "name": "利贝罗勒"
+  }
+ ],
+ "利贝罗勒": [
+  {
+   "kind": "doll",
+   "code": "Ribeyrolles",
+   "name": "利贝罗勒"
+  },
+  {
+   "kind": "doll",
+   "code": "RibeyrollesMod",
+   "name": "利贝罗勒"
+  }
+ ],
+ "ribeyrolles": [
+  {
+   "kind": "doll",
+   "code": "Ribeyrolles",
+   "name": "利贝罗勒"
+  }
+ ],
+ "ak5": [
+  {
+   "kind": "doll",
+   "code": "Ak5",
+   "name": "Ak 5"
+  }
+ ],
+ "cz2000": [
+  {
+   "kind": "doll",
+   "code": "CZ2000",
+   "name": "CZ2000"
+  }
+ ],
+ "xm8": [
+  {
+   "kind": "doll",
+   "code": "XM8",
+   "name": "XM8"
+  },
+  {
+   "kind": "doll",
+   "code": "XM8Mod",
+   "name": "XM8"
+  }
+ ],
+ "a91": [
+  {
+   "kind": "doll",
+   "code": "A91",
+   "name": "A-91"
+  }
+ ],
+ "sar21": [
+  {
+   "kind": "doll",
+   "code": "SAR21",
+   "name": "SAR-21"
+  }
+ ],
+ "em2": [
+  {
+   "kind": "doll",
+   "code": "EM2",
+   "name": "EM-2"
+  },
+  {
+   "kind": "doll",
+   "code": "EM2Mod",
+   "name": "EM-2"
+  }
+ ],
+ "cr21": [
+  {
+   "kind": "doll",
+   "code": "CR21",
+   "name": "CR-21"
+  },
+  {
+   "kind": "doll",
+   "code": "CR21Mod",
+   "name": "CR-21"
+  }
+ ],
+ "m82": [
+  {
+   "kind": "doll",
+   "code": "M82",
+   "name": "M82"
+  }
+ ],
+ "fx05": [
+  {
+   "kind": "doll",
+   "code": "FX05",
+   "name": "FX-05"
+  }
+ ],
+ "fedorov": [
+  {
+   "kind": "doll",
+   "code": "Fedorov",
+   "name": "菲德洛夫"
+  }
+ ],
+ "菲德洛夫": [
+  {
+   "kind": "doll",
+   "code": "Fedorov",
+   "name": "菲德洛夫"
+  }
+ ],
+ "apc556": [
+  {
+   "kind": "doll",
+   "code": "APC556",
+   "name": "APC556"
+  }
+ ],
+ "fara83": [
+  {
+   "kind": "doll",
+   "code": "FARA83",
+   "name": "FARA 83"
+  }
+ ],
+ "ak74m": [
+  {
+   "kind": "doll",
+   "code": "AK74M",
+   "name": "AK74M"
+  }
+ ],
+ "cmr30": [
+  {
+   "kind": "doll",
+   "code": "CMR30",
+   "name": "CMR-30"
+  }
+ ],
+ "msbs": [
+  {
+   "kind": "doll",
+   "code": "MSBS",
+   "name": "MSBS"
+  }
+ ],
+ "cm901": [
+  {
+   "kind": "doll",
+   "code": "CM901",
+   "name": "CM901"
+  }
+ ],
+ "sigm400": [
+  {
+   "kind": "doll",
+   "code": "SIGM400",
+   "name": "SIG M400"
+  }
+ ],
+ "xcr": [
+  {
+   "kind": "doll",
+   "code": "XCR",
+   "name": "XCR"
+  }
+ ],
+ "m4a1motor": [
+  {
+   "kind": "doll",
+   "code": "M4A1_Motor",
+   "name": "M4A1_Motor"
+  }
+ ],
+ "ar15motor": [
+  {
+   "kind": "doll",
+   "code": "AR15_Motor",
+   "name": "AR15_Motor"
+  }
+ ],
+ "m16a1npc": [
+  {
+   "kind": "doll",
+   "code": "M16A1_NPC",
+   "name": "M16_BOSS"
+  }
+ ],
+ "m16boss": [
+  {
+   "kind": "doll",
+   "code": "M16A1_NPC",
+   "name": "M16_BOSS"
+  }
+ ],
+ "tankrally": [
+  {
+   "kind": "doll",
+   "code": "Tank_R_Ally",
+   "name": "阿尔戈-船底座"
+  }
+ ],
+ "阿尔戈船底座": [
+  {
+   "kind": "doll",
+   "code": "Tank_R_Ally",
+   "name": "阿尔戈-船底座"
+  }
+ ],
+ "carina": [
+  {
+   "kind": "doll",
+   "code": "Tank_R_Ally",
+   "name": "阿尔戈-船底座"
+  }
+ ],
+ "vela": [
+  {
+   "kind": "doll",
+   "code": "Tank_M_Ally",
+   "name": "阿尔戈-船帆座"
+  }
+ ],
+ "tankmally": [
+  {
+   "kind": "doll",
+   "code": "Tank_M_Ally",
+   "name": "阿尔戈-船帆座"
+  }
+ ],
+ "阿尔戈船帆座": [
+  {
+   "kind": "doll",
+   "code": "Tank_M_Ally",
+   "name": "阿尔戈-船帆座"
+  }
+ ],
+ "阿尔戈船尾座": [
+  {
+   "kind": "doll",
+   "code": "Tank_L_Ally",
+   "name": "阿尔戈-船尾座"
+  }
+ ],
+ "puppis": [
+  {
+   "kind": "doll",
+   "code": "Tank_L_Ally",
+   "name": "阿尔戈-船尾座"
+  }
+ ],
+ "tanklally": [
+  {
+   "kind": "doll",
+   "code": "Tank_L_Ally",
+   "name": "阿尔戈-船尾座"
+  }
+ ],
+ "towally": [
+  {
+   "kind": "doll",
+   "code": "TOW_Ally",
+   "name": "BGM-71"
+  }
+ ],
+ "bgm71": [
+  {
+   "kind": "doll",
+   "code": "TOW_Ally",
+   "name": "BGM-71"
+  }
+ ],
+ "pp93": [
+  {
+   "kind": "doll",
+   "code": "PP93_Ally",
+   "name": "PP-93"
+  }
+ ],
+ "pp93ally": [
+  {
+   "kind": "doll",
+   "code": "PP93_Ally",
+   "name": "PP-93"
+  }
+ ],
+ "qlz04ally": [
+  {
+   "kind": "doll",
+   "code": "QLZ04_Ally",
+   "name": "QLZ-04"
+  }
+ ],
+ "qlz04": [
+  {
+   "kind": "doll",
+   "code": "QLZ04_Ally",
+   "name": "QLZ-04"
+  }
+ ],
+ "m16a1533": [
+  {
+   "kind": "doll",
+   "code": "M16A1_533",
+   "name": "M16A1"
+  }
+ ],
+ "stg44mod": [
+  {
+   "kind": "doll",
+   "code": "STG44Mod",
+   "name": "StG44"
+  }
+ ],
+ "g3mod": [
+  {
+   "kind": "doll",
+   "code": "G3Mod",
+   "name": "G3"
+  }
+ ],
+ "armod": [
+  {
+   "kind": "doll",
+   "code": "ARMod",
+   "name": "加利尔"
+  }
+ ],
+ "g41": [
+  {
+   "kind": "doll",
+   "code": "G41",
+   "name": "G41"
+  }
+ ],
+ "hk416": [
+  {
+   "kind": "doll",
+   "code": "HK416",
+   "name": "HK416"
+  },
+  {
+   "kind": "doll",
+   "code": "HK416Agent",
+   "name": "特工416"
+  },
+  {
+   "kind": "doll",
+   "code": "HK416Mod",
+   "name": "HK416"
+  }
+ ],
+ "aug": [
+  {
+   "kind": "doll",
+   "code": "AUG",
+   "name": "AUG"
+  }
+ ],
+ "fal": [
+  {
+   "kind": "doll",
+   "code": "FNFAL",
+   "name": "FAL"
+  }
+ ],
+ "fnfal": [
+  {
+   "kind": "doll",
+   "code": "FNFAL",
+   "name": "FAL"
+  }
+ ],
+ "ots14": [
+  {
+   "kind": "doll",
+   "code": "OTs14",
+   "name": "OTs-14"
+  }
+ ],
+ "g11": [
+  {
+   "kind": "doll",
+   "code": "G11",
+   "name": "G11"
+  },
+  {
+   "kind": "doll",
+   "code": "G11Mod",
+   "name": "G11"
+  }
+ ],
+ "95type": [
+  {
+   "kind": "doll",
+   "code": "95type",
+   "name": "95式"
+  }
+ ],
+ "95式": [
+  {
+   "kind": "doll",
+   "code": "95type",
+   "name": "95式"
+  }
+ ],
+ "type95": [
+  {
+   "kind": "doll",
+   "code": "95type",
+   "name": "95式"
+  }
+ ],
+ "97式": [
+  {
+   "kind": "doll",
+   "code": "97type",
+   "name": "97式"
+  }
+ ],
+ "97type": [
+  {
+   "kind": "doll",
+   "code": "97type",
+   "name": "97式"
+  }
+ ],
+ "type97": [
+  {
+   "kind": "doll",
+   "code": "97type",
+   "name": "97式"
+  }
+ ],
+ "rfb": [
+  {
+   "kind": "doll",
+   "code": "RFB",
+   "name": "RFB"
+  }
+ ],
+ "art556": [
+  {
+   "kind": "doll",
+   "code": "ART556",
+   "name": "ART556"
+  }
+ ],
+ "t91": [
+  {
+   "kind": "doll",
+   "code": "T91",
+   "name": "T91"
+  }
+ ],
+ "k2": [
+  {
+   "kind": "doll",
+   "code": "K2",
+   "name": "K2"
+  }
+ ],
+ "zasm21": [
+  {
+   "kind": "doll",
+   "code": "ZastavaM21",
+   "name": "Zas M21"
+  },
+  {
+   "kind": "doll",
+   "code": "ZastavaM21Mod",
+   "name": "Zas M21"
+  }
+ ],
+ "zastavam21": [
+  {
+   "kind": "doll",
+   "code": "ZastavaM21",
+   "name": "Zas M21"
+  },
+  {
+   "kind": "doll",
+   "code": "ZastavaM21Mod",
+   "name": "Zas M21"
+  }
+ ],
+ "an94": [
+  {
+   "kind": "doll",
+   "code": "AN94",
+   "name": "AN-94"
+  },
+  {
+   "kind": "doll",
+   "code": "AN94Mod",
+   "name": "AN-94"
+  }
+ ],
+ "ak12": [
+  {
+   "kind": "doll",
+   "code": "AK12",
+   "name": "AK-12"
+  },
+  {
+   "kind": "doll",
+   "code": "AK12Mod",
+   "name": "AK-12"
+  }
+ ],
+ "ads": [
+  {
+   "kind": "doll",
+   "code": "ADS",
+   "name": "ADS"
+  }
+ ],
+ "mdr": [
+  {
+   "kind": "doll",
+   "code": "MDR",
+   "name": "MDR"
+  }
+ ],
+ "k11": [
+  {
+   "kind": "doll",
+   "code": "K11",
+   "name": "K11"
+  }
+ ],
+ "64式自": [
+  {
+   "kind": "doll",
+   "code": "Type64-AR",
+   "name": "64式自"
+  }
+ ],
+ "type64ar": [
+  {
+   "kind": "doll",
+   "code": "Type64-AR",
+   "name": "64式自"
+  }
+ ],
+ "acr": [
+  {
+   "kind": "doll",
+   "code": "ACR",
+   "name": "ACR"
+  }
+ ],
+ "sig556": [
+  {
+   "kind": "doll",
+   "code": "SIG556",
+   "name": "SIG-556"
+  }
+ ],
+ "r5rgp": [
+  {
+   "kind": "doll",
+   "code": "R5RGP",
+   "name": "R5"
+  }
+ ],
+ "r5": [
+  {
+   "kind": "doll",
+   "code": "R5RGP",
+   "name": "R5"
+  }
+ ],
+ "howatype89": [
+  {
+   "kind": "doll",
+   "code": "HowaType89",
+   "name": "89式自"
+  }
+ ],
+ "89式自": [
+  {
+   "kind": "doll",
+   "code": "HowaType89",
+   "name": "89式自"
+  }
+ ],
+ "type89": [
+  {
+   "kind": "doll",
+   "code": "HowaType89",
+   "name": "89式自"
+  }
+ ],
+ "ak15": [
+  {
+   "kind": "doll",
+   "code": "AK15",
+   "name": "AK-15"
+  },
+  {
+   "kind": "doll",
+   "code": "AK15Mod",
+   "name": "AK-15"
+  }
+ ],
+ "akalfa": [
+  {
+   "kind": "doll",
+   "code": "AKAlfa",
+   "name": "AK-阿尔法"
+  }
+ ],
+ "ak阿尔法": [
+  {
+   "kind": "doll",
+   "code": "AKAlfa",
+   "name": "AK-阿尔法"
+  }
+ ],
+ "sacr": [
+  {
+   "kind": "doll",
+   "code": "SACR",
+   "name": "S-ACR"
+  }
+ ],
+ "vhs": [
+  {
+   "kind": "doll",
+   "code": "VHS",
+   "name": "VHS"
+  }
+ ],
+ "sigmcx": [
+  {
+   "kind": "doll",
+   "code": "SIGMCX",
+   "name": "SIG MCX"
+  }
+ ],
+ "tkb408": [
+  {
+   "kind": "doll",
+   "code": "TKB408",
+   "name": "TKB-408"
+  }
+ ],
+ "kh2002": [
+  {
+   "kind": "doll",
+   "code": "KH2002",
+   "name": "KH2002"
+  }
+ ],
+ "a545": [
+  {
+   "kind": "doll",
+   "code": "A545",
+   "name": "A-545"
+  }
+ ],
+ "qbz191": [
+  {
+   "kind": "doll",
+   "code": "QBZ191",
+   "name": "QBZ-191"
+  }
+ ],
+ "scr": [
+  {
+   "kind": "doll",
+   "code": "SCR",
+   "name": "SCR"
+  }
+ ],
+ "ar18": [
+  {
+   "kind": "doll",
+   "code": "AR18",
+   "name": "AR-18"
+  }
+ ],
+ "scarl": [
+  {
+   "kind": "doll",
+   "code": "SCARL",
+   "name": "SCAR-L"
+  }
+ ],
+ "vrb": [
+  {
+   "kind": "doll",
+   "code": "VRB",
+   "name": "VRB"
+  }
+ ],
+ "hk433": [
+  {
+   "kind": "doll",
+   "code": "HK433",
+   "name": "HK433"
+  }
+ ],
+ "beowulf": [
+  {
+   "kind": "doll",
+   "code": "Beowulf",
+   "name": "贝奥武夫"
+  }
+ ],
+ "贝奥武夫": [
+  {
+   "kind": "doll",
+   "code": "Beowulf",
+   "name": "贝奥武夫"
+  }
+ ],
+ "mk18": [
+  {
+   "kind": "doll",
+   "code": "MK18",
+   "name": "Mk.18"
+  }
+ ],
+ "ia2": [
+  {
+   "kind": "doll",
+   "code": "IA2",
+   "name": "IA2"
+  }
+ ],
+ "ef88": [
+  {
+   "kind": "doll",
+   "code": "EF88",
+   "name": "EF88"
+  }
+ ],
+ "lr300": [
+  {
+   "kind": "doll",
+   "code": "LR300",
+   "name": "LR-300"
+  }
+ ],
+ "无量塔姬子": [
+  {
+   "kind": "doll",
+   "code": "Himeko",
+   "name": "无量塔姬子"
+  }
+ ],
+ "himeko": [
+  {
+   "kind": "doll",
+   "code": "Himeko",
+   "name": "无量塔姬子"
+  }
+ ],
+ "安洁莉卡": [
+  {
+   "kind": "doll",
+   "code": "Angelica",
+   "name": "安洁莉卡"
+  }
+ ],
+ "angelica": [
+  {
+   "kind": "doll",
+   "code": "Angelica",
+   "name": "安洁莉卡"
+  }
+ ],
+ "hk416agent": [
+  {
+   "kind": "doll",
+   "code": "HK416Agent",
+   "name": "特工416"
+  }
+ ],
+ "特工416": [
+  {
+   "kind": "doll",
+   "code": "HK416Agent",
+   "name": "特工416"
+  }
+ ],
+ "美杜莎": [
+  {
+   "kind": "doll",
+   "code": "Medusa",
+   "name": "美杜莎"
+  }
+ ],
+ "medusa": [
+  {
+   "kind": "doll",
+   "code": "Medusa",
+   "name": "美杜莎"
+  }
+ ],
+ "水野爱": [
+  {
+   "kind": "doll",
+   "code": "Ai",
+   "name": "水野爱"
+  }
+ ],
+ "ai": [
+  {
+   "kind": "doll",
+   "code": "Ai",
+   "name": "水野爱"
+  }
+ ],
+ "绀野纯子": [
+  {
+   "kind": "doll",
+   "code": "Junko",
+   "name": "绀野纯子"
+  }
+ ],
+ "junko": [
+  {
+   "kind": "doll",
+   "code": "Junko",
+   "name": "绀野纯子"
+  }
+ ],
+ "ezaki": [
+  {
+   "kind": "doll",
+   "code": "Ezaki",
+   "name": "江崎普林"
+  }
+ ],
+ "江崎普林": [
+  {
+   "kind": "doll",
+   "code": "Ezaki",
+   "name": "江崎普林"
+  }
+ ],
+ "独眼巨人a": [
+  {
+   "kind": "doll",
+   "code": "Cyclops_F",
+   "name": "独眼巨人A"
+  }
+ ],
+ "cyclops": [
+  {
+   "kind": "doll",
+   "code": "Cyclops_F",
+   "name": "独眼巨人A"
+  }
+ ],
+ "cyclopsf": [
+  {
+   "kind": "doll",
+   "code": "Cyclops_F",
+   "name": "独眼巨人A"
+  }
+ ],
+ "m4a1mod": [
+  {
+   "kind": "doll",
+   "code": "M4A1Mod",
+   "name": "M4A1"
+  }
+ ],
+ "ak12motor": [
+  {
+   "kind": "doll",
+   "code": "AK12_Motor",
+   "name": "AK12_Motor"
+  }
+ ],
+ "an94motor": [
+  {
+   "kind": "doll",
+   "code": "AN94_Motor",
+   "name": "AN94_Motor"
+  }
+ ],
+ "m4a1modogas": [
+  {
+   "kind": "doll",
+   "code": "M4A1Mod_Ogas",
+   "name": "M4A1"
+  }
+ ],
+ "angejump": [
+  {
+   "kind": "doll",
+   "code": "Ange_Jump",
+   "name": "安洁"
+  }
+ ],
+ "mahelian": [
+  {
+   "kind": "doll",
+   "code": "Mahelian",
+   "name": "玛赫莲"
+  }
+ ],
+ "玛赫莲": [
+  {
+   "kind": "doll",
+   "code": "Mahelian",
+   "name": "玛赫莲"
+  }
+ ],
+ "ar18npc": [
+  {
+   "kind": "doll",
+   "code": "AR18_NPC",
+   "name": "柳德米拉"
+  }
+ ],
+ "柳德米拉": [
+  {
+   "kind": "doll",
+   "code": "AR18_NPC",
+   "name": "柳德米拉"
+  }
+ ],
+ "npckalinablazar1": [
+  {
+   "kind": "doll",
+   "code": "NPC_Kalina_Blazar1",
+   "name": "格琳娜"
+  }
+ ],
+ "m4sopmodiimod": [
+  {
+   "kind": "doll",
+   "code": "M4 SOPMOD IIMod",
+   "name": "M4 SOPMODII"
+  }
+ ],
+ "ar15mod": [
+  {
+   "kind": "doll",
+   "code": "AR15Mod",
+   "name": "ST AR-15"
+  }
+ ],
+ "asvalmod": [
+  {
+   "kind": "doll",
+   "code": "ASVALMod",
+   "name": "AS Val"
+  }
+ ],
+ "g36mod": [
+  {
+   "kind": "doll",
+   "code": "G36Mod",
+   "name": "G36"
+  }
+ ],
+ "561typemod": [
+  {
+   "kind": "doll",
+   "code": "56-1typeMod",
+   "name": "56-1式"
+  }
+ ],
+ "ribeyrollesmod": [
+  {
+   "kind": "doll",
+   "code": "RibeyrollesMod",
+   "name": "利贝罗勒"
+  }
+ ],
+ "xm8mod": [
+  {
+   "kind": "doll",
+   "code": "XM8Mod",
+   "name": "XM8"
+  }
+ ],
+ "em2mod": [
+  {
+   "kind": "doll",
+   "code": "EM2Mod",
+   "name": "EM-2"
+  }
+ ],
+ "cr21mod": [
+  {
+   "kind": "doll",
+   "code": "CR21Mod",
+   "name": "CR-21"
+  }
+ ],
+ "beakm16ally": [
+  {
+   "kind": "doll",
+   "code": "Beak_M16_ally",
+   "name": "M16A1"
+  }
+ ],
+ "ak12mod": [
+  {
+   "kind": "doll",
+   "code": "AK12Mod",
+   "name": "AK-12"
+  }
+ ],
+ "an94mod": [
+  {
+   "kind": "doll",
+   "code": "AN94Mod",
+   "name": "AN-94"
+  }
+ ],
+ "ak15mod": [
+  {
+   "kind": "doll",
+   "code": "AK15Mod",
+   "name": "AK-15"
+  }
+ ],
+ "hk416mod": [
+  {
+   "kind": "doll",
+   "code": "HK416Mod",
+   "name": "HK416"
+  }
+ ],
+ "g11mod": [
+  {
+   "kind": "doll",
+   "code": "G11Mod",
+   "name": "G11"
+  }
+ ],
+ "zastavam21mod": [
+  {
+   "kind": "doll",
+   "code": "ZastavaM21Mod",
+   "name": "Zas M21"
+  }
+ ],
+ "lwmmg": [
+  {
+   "kind": "doll",
+   "code": "LWMMG",
+   "name": "LWMMG"
+  },
+  {
+   "kind": "doll",
+   "code": "LWMMGMod",
+   "name": "LWMMG"
+  }
+ ],
+ "dp28": [
+  {
+   "kind": "doll",
+   "code": "DP28",
+   "name": "DP28"
+  }
+ ],
+ "mg34": [
+  {
+   "kind": "doll",
+   "code": "MG34",
+   "name": "MG34"
+  }
+ ],
+ "fg42": [
+  {
+   "kind": "doll",
+   "code": "FG42",
+   "name": "FG42"
+  }
+ ],
+ "aat52": [
+  {
+   "kind": "doll",
+   "code": "AAT52",
+   "name": "AAT-52"
+  }
+ ],
+ "m2hb": [
+  {
+   "kind": "doll",
+   "code": "M2HB",
+   "name": "M2HB"
+  }
+ ],
+ "m249saw": [
+  {
+   "kind": "doll",
+   "code": "M249SAW",
+   "name": "M249 SAW"
+  }
+ ],
+ "m1919a4": [
+  {
+   "kind": "doll",
+   "code": "M1919A4",
+   "name": "M1919A4"
+  },
+  {
+   "kind": "doll",
+   "code": "M1919A4Mod",
+   "name": "M1919A4"
+  }
+ ],
+ "rpd": [
+  {
+   "kind": "doll",
+   "code": "RPD",
+   "name": "RPD"
+  }
+ ],
+ "mg42": [
+  {
+   "kind": "doll",
+   "code": "MG42",
+   "name": "MG42"
+  }
+ ],
+ "布伦": [
+  {
+   "kind": "doll",
+   "code": "BrenMK",
+   "name": "布伦"
+  },
+  {
+   "kind": "doll",
+   "code": "BrenMKMod",
+   "name": "布伦"
+  }
+ ],
+ "brenmk": [
+  {
+   "kind": "doll",
+   "code": "BrenMK",
+   "name": "布伦"
+  }
+ ],
+ "brenmki": [
+  {
+   "kind": "doll",
+   "code": "BrenMK",
+   "name": "布伦"
+  },
+  {
+   "kind": "doll",
+   "code": "BrenMKMod",
+   "name": "布伦"
+  }
+ ],
+ "hk23": [
+  {
+   "kind": "doll",
+   "code": "HK23",
+   "name": "HK23"
+  }
+ ],
+ "type62": [
+  {
+   "kind": "doll",
+   "code": "Type62",
+   "name": "62式"
+  }
+ ],
+ "62式": [
+  {
+   "kind": "doll",
+   "code": "Type62",
+   "name": "62式"
+  }
+ ],
+ "k3": [
+  {
+   "kind": "doll",
+   "code": "K3",
+   "name": "K3"
+  }
+ ],
+ "car": [
+  {
+   "kind": "doll",
+   "code": "CAR",
+   "name": "CAR"
+  }
+ ],
+ "m1918": [
+  {
+   "kind": "doll",
+   "code": "M1918",
+   "name": "M1918"
+  },
+  {
+   "kind": "doll",
+   "code": "M1918Mod",
+   "name": "M1918"
+  }
+ ],
+ "m60": [
+  {
+   "kind": "doll",
+   "code": "M60",
+   "name": "M60"
+  }
+ ],
+ "pk": [
+  {
+   "kind": "doll",
+   "code": "PK",
+   "name": "PK"
+  }
+ ],
+ "mg3": [
+  {
+   "kind": "doll",
+   "code": "MG3",
+   "name": "MG3"
+  },
+  {
+   "kind": "doll",
+   "code": "MG3Mod",
+   "name": "MG3"
+  }
+ ],
+ "mk48": [
+  {
+   "kind": "doll",
+   "code": "Mk48",
+   "name": "Mk48"
+  }
+ ],
+ "aek999": [
+  {
+   "kind": "doll",
+   "code": "AEK999",
+   "name": "AEK-999"
+  }
+ ],
+ "ameli": [
+  {
+   "kind": "doll",
+   "code": "Ameli",
+   "name": "阿梅利"
+  }
+ ],
+ "阿梅利": [
+  {
+   "kind": "doll",
+   "code": "Ameli",
+   "name": "阿梅利"
+  }
+ ],
+ "80式": [
+  {
+   "kind": "doll",
+   "code": "80type",
+   "name": "80式"
+  },
+  {
+   "kind": "doll",
+   "code": "80typeMod",
+   "name": "80式"
+  }
+ ],
+ "80type": [
+  {
+   "kind": "doll",
+   "code": "80type",
+   "name": "80式"
+  },
+  {
+   "kind": "doll",
+   "code": "80typeMod",
+   "name": "80式"
+  }
+ ],
+ "mk46": [
+  {
+   "kind": "doll",
+   "code": "Mk46",
+   "name": "Mk46"
+  }
+ ],
+ "ukm2000": [
+  {
+   "kind": "doll",
+   "code": "UKM2000",
+   "name": "UKM-2000"
+  }
+ ],
+ "chauchat": [
+  {
+   "kind": "doll",
+   "code": "ChauchatM1915",
+   "name": "绍沙"
+  }
+ ],
+ "chauchatm1915": [
+  {
+   "kind": "doll",
+   "code": "ChauchatM1915",
+   "name": "绍沙"
+  }
+ ],
+ "绍沙": [
+  {
+   "kind": "doll",
+   "code": "ChauchatM1915",
+   "name": "绍沙"
+  }
+ ],
+ "m1895cb": [
+  {
+   "kind": "doll",
+   "code": "M1895MG",
+   "name": "M1895 CB"
+  }
+ ],
+ "m1895mg": [
+  {
+   "kind": "doll",
+   "code": "M1895MG",
+   "name": "M1895 CB"
+  }
+ ],
+ "pm1910": [
+  {
+   "kind": "doll",
+   "code": "PM1910",
+   "name": "PM1910"
+  }
+ ],
+ "ls26": [
+  {
+   "kind": "doll",
+   "code": "LS26",
+   "name": "LS26"
+  }
+ ],
+ "mg15": [
+  {
+   "kind": "doll",
+   "code": "MG15",
+   "name": "MG15"
+  }
+ ],
+ "m1919a4mod": [
+  {
+   "kind": "doll",
+   "code": "M1919A4Mod",
+   "name": "M1919A4"
+  }
+ ],
+ "lwmmgmod": [
+  {
+   "kind": "doll",
+   "code": "LWMMGMod",
+   "name": "LWMMG"
+  }
+ ],
+ "brenmkmod": [
+  {
+   "kind": "doll",
+   "code": "BrenMKMod",
+   "name": "布伦"
+  }
+ ],
+ "mg5": [
+  {
+   "kind": "doll",
+   "code": "MG5",
+   "name": "MG5"
+  }
+ ],
+ "negev": [
+  {
+   "kind": "doll",
+   "code": "NEGEV",
+   "name": "内格夫"
+  }
+ ],
+ "内格夫": [
+  {
+   "kind": "doll",
+   "code": "NEGEV",
+   "name": "内格夫"
+  }
+ ],
+ "mg4": [
+  {
+   "kind": "doll",
+   "code": "MG4",
+   "name": "MG4"
+  },
+  {
+   "kind": "doll",
+   "code": "MG4Mod",
+   "name": "MG4"
+  }
+ ],
+ "pkp": [
+  {
+   "kind": "doll",
+   "code": "PKP",
+   "name": "PKP"
+  }
+ ],
+ "pecheneg": [
+  {
+   "kind": "doll",
+   "code": "PKP",
+   "name": "PKP"
+  }
+ ],
+ "hk21": [
+  {
+   "kind": "doll",
+   "code": "HK21",
+   "name": "HK21"
+  }
+ ],
+ "88式": [
+  {
+   "kind": "doll",
+   "code": "Type88",
+   "name": "88式"
+  }
+ ],
+ "刘易斯": [
+  {
+   "kind": "doll",
+   "code": "Lewis",
+   "name": "刘易斯"
+  }
+ ],
+ "lewis": [
+  {
+   "kind": "doll",
+   "code": "Lewis",
+   "name": "刘易斯"
+  }
+ ],
+ "mg36": [
+  {
+   "kind": "doll",
+   "code": "MG36",
+   "name": "MG36"
+  }
+ ],
+ "kord": [
+  {
+   "kind": "doll",
+   "code": "Kord",
+   "name": "Kord"
+  }
+ ],
+ "rpk16": [
+  {
+   "kind": "doll",
+   "code": "RPK16",
+   "name": "RPK-16"
+  }
+ ],
+ "zb26": [
+  {
+   "kind": "doll",
+   "code": "ZB26",
+   "name": "ZB-26"
+  }
+ ],
+ "rpk203": [
+  {
+   "kind": "doll",
+   "code": "RPK203",
+   "name": "RPK-203"
+  }
+ ],
+ "mg338": [
+  {
+   "kind": "doll",
+   "code": "MG338",
+   "name": "MG338"
+  }
+ ],
+ "m240l": [
+  {
+   "kind": "doll",
+   "code": "M240L",
+   "name": "M240L"
+  }
+ ],
+ "lamg": [
+  {
+   "kind": "doll",
+   "code": "LAMG",
+   "name": "LAMG"
+  }
+ ],
+ "fm24": [
+  {
+   "kind": "doll",
+   "code": "FM24",
+   "name": "FM24"
+  }
+ ],
+ "xm556": [
+  {
+   "kind": "doll",
+   "code": "XM556",
+   "name": "XM556"
+  }
+ ],
+ "almaarmas": [
+  {
+   "kind": "doll",
+   "code": "Alma",
+   "name": "阿尔玛·阿玛斯"
+  }
+ ],
+ "alma": [
+  {
+   "kind": "doll",
+   "code": "Alma",
+   "name": "阿尔玛·阿玛斯"
+  }
+ ],
+ "阿尔玛阿玛斯": [
+  {
+   "kind": "doll",
+   "code": "Alma",
+   "name": "阿尔玛·阿玛斯"
+  }
+ ],
+ "库拉耶丝": [
+  {
+   "kind": "doll",
+   "code": "Claes",
+   "name": "库拉耶丝"
+  }
+ ],
+ "claes": [
+  {
+   "kind": "doll",
+   "code": "Claes",
+   "name": "库拉耶丝"
+  }
+ ],
+ "花园百合铃": [
+  {
+   "kind": "doll",
+   "code": "Yurine",
+   "name": "花园百合铃"
+  }
+ ],
+ "yurine": [
+  {
+   "kind": "doll",
+   "code": "Yurine",
+   "name": "花园百合铃"
+  }
+ ],
+ "yurinehanazono": [
+  {
+   "kind": "doll",
+   "code": "Yurine",
+   "name": "花园百合铃"
+  }
+ ],
+ "yuugiri": [
+  {
+   "kind": "doll",
+   "code": "Yuugiri",
+   "name": "夕雾"
+  }
+ ],
+ "夕雾": [
+  {
+   "kind": "doll",
+   "code": "Yuugiri",
+   "name": "夕雾"
+  }
+ ],
+ "yugiri": [
+  {
+   "kind": "doll",
+   "code": "Yuugiri",
+   "name": "夕雾"
+  }
+ ],
+ "水金铃鹿": [
+  {
+   "kind": "doll",
+   "code": "Mizukinn",
+   "name": "水金铃鹿"
+  }
+ ],
+ "mizukinn": [
+  {
+   "kind": "doll",
+   "code": "Mizukinn",
+   "name": "水金铃鹿"
+  }
+ ],
+ "牝鹿": [
+  {
+   "kind": "doll",
+   "code": "Cerynitis_F",
+   "name": "牝鹿"
+  }
+ ],
+ "cerynitis": [
+  {
+   "kind": "doll",
+   "code": "Cerynitis_F",
+   "name": "牝鹿"
+  }
+ ],
+ "cerynitisf": [
+  {
+   "kind": "doll",
+   "code": "Cerynitis_F",
+   "name": "牝鹿"
+  }
+ ],
+ "hydra": [
+  {
+   "kind": "doll",
+   "code": "Hydra_F",
+   "name": "九头蛇"
+  }
+ ],
+ "hydraf": [
+  {
+   "kind": "doll",
+   "code": "Hydra_F",
+   "name": "九头蛇"
+  }
+ ],
+ "九头蛇": [
+  {
+   "kind": "doll",
+   "code": "Hydra_F",
+   "name": "九头蛇"
+  }
+ ],
+ "m1918mod": [
+  {
+   "kind": "doll",
+   "code": "M1918Mod",
+   "name": "M1918"
+  }
+ ],
+ "mg3mod": [
+  {
+   "kind": "doll",
+   "code": "MG3Mod",
+   "name": "MG3"
+  }
+ ],
+ "80typemod": [
+  {
+   "kind": "doll",
+   "code": "80typeMod",
+   "name": "80式"
+  }
+ ],
+ "mg4mod": [
+  {
+   "kind": "doll",
+   "code": "MG4Mod",
+   "name": "MG4"
+  }
+ ],
+ "m1897": [
+  {
+   "kind": "doll",
+   "code": "M1897",
+   "name": "M1897"
+  },
+  {
+   "kind": "doll",
+   "code": "M1897Mod",
+   "name": "M1897"
+  }
+ ],
+ "m500": [
+  {
+   "kind": "doll",
+   "code": "M500",
+   "name": "M500"
+  },
+  {
+   "kind": "doll",
+   "code": "M500Mod",
+   "name": "M500"
+  }
+ ],
+ "ks23": [
+  {
+   "kind": "doll",
+   "code": "KS23",
+   "name": "KS-23"
+  }
+ ],
+ "rmb93": [
+  {
+   "kind": "doll",
+   "code": "RMB93",
+   "name": "RMB-93"
+  },
+  {
+   "kind": "doll",
+   "code": "RMB93Mod",
+   "name": "RMB-93"
+  }
+ ],
+ "ns2000": [
+  {
+   "kind": "doll",
+   "code": "NS2000",
+   "name": "NS2000"
+  }
+ ],
+ "cps12": [
+  {
+   "kind": "doll",
+   "code": "Six12",
+   "name": "CPS-12"
+  }
+ ],
+ "six12": [
+  {
+   "kind": "doll",
+   "code": "Six12",
+   "name": "CPS-12"
+  }
+ ],
+ "高标10型": [
+  {
+   "kind": "doll",
+   "code": "HSM10",
+   "name": "高标10型"
+  }
+ ],
+ "hsm10": [
+  {
+   "kind": "doll",
+   "code": "HSM10",
+   "name": "高标10型"
+  }
+ ],
+ "ts12": [
+  {
+   "kind": "doll",
+   "code": "TavorTS12",
+   "name": "TS12"
+  }
+ ],
+ "tavorts12": [
+  {
+   "kind": "doll",
+   "code": "TavorTS12",
+   "name": "TS12"
+  }
+ ],
+ "ithaca37": [
+  {
+   "kind": "doll",
+   "code": "Ithaca37",
+   "name": "M37"
+  }
+ ],
+ "m37": [
+  {
+   "kind": "doll",
+   "code": "Ithaca37",
+   "name": "M37"
+  }
+ ],
+ "m590": [
+  {
+   "kind": "doll",
+   "code": "M590",
+   "name": "M590"
+  }
+ ],
+ "supershorty": [
+  {
+   "kind": "doll",
+   "code": "SuperShorty",
+   "name": "超级肖蒂"
+  }
+ ],
+ "超级肖蒂": [
+  {
+   "kind": "doll",
+   "code": "SuperShorty",
+   "name": "超级肖蒂"
+  }
+ ],
+ "type97s": [
+  {
+   "kind": "doll",
+   "code": "97typeS",
+   "name": "97式霰"
+  },
+  {
+   "kind": "doll",
+   "code": "97typeSMod",
+   "name": "97式霰"
+  }
+ ],
+ "97式霰": [
+  {
+   "kind": "doll",
+   "code": "97typeS",
+   "name": "97式霰"
+  },
+  {
+   "kind": "doll",
+   "code": "97typeSMod",
+   "name": "97式霰"
+  }
+ ],
+ "97types": [
+  {
+   "kind": "doll",
+   "code": "97typeS",
+   "name": "97式霰"
+  }
+ ],
+ "spas12": [
+  {
+   "kind": "doll",
+   "code": "SPAS12",
+   "name": "SPAS-12"
+  },
+  {
+   "kind": "doll",
+   "code": "SPAS12Mod",
+   "name": "SPAS-12"
+  }
+ ],
+ "m1014": [
+  {
+   "kind": "doll",
+   "code": "M1014",
+   "name": "M1014"
+  }
+ ],
+ "usas12": [
+  {
+   "kind": "doll",
+   "code": "USAS12",
+   "name": "USAS-12"
+  }
+ ],
+ "liberator": [
+  {
+   "kind": "doll",
+   "code": "Liberator",
+   "name": "解放者"
+  }
+ ],
+ "解放者": [
+  {
+   "kind": "doll",
+   "code": "Liberator",
+   "name": "解放者"
+  }
+ ],
+ "防卫者": [
+  {
+   "kind": "doll",
+   "code": "ColtDefender",
+   "name": "防卫者"
+  }
+ ],
+ "coltdefender": [
+  {
+   "kind": "doll",
+   "code": "ColtDefender",
+   "name": "防卫者"
+  }
+ ],
+ "vpm5": [
+  {
+   "kind": "doll",
+   "code": "VPM5",
+   "name": "V-PM5"
+  }
+ ],
+ "hk512": [
+  {
+   "kind": "doll",
+   "code": "HK512",
+   "name": "HK512"
+  }
+ ],
+ "新星": [
+  {
+   "kind": "doll",
+   "code": "Nova",
+   "name": "新星"
+  }
+ ],
+ "nova": [
+  {
+   "kind": "doll",
+   "code": "Nova",
+   "name": "新星"
+  }
+ ],
+ "mag7": [
+  {
+   "kind": "doll",
+   "code": "MAG7",
+   "name": "MAG-7"
+  }
+ ],
+ "uts15": [
+  {
+   "kind": "doll",
+   "code": "UTS15",
+   "name": "UTS-15"
+  }
+ ],
+ "m1897mod": [
+  {
+   "kind": "doll",
+   "code": "M1897Mod",
+   "name": "M1897"
+  }
+ ],
+ "m500mod": [
+  {
+   "kind": "doll",
+   "code": "M500Mod",
+   "name": "M500"
+  }
+ ],
+ "rmb93mod": [
+  {
+   "kind": "doll",
+   "code": "RMB93Mod",
+   "name": "RMB-93"
+  }
+ ],
+ "m1887": [
+  {
+   "kind": "doll",
+   "code": "M1887",
+   "name": "M1887"
+  }
+ ],
+ "ksg": [
+  {
+   "kind": "doll",
+   "code": "KSG",
+   "name": "KSG"
+  }
+ ],
+ "saiga12": [
+  {
+   "kind": "doll",
+   "code": "Saiga12",
+   "name": "塞伽12型"
+  }
+ ],
+ "塞伽12型": [
+  {
+   "kind": "doll",
+   "code": "Saiga12",
+   "name": "塞伽12型"
+  }
+ ],
+ "aa12": [
+  {
+   "kind": "doll",
+   "code": "AA12",
+   "name": "AA-12"
+  }
+ ],
+ "fp6": [
+  {
+   "kind": "doll",
+   "code": "FP6",
+   "name": "FP-6"
+  }
+ ],
+ "sat8": [
+  {
+   "kind": "doll",
+   "code": "SAT8",
+   "name": "S.A.T.8"
+  }
+ ],
+ "m870": [
+  {
+   "kind": "doll",
+   "code": "M870P",
+   "name": "M870"
+  }
+ ],
+ "m870p": [
+  {
+   "kind": "doll",
+   "code": "M870P",
+   "name": "M870"
+  }
+ ],
+ "caws": [
+  {
+   "kind": "doll",
+   "code": "HKCAWS",
+   "name": "CAWS"
+  }
+ ],
+ "hkcaws": [
+  {
+   "kind": "doll",
+   "code": "HKCAWS",
+   "name": "CAWS"
+  }
+ ],
+ "dp12": [
+  {
+   "kind": "doll",
+   "code": "DP12",
+   "name": "DP-12"
+  },
+  {
+   "kind": "doll",
+   "code": "DP12Mod",
+   "name": "DP-12"
+  }
+ ],
+ "ltlx7000": [
+  {
+   "kind": "doll",
+   "code": "LTLX7000",
+   "name": "LTLX7000"
+  }
+ ],
+ "m6asw": [
+  {
+   "kind": "doll",
+   "code": "M6ASW",
+   "name": "M6 ASW"
+  }
+ ],
+ "fo12": [
+  {
+   "kind": "doll",
+   "code": "FO12",
+   "name": "FO-12"
+  }
+ ],
+ "m26mass": [
+  {
+   "kind": "doll",
+   "code": "M26MASS",
+   "name": "M26-MASS"
+  }
+ ],
+ "spas15": [
+  {
+   "kind": "doll",
+   "code": "SPAS15",
+   "name": "SPAS-15"
+  }
+ ],
+ "mk3a1": [
+  {
+   "kind": "doll",
+   "code": "MK3A1",
+   "name": "MK3A1"
+  }
+ ],
+ "tps": [
+  {
+   "kind": "doll",
+   "code": "TPS",
+   "name": "TPS"
+  }
+ ],
+ "stevens520": [
+  {
+   "kind": "doll",
+   "code": "Stevens520",
+   "name": "史蒂文斯520"
+  }
+ ],
+ "史蒂文斯520": [
+  {
+   "kind": "doll",
+   "code": "Stevens520",
+   "name": "史蒂文斯520"
+  }
+ ],
+ "史蒂文斯620": [
+  {
+   "kind": "doll",
+   "code": "Stevens620",
+   "name": "史蒂文斯620"
+  }
+ ],
+ "stevens620": [
+  {
+   "kind": "doll",
+   "code": "Stevens620",
+   "name": "史蒂文斯620"
+  }
+ ],
+ "chiappatriplecrown": [
+  {
+   "kind": "doll",
+   "code": "ChiappaTripleCrown",
+   "name": "齐亚帕三重冕"
+  }
+ ],
+ "齐亚帕三重冕": [
+  {
+   "kind": "doll",
+   "code": "ChiappaTripleCrown",
+   "name": "齐亚帕三重冕"
+  }
+ ],
+ "m887": [
+  {
+   "kind": "doll",
+   "code": "M887",
+   "name": "M887"
+  }
+ ],
+ "ggelfeldt": [
+  {
+   "kind": "doll",
+   "code": "GG_elfeldt",
+   "name": "艾尔菲尔特"
+  }
+ ],
+ "elphelt": [
+  {
+   "kind": "doll",
+   "code": "GG_elfeldt",
+   "name": "艾尔菲尔特"
+  }
+ ],
+ "艾尔菲尔特": [
+  {
+   "kind": "doll",
+   "code": "GG_elfeldt",
+   "name": "艾尔菲尔特"
+  }
+ ],
+ "seele": [
+  {
+   "kind": "doll",
+   "code": "Seele",
+   "name": "希儿"
+  }
+ ],
+ "希儿": [
+  {
+   "kind": "doll",
+   "code": "Seele",
+   "name": "希儿"
+  }
+ ],
+ "danazane": [
+  {
+   "kind": "doll",
+   "code": "Dana",
+   "name": "达娜·赞恩"
+  }
+ ],
+ "达娜赞恩": [
+  {
+   "kind": "doll",
+   "code": "Dana",
+   "name": "达娜·赞恩"
+  }
+ ],
+ "崔耶拉": [
+  {
+   "kind": "doll",
+   "code": "Triela",
+   "name": "崔耶拉"
+  }
+ ],
+ "triela": [
+  {
+   "kind": "doll",
+   "code": "Triela",
+   "name": "崔耶拉"
+  }
+ ],
+ "米诺斯": [
+  {
+   "kind": "doll",
+   "code": "Minosu",
+   "name": "米诺斯"
+  }
+ ],
+ "minosu": [
+  {
+   "kind": "doll",
+   "code": "Minosu",
+   "name": "米诺斯"
+  }
+ ],
+ "minos": [
+  {
+   "kind": "doll",
+   "code": "Minosu",
+   "name": "米诺斯"
+  }
+ ],
+ "saki": [
+  {
+   "kind": "doll",
+   "code": "Saki",
+   "name": "二阶堂咲"
+  }
+ ],
+ "二阶堂咲": [
+  {
+   "kind": "doll",
+   "code": "Saki",
+   "name": "二阶堂咲"
+  }
+ ],
+ "独眼巨人s": [
+  {
+   "kind": "doll",
+   "code": "Cyclops_SG_F",
+   "name": "独眼巨人S"
+  }
+ ],
+ "cyclopssgf": [
+  {
+   "kind": "doll",
+   "code": "Cyclops_SG_F",
+   "name": "独眼巨人S"
+  }
+ ],
+ "cyclopssg": [
+  {
+   "kind": "doll",
+   "code": "Cyclops_SG_F",
+   "name": "独眼巨人S"
+  }
+ ],
+ "圣盾": [
+  {
+   "kind": "doll",
+   "code": "Aegis_GA_F",
+   "name": "圣盾"
+  },
+  {
+   "kind": "sangvis",
+   "code": "Aegis",
+   "name": "圣盾"
+  }
+ ],
+ "aegisgaf": [
+  {
+   "kind": "doll",
+   "code": "Aegis_GA_F",
+   "name": "圣盾"
+  }
+ ],
+ "aegisga": [
+  {
+   "kind": "doll",
+   "code": "Aegis_GA_F",
+   "name": "圣盾"
+  }
+ ],
+ "克鲁格": [
+  {
+   "kind": "doll",
+   "code": "NPC_Kryuger",
+   "name": "克鲁格"
+  },
+  {
+   "kind": "doll",
+   "code": "Kryuger_2021summer",
+   "name": "克鲁格"
+  }
+ ],
+ "npckryuger": [
+  {
+   "kind": "doll",
+   "code": "NPC_Kryuger",
+   "name": "克鲁格"
+  }
+ ],
+ "kryuger2021summer": [
+  {
+   "kind": "doll",
+   "code": "Kryuger_2021summer",
+   "name": "克鲁格"
+  }
+ ],
+ "beak": [
+  {
+   "kind": "doll",
+   "code": "Beak",
+   "name": "喙"
+  },
+  {
+   "kind": "doll",
+   "code": "Beak_M16X",
+   "name": "喙"
+  }
+ ],
+ "喙": [
+  {
+   "kind": "doll",
+   "code": "Beak",
+   "name": "喙"
+  },
+  {
+   "kind": "doll",
+   "code": "Beak_M16X",
+   "name": "喙"
+  }
+ ],
+ "beakm16x": [
+  {
+   "kind": "doll",
+   "code": "Beak_M16X",
+   "name": "喙"
+  }
+ ],
+ "97typesmod": [
+  {
+   "kind": "doll",
+   "code": "97typeSMod",
+   "name": "97式霰"
+  }
+ ],
+ "spas12mod": [
+  {
+   "kind": "doll",
+   "code": "SPAS12Mod",
+   "name": "SPAS-12"
+  }
+ ],
+ "dp12mod": [
+  {
+   "kind": "doll",
+   "code": "DP12Mod",
+   "name": "DP-12"
+  }
+ ],
+ "勇士妖精": [
+  {
+   "kind": "fairy",
+   "code": "fighting",
+   "name": "勇士妖精"
+  }
+ ],
+ "fighting": [
+  {
+   "kind": "fairy",
+   "code": "fighting",
+   "name": "勇士妖精"
+  }
+ ],
+ "暴怒妖精": [
+  {
+   "kind": "fairy",
+   "code": "crit",
+   "name": "暴怒妖精"
+  }
+ ],
+ "crit": [
+  {
+   "kind": "fairy",
+   "code": "crit",
+   "name": "暴怒妖精"
+  }
+ ],
+ "盾甲妖精": [
+  {
+   "kind": "fairy",
+   "code": "armor",
+   "name": "盾甲妖精"
+  }
+ ],
+ "armor": [
+  {
+   "kind": "fairy",
+   "code": "armor",
+   "name": "盾甲妖精"
+  }
+ ],
+ "护盾妖精": [
+  {
+   "kind": "fairy",
+   "code": "shield",
+   "name": "护盾妖精"
+  }
+ ],
+ "shield": [
+  {
+   "kind": "fairy",
+   "code": "shield",
+   "name": "护盾妖精"
+  }
+ ],
+ "defense": [
+  {
+   "kind": "fairy",
+   "code": "defense",
+   "name": "防御妖精"
+  }
+ ],
+ "防御妖精": [
+  {
+   "kind": "fairy",
+   "code": "defense",
+   "name": "防御妖精"
+  }
+ ],
+ "嘲讽妖精": [
+  {
+   "kind": "fairy",
+   "code": "target",
+   "name": "嘲讽妖精"
+  }
+ ],
+ "target": [
+  {
+   "kind": "fairy",
+   "code": "target",
+   "name": "嘲讽妖精"
+  }
+ ],
+ "sniper": [
+  {
+   "kind": "fairy",
+   "code": "sniper",
+   "name": "狙击妖精"
+  }
+ ],
+ "狙击妖精": [
+  {
+   "kind": "fairy",
+   "code": "sniper",
+   "name": "狙击妖精"
+  }
+ ],
+ "bombard": [
+  {
+   "kind": "fairy",
+   "code": "bombard",
+   "name": "炮击妖精"
+  }
+ ],
+ "炮击妖精": [
+  {
+   "kind": "fairy",
+   "code": "bombard",
+   "name": "炮击妖精"
+  }
+ ],
+ "airattack": [
+  {
+   "kind": "fairy",
+   "code": "air_attack",
+   "name": "空袭妖精"
+  }
+ ],
+ "空袭妖精": [
+  {
+   "kind": "fairy",
+   "code": "air_attack",
+   "name": "空袭妖精"
+  }
+ ],
+ "reinforce": [
+  {
+   "kind": "fairy",
+   "code": "reinforce",
+   "name": "增援妖精"
+  }
+ ],
+ "增援妖精": [
+  {
+   "kind": "fairy",
+   "code": "reinforce",
+   "name": "增援妖精"
+  }
+ ],
+ "空降妖精": [
+  {
+   "kind": "fairy",
+   "code": "airborne",
+   "name": "空降妖精"
+  }
+ ],
+ "airborne": [
+  {
+   "kind": "fairy",
+   "code": "airborne",
+   "name": "空降妖精"
+  }
+ ],
+ "landmines": [
+  {
+   "kind": "fairy",
+   "code": "Landmines",
+   "name": "布雷妖精"
+  }
+ ],
+ "布雷妖精": [
+  {
+   "kind": "fairy",
+   "code": "Landmines",
+   "name": "布雷妖精"
+  }
+ ],
+ "position": [
+  {
+   "kind": "fairy",
+   "code": "position",
+   "name": "火箭妖精"
+  }
+ ],
+ "火箭妖精": [
+  {
+   "kind": "fairy",
+   "code": "position",
+   "name": "火箭妖精"
+  }
+ ],
+ "fortress": [
+  {
+   "kind": "fairy",
+   "code": "fortress",
+   "name": "工事妖精"
+  }
+ ],
+ "工事妖精": [
+  {
+   "kind": "fairy",
+   "code": "fortress",
+   "name": "工事妖精"
+  }
+ ],
+ "指挥妖精": [
+  {
+   "kind": "fairy",
+   "code": "command",
+   "name": "指挥妖精"
+  }
+ ],
+ "command": [
+  {
+   "kind": "fairy",
+   "code": "command",
+   "name": "指挥妖精"
+  }
+ ],
+ "搜救妖精": [
+  {
+   "kind": "fairy",
+   "code": "rescue",
+   "name": "搜救妖精"
+  }
+ ],
+ "rescue": [
+  {
+   "kind": "fairy",
+   "code": "rescue",
+   "name": "搜救妖精"
+  }
+ ],
+ "illumine": [
+  {
+   "kind": "fairy",
+   "code": "illumine",
+   "name": "照明妖精"
+  }
+ ],
+ "照明妖精": [
+  {
+   "kind": "fairy",
+   "code": "illumine",
+   "name": "照明妖精"
+  }
+ ],
+ "黄金妖精": [
+  {
+   "kind": "fairy",
+   "code": "golden",
+   "name": "黄金妖精"
+  }
+ ],
+ "golden": [
+  {
+   "kind": "fairy",
+   "code": "golden",
+   "name": "黄金妖精"
+  }
+ ],
+ "炊事妖精": [
+  {
+   "kind": "fairy",
+   "code": "cooking",
+   "name": "炊事妖精"
+  }
+ ],
+ "cooking": [
+  {
+   "kind": "fairy",
+   "code": "cooking",
+   "name": "炊事妖精"
+  }
+ ],
+ "petard": [
+  {
+   "kind": "fairy",
+   "code": "petard",
+   "name": "花火妖精"
+  }
+ ],
+ "花火妖精": [
+  {
+   "kind": "fairy",
+   "code": "petard",
+   "name": "花火妖精"
+  }
+ ],
+ "年兽妖精": [
+  {
+   "kind": "fairy",
+   "code": "Nian",
+   "name": "年兽妖精"
+  }
+ ],
+ "nian": [
+  {
+   "kind": "fairy",
+   "code": "Nian",
+   "name": "年兽妖精"
+  }
+ ],
+ "海滩妖精": [
+  {
+   "kind": "fairy",
+   "code": "beach",
+   "name": "海滩妖精"
+  }
+ ],
+ "beach": [
+  {
+   "kind": "fairy",
+   "code": "beach",
+   "name": "海滩妖精"
+  }
+ ],
+ "combo": [
+  {
+   "kind": "fairy",
+   "code": "combo",
+   "name": "连击妖精"
+  }
+ ],
+ "连击妖精": [
+  {
+   "kind": "fairy",
+   "code": "combo",
+   "name": "连击妖精"
+  }
+ ],
+ "立盾妖精": [
+  {
+   "kind": "fairy",
+   "code": "standshield",
+   "name": "立盾妖精"
+  }
+ ],
+ "standshield": [
+  {
+   "kind": "fairy",
+   "code": "standshield",
+   "name": "立盾妖精"
+  }
+ ],
+ "双生妖精": [
+  {
+   "kind": "fairy",
+   "code": "twins",
+   "name": "双生妖精"
+  }
+ ],
+ "twins": [
+  {
+   "kind": "fairy",
+   "code": "twins",
+   "name": "双生妖精"
+  }
+ ],
+ "原型妖精": [
+  {
+   "kind": "fairy",
+   "code": "origin",
+   "name": "原型妖精"
+  }
+ ],
+ "origin": [
+  {
+   "kind": "fairy",
+   "code": "origin",
+   "name": "原型妖精"
+  }
+ ],
+ "祥瑞妖精": [
+  {
+   "kind": "fairy",
+   "code": "auspicious",
+   "name": "祥瑞妖精"
+  }
+ ],
+ "auspicious": [
+  {
+   "kind": "fairy",
+   "code": "auspicious",
+   "name": "祥瑞妖精"
+  }
+ ],
+ "sanddance": [
+  {
+   "kind": "fairy",
+   "code": "sanddance",
+   "name": "沙舞妖精"
+  }
+ ],
+ "沙舞妖精": [
+  {
+   "kind": "fairy",
+   "code": "sanddance",
+   "name": "沙舞妖精"
+  }
+ ],
+ "应援妖精": [
+  {
+   "kind": "fairy",
+   "code": "cheeringteam",
+   "name": "应援妖精"
+  }
+ ],
+ "cheeringteam": [
+  {
+   "kind": "fairy",
+   "code": "cheeringteam",
+   "name": "应援妖精"
+  }
+ ],
+ "curse": [
+  {
+   "kind": "fairy",
+   "code": "curse",
+   "name": "魔女妖精"
+  }
+ ],
+ "魔女妖精": [
+  {
+   "kind": "fairy",
+   "code": "curse",
+   "name": "魔女妖精"
+  }
+ ],
+ "陷阱妖精": [
+  {
+   "kind": "fairy",
+   "code": "trap",
+   "name": "陷阱妖精"
+  }
+ ],
+ "trap": [
+  {
+   "kind": "fairy",
+   "code": "trap",
+   "name": "陷阱妖精"
+  }
+ ],
+ "peace": [
+  {
+   "kind": "fairy",
+   "code": "peace",
+   "name": "和平妖精"
+  }
+ ],
+ "和平妖精": [
+  {
+   "kind": "fairy",
+   "code": "peace",
+   "name": "和平妖精"
+  }
+ ],
+ "doctor": [
+  {
+   "kind": "fairy",
+   "code": "doctor",
+   "name": "护理妖精"
+  }
+ ],
+ "护理妖精": [
+  {
+   "kind": "fairy",
+   "code": "doctor",
+   "name": "护理妖精"
+  }
+ ],
+ "toy": [
+  {
+   "kind": "fairy",
+   "code": "toy",
+   "name": "玩具妖精"
+  }
+ ],
+ "玩具妖精": [
+  {
+   "kind": "fairy",
+   "code": "toy",
+   "name": "玩具妖精"
+  }
+ ],
+ "英雄妖精": [
+  {
+   "kind": "fairy",
+   "code": "hero",
+   "name": "英雄妖精"
+  }
+ ],
+ "hero": [
+  {
+   "kind": "fairy",
+   "code": "hero",
+   "name": "英雄妖精"
+  }
+ ],
+ "heal": [
+  {
+   "kind": "fairy",
+   "code": "heal",
+   "name": "治愈妖精"
+  }
+ ],
+ "治愈妖精": [
+  {
+   "kind": "fairy",
+   "code": "heal",
+   "name": "治愈妖精"
+  }
+ ],
+ "电磁妖精": [
+  {
+   "kind": "fairy",
+   "code": "em",
+   "name": "电磁妖精"
+  }
+ ],
+ "em": [
+  {
+   "kind": "fairy",
+   "code": "em",
+   "name": "电磁妖精"
+  }
+ ],
+ "海盗妖精": [
+  {
+   "kind": "fairy",
+   "code": "pirate",
+   "name": "海盗妖精"
+  }
+ ],
+ "pirate": [
+  {
+   "kind": "fairy",
+   "code": "pirate",
+   "name": "海盗妖精"
+  }
+ ],
+ "疾跑妖精": [
+  {
+   "kind": "fairy",
+   "code": "sports",
+   "name": "疾跑妖精"
+  }
+ ],
+ "sports": [
+  {
+   "kind": "fairy",
+   "code": "sports",
+   "name": "疾跑妖精"
+  }
+ ],
+ "黑洞妖精": [
+  {
+   "kind": "fairy",
+   "code": "blackhole",
+   "name": "黑洞妖精"
+  }
+ ],
+ "blackhole": [
+  {
+   "kind": "fairy",
+   "code": "blackhole",
+   "name": "黑洞妖精"
+  }
+ ],
+ "太空妖精": [
+  {
+   "kind": "fairy",
+   "code": "space",
+   "name": "太空妖精"
+  }
+ ],
+ "space": [
+  {
+   "kind": "fairy",
+   "code": "space",
+   "name": "太空妖精"
+  }
+ ],
+ "八重樱": [
+  {
+   "kind": "fairy",
+   "code": "Sakura",
+   "name": "八重樱"
+  }
+ ],
+ "kaguya": [
+  {
+   "kind": "fairy",
+   "code": "Kaguya",
+   "name": "耀夜姬"
+  }
+ ],
+ "耀夜姬": [
+  {
+   "kind": "fairy",
+   "code": "Kaguya",
+   "name": "耀夜姬"
+  }
+ ],
+ "柯萝伊": [
+  {
+   "kind": "fairy",
+   "code": "Chloe",
+   "name": "柯萝伊"
+  }
+ ],
+ "chloe": [
+  {
+   "kind": "fairy",
+   "code": "Chloe",
+   "name": "柯萝伊"
+  }
+ ],
+ "希依": [
+  {
+   "kind": "fairy",
+   "code": "DJMAXSUEE",
+   "name": "希依"
+  }
+ ],
+ "djmaxsuee": [
+  {
+   "kind": "fairy",
+   "code": "DJMAXSUEE",
+   "name": "希依"
+  }
+ ],
+ "世拉and妮娜": [
+  {
+   "kind": "fairy",
+   "code": "DJMAXSEHRA",
+   "name": "世拉&妮娜"
+  }
+ ],
+ "djmaxsehra": [
+  {
+   "kind": "fairy",
+   "code": "DJMAXSEHRA",
+   "name": "世拉&妮娜"
+  }
+ ],
+ "djmaxpreiya": [
+  {
+   "kind": "fairy",
+   "code": "DJMAXPREIYA",
+   "name": "普蕾娅&卡米莉娅"
+  }
+ ],
+ "普蕾娅and卡米莉娅": [
+  {
+   "kind": "fairy",
+   "code": "DJMAXPREIYA",
+   "name": "普蕾娅&卡米莉娅"
+  }
+ ],
+ "anna": [
+  {
+   "kind": "fairy",
+   "code": "Anna",
+   "name": "安娜·格雷姆"
+  }
+ ],
+ "安娜格雷姆": [
+  {
+   "kind": "fairy",
+   "code": "Anna",
+   "name": "安娜·格雷姆"
+  }
+ ],
+ "koji": [
+  {
+   "kind": "fairy",
+   "code": "Koji",
+   "name": "浩二"
+  }
+ ],
+ "浩二": [
+  {
+   "kind": "fairy",
+   "code": "Koji",
+   "name": "浩二"
+  }
+ ],
+ "drbird": [
+  {
+   "kind": "fairy",
+   "code": "DRBird",
+   "name": "DR鸡"
+  }
+ ],
+ "dr鸡": [
+  {
+   "kind": "fairy",
+   "code": "DRBird",
+   "name": "DR鸡"
+  }
+ ],
+ "scarecrow": [
+  {
+   "kind": "sangvis",
+   "code": "Scarecrow",
+   "name": "稻草人"
+  }
+ ],
+ "行裁者": [
+  {
+   "kind": "sangvis",
+   "code": "Excutioner",
+   "name": "行裁者"
+  }
+ ],
+ "excutioner": [
+  {
+   "kind": "sangvis",
+   "code": "Excutioner",
+   "name": "行裁者"
+  }
+ ],
+ "hunter": [
+  {
+   "kind": "sangvis",
+   "code": "Hunter",
+   "name": "猎手"
+  }
+ ],
+ "intruder": [
+  {
+   "kind": "sangvis",
+   "code": "Intruder",
+   "name": "干扰者"
+  }
+ ],
+ "干扰者": [
+  {
+   "kind": "sangvis",
+   "code": "Intruder",
+   "name": "干扰者"
+  }
+ ],
+ "破坏者": [
+  {
+   "kind": "sangvis",
+   "code": "Destroyer",
+   "name": "破坏者"
+  }
+ ],
+ "destroyer": [
+  {
+   "kind": "sangvis",
+   "code": "Destroyer",
+   "name": "破坏者"
+  }
+ ],
+ "architect": [
+  {
+   "kind": "sangvis",
+   "code": "BossArchitect",
+   "name": "建筑师"
+  }
+ ],
+ "bossarchitect": [
+  {
+   "kind": "sangvis",
+   "code": "BossArchitect",
+   "name": "建筑师"
+  }
+ ],
+ "weaver": [
+  {
+   "kind": "sangvis",
+   "code": "Weaver",
+   "name": "衔尾蛇"
+  }
+ ],
+ "衔尾蛇": [
+  {
+   "kind": "sangvis",
+   "code": "Weaver",
+   "name": "衔尾蛇"
+  }
+ ],
+ "alchemist": [
+  {
+   "kind": "sangvis",
+   "code": "Alchemist",
+   "name": "炼金术士"
+  }
+ ],
+ "炼金术士": [
+  {
+   "kind": "sangvis",
+   "code": "Alchemist",
+   "name": "炼金术士"
+  }
+ ],
+ "梦想家": [
+  {
+   "kind": "sangvis",
+   "code": "Dreamer",
+   "name": "梦想家"
+  }
+ ],
+ "dreamer": [
+  {
+   "kind": "sangvis",
+   "code": "Dreamer",
+   "name": "梦想家"
+  }
+ ],
+ "gager": [
+  {
+   "kind": "sangvis",
+   "code": "BossGager",
+   "name": "计量官"
+  }
+ ],
+ "计量官": [
+  {
+   "kind": "sangvis",
+   "code": "BossGager",
+   "name": "计量官"
+  }
+ ],
+ "bossgager": [
+  {
+   "kind": "sangvis",
+   "code": "BossGager",
+   "name": "计量官"
+  }
+ ],
+ "法官": [
+  {
+   "kind": "sangvis",
+   "code": "Justice",
+   "name": "法官"
+  }
+ ],
+ "justice": [
+  {
+   "kind": "sangvis",
+   "code": "Justice",
+   "name": "法官"
+  }
+ ],
+ "代理人": [
+  {
+   "kind": "sangvis",
+   "code": "Agent",
+   "name": "代理人"
+  }
+ ],
+ "agent": [
+  {
+   "kind": "sangvis",
+   "code": "Agent",
+   "name": "代理人"
+  }
+ ],
+ "建筑师nvw型": [
+  {
+   "kind": "sangvis",
+   "code": "BossArchitect_Summer",
+   "name": "建筑师-NVW型"
+  }
+ ],
+ "architectsummer": [
+  {
+   "kind": "sangvis",
+   "code": "BossArchitect_Summer",
+   "name": "建筑师-NVW型"
+  }
+ ],
+ "bossarchitectsummer": [
+  {
+   "kind": "sangvis",
+   "code": "BossArchitect_Summer",
+   "name": "建筑师-NVW型"
+  }
+ ],
+ "intruderhalloween": [
+  {
+   "kind": "sangvis",
+   "code": "Intruder_Halloween",
+   "name": "干扰者-终幕魔女"
+  }
+ ],
+ "干扰者终幕魔女": [
+  {
+   "kind": "sangvis",
+   "code": "Intruder_Halloween",
+   "name": "干扰者-终幕魔女"
+  }
+ ],
+ "destroyerchristmas": [
+  {
+   "kind": "sangvis",
+   "code": "Destroyer_Christmas",
+   "name": "破坏者-浮掠麋影"
+  }
+ ],
+ "破坏者浮掠麋影": [
+  {
+   "kind": "sangvis",
+   "code": "Destroyer_Christmas",
+   "name": "破坏者-浮掠麋影"
+  }
+ ],
+ "猎手裳夜落蛾": [
+  {
+   "kind": "sangvis",
+   "code": "Hunter_WhiteDay",
+   "name": "猎手-裳夜落蛾"
+  }
+ ],
+ "hunterwhiteday": [
+  {
+   "kind": "sangvis",
+   "code": "Hunter_WhiteDay",
+   "name": "猎手-裳夜落蛾"
+  }
+ ],
+ "cerberus": [
+  {
+   "kind": "sangvis",
+   "code": "BossCerberus",
+   "name": "末日魔犬"
+  }
+ ],
+ "末日魔犬": [
+  {
+   "kind": "sangvis",
+   "code": "BossCerberus",
+   "name": "末日魔犬"
+  }
+ ],
+ "bosscerberus": [
+  {
+   "kind": "sangvis",
+   "code": "BossCerberus",
+   "name": "末日魔犬"
+  }
+ ],
+ "excutionerhalloween": [
+  {
+   "kind": "sangvis",
+   "code": "Excutioner_Halloween",
+   "name": "行裁者-血魇猎狂"
+  }
+ ],
+ "行裁者血魇猎狂": [
+  {
+   "kind": "sangvis",
+   "code": "Excutioner_Halloween",
+   "name": "行裁者-血魇猎狂"
+  }
+ ],
+ "scarecrowspringfes": [
+  {
+   "kind": "sangvis",
+   "code": "Scarecrow_SpringFes",
+   "name": "稻草人-魇渊夕来"
+  }
+ ],
+ "稻草人魇渊夕来": [
+  {
+   "kind": "sangvis",
+   "code": "Scarecrow_SpringFes",
+   "name": "稻草人-魇渊夕来"
+  }
+ ],
+ "dreamerhalloween": [
+  {
+   "kind": "sangvis",
+   "code": "Dreamer_Halloween",
+   "name": "梦想家-雾月翼手"
+  }
+ ],
+ "梦想家雾月翼手": [
+  {
+   "kind": "sangvis",
+   "code": "Dreamer_Halloween",
+   "name": "梦想家-雾月翼手"
+  }
+ ],
+ "计量官vwv型": [
+  {
+   "kind": "sangvis",
+   "code": "GagerSwimwear",
+   "name": "计量官-VWV型"
+  }
+ ],
+ "gagerswimwear": [
+  {
+   "kind": "sangvis",
+   "code": "GagerSwimwear",
+   "name": "计量官-VWV型"
+  }
+ ],
+ "beluga": [
+  {
+   "kind": "sangvis",
+   "code": "Beluga",
+   "name": "白烨戈"
+  }
+ ],
+ "白烨戈": [
+  {
+   "kind": "sangvis",
+   "code": "Beluga",
+   "name": "白烨戈"
+  }
+ ],
+ "brute": [
+  {
+   "kind": "sangvis",
+   "code": "Brute",
+   "name": "残兽"
+  }
+ ],
+ "残兽": [
+  {
+   "kind": "sangvis",
+   "code": "Brute",
+   "name": "残兽"
+  }
+ ],
+ "龙骑兵": [
+  {
+   "kind": "sangvis",
+   "code": "Dragoon",
+   "name": "龙骑兵"
+  }
+ ],
+ "dragoon": [
+  {
+   "kind": "sangvis",
+   "code": "Dragoon",
+   "name": "龙骑兵"
+  }
+ ],
+ "aegis": [
+  {
+   "kind": "sangvis",
+   "code": "Aegis",
+   "name": "圣盾"
+  }
+ ],
+ "nemeum": [
+  {
+   "kind": "sangvis",
+   "code": "Nemeum",
+   "name": "钢狮"
+  }
+ ],
+ "钢狮": [
+  {
+   "kind": "sangvis",
+   "code": "Nemeum",
+   "name": "钢狮"
+  }
+ ],
+ "tarantula": [
+  {
+   "kind": "sangvis",
+   "code": "Tarantula",
+   "name": "狼蛛"
+  }
+ ],
+ "狼蛛": [
+  {
+   "kind": "sangvis",
+   "code": "Tarantula",
+   "name": "狼蛛"
+  }
+ ],
+ "manticore": [
+  {
+   "kind": "sangvis",
+   "code": "Manticore",
+   "name": "蝎甲兽"
+  }
+ ],
+ "蝎甲兽": [
+  {
+   "kind": "sangvis",
+   "code": "Manticore",
+   "name": "蝎甲兽"
+  }
+ ],
+ "guardswap": [
+  {
+   "kind": "sangvis",
+   "code": "Guard_SWAP",
+   "name": "护卫者SWAP"
+  }
+ ],
+ "护卫者swap": [
+  {
+   "kind": "sangvis",
+   "code": "Guard_SWAP",
+   "name": "护卫者SWAP"
+  }
+ ],
+ "切割者swap": [
+  {
+   "kind": "sangvis",
+   "code": "Ripper_SWAP",
+   "name": "切割者SWAP"
+  }
+ ],
+ "ripperswap": [
+  {
+   "kind": "sangvis",
+   "code": "Ripper_SWAP",
+   "name": "切割者SWAP"
+  }
+ ],
+ "vespidswap": [
+  {
+   "kind": "sangvis",
+   "code": "Vespid_SWAP",
+   "name": "胡蜂SWAP"
+  }
+ ],
+ "胡蜂swap": [
+  {
+   "kind": "sangvis",
+   "code": "Vespid_SWAP",
+   "name": "胡蜂SWAP"
+  }
+ ],
+ "巡游者swap": [
+  {
+   "kind": "sangvis",
+   "code": "Prowler_SWAP",
+   "name": "巡游者SWAP"
+  }
+ ],
+ "prowlerswap": [
+  {
+   "kind": "sangvis",
+   "code": "Prowler_SWAP",
+   "name": "巡游者SWAP"
+  }
+ ],
+ "龙骑兵swap": [
+  {
+   "kind": "sangvis",
+   "code": "Dragoon_SWAP",
+   "name": "龙骑兵SWAP"
+  }
+ ],
+ "dragoonswap": [
+  {
+   "kind": "sangvis",
+   "code": "Dragoon_SWAP",
+   "name": "龙骑兵SWAP"
+  }
+ ],
+ "痛击者swap": [
+  {
+   "kind": "sangvis",
+   "code": "Striker_SWAP",
+   "name": "痛击者SWAP"
+  }
+ ],
+ "strikerswap": [
+  {
+   "kind": "sangvis",
+   "code": "Striker_SWAP",
+   "name": "痛击者SWAP"
+  }
+ ],
+ "aegisswap": [
+  {
+   "kind": "sangvis",
+   "code": "Aegis_SWAP",
+   "name": "圣盾SWAP"
+  }
+ ],
+ "圣盾swap": [
+  {
+   "kind": "sangvis",
+   "code": "Aegis_SWAP",
+   "name": "圣盾SWAP"
+  }
+ ],
+ "猎鸥swap": [
+  {
+   "kind": "sangvis",
+   "code": "Jaeger_SWAP",
+   "name": "猎鸥SWAP"
+  }
+ ],
+ "jaegerswap": [
+  {
+   "kind": "sangvis",
+   "code": "Jaeger_SWAP",
+   "name": "猎鸥SWAP"
+  }
+ ],
+ "guardchm": [
+  {
+   "kind": "sangvis",
+   "code": "Guard_chm",
+   "name": "姜饼护卫者"
+  }
+ ],
+ "姜饼护卫者": [
+  {
+   "kind": "sangvis",
+   "code": "Guard_chm",
+   "name": "姜饼护卫者"
+  }
+ ],
+ "vespidbride": [
+  {
+   "kind": "sangvis",
+   "code": "Vespid_bride",
+   "name": "僵尸新娘"
+  }
+ ],
+ "僵尸新娘": [
+  {
+   "kind": "sangvis",
+   "code": "Vespid_bride",
+   "name": "僵尸新娘"
+  }
+ ],
+ "reccecentreswimbuhuo": [
+  {
+   "kind": "sangvis",
+   "code": "RecceCentreSwim_buhuo",
+   "name": "大白鲨乐园"
+  }
+ ],
+ "reccecentreswim": [
+  {
+   "kind": "sangvis",
+   "code": "RecceCentreSwim_buhuo",
+   "name": "大白鲨乐园"
+  }
+ ],
+ "大白鲨乐园": [
+  {
+   "kind": "sangvis",
+   "code": "RecceCentreSwim_buhuo",
+   "name": "大白鲨乐园"
+  }
+ ],
+ "ripper": [
+  {
+   "kind": "sangvis",
+   "code": "Ripper",
+   "name": "切割者"
+  }
+ ],
+ "切割者": [
+  {
+   "kind": "sangvis",
+   "code": "Ripper",
+   "name": "切割者"
+  }
+ ],
+ "vespid": [
+  {
+   "kind": "sangvis",
+   "code": "Vespid",
+   "name": "胡蜂"
+  }
+ ],
+ "胡蜂": [
+  {
+   "kind": "sangvis",
+   "code": "Vespid",
+   "name": "胡蜂"
+  }
+ ],
+ "护卫者": [
+  {
+   "kind": "sangvis",
+   "code": "Guard",
+   "name": "护卫者"
+  }
+ ],
+ "guard": [
+  {
+   "kind": "sangvis",
+   "code": "Guard",
+   "name": "护卫者"
+  }
+ ],
+ "猎鸥": [
+  {
+   "kind": "sangvis",
+   "code": "Jaeger",
+   "name": "猎鸥"
+  }
+ ],
+ "jaeger": [
+  {
+   "kind": "sangvis",
+   "code": "Jaeger",
+   "name": "猎鸥"
+  }
+ ],
+ "striker": [
+  {
+   "kind": "sangvis",
+   "code": "Striker",
+   "name": "痛击者"
+  }
+ ],
+ "痛击者": [
+  {
+   "kind": "sangvis",
+   "code": "Striker",
+   "name": "痛击者"
+  }
+ ],
+ "兵蚁": [
+  {
+   "kind": "sangvis",
+   "code": "Dinergate",
+   "name": "兵蚁"
+  }
+ ],
+ "dinergate": [
+  {
+   "kind": "sangvis",
+   "code": "Dinergate",
+   "name": "兵蚁"
+  }
+ ],
+ "scouts": [
+  {
+   "kind": "sangvis",
+   "code": "Scouts",
+   "name": "侦察者"
+  }
+ ],
+ "prowler": [
+  {
+   "kind": "sangvis",
+   "code": "Prowler",
+   "name": "巡游者"
+  }
+ ],
+ "巡游者": [
+  {
+   "kind": "sangvis",
+   "code": "Prowler",
+   "name": "巡游者"
+  }
+ ],
+ "劫豹": [
+  {
+   "kind": "sangvis",
+   "code": "Jaguar",
+   "name": "劫豹"
+  }
+ ],
+ "jaguar": [
+  {
+   "kind": "sangvis",
+   "code": "Jaguar",
+   "name": "劫豹"
+  }
+ ],
+ "golyatfactory": [
+  {
+   "kind": "sangvis",
+   "code": "Golyat_Factory",
+   "name": "歌利亚工厂"
+  }
+ ],
+ "歌利亚工厂": [
+  {
+   "kind": "sangvis",
+   "code": "Golyat_Factory",
+   "name": "歌利亚工厂"
+  }
+ ],
+ "nytoblack": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_black",
+   "name": "艾德琳"
+  }
+ ],
+ "艾德琳": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_black",
+   "name": "艾德琳"
+  }
+ ],
+ "nytowhite": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_white",
+   "name": "埃莉诺"
+  }
+ ],
+ "埃莉诺": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_white",
+   "name": "埃莉诺"
+  }
+ ],
+ "nytowhitesummer": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_White_Summer",
+   "name": "埃莉诺-沧龙掠骑者"
+  }
+ ],
+ "埃莉诺沧龙掠骑者": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_White_Summer",
+   "name": "埃莉诺-沧龙掠骑者"
+  }
+ ],
+ "塔亚柔斯": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_tareus",
+   "name": "塔亚柔斯"
+  }
+ ],
+ "nytotareus": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_tareus",
+   "name": "塔亚柔斯"
+  }
+ ],
+ "sana": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_mecha2",
+   "name": "纱那"
+  }
+ ],
+ "nytomecha2": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_mecha2",
+   "name": "纱那"
+  }
+ ],
+ "纱那": [
+  {
+   "kind": "sangvis",
+   "code": "Nyto_mecha2",
+   "name": "纱那"
+  }
+ ],
+ "narciss": [
+  {
+   "kind": "sangvis",
+   "code": "BossNarciss",
+   "name": "娜希斯"
+  }
+ ],
+ "娜希斯": [
+  {
+   "kind": "sangvis",
+   "code": "BossNarciss",
+   "name": "娜希斯"
+  }
+ ],
+ "bossnarciss": [
+  {
+   "kind": "sangvis",
+   "code": "BossNarciss",
+   "name": "娜希斯"
+  }
+ ],
+ "格雷": [
+  {
+   "kind": "sangvis",
+   "code": "Mrsgray",
+   "name": "格雷"
+  }
+ ],
+ "mrsgray": [
+  {
+   "kind": "sangvis",
+   "code": "Mrsgray",
+   "name": "格雷"
+  }
+ ],
+ "teal": [
+  {
+   "kind": "sangvis",
+   "code": "Teal",
+   "name": "缇"
+  }
+ ],
+ "缇": [
+  {
+   "kind": "sangvis",
+   "code": "Teal",
+   "name": "缇"
+  }
+ ]
+}
