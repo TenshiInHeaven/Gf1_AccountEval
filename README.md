@@ -71,7 +71,7 @@ build.bat
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
 3. 安装 `requirements.txt`
-4. 运行 14 个单元测试
+4. 运行 17 个单元测试
 5. 运行 `tools/build_web.py` 生成 PWA 数据与头像副本
 
 需要运行头像/素材提取脚本时，先安装可选依赖（这一步**不会自动重提取**）：
@@ -159,6 +159,30 @@ python -m venv .venv
    - `/sdcard/Android/data/<包名>/files/gf_account_snapshot.json`
 
 Android 端只需要把快照 JSON 放到上述路径，桌面端即可导入并参与四维评分。快照 schema 与 PC 端一致，可直接参考 [`app/data/sample_account.json`](app/data/sample_account.json)。
+
+### Android 模拟器 HTTPS 抓包（无需 root）
+
+这是和 targetForge 相同的 **MITM 代理**路线：不读进程内存，而是让模拟器通过 PC 上的代理登录，抓取登录后的 `Index/index` 全量账号响应。
+
+```powershell
+build.bat --with-android
+python tools\android_proxy_capture.py --port 18080 --push-ca
+```
+
+1. 模拟器 Wi-Fi 代理设置为工具打印的 **PC 局域网 IP:18080**（不要填 127.0.0.1）
+2. 在模拟器安装 CA：设置 → 安全 → 加密与凭据 → 安装证书 → CA 证书
+3. 完全退出并重启游戏，重新登录到主界面
+4. 工具出现 `[SNAP]` 后会自动停止，并写入 `snapshots/account_android_*.json`
+5. 在桌面版「提取账号 → 导入快照」选择它
+
+抓到的原始 `Index` 也会保留为 `snapshots/index_*.json`。如果已经保存了原始响应，可以离线转换：
+
+```powershell
+python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
+```
+
+注意：这是 **协议层抓包**，不是 Frida 进程读取；它依赖客户端信任本地 CA。若客户端升级后启用证书固定，则需要改抓包方式。详见 [USAGE.md](USAGE.md)。
+
 
 ![Android ADB 桥接](docs/screenshots/android_capture.png)
 

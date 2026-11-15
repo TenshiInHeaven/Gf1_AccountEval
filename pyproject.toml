@@ -16,6 +16,7 @@ dependencies = [
 
 [project.optional-dependencies]
 extract = ["UnityPy>=1.20"]
+android = ["mitmproxy>=10", "cryptography>=42", "gflzirc==0.4.4"]
 
 [project.scripts]
 gf-account-forge = "app.main:main"

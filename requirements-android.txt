@@ -1,0 +1,5 @@
+# Optional Android HTTPS proxy capture (Index/index -> account_snapshot.json)
+# Install with: build.bat --with-android
+mitmproxy>=10
+cryptography>=42
+gflzirc==0.4.4
