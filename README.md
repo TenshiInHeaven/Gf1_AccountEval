@@ -283,6 +283,8 @@ account_evaluate/
 └─ run.ps1
 ```
 
+根目录这几张榜单图/Excel 只用于来源标注和人工核对，**不是运行时依赖**；运行 app / PWA 读取的是 `app/data/tierlists/*.json` 和 `app/data/equipment_targets.json`。如果删掉它们，程序仍可运行，但建议同步更新 `ASSETS_LICENSE.md` 和上面的来源说明。
+
 ## 重建数据 / 头像
 
 需要工作区里的原始素材与 `dataMiner` 导出：
