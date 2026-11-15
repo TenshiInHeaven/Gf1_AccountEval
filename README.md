@@ -84,6 +84,9 @@ build.bat --with-extract
 
 （会额外安装 `UnityPy`；仍需要本机游戏 `Res/Pc` 目录和 `local_paths.json`。）
 
+> **普通用户不需要 `dataMiner`、`Portrait_showcase` 或 UnityPy。**  
+> 这些只用于维护者重建图鉴/头像；仓库已经包含 `app/data` 和 `assets/avatars`，正常安装后直接运行即可。实时读取账号走 Frida/XLua，也不会调用 `dataMiner`。
+
 ## 快速开始
 
 ### 方式一：直接运行（推荐）
