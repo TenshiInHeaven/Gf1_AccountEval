@@ -32,7 +32,7 @@ build.bat
 ```
 
 > `build.bat` 会安装运行依赖、跑测试，并生成 PWA 的 `web/data` 与头像副本。  
-> 如果你要从游戏资源重新提取头像，使用 `build.bat --with-extract`。
+> 只有你要运行头像/Spine 提取脚本时，才需要用 `build.bat --with-extract` 安装 UnityPy；它**不会自动重新提取素材**，提取命令仍需按 README 的「重建数据 / 头像」手动执行。
 
 ## 2. 打开桌面版
 

@@ -74,11 +74,13 @@ build.bat
 4. 运行 14 个单元测试
 5. 运行 `tools/build_web.py` 生成 PWA 数据与头像副本
 
-需要重新从游戏资源提取头像时：
+需要运行头像/素材提取脚本时，先安装可选依赖（这一步**不会自动重提取**）：
 
 ```bat
 build.bat --with-extract
 ```
+
+然后按 `## 重建数据 / 头像` 里的命令显式运行 `tools/extract_avatars.py` / `tools/extract_sf_spine.py`，并传入 `--game-root`。
 
 （会额外安装 `UnityPy`；仍需要本机游戏 `Res/Pc` 目录和 `local_paths.json`。）
 
