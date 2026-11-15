@@ -21,49 +21,33 @@ echo ============================================================
 echo  Project: %ROOT%
 echo.
 
-set "PYEXE="
-if exist "%VENV%\Scripts\python.exe" (
-  set "PYEXE=%VENV%\Scripts\python.exe"
-  goto python_found
-)
-
-where py >nul 2>&1
-if not errorlevel 1 (
-  py -3.12 -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)" >nul 2>&1
-  if not errorlevel 1 (
-    set "PYEXE=py -3.12"
-    goto python_found
-  )
-  py -3 -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)" >nul 2>&1
-  if not errorlevel 1 (
-    set "PYEXE=py -3"
-    goto python_found
-  )
-)
-
-where python >nul 2>&1
-if not errorlevel 1 (
-  python -c "import sys; raise SystemExit(0 if sys.version_info >= (3, 10) else 1)" >nul 2>&1
-  if not errorlevel 1 (
-    set "PYEXE=python"
-    goto python_found
+call :detect_python
+if not defined PYEXE (
+  echo [INFO] Python 3.10+ was not found.
+  where winget >nul 2>&1
+  if errorlevel 1 goto manual_python
+  echo.
+  echo        This installer can install Python 3.12 automatically
+  echo        via winget. Press Y to continue, N to open the download page.
+  choice /C YN /T 15 /D Y /M "Install Python 3.12 now"
+  if errorlevel 2 goto manual_python
+  echo.
+  echo [INFO] Installing Python 3.12 ...
+  winget install --id Python.Python.3.12 -e --source winget --accept-package-agreements --accept-source-agreements
+  call :detect_python
+  if not defined PYEXE (
+    echo [WARN] Python was installed but is not on PATH yet.
+    echo        Close this window and run build.bat again.
+    goto fail
   )
 )
+if not defined PYEXE goto manual_python
 
-echo [ERROR] Python 3.10+ not found.
-echo         Install Python 3.12 x64 from https://www.python.org/downloads/
-echo         and enable "Add Python to PATH".
-exit /b 1
-
-:python_found
 echo [1/4] Python: %PYEXE%
 if not exist "%VENV%\Scripts\python.exe" (
   echo [2/4] Creating .venv ...
-  %PYEXE% -m venv "%VENV%"
-  if errorlevel 1 (
-    echo [ERROR] Failed to create .venv
-    exit /b 1
-  )
+  "%PYEXE%" -m venv "%VENV%"
+  if errorlevel 1 goto fail
 ) else (
   echo [2/4] Reusing existing .venv
 )
@@ -71,33 +55,76 @@ if not exist "%VENV%\Scripts\python.exe" (
 set "PY=%VENV%\Scripts\python.exe"
 echo [3/4] Installing dependencies ...
 "%PY%" -m pip install --upgrade pip setuptools wheel
-if errorlevel 1 exit /b 1
+if errorlevel 1 goto fail
 "%PY%" -m pip install -r "%ROOT%\requirements.txt"
-if errorlevel 1 exit /b 1
+if errorlevel 1 goto fail
 if "%WITH_EXTRACT%"=="1" (
   echo      Installing optional UnityPy extraction dependencies ...
   "%PY%" -m pip install -r "%ROOT%\requirements-extract.txt"
-  if errorlevel 1 exit /b 1
+  if errorlevel 1 goto fail
 )
 
 echo [4/4] Running tests and building PWA data ...
 "%PY%" -m unittest discover -s "%ROOT%\tests" -q
-if errorlevel 1 (
-  echo [ERROR] Tests failed.
-  exit /b 1
-)
+if errorlevel 1 goto fail
 "%PY%" "%ROOT%\tools\build_web.py"
-if errorlevel 1 (
-  echo [ERROR] PWA build failed.
-  exit /b 1
-)
+if errorlevel 1 goto fail
 
 echo.
 echo ============================================================
 echo  Build environment is ready.
-echo    Desktop:  run.ps1
-echo    PWA:      run_web.ps1  (http://127.0.0.1:8770/)
+echo    Desktop:  run.bat
+echo    PWA:      run_web.bat  (http://127.0.0.1:8770/)
 echo    Tests:    .venv\Scripts\python.exe -m unittest discover -s tests -v
 echo ============================================================
 if "%NO_PAUSE%"=="0" pause
-endlocal
+exit /b 0
+
+:detect_python
+set "PYEXE="
+if exist "%VENV%\Scripts\python.exe" (
+  set "PYEXE=%VENV%\Scripts\python.exe"
+  exit /b 0
+)
+where py >nul 2>&1
+if not errorlevel 1 (
+  for /f "usebackq delims=" %%P in (`py -3.12 -c "import sys; print(sys.executable)" 2^>nul`) do set "PYEXE=%%P"
+  if defined PYEXE exit /b 0
+  for /f "usebackq delims=" %%P in (`py -3 -c "import sys; print(sys.executable)" 2^>nul`) do set "PYEXE=%%P"
+  if defined PYEXE exit /b 0
+)
+where python >nul 2>&1
+if not errorlevel 1 (
+  for /f "usebackq delims=" %%P in (`python -c "import sys; print(sys.executable)" 2^>nul`) do set "PYEXE=%%P"
+  if defined PYEXE exit /b 0
+)
+rem winget may install Python outside the current PATH.
+for %%P in (
+  "%LOCALAPPDATA%\Programs\Python\Python312\python.exe"
+  "%LOCALAPPDATA%\Programs\Python\Python311\python.exe"
+  "%PROGRAMFILES%\Python312\python.exe"
+  "%PROGRAMFILES%\Python311\python.exe"
+  "C:\Python312\python.exe"
+  "C:\Python311\python.exe"
+) do (
+  if exist "%%~P" (
+    set "PYEXE=%%~P"
+    exit /b 0
+  )
+)
+exit /b 0
+
+:manual_python
+echo.
+echo [ERROR] Python 3.10+ is required.
+echo         Install Python 3.12 x64 from:
+echo         https://www.python.org/downloads/windows/
+echo         Enable "Add Python to PATH", then run build.bat again.
+start "" "https://www.python.org/downloads/windows/"
+goto fail
+
+:fail
+echo.
+echo [ERROR] Build failed. Read the message above.
+if "%NO_PAUSE%"=="0" pause
+exit /b 1

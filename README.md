@@ -68,10 +68,11 @@ build.bat
 
 它会：
 
-1. 查找 Python 3.10+（优先 3.12）并创建/复用 `.venv`
-2. 安装 `requirements.txt`
-3. 运行 14 个单元测试
-4. 运行 `tools/build_web.py` 生成 PWA 数据与头像副本
+1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
+2. 创建或复用 `.venv`
+3. 安装 `requirements.txt`
+4. 运行 14 个单元测试
+5. 运行 `tools/build_web.py` 生成 PWA 数据与头像副本
 
 需要重新从游戏资源提取头像时：
 

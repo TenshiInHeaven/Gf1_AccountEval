@@ -20,7 +20,8 @@
 3. 解压到任意目录，例如 `D:\Gf1_AccountEval`
 4. 双击 `build.bat`
 
-第一次会自动创建 `.venv` 并安装依赖，需要几分钟。
+第一次会自动创建 `.venv` 并安装依赖，需要几分钟。  
+如果没有检测到 Python 3.10+，`build.bat` 会询问是否通过 winget 自动安装 Python 3.12；没有 winget 时会打开 Python 下载页。
 
 ### 方式 B：git clone
 
