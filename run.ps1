@@ -12,7 +12,7 @@ if (-not (Test-Path -LiteralPath $python)) {
     if ($LASTEXITCODE -ne 0) { throw "venv creation failed" }
 }
 
-$check = & $python -c "import PySide6, PIL; print('ok')" 2>$null
+$check = & $python -c "import PySide6, PIL, frida; print('ok')" 2>$null
 if ($check -ne "ok") {
     Write-Host "Installing dependencies ..." -ForegroundColor Cyan
     & $python -m pip install -r (Join-Path $PSScriptRoot "requirements.txt")
