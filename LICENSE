@@ -19,31 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-================================================================================
-ASSETS EXCEPTION
-================================================================================
-
-The MIT license above applies to the source code, build scripts, data tables
-and documentation of this repository, but NOT to the artwork assets.
-
-The following paths are artwork / third-party assets and are NOT MIT licensed:
-
-  - assets/
-  - web/assets/
-  - web/icons/
-  - docs/screenshots/
-  - 人形强度榜.jpeg
-  - 妖精强度榜.png
-  - 机动装甲武器.png
-  - 装备需求一图流.jpeg
-  - 铁血强度榜.png
-
-Those files are from Girls' Frontline (少女前线), copyright Sunborn Network
-Technology / 散爆网络 and their respective rights holders. They are included
-only for personal, non-commercial reference and preservation. Do not use them
-for commercial redistribution, resale, or claim them as your own work.
-
-If you fork or redistribute this repository, keep this exception notice and
-the original rights notices intact. If you do not need the artwork, remove
-the paths listed above; the code remains MIT licensed.

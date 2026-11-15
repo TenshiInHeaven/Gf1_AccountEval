@@ -1,5 +1,7 @@
 # Gf1_AccountEval · 少前账号强度工坊
 
+GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
+
 一个独立的、本地优先的《少女前线 1》账号配置提取与四维强度评估小软件。Qt（PySide6）桌面端，读取仓库人形、妖精、融合势力、装备与图鉴，并用手上的四张榜单给出 **人形 / 妖精 / 融合势力 / 装备** 四个维度的评分和建议。
 
 > **License**：代码、脚本、文档和数据表为 **MIT**；`assets/` 等美术素材不属于 MIT，版权归 Sunborn / 散爆及各自权利人，详见 [LICENSE](LICENSE) 和 [ASSETS_LICENSE.md](ASSETS_LICENSE.md)。
