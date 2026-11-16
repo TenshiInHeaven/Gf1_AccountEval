@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (
 )
 
 from ..core.paths import ASSETS_DIR, SAMPLE_ACCOUNT
+from .. import __version__
 from ..state import AppState
 from .capture_dialog import CaptureDialog
 from .codex_page import CodexPage
@@ -171,7 +172,7 @@ class MainWindow(QMainWindow):
         self.status_label.setStyleSheet(f"color: {MUTED}; font-size: 10px;")
         self.status_label.setWordWrap(True)
         layout.addWidget(self.status_label)
-        version = QLabel("v0.1 · local-first")
+        version = QLabel(f"v{__version__} · local-first")
         version.setStyleSheet(f"color: #8A9CB3; font-size: 10px;")
         layout.addWidget(version)
         return sidebar
