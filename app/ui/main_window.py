@@ -4,7 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QSize, Qt
-from PySide6.QtGui import QIcon, QPixmap
+from PySide6.QtGui import QIcon, QKeySequence, QPixmap, QShortcut
 from PySide6.QtWidgets import (
     QFrame,
     QGraphicsOpacityEffect,
@@ -24,6 +24,7 @@ from .capture_dialog import CaptureDialog
 from .codex_page import CodexPage
 from .dashboard import DashboardPage
 from .equipment_page import EquipmentPage
+from .help_dialog import HelpDialog
 from .settings_page import SettingsPage
 from .theme import BG, BG_SOFT, BORDER, GOLD, MUTED, PANEL, PANEL_2, TEXT, TEXT_SOFT
 from .units import DollPage, FairyPage, SangvisPage
@@ -75,6 +76,8 @@ class MainWindow(QMainWindow):
         self.state.account_changed.connect(self._on_account_changed)
         self.state.error.connect(self._on_error)
         self.state.notice.connect(self._on_notice)
+        self.help_shortcut = QShortcut(QKeySequence("F1"), self)
+        self.help_shortcut.activated.connect(self.open_help)
         self._load_initial()
 
     # ------------------------------------------------------------------
@@ -191,6 +194,11 @@ class MainWindow(QMainWindow):
         self.capture_button.setObjectName("Primary")
         self.capture_button.clicked.connect(self.open_capture)
         header_layout.addWidget(self.capture_button)
+        self.help_button = QPushButton("帮助")
+        self.help_button.setObjectName("Ghost")
+        self.help_button.setToolTip("操作帮助：正常流程 / Android 抓包 / PWA（F1）")
+        self.help_button.clicked.connect(self.open_help)
+        header_layout.addWidget(self.help_button)
         layout.addWidget(header)
 
         self.stack = QStackedWidget()
@@ -250,6 +258,10 @@ class MainWindow(QMainWindow):
 
     def open_capture(self) -> None:
         dialog = CaptureDialog(self.state, self)
+        dialog.exec()
+
+    def open_help(self) -> None:
+        dialog = HelpDialog(self)
         dialog.exec()
 
     def _clear_page_animation(self) -> None:

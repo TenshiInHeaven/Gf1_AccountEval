@@ -12,6 +12,7 @@ TIER_DIR = DATA_DIR / "tierlists"
 ASSETS_DIR = PROJECT_ROOT / "assets"
 AVATAR_DIR = ASSETS_DIR / "avatars"
 SAMPLE_ACCOUNT = DATA_DIR / "sample_account.json"
+HELP_FILE = PROJECT_ROOT / "HELP.md"
 SETTINGS_FILE = PROJECT_ROOT / ".account_forge_settings.json"
 
 

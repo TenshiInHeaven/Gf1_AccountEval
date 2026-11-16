@@ -1,0 +1,456 @@
+# Gf1_AccountEval 使用帮助
+
+这个帮助分为两部分：
+
+1. **正常使用流程（PC）**
+2. **安卓端流程（模拟器 / 手机 / PWA）**
+
+> 本工具只读取账号数据并做本地评分。  
+> 不上传账号、不写入游戏内存、不修改账号。  
+> 抓包只读取流量；是否继续操作账号（例如靶机注入）由 targetForge 等独立工具负责。
+
+---
+
+## 一、正常使用流程（PC）
+
+### 1. 安装
+
+1. 下载仓库 ZIP 并解压
+2. 双击 `build.bat`
+3. 等待 Python 环境、依赖、PWA 数据准备完成
+4. 双击 `run.bat` 启动桌面版
+
+如果已经装好，以后只需要 `run.bat`。
+
+### 2. 提取账号
+
+启动后点右上角 **「提取账号」**，有两种方式：
+
+#### 方式 A：实时提取
+
+适用条件：
+
+- PC 国服客户端已经启动并登录
+- 游戏和本工具在同一台 Windows 机器
+
+步骤：
+
+1. 点 **「提取账号」**
+2. 选择 **实时提取**
+3. 工具通过 Frida / XLua 只读读取 `CS.GameData`
+4. 等待出现账号总览
+5. 提取完成后会自动保存 `snapshots/account_*.json`
+
+#### 方式 B：导入快照
+
+适用条件：
+
+- 已经有之前导出的 `account_snapshot.json`
+- 或者从 Android 端抓到的快照
+
+步骤：
+
+1. 点 **「提取账号」**
+2. 选择 **导入快照**
+3. 选择 `snapshots/account_*.json`
+4. 等待载入完成
+
+### 3. 查看评分
+
+左侧导航：
+
+- **总览**：四维评分、下一步建议
+- **人形**：仓库人形、三改/常用好手
+- **妖精**：空降与战略妖精储备
+- **融合势力**：铁血捕获单位
+- **装备**：目标个数 vs 当前个数
+- **图鉴**：全部单位与拥有状态
+- **设置**：数据来源、评分口径
+
+人形 / 妖精 / 融合势力支持：
+
+- 多选强度筛选
+- 逐条复制详情
+- 按等级、品质、技能等排序
+
+### 4. 导出 / 备份
+
+提取或导入后，快照默认在：
+
+```text
+snapshots/account_*.json
+```
+
+这个 JSON 就是后续 Android / PWA 的导入文件。  
+备份时直接复制它即可，不要复制整个游戏目录。
+
+---
+
+## 二、安卓端流程
+
+安卓端有三种用法：
+
+1. **Android 模拟器 + PC 抓包**（推荐，不需 root）
+2. **Android 手机 + PC 局域网抓包**（不需 root）
+3. **Android / PWA 只做查看器**（导入 PC 快照，不需 root）
+
+> 安卓端**不读取进程**。  
+> 读取游戏进程需要 root + Frida/注入，风险高，也不需要；代理抓包拿到的是同一份 `Index/index` 账号数据。
+
+### 当前版本说明
+
+Android 抓包目前由独立命令行工具完成：
+
+```text
+tools/android_proxy_capture.py
+```
+
+桌面端内置的是 **实时提取 / 快照导入**；Android 抓包请按下面步骤在终端运行工具。  
+抓包完成后，生成的快照可以在桌面端或 PWA 导入。
+
+---
+
+## 2.1 安装 Android 抓包依赖
+
+在项目根目录执行：
+
+```powershell
+build.bat --with-android
+```
+
+会安装：
+
+- `mitmproxy`
+- `cryptography`
+- `gflzirc`
+
+如果已经安装过，可以跳过。
+
+---
+
+## 2.2 Android 模拟器 + PC 抓包
+
+### 适用
+
+- MuMu / LDPlayer / BlueStacks / Nox 等安卓模拟器
+- 国服、台服、日服或 CN 复活版
+- 不需要 Android root
+
+### 第一步：启动抓包工具
+
+在项目根目录打开 PowerShell：
+
+```powershell
+.\.venv\Scripts\python.exe tools\android_proxy_capture.py --port 18080 --host 0.0.0.0 --push-ca
+```
+
+工具会打印：
+
+```text
+PC 局域网 IP:18080
+CA 证书路径
+```
+
+> `--push-ca` 会把 CA 推到模拟器的 `Download` 目录。  
+> 只抓 HTTP 的 `Index/index` 时，CA 不是必须的；  
+> 如果游戏有 HTTPS 登录包，或者出现 TLS 握手失败，再安装 CA。
+
+### 第二步：让模拟器走 PC 代理
+
+#### 方式 A：Wi-Fi 代理（简单）
+
+在模拟器里：
+
+```text
+设置 → Wi-Fi → 当前网络 → 修改网络 → 代理 → 手动
+主机名：PC 的局域网 IP
+端口：18080
+```
+
+不要填 `127.0.0.1`，模拟器里的 `127.0.0.1` 是模拟器自己。
+
+#### 方式 B：adb reverse（更稳，适合 MuMu）
+
+先确认 adb 能找到设备：
+
+```powershell
+adb devices
+```
+
+然后：
+
+```powershell
+adb reverse tcp:18080 tcp:18080
+adb forward tcp:18765 tcp:18765
+adb forward tcp:18766 tcp:18766
+adb shell settings put global http_proxy 127.0.0.1:18080
+```
+
+说明：
+
+- `adb reverse`：模拟器访问自己的 `127.0.0.1:18080` 时转发到 PC 的抓包工具
+- `adb forward 18765/18766`：保留游戏自己的本地桥接端口
+- 全局代理让游戏 HTTP 请求进入抓包工具
+
+> 不同模拟器的 adb 路径不同。MuMu 常见路径：  
+> `D:\Program Files\Netease\MuMu\nx_device\12.0\shell\adb.exe`
+
+### 第三步：安装 CA（可选，但推荐）
+
+如果工具打印的 CA 已经推到 `Download`：
+
+1. 打开模拟器 **设置 → 安全 → 加密与凭据 → 安装证书 → CA 证书**
+2. 选择 `Download` 里的 `ca.crt`
+3. 给它起个名字，例如 `GF Capture`
+
+Android 7+ 默认不信任用户 CA。  
+如果游戏只抓 HTTP，可以跳过；如果 HTTPS 包握手失败，需要：
+
+- 模拟器开启 root，把 CA 安装到系统证书目录
+- 或使用 targetForge 的 CA 安装流程
+
+### 第四步：关键——全新登录
+
+这一步是成功的关键：
+
+1. 抓包工具保持运行
+2. 启动游戏
+3. 在游戏里 **退出登录 / 切换账号**
+4. **重新输入账号密码**
+5. 等待游戏进入主界面
+
+只有全新登录，日志里才会出现：
+
+```text
+POST Index/getUidPC
+[S2C] getUidPC
+[KEY] uid/sign 已获取
+```
+
+之后才会出现：
+
+```text
+POST Index/index
+[S2C] Index/index
+[SNAP] 已写入 snapshots/account_android_*.json
+```
+
+### 只重启客户端为什么不行
+
+如果只是：
+
+```text
+关闭游戏
+→ 重新打开
+```
+
+游戏可能直接复用缓存登录态，自动回到主界面，**不会重新走 `getUidPC`**。  
+这时抓包工具只能看到 `Index/index` 密文，没有当前 `sign`，无法解密。
+
+所以请认准：
+
+```text
+抓包运行中 + 退出登录/切换账号 + 重新输入账密
+```
+
+不是“重启客户端”。
+
+### 第五步：停止并恢复
+
+看到 `[SNAP]` 后，在抓包窗口按 `Ctrl+C` 停止，然后恢复模拟器：
+
+```powershell
+adb shell settings put global http_proxy :0
+adb reverse --remove tcp:18080
+adb forward --remove tcp:18765
+adb forward --remove tcp:18766
+```
+
+如果安装了 CA，按需在模拟器里删除测试证书。
+
+### 第六步：导入快照
+
+抓包成功后生成：
+
+```text
+snapshots/account_android_*.json
+```
+
+回到桌面端：
+
+```text
+提取账号 → 导入快照 → 选择该 JSON
+```
+
+---
+
+## 2.3 Android 手机 + PC 抓包
+
+不需要 root，前提是手机和 PC 在同一局域网。
+
+1. PC 上启动抓包工具：
+
+```powershell
+.\.venv\Scripts\python.exe tools\android_proxy_capture.py --port 18080 --host 0.0.0.0 --push-ca
+```
+
+2. 手机 Wi-Fi 代理指向：
+
+```text
+PC 局域网 IP:18080
+```
+
+3. 手机安装 CA（如果抓 HTTPS）：
+
+```text
+设置 → 安全 → 加密与凭据 → 安装 CA 证书
+```
+
+4. 手机游戏里 **退出登录 / 切换账号 → 重新输入账密**
+
+5. 看到 `[KEY]` 和 `[SNAP]` 后停止工具，把手机代理改回“无”
+
+6. 把 `snapshots/account_android_*.json` 传到桌面端导入，或直接在 PWA 导入
+
+> 部分手机系统会限制用户 CA 被游戏信任。  
+> 如果 HTTPS 包抓不到，不要强行 root；优先用模拟器 + PC 抓包。
+
+---
+
+## 2.4 Android / PWA 只做查看器
+
+这是最轻量的方式，不需要 root，也不需要代理。
+
+### 启动 PWA 服务
+
+在 PC 项目根目录：
+
+```powershell
+.\run_web.bat
+```
+
+浏览器会打开：
+
+```text
+http://127.0.0.1:8770/
+```
+
+### 手机访问
+
+#### 同局域网
+
+```powershell
+.\.venv\Scripts\python.exe web\serve.py --host 0.0.0.0 --port 8770
+```
+
+手机 Chrome 打开：
+
+```text
+http://PC局域网IP:8770/
+```
+
+#### 用 adb reverse
+
+```powershell
+adb reverse tcp:8770 tcp:8770
+```
+
+手机 Chrome 打开：
+
+```text
+http://localhost:8770/
+```
+
+### 安装到主屏幕
+
+Chrome 菜单 → **添加到主屏幕 / 安装应用**。
+
+### 导入快照
+
+PWA 首页 → **导入快照** → 选择：
+
+```text
+snapshots/account_android_*.json
+```
+
+PWA 只保存本地快照，不上传账号。
+
+---
+
+## 三、常见问题
+
+### Q1：抓包只看到 `Index/index`，没有 `[KEY]`
+
+原因：游戏复用了缓存登录态，没有重新走登录。
+
+处理：
+
+```text
+抓包运行中 → 游戏内退出登录/切换账号 → 重新输入账密
+```
+
+不要只重启客户端。
+
+### Q2：出现 `[WARN] # 包解密失败`
+
+说明当前没有 sign，或者 sign 已过期。
+
+检查：
+
+- 是否在抓包运行期间完成全新登录
+- 日志里有没有 `Index/getUidPC`
+- 有没有 `[KEY] uid/sign`
+
+### Q3：模拟器里打不开网页 / 连不上代理
+
+- 确认手机/模拟器和 PC 在同一网络
+- 确认 Windows 防火墙允许 18080 / 8770
+- 模拟器里不要用 `127.0.0.1` 访问 PC，除非用了 `adb reverse`
+
+### Q4：TLS 握手失败
+
+- 没有安装 CA，或 CA 没被系统信任
+- Android 7+ 用户 CA 不一定被游戏信任
+- 只抓 HTTP 的 `Index/index` 可以先不装 CA；需要 HTTPS 时用系统 CA
+
+### Q5：CN 复活版可以抓吗
+
+可以，但必须**全新登录**：
+
+```text
+抓包生效 → 退出登录/切换账号 → 重新输入账密
+```
+
+只重启客户端会复用缓存，抓不到 sign。
+
+### Q6：需要 root 吗
+
+不需要。
+
+- PC + 模拟器抓包：不需要 Android root
+- PC + 手机抓包：不需要 root
+- PWA 查看：不需要 root
+
+只有两种情况需要 root：
+
+- 把 CA 装进系统证书目录
+- 读取游戏进程内存（本工具不建议）
+
+---
+
+## 四、数据与隐私
+
+- 抓包数据只在本机处理
+- 快照默认保存在 `snapshots/`
+- `snapshots/` 和 `raw/` 已加入 `.gitignore`，不会被提交
+- 不要把包含 UID、签名、账号数据的快照发到公开仓库
+- 抓包结束后建议清空代理和测试 CA
+
+---
+
+## 五、相关文件
+
+- [README.md](README.md)：项目总览
+- [USAGE.md](USAGE.md)：安装与使用说明
+- [tools/android_proxy_capture.py](tools/android_proxy_capture.py)：Android 抓包工具
+- [web/README.md](web/README.md)：PWA 说明

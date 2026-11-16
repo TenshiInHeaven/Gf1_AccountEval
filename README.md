@@ -25,7 +25,8 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 2. 双击 **`run.bat`** 打开桌面版
 3. 点右上角 **「提取账号」**：游戏已登录就选实时提取，否则导入 `account_snapshot.json`
 
-完整图文步骤（实时提取、快照导入、Android/PWA 安装、常见问题）见 **[USAGE.md](USAGE.md)**。
+完整图文步骤（实时提取、快照导入、Android/PWA 安装、常见问题）见 **[USAGE.md](USAGE.md)**。  
+应用内点右上角 **「帮助」**（或按 **F1**）可查看正常流程和 Android 抓包流程，对应文档：[HELP.md](HELP.md)。
 
 
 > 账号数据在服务器上，本地没有完整仓库存档。本工具不猜本地缓存，而是通过游戏自带的 **XLua 运行时** 只读读取 `CS.GameData`，一次提取、立即 detach；也可以导入之前保存的 JSON 快照。
