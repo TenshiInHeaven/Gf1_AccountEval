@@ -26,7 +26,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from .theme import BORDER, GOLD, MUTED, PANEL_2, TEXT, TIER_COLORS
+from .theme import BORDER, FRAME_GOLD, GOLD, MUTED, PANEL_2, TEXT, TIER_COLORS
 
 
 def rgba(hex_color: str, alpha: int) -> str:
@@ -186,6 +186,7 @@ class UnitCard(QFrame):
         footer: str = "",
         letter: str = "",
         crown: bool = False,
+        frame_color: str | None = None,
         parent: QWidget | None = None,
     ):
         super().__init__(parent)
@@ -193,16 +194,14 @@ class UnitCard(QFrame):
         self.setFixedSize(164, 218)
         self.setCursor(Qt.PointingHandCursor)
         self._payload = None
+        frame = FRAME_GOLD if crown else (frame_color or BORDER)
+        border_width = 2 if (crown or frame_color) else 1
+        background = "#FFF9E8" if crown else PANEL_2
         self.setStyleSheet(
-            f"QFrame#SoftCard {{ background: {PANEL_2}; border: 1px solid {BORDER}; border-radius: 14px; }}"
-            f"QFrame#SoftCard:hover {{ border: 1px solid {rgba(GOLD, 150)}; background: #F0F7FF; }}"
+            f"QFrame#SoftCard {{ background: {background};"
+            f" border: {border_width}px solid {frame}; border-radius: 14px; }}"
+            f"QFrame#SoftCard:hover {{ border: 2px solid {frame}; background: #F0F7FF; }}"
         )
-        if crown:
-            self.setStyleSheet(
-                f"QFrame#SoftCard {{ background: #FFF9E8; border: 2px solid {GOLD};"
-                " border-radius: 14px; }"
-                f"QFrame#SoftCard:hover {{ border: 2px solid {GOLD}; background: #FFF4D6; }}"
-            )
         layout = QVBoxLayout(self)
         layout.setContentsMargins(12, 12, 12, 10)
         layout.setSpacing(6)

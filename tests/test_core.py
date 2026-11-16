@@ -122,6 +122,15 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(dolls.tier_for(name="卡尔卡诺M91/38").id, "A-")
         self.assertTrue(dolls.is_crown(name="卡尔卡诺M91/38"))
 
+    def test_frame_overrides(self):
+        dolls = get_tierlists()["doll"]
+        self.assertEqual(dolls.frame_for(name="NTW-20"), "A-")
+        self.assertEqual(dolls.frame_for(name="TEC-9"), "A-")
+        self.assertEqual(dolls.frame_for(name="MG3"), "S")
+        self.assertEqual(dolls.frame_for(name="KLIN"), "Sp")
+        sangvis = get_tierlists()["sangvis"]
+        self.assertEqual(sangvis.frame_for(name="稻草人"), "SS")
+
 
 class LiveParserTests(unittest.TestCase):
     def test_parse_sections(self):

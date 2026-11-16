@@ -33,6 +33,23 @@ TIER_COLORS = {
     "Sp": "#6D5BD0",
 }
 
+# Card frames requested by tier.  ``GOLD`` above is the app's blue accent;
+# keep a real metallic gold here so SS / crown cards do not become blue.
+FRAME_GOLD = "#D4AF37"
+FRAME_GREEN = GREEN
+FRAME_BLUE = BLUE
+FRAME_WHITE = "#FFFFFF"
+FRAME_PURPLE = PURPLE
+FRAME_COLORS = {
+    "SS": FRAME_GOLD,
+    "S": FRAME_GREEN,
+    "A-": FRAME_BLUE,
+    "A": FRAME_BLUE,
+    "B": FRAME_WHITE,
+    "C": FRAME_WHITE,
+    "Sp": FRAME_PURPLE,
+}
+
 FONT_FAMILY = "Microsoft YaHei UI"
 
 

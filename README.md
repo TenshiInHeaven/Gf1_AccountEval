@@ -86,7 +86,7 @@ build.bat
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
 3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
-4. 运行 22 个单元测试
+4. 运行 23 个单元测试
 
 > Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
 
@@ -259,6 +259,9 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 ### 人形 A- 皇冠
 
 `卡尔卡诺M91/38` 为 **A- 档皇冠卡**：A- 档内置顶，卡片使用金色边框和 `♛ A-` 徽标。
+
+卡片边框：**SS 金 / S 绿 / A-、A 蓝 / B、C 白 / Sp 紫**。  
+S 档中 `NTW-20`、`MG338`、`MPL`、`MPK`、`TEC-9`、`MP-443`、`MG15`、`HP-35`、`汉阳造88式` 使用 A- 蓝框；`KLIN` 为 Sp 紫框。
 
 ### 装备
 

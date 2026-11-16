@@ -26,7 +26,7 @@ from ..core.normalize import type_label
 from ..core.ratings import Evaluation
 from ..core.tiers import get_tierlists
 from .animations import fade_in
-from .theme import BORDER, GOLD, MUTED, PANEL, TEXT, TEXT_SOFT, TIER_COLORS
+from .theme import BORDER, FRAME_COLORS, GOLD, MUTED, PANEL, TEXT, TEXT_SOFT, TIER_COLORS
 from .widgets import AvatarLabel, FlowLayout, TierBadge, UnitCard
 
 
@@ -385,6 +385,9 @@ class UnitPage(QWidget):
                 footer=footer,
                 letter=item.name[:2],
                 crown=self.tiers.is_crown(code=item.code, name=item.name),
+                frame_color=FRAME_COLORS.get(
+                    self.tiers.frame_for(code=item.code, name=item.name), BORDER
+                ),
             )
             card.set_payload((item, owned))
             card.clicked.connect(self._open_detail)

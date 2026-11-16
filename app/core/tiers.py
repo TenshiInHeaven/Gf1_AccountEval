@@ -33,6 +33,7 @@ class TierList:
     name_tier: dict[str, str] = field(default_factory=dict)
     crown_codes: set[tuple[str, str]] = field(default_factory=set)
     crown_names: set[str] = field(default_factory=set)
+    frame_overrides: dict[str, str] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         self.tier_by_id = {tier.id: tier for tier in self.tiers}
@@ -42,15 +43,20 @@ class TierList:
             if tier_id not in self.tier_by_id:
                 continue
             names = [entry.get("name", ""), *(entry.get("aliases") or [])]
+            frame = str(entry.get("frame") or "").strip()
             for name in names:
                 norm = normalize_name(name)
                 if norm:
                     self.name_tier.setdefault(norm, tier_id)
+                    if frame:
+                        self.frame_overrides[norm] = frame
                 for item in codex.by_norm.get(norm, []):
                     if item.kind == self.kind:
                         self.code_tier.setdefault((self.kind, item.code), tier_id)
                         if entry.get("crown"):
                             self.crown_codes.add((self.kind, item.code))
+                        if frame:
+                            self.frame_overrides[normalize_name(item.code)] = frame
                 if entry.get("crown") and norm:
                     self.crown_names.add(norm)
             explicit_code = str(entry.get("code") or "")
@@ -58,11 +64,21 @@ class TierList:
                 self.code_tier.setdefault((self.kind, explicit_code), tier_id)
                 if entry.get("crown"):
                     self.crown_codes.add((self.kind, explicit_code))
+                if frame:
+                    self.frame_overrides[normalize_name(explicit_code)] = frame
 
     def is_crown(self, code: str = "", name: str = "") -> bool:
         if code and (self.kind, code) in self.crown_codes:
             return True
         return bool(name and normalize_name(name) in self.crown_names)
+
+    def frame_for(self, code: str = "", name: str = "") -> str:
+        """Return a frame key (tier id or explicit override)."""
+        for value in (code, name):
+            norm = normalize_name(value)
+            if norm and norm in self.frame_overrides:
+                return self.frame_overrides[norm]
+        return self.tier_for(code=code, name=name).id
 
     def tier_for(self, code: str = "", name: str = "") -> Tier:
         tier_id = self.code_tier.get((self.kind, code))
