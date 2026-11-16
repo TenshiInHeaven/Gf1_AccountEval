@@ -61,7 +61,7 @@ class CaptureDialog(QDialog):
         self.android_device = None
         self.android_package: str | None = None
         self.setWindowTitle("提取账号")
-        self.setFixedSize(720, 840)
+        self.setFixedSize(900, 880)
         self.setStyleSheet(f"QDialog {{ background: {PANEL}; }}")
         root = QVBoxLayout(self)
         root.setContentsMargins(26, 22, 26, 20)
