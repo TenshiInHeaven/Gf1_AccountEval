@@ -169,11 +169,11 @@ class MainWindow(QMainWindow):
         names.addWidget(self.side_name)
         self.side_uid = QLabel("—")
         self.side_uid.setStyleSheet(f"color: {MUTED}; font-size: 10px;")
-        names.addWidget(self.side_uid)
+        self.side_uid.hide()
         top.addLayout(names, 1)
         account_layout.addLayout(top)
         self.side_meta = QLabel("等待快照")
-        self.side_meta.setStyleSheet(f"color: {MUTED}; font-size: 10px;")
+        self.side_meta.setStyleSheet(f"color: {MUTED}; font-size: 9px;")
         self.side_meta.setWordWrap(True)
         account_layout.addWidget(self.side_meta)
         layout.addWidget(account_card)
@@ -187,7 +187,7 @@ class MainWindow(QMainWindow):
         legend_layout.setContentsMargins(12, 10, 12, 9)
         legend_layout.setSpacing(4)
         legend_title = QLabel("怎么看档位 / 边框")
-        legend_title.setStyleSheet(f"color: {TEXT}; font-size: 11px; font-weight: 700;")
+        legend_title.setStyleSheet(f"color: {TEXT}; font-size: 13px; font-weight: 700;")
         legend_layout.addWidget(legend_title)
         legend_text = QLabel(
             f"<span style='color:{FRAME_COLORS['SS']}'><b>● SS / 金框</b></span>"
@@ -203,11 +203,11 @@ class MainWindow(QMainWindow):
         )
         legend_text.setTextFormat(Qt.RichText)
         legend_text.setWordWrap(True)
-        legend_text.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 9px;")
+        legend_text.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 11px;")
         legend_layout.addWidget(legend_text)
         legend_note = QLabel("此推荐仅从强度角度考虑，若与 XP 冲突请以 XP 为准。")
         legend_note.setWordWrap(True)
-        legend_note.setStyleSheet("color: #8A9CB3; font-size: 9px;")
+        legend_note.setStyleSheet("color: #8A9CB3; font-size: 10px;")
         legend_layout.addWidget(legend_note)
         layout.addWidget(legend)
 
@@ -219,6 +219,10 @@ class MainWindow(QMainWindow):
         version = QLabel(f"v{__version__} · local-first")
         version.setStyleSheet(f"color: #8A9CB3; font-size: 10px;")
         layout.addWidget(version)
+        # Account identity belongs at the top; the lower-left area is the
+        # tier/border legend.
+        layout.removeWidget(account_card)
+        layout.insertWidget(1, account_card)
         return sidebar
 
     def _build_main(self) -> QWidget:
@@ -240,6 +244,7 @@ class MainWindow(QMainWindow):
         self.page_subtitle = QLabel("四维评分与下一步建议")
         self.page_subtitle.setObjectName("PageSub")
         titles.addWidget(self.page_subtitle)
+        self.page_subtitle.hide()
         header_layout.addLayout(titles, 1)
 
         self.refresh_button = QPushButton("刷新")
@@ -392,10 +397,7 @@ class MainWindow(QMainWindow):
         self.side_name.setText(account.nickname)
         level = f"Lv.{account.level}" if account.level else "Lv.—"
         self.side_uid.setText(f"UID {account.uid} · {level}")
-        self.side_meta.setText(
-            f"{len(account.dolls)} 人形 · {len(account.fairies)} 妖精 · "
-            f"{len(account.sangvis)} 融合势力"
-        )
+        self.side_meta.setText(f"UID {account.uid} · {level}")
         self.side_avatar.set_avatar(None, account.nickname[:2] if account.nickname else "GF")
         self.dashboard.refresh(evaluation)
         self.dolls.refresh(evaluation)

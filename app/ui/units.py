@@ -40,6 +40,17 @@ class StableComboBox(QComboBox):
             popup.move(self.mapToGlobal(QPoint(0, self.height())))
 
 
+def favor_display(value) -> int:
+    """Convert the raw 0..2,000,000 favor field to the 0..200 UI scale."""
+    try:
+        number = int(float(value))
+    except (TypeError, ValueError):
+        return 0
+    if number > 200:
+        number = round(number / 10000)
+    return max(0, min(200, number))
+
+
 def clear_flow(layout: FlowLayout) -> None:
     while layout.count():
         item = layout.takeAt(0)
@@ -101,7 +112,7 @@ def _copy_detail_html(unit: OwnedUnit, kind: str, note: str) -> str:
             meta = [
                 f"Lv.{copy.get('level', 0)}",
                 f"改造 {copy.get('mod', 0)}",
-                f"好感 {copy.get('favor', 0)}",
+                f"好感 {favor_display(copy.get('favor', 0))}",
             ]
             if copy.get("team_id"):
                 meta.append(f"编队 {copy['team_id']}")
@@ -252,8 +263,14 @@ class UnitPage(QWidget):
         self.owned_toggle.setCheckable(True)
         self.owned_toggle.setChecked(True)
         self.owned_toggle.setCursor(Qt.PointingHandCursor)
-        self.owned_toggle.clicked.connect(self._on_filter_changed)
+        self.owned_toggle.clicked.connect(self._on_owned_clicked)
         toolbar_layout.addWidget(self.owned_toggle)
+        self.unowned_toggle = QPushButton("只看未拥有")
+        self.unowned_toggle.setObjectName("Chip")
+        self.unowned_toggle.setCheckable(True)
+        self.unowned_toggle.setCursor(Qt.PointingHandCursor)
+        self.unowned_toggle.clicked.connect(self._on_unowned_clicked)
+        toolbar_layout.addWidget(self.unowned_toggle)
         self.count_label = QLabel()
         self.count_label.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
         toolbar_layout.addWidget(self.count_label)
@@ -282,8 +299,19 @@ class UnitPage(QWidget):
         self._render()
 
     def set_owned_only(self, enabled: bool) -> None:
+        self.unowned_toggle.setChecked(False)
         self.owned_toggle.setChecked(enabled)
         self._render()
+
+    def _on_owned_clicked(self, checked: bool) -> None:
+        if checked:
+            self.unowned_toggle.setChecked(False)
+        self._on_filter_changed()
+
+    def _on_unowned_clicked(self, checked: bool) -> None:
+        if checked:
+            self.owned_toggle.setChecked(False)
+        self._on_filter_changed()
 
     def _toggle_tier(self, tier: str, checked: bool) -> None:
         """Multi-select tier chips; ``全部`` is a shortcut for an empty set."""
@@ -344,10 +372,13 @@ class UnitPage(QWidget):
             return
         query = self.search.text().strip().lower()
         only_owned = self.owned_toggle.isChecked()
+        only_unowned = self.unowned_toggle.isChecked()
         type_filter = int(self.type_combo.currentData() or 0)
         rows: list[tuple[CodexItem, OwnedUnit | None]] = []
         for item, owned in self._all_items():
             if only_owned and owned is None:
+                continue
+            if only_unowned and owned is not None:
                 continue
             if self._tier_filters:
                 tier = self.tiers.tier_for(code=item.code, name=item.name)
