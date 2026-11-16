@@ -3,6 +3,9 @@
 这是一个本地优先的《少女前线 1》账号查看与四维强度评估工具。  
 **不修改游戏、不绕过登录、不上传账号数据。**
 
+> **明确不支持：国服复活版 / PC 继承客户端（`.pt` / 日服壳）。**  
+> 原因：这类客户端的 **sign 不在登录流程中返回**，而是由 `libgfcompat` / `pc_session_ciphertext` 在进程内提供；Android 代理只能抓到加密的 `Index/index`，拿不到当前 sign，无法解密。请使用 PC 端实时提取同一账号，或导入已有快照。
+
 ## 你需要什么
 
 - Windows 10/11 x64
@@ -104,7 +107,8 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 > 如果客户端启用了证书固定，或者当前区服的登录协议发生变化，抓包可能解不开；这时仍可使用下面的快照导入。
 
-> **CN 复活版 / PC 继承客户端**：实测登录走游戏内 `18765/18766` 本地桥接，HTTP 代理抓不到当前 `sign`，因此无法解密 `Index/index`；请使用 PC 端实时提取或已有快照。
+> **CN 复活版 / PC 继承客户端：不支持。**  
+> 原因：**sign 不在登录 HTTP 流程中返回**，而在 `libgfcompat` / `pc_session_ciphertext` 的进程内 session 里；代理拿不到当前 sign，`Index/index` 无法解密。请使用 PC 端实时提取或已有快照。
 
 ### 方式 D：Android 模拟器显式快照 fallback
 

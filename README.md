@@ -6,6 +6,17 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 
 > **License**：代码、脚本、文档和数据表为 **MIT**；`assets/` 等美术素材不属于 MIT，版权归 Sunborn / 散爆及各自权利人，详见 [LICENSE](LICENSE) 和 [ASSETS_LICENSE.md](ASSETS_LICENSE.md)。
 
+## 支持范围（重要）
+
+| 客户端 | 支持情况 | 原因 |
+|---|---|---|
+| PC 国服 / 正常登录的官方客户端 | 支持 | XLua 实时读取；Frida attach 后读 `CS.GameData` |
+| 正常 HTTP 登录、登录响应中返回 `uid/sign` 的客户端 | 支持（实验） | 本地代理先解出 `SYS_KEY_UPGRADE`，再用当前 sign 解 `Index/index` |
+| **国服复活版 / PC 继承客户端（`.pt` / 日服壳）** | **不支持** | **sign 不在登录流程中返回**，而是由 `libgfcompat` / `pc_session_ciphertext` 在进程内提供；HTTP 代理只能抓到加密的 `Index/index`，拿不到当前 sign，无法解密 |
+
+国服复活版请改用 **PC 端实时提取同一账号**，或导入已有 `account_snapshot.json`。不要指望 Android 代理抓包，当前版本不会成功。
+
+
 ## 第一次使用（3 步）
 
 1. 下载仓库 ZIP，解压后双击 **`build.bat`**，等待依赖安装完成
@@ -183,8 +194,8 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 注意：这是 **协议层抓包**，不是 Frida 进程读取；它依赖客户端信任本地 CA。若客户端升级后启用证书固定，则需要改抓包方式。详见 [USAGE.md](USAGE.md)。
 
-> **CN 复活版 / PC 继承客户端暂不支持这条路径。**  
-> 实测这类客户端登录走游戏内 `18765/18766` 本地桥接 + `pc_session_ciphertext` sealed session；普通 HTTP 代理能抓到 `Index/index`，但抓不到 `SYS_KEY_UPGRADE`，没有当前登录 sign，响应无法解密。请改用 PC 端实时提取、已有快照，或 targetForge 的 PC 继承凭据。
+> **国服复活版 / PC 继承客户端不支持这条路径（明确声明）。**  
+> 原因：这类客户端的 **sign 不在登录 HTTP 流程中返回**，而是由 `libgfcompat` / `pc_session_ciphertext` 在进程内提供。代理只能抓到 `Index/index` 密文，拿不到当前 sign，无法解密。请改用 PC 端实时提取或已有快照。
 
 
 ![Android ADB 桥接](docs/screenshots/android_capture.png)

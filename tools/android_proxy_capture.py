@@ -11,6 +11,10 @@ This is the proxy/MITM route described in ``build_private_server.md``:
 It does **not** need root, Frida or process memory.  It needs the emulator to
 trust the local CA and to be restarted/re-logged after the proxy is enabled.
 
+Unsupported: 国服复活版 / PC 继承客户端.  Their sign is supplied inside the
+process (`libgfcompat` / `pc_session_ciphertext`), not in the login HTTP flow;
+the proxy can capture the encrypted Index but cannot decrypt it.
+
 Install optional dependencies:
 
     build.bat --with-android
@@ -43,6 +47,10 @@ from app.capture.android_proxy import AndroidCaptureError, build_snapshot  # noq
 from app.capture.android import AndroidBridge  # noqa: E402
 
 STATIC_KEY = "yundoudou"
+SUPPORT_NOTICE = (
+    "不支持国服复活版 / PC 继承客户端："
+    "其 sign 不在登录 HTTP 流程中返回，代理只能抓到加密 Index。"
+)
 CACHE = ROOT / ".cache" / "android_mitm"
 DEFAULT_PORT = 18080
 
@@ -337,6 +345,8 @@ async def run_proxy(args) -> int:
     print("=" * 62)
     print("Gf1_AccountEval · Android 抓包")
     print("=" * 62)
+    print(f"支持范围 : 正常登录并返回 uid/sign 的客户端")
+    print(f"不支持   : 国服复活版 / PC 继承（sign 不在登录流程中返回）")
     print(f"代理端口 : {args.host}:{args.port}")
     print(f"模拟器代理: {_lan_ip()}:{args.port}")
     print(f"CA 证书  : {ca_path}")
