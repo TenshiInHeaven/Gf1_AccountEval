@@ -183,6 +183,9 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 注意：这是 **协议层抓包**，不是 Frida 进程读取；它依赖客户端信任本地 CA。若客户端升级后启用证书固定，则需要改抓包方式。详见 [USAGE.md](USAGE.md)。
 
+> **CN 复活版 / PC 继承客户端暂不支持这条路径。**  
+> 实测这类客户端登录走游戏内 `18765/18766` 本地桥接 + `pc_session_ciphertext` sealed session；普通 HTTP 代理能抓到 `Index/index`，但抓不到 `SYS_KEY_UPGRADE`，没有当前登录 sign，响应无法解密。请改用 PC 端实时提取、已有快照，或 targetForge 的 PC 继承凭据。
+
 
 ![Android ADB 桥接](docs/screenshots/android_capture.png)
 

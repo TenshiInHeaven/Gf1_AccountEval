@@ -104,6 +104,8 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 > 如果客户端启用了证书固定，或者当前区服的登录协议发生变化，抓包可能解不开；这时仍可使用下面的快照导入。
 
+> **CN 复活版 / PC 继承客户端**：实测登录走游戏内 `18765/18766` 本地桥接，HTTP 代理抓不到当前 `sign`，因此无法解密 `Index/index`；请使用 PC 端实时提取或已有快照。
+
 ### 方式 D：Android 模拟器显式快照 fallback
 
 如果你的模拟器已经开启 ADB：
