@@ -86,20 +86,27 @@ run.bat
 
 之前从本工具导出的、或从 Android 端导出的快照都可以。
 
-### 方式 C：Android 模拟器 HTTPS 抓包（无需 root）
+### 方式 C：Android 模拟器一键抓包（无需 root）
 
-这是与 targetForge 同类的 MITM 代理路线：不读进程，抓登录后的 `Index/index` 全量账号响应。
+桌面端 **「提取账号」→「一键抓包」**：
+
+1. 自动检测 ADB / 模拟器
+2. 选择区服：台服 / 日服 / 美服 / 国服复活版
+3. 自动选择端口并配置代理、`adb reverse` 和桥接
+4. 点「开始抓包」，游戏启动后 **退出登录 / 切换账号 → 重新输入账密**
+5. 看到 `[SNAP]` 后自动生成 `snapshots/account_android_*.json`
+6. 桌面版直接载入；也可以在 PWA 导入
+
+只有 **国服复活版** 会额外处理 `18765/18766` 本地桥接；其他区服走普通代理路径。
+
+如果按钮不可用，可以用命令行备用：
 
 ```powershell
 build.bat --with-android
 python tools\android_proxy_capture.py --port 18080 --push-ca
 ```
 
-1. 按工具提示，把模拟器 Wi-Fi 代理设为 **PC 局域网 IP:18080**
-2. 在模拟器安装 CA（设置 → 安全 → 加密与凭据 → 安装证书 → CA 证书）
-3. 完全退出并重启游戏，重新登录到主界面
-4. 看到 `[SNAP]` 后，工具生成 `snapshots/account_android_*.json`
-5. 在桌面版「提取账号 → 导入快照」选择该文件
+然后按工具提示设置模拟器代理并安装 CA。
 
 如果已经保存了原始响应，可以离线转换：
 

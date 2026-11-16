@@ -18,7 +18,9 @@ from tempfile import TemporaryDirectory
 PACKAGE_CANDIDATES = (
     "com.sunborn.girlsfrontline.cn",
     "com.sunborn.girlsfrontline",
+    "com.sunborn.girlsfrontline.en",
     "com.sunborn.girlsfrontline.jp",
+    "com.sunborn.girlsfrontline.pt",
     "com.sunborn.girlsfrontline.kr",
     "tw.txwy.and.snqx",
 )
@@ -26,7 +28,9 @@ PACKAGE_CANDIDATES = (
 PACKAGE_LABELS = {
     "com.sunborn.girlsfrontline.cn": "国服",
     "com.sunborn.girlsfrontline": "国际服",
+    "com.sunborn.girlsfrontline.en": "美服",
     "com.sunborn.girlsfrontline.jp": "日服",
+    "com.sunborn.girlsfrontline.pt": "国服复活版 / 日服壳",
     "com.sunborn.girlsfrontline.kr": "韩服",
     "tw.txwy.and.snqx": "台服",
 }

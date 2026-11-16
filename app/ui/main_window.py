@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QSize, Qt
+from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QRect, QTimer, QSize, Qt
 from PySide6.QtGui import QIcon, QKeySequence, QPixmap, QShortcut
 from PySide6.QtWidgets import (
     QFrame,
@@ -79,6 +79,7 @@ class MainWindow(QMainWindow):
         self.help_shortcut = QShortcut(QKeySequence("F1"), self)
         self.help_shortcut.activated.connect(self.open_help)
         self._load_initial()
+        QTimer.singleShot(0, self._init_nav_indicator)
 
     # ------------------------------------------------------------------
     def _build_sidebar(self) -> QWidget:
@@ -118,6 +119,13 @@ class MainWindow(QMainWindow):
             button.clicked.connect(lambda checked=False, page=key: self.show_page(page))
             layout.addWidget(button)
             self.nav_buttons[key] = button
+        self.nav_indicator = QFrame(sidebar)
+        self.nav_indicator.setFixedWidth(3)
+        self.nav_indicator.setStyleSheet(f"background: {GOLD}; border-radius: 1px;")
+        self.nav_indicator.setAttribute(Qt.WA_TransparentForMouseEvents)
+        self.nav_indicator.raise_()
+        self.nav_indicator_anim: QPropertyAnimation | None = None
+        self.nav_indicator_ready = False
         layout.addSpacing(10)
         separator = QFrame()
         separator.setFixedHeight(1)
@@ -240,8 +248,8 @@ class MainWindow(QMainWindow):
             target.setGraphicsEffect(effect)
             self.stack.setCurrentWidget(target)
             animation = QPropertyAnimation(effect, b"opacity", self)
-            animation.setDuration(190)
-            animation.setStartValue(0.0)
+            animation.setDuration(260)
+            animation.setStartValue(0.12)
             animation.setEndValue(1.0)
             animation.setEasingCurve(QEasingCurve.OutCubic)
             animation.finished.connect(lambda: target.setGraphicsEffect(None))
@@ -250,11 +258,45 @@ class MainWindow(QMainWindow):
             self._page_anim = animation
         for name, button in self.nav_buttons.items():
             button.setChecked(name == key)
+        self._move_nav_indicator(key)
         for name, label, subtitle, _icon in self.PAGES:
             if name == key:
                 self.page_title.setText(label)
                 self.page_subtitle.setText(subtitle)
                 break
+
+    def _init_nav_indicator(self) -> None:
+        self.nav_indicator_ready = True
+        current = next(
+            (name for name, button in self.nav_buttons.items() if button.isChecked()),
+            "dashboard",
+        )
+        self._move_nav_indicator(current, animate=False)
+
+    def _move_nav_indicator(self, key: str, animate: bool = True) -> None:
+        if not getattr(self, "nav_indicator_ready", False):
+            return
+        button = self.nav_buttons.get(key)
+        if button is None:
+            return
+        target = QRect(
+            button.geometry().left() + 5,
+            button.geometry().top() + 8,
+            3,
+            max(8, button.height() - 16),
+        )
+        if not animate or self.nav_indicator.geometry() == target:
+            self.nav_indicator.setGeometry(target)
+            return
+        if self.nav_indicator_anim is not None:
+            self.nav_indicator_anim.stop()
+        animation = QPropertyAnimation(self.nav_indicator, b"geometry", self)
+        animation.setDuration(220)
+        animation.setStartValue(self.nav_indicator.geometry())
+        animation.setEndValue(target)
+        animation.setEasingCurve(QEasingCurve.OutCubic)
+        animation.start()
+        self.nav_indicator_anim = animation
 
     def open_capture(self) -> None:
         dialog = CaptureDialog(self.state, self)

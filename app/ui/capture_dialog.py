@@ -23,6 +23,7 @@ from ..capture.android import AndroidBridge, AndroidError, PACKAGE_LABELS
 from ..capture.live import CaptureError, capture, find_game_pid
 from ..core.paths import PROJECT_ROOT
 from ..state import AppState
+from .android_proxy_dialog import AndroidProxyDialog
 from .theme import BORDER, GOLD, GREEN, MUTED, PANEL, PANEL_2, RED, TEXT
 
 
@@ -147,13 +148,17 @@ class CaptureDialog(QDialog):
         android_head.addWidget(self.android_status)
         android_layout.addLayout(android_head)
         android_note = QLabel(
-            "通过 ADB 启动模拟器里的游戏，并拉取 /sdcard/Download/gf_account_snapshot.json。"
-            "不读取游戏内存，不需要 root。"
+            "一键检测 ADB / 模拟器，自动选择端口并配置代理；区服支持台服、日服、"
+            "美服、国服复活版。开始后需要退出登录/切换账号并重新登录。"
         )
         android_note.setStyleSheet(f"color: {MUTED}; font-size: 11px;")
         android_note.setWordWrap(True)
         android_layout.addWidget(android_note)
         android_actions = QHBoxLayout()
+        self.android_proxy = QPushButton("一键抓包")
+        self.android_proxy.setObjectName("Primary")
+        self.android_proxy.clicked.connect(self._open_android_proxy)
+        android_actions.addWidget(self.android_proxy)
         self.android_detect = QPushButton("检测设备")
         self.android_detect.setObjectName("Ghost")
         self.android_detect.clicked.connect(self._detect_android)
@@ -163,7 +168,7 @@ class CaptureDialog(QDialog):
         self.android_launch.clicked.connect(self._launch_android)
         android_actions.addWidget(self.android_launch)
         self.android_pull = QPushButton("从设备导入快照")
-        self.android_pull.setObjectName("Primary")
+        self.android_pull.setObjectName("Ghost")
         self.android_pull.clicked.connect(self._pull_android)
         android_actions.addWidget(self.android_pull)
         android_actions.addStretch(1)
@@ -255,6 +260,24 @@ class CaptureDialog(QDialog):
             self._append(
                 f"Android 设备：{self.android_device.label}；包名：{self.android_package or '未找到'}"
             )
+
+    def _open_android_proxy(self) -> None:
+        if not self.android_device:
+            self._detect_android()
+        if not self.android_device:
+            QMessageBox.warning(
+                self, "没有设备", "请先启动模拟器并点击「检测设备」。"
+            )
+            return
+        dialog = AndroidProxyDialog(
+            self.state,
+            self.android,
+            self.android_device,
+            self.android_package,
+            self,
+        )
+        if dialog.exec() == QDialog.Accepted:
+            self.accept()
 
     def _launch_android(self) -> None:
         if not self.android_device:

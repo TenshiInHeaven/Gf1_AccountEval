@@ -48,7 +48,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 - **多强度条件同时筛选**：人形 / 妖精 / 融合势力 / 图鉴页的强度 chip 支持多选，例如同时看 `SS + S`，再叠加类型、搜索和「只看已拥有」。
 - **逐条复制详情**：点击任意单位卡片可查看每一条复制记录（妖精按 5★/4★/3★/2★/1★ 分组，显示等级、技能、装备、编队；人形显示等级、改造、好感、编队；融合势力显示扩编、解析）。
 - **平滑过渡**：Qt `QPropertyAnimation` + `QGraphicsOpacityEffect` 做页面淡入和筛选结果淡入，不依赖第三方动画库。
-- **Android ADB 桥接**：自动查找 MuMu / LDPlayer / BlueStacks / Nox / Android SDK 的 `adb`，检测设备与少前包名，启动游戏，并从 `/sdcard/Download/` 拉取显式导出的快照。
+- **Android 一键抓包**：自动检测 MuMu / LDPlayer / BlueStacks / Nox / Android SDK 的 `adb`，选择台服 / 日服 / 美服 / 国服复活版后自动选端口、配置代理和 `adb reverse`；国服复活版额外处理 `18765/18766` 桥接。抓包期间在游戏里退出登录 / 切换账号并重新登录，成功后直接载入账号。也支持从 `/sdcard/Download/` 拉取显式导出的快照。
 - **头像标识**：人形/妖精优先使用游戏 `resourceiconspinehead` / `resourcefairy` 资源包中的头像；融合势力改为提取 `character*spine.ab` 的战场 Q 版 Spine 小人并渲染成小全身头像，活动皮肤也使用对应皮肤的 Q 版模型；只有缺少 Q 版模型时才回退官方小图/占位图。
 - **本地优先**：不上传账号数据，不写入游戏，不修改内存；快照默认保存在项目目录。
 
@@ -238,6 +238,18 @@ adb reverse tcp:8770 tcp:8770
 ```
 
 PWA 不读取游戏进程、不需要 root；账号快照仍需 PC 端提取或从设备导入。它可以直接导入 PC 导出的 `account_snapshot.json`，也内置示例账号。
+
+### PWA 有什么用
+
+PWA 是**手机端查看器**，不是抓包工具：
+
+- 在手机 / 平板上查看已提取的账号
+- 离线查看四维评分、单位筛选、逐条复制详情
+- 安装到主屏幕，像 App 一样打开
+- 不读取游戏进程、不参与抓包、不需要 root
+
+抓包仍然在 PC 端完成；PWA 只负责导入并展示快照。这样手机端不需要任何特殊权限。
+
 
 ![PWA 总览](docs/screenshots/pwa_dashboard.png)
 
