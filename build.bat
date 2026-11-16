@@ -6,13 +6,14 @@ cd /d "%~dp0"
 set "ROOT=%CD%"
 set "VENV=%ROOT%\.venv"
 set "WITH_EXTRACT=0"
-set "WITH_ANDROID=0"
+set "WITH_ANDROID=1"
 set "NO_PAUSE=0"
 
 :parse_args
 if "%~1"=="" goto args_done
 if /I "%~1"=="--with-extract" set "WITH_EXTRACT=1"
 if /I "%~1"=="--with-android" set "WITH_ANDROID=1"
+if /I "%~1"=="--without-android" set "WITH_ANDROID=0"
 if /I "%~1"=="--no-pause" set "NO_PAUSE=1"
 shift
 goto parse_args
@@ -67,22 +68,21 @@ if "%WITH_EXTRACT%"=="1" (
   if errorlevel 1 goto fail
 )
 if "%WITH_ANDROID%"=="1" (
-  echo      Installing optional Android MITM capture dependencies ...
+  echo      Installing Android capture dependencies ...
   "%PY%" -m pip install -r "%ROOT%\requirements-android.txt"
   if errorlevel 1 goto fail
+) else (
+  echo      Android capture dependencies skipped by --without-android
 )
 
-echo [4/4] Running tests and building PWA data ...
+echo [4/4] Running tests ...
 "%PY%" -m unittest discover -s "%ROOT%\tests" -q
-if errorlevel 1 goto fail
-"%PY%" "%ROOT%\tools\build_web.py"
 if errorlevel 1 goto fail
 
 echo.
 echo ============================================================
 echo  Build environment is ready.
 echo    Desktop:  run.bat
-echo    PWA:      run_web.bat  (http://127.0.0.1:8770/)
 echo    Tests:    .venv\Scripts\python.exe -m unittest discover -s tests -v
 echo ============================================================
 if "%NO_PAUSE%"=="0" pause

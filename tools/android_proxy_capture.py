@@ -9,14 +9,13 @@ This is the proxy/MITM route described in ``build_private_server.md``:
       -> convert to account_snapshot.json
 
 It does **not** need root, Frida or process memory.  It needs the emulator to
-trust the local CA and a **fresh login while the proxy is active**.  A mere
-client restart can resume a cached session; that produces no ``getUidPC`` and
-therefore no session sign.  For CN revival clients, use "退出登录 / 切换账号"
-and enter the credentials again after capture is running.
+trust the local CA when HTTPS is used.  CN revival clients must do a **fresh
+login while the proxy is active** ("退出登录 / 切换账号"); other regions only
+need the normal client restart, matching the PC flow.
 
-Install optional dependencies:
+Dependencies are installed by default:
 
-    build.bat --with-android
+    build.bat
 
 Run:
 
@@ -48,8 +47,8 @@ from app.capture.android import AndroidBridge  # noqa: E402
 
 STATIC_KEY = "yundoudou"
 SUPPORT_NOTICE = (
-    "国服复活版可抓，但必须在抓包期间完成一次全新登录"
-    "（退出登录 / 切换账号 → 重新输入账密）；只重启会复用缓存，抓不到 sign。"
+    "国服复活版必须在抓包期间「退出登录 / 切换账号 → 重新输入账密」；"
+    "其他区服重启游戏即可。"
 )
 CACHE = ROOT / ".cache" / "android_mitm"
 DEFAULT_PORT = 18080
@@ -306,8 +305,8 @@ class Recorder:
                     if not self.sign and not self.warned_no_sign:
                         self.warned_no_sign = True
                         print(
-                            "[HINT] 未捕获登录 sign：请在抓包运行期间"
-                            "退出登录 / 切换账号，再重新输入账密。",
+                            "[HINT] 未捕获登录 sign：国服复活版请退出登录 / 切换账号；"
+                            "其他区服重启游戏后再试。",
                             flush=True,
                         )
                     return
@@ -374,15 +373,15 @@ async def run_proxy(args) -> int:
     print("=" * 62)
     print(f"支持范围 : 正常登录并返回 uid/sign 的客户端")
     print(f"国服复活版: 需抓包期间「退出登录 / 切换账号」后全新登录")
-    print(f"注意     : 只重启客户端可能复用缓存，抓不到 sign")
+    print(f"其他区服 : 重启游戏即可，和 PC 国服流程一样")
     print(f"代理端口 : {args.host}:{args.port}")
     print(f"模拟器代理: {_lan_ip()}:{args.port}")
     print(f"CA 证书  : {ca_path}")
     print("步骤：")
     print("  1. 模拟器 Wi-Fi 代理指向上面的 IP:端口（不要用 127.0.0.1）")
     print("  2. 安装 CA 证书（或重新运行时加 --push-ca，把证书推到 Download）")
-    print("  3. 在游戏里「退出登录 / 切换账号」，重新输入账密完成全新登录")
-    print("     只重启客户端会复用缓存，不产生 getUidPC，sign 为空")
+    print("  3. 国服复活版：退出登录 / 切换账号，重新输入账密")
+    print("     其他区服：重启游戏即可")
     print("  4. 等本窗口出现 [SNAP]；按 Ctrl+C 停止")
     print("=" * 62, flush=True)
     if args.push_ca:

@@ -106,25 +106,6 @@ class AndroidBridgeTests(unittest.TestCase):
         self.assertTrue(any("gf_account_snapshot.json" in path for path in SNAPSHOT_CANDIDATES))
 
 
-class WebDataTests(unittest.TestCase):
-    def test_pwa_files_and_icons_exist(self):
-        web = ROOT / "web"
-        for name in ("index.html", "styles.css", "app.js", "manifest.webmanifest", "sw.js", "serve.py"):
-            self.assertTrue((web / name).is_file(), name)
-        for size in (192, 512):
-            self.assertTrue((web / "icons" / f"icon-{size}.png").is_file())
-
-    def test_web_data_matches_app_data(self):
-        web = ROOT / "web" / "data"
-        app = ROOT / "app" / "data"
-        for kind in ("dolls", "fairies", "sangvis"):
-            web_rows = json.loads((web / "codex" / f"{kind}.json").read_text(encoding="utf-8"))
-            app_rows = json.loads((app / "codex" / f"{kind}.json").read_text(encoding="utf-8"))
-            self.assertEqual(len(web_rows), len(app_rows))
-        self.assertTrue((web / "sample_account.json").is_file())
-        self.assertTrue((ROOT / "web" / "assets" / "avatars" / "dolls").is_dir())
-
-
 class LiveParserTests(unittest.TestCase):
     def test_parse_sections(self):
         text = (

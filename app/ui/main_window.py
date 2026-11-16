@@ -124,7 +124,14 @@ class MainWindow(QMainWindow):
         self.nav_indicator.setStyleSheet(f"background: {GOLD}; border-radius: 1px;")
         self.nav_indicator.setAttribute(Qt.WA_TransparentForMouseEvents)
         self.nav_indicator.raise_()
+        self.nav_pill = QFrame(sidebar)
+        self.nav_pill.setStyleSheet(
+            "background: #E2EEFF; border-radius: 10px;"
+        )
+        self.nav_pill.setAttribute(Qt.WA_TransparentForMouseEvents)
+        self.nav_pill.lower()
         self.nav_indicator_anim: QPropertyAnimation | None = None
+        self.nav_pill_anim: QPropertyAnimation | None = None
         self.nav_indicator_ready = False
         layout.addSpacing(10)
         separator = QFrame()
@@ -204,7 +211,7 @@ class MainWindow(QMainWindow):
         header_layout.addWidget(self.capture_button)
         self.help_button = QPushButton("帮助")
         self.help_button.setObjectName("Ghost")
-        self.help_button.setToolTip("操作帮助：正常流程 / Android 抓包 / PWA（F1）")
+        self.help_button.setToolTip("操作帮助：正常流程 / Android 抓包（F1）")
         self.help_button.clicked.connect(self.open_help)
         header_layout.addWidget(self.help_button)
         layout.addWidget(header)
@@ -285,8 +292,13 @@ class MainWindow(QMainWindow):
             3,
             max(8, button.height() - 16),
         )
-        if not animate or self.nav_indicator.geometry() == target:
+        pill_target = button.geometry()
+        if not animate or (
+            self.nav_indicator.geometry() == target
+            and self.nav_pill.geometry() == pill_target
+        ):
             self.nav_indicator.setGeometry(target)
+            self.nav_pill.setGeometry(pill_target)
             return
         if self.nav_indicator_anim is not None:
             self.nav_indicator_anim.stop()
@@ -297,6 +309,15 @@ class MainWindow(QMainWindow):
         animation.setEasingCurve(QEasingCurve.OutCubic)
         animation.start()
         self.nav_indicator_anim = animation
+        if self.nav_pill_anim is not None:
+            self.nav_pill_anim.stop()
+        pill_anim = QPropertyAnimation(self.nav_pill, b"geometry", self)
+        pill_anim.setDuration(220)
+        pill_anim.setStartValue(self.nav_pill.geometry())
+        pill_anim.setEndValue(pill_target)
+        pill_anim.setEasingCurve(QEasingCurve.OutCubic)
+        pill_anim.start()
+        self.nav_pill_anim = pill_anim
 
     def open_capture(self) -> None:
         dialog = CaptureDialog(self.state, self)

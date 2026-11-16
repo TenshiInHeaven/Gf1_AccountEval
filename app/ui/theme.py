@@ -189,6 +189,7 @@ QPushButton#Nav {{
     text-align: left;
     padding: 12px 16px;
     border-radius: 10px;
+    background: transparent;
     font-size: 14px;
     color: {MUTED};
 }}
@@ -197,9 +198,9 @@ QPushButton#Nav:hover {{
     color: {TEXT};
 }}
 QPushButton#Nav:checked {{
-    background: #E2EEFF;
+    background: transparent;
     color: #0F4C9C;
-    border-left: 3px solid {GOLD};
+    border-left: none;
 }}
 QPushButton#Primary {{
     background: {GOLD};

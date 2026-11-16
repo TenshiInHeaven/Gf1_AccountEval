@@ -39,7 +39,8 @@ cd Gf1_AccountEval
 build.bat
 ```
 
-> `build.bat` 会安装运行依赖、跑测试，并生成 PWA 的 `web/data` 与头像副本。  
+> `build.bat` 会安装运行依赖、默认安装 Android 抓包依赖，并跑测试。  
+> 如果完全不需要 Android，可用 `build.bat --without-android` 跳过。
 > 只有你要运行头像/Spine 提取脚本时，才需要用 `build.bat --with-extract` 安装 UnityPy；它**不会自动重新提取素材**，提取命令仍需按 README 的「重建数据 / 头像」手动执行。
 
 ## 2. 打开桌面版
@@ -93,16 +94,16 @@ run.bat
 1. 自动检测 ADB / 模拟器
 2. 选择区服：台服 / 日服 / 美服 / 国服复活版
 3. 自动选择端口并配置代理、`adb reverse` 和桥接
-4. 点「开始抓包」，游戏启动后 **退出登录 / 切换账号 → 重新输入账密**
+4. 点「开始抓包」：台服 / 日服 / 美服重启游戏即可；国服复活版需 **退出登录 / 切换账号 → 重新输入账密**
 5. 看到 `[SNAP]` 后自动生成 `snapshots/account_android_*.json`
-6. 桌面版直接载入；也可以在 PWA 导入
+6. 桌面版直接载入
 
 只有 **国服复活版** 会额外处理 `18765/18766` 本地桥接；其他区服走普通代理路径。
 
 如果按钮不可用，可以用命令行备用：
 
 ```powershell
-build.bat --with-android
+build.bat
 python tools\android_proxy_capture.py --port 18080 --push-ca
 ```
 
@@ -139,34 +140,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 融合势力头像是从游戏 Spine 资源提取的战场 Q 版小全身，少数没有独立 Q 版模型的 SWAP/特殊单位会回退到官方小图。
 
-## 5. 手机 / PWA 版
-
-在电脑上双击：
-
-```text
-run_web.bat
-```
-
-浏览器会打开 `http://127.0.0.1:8770/`。
-
-### 安装到 Android
-
-推荐用 `adb reverse`，让手机访问电脑的 localhost：
-
-```powershell
-adb reverse tcp:8770 tcp:8770
-```
-
-然后在手机 Chrome 打开：
-
-```text
-http://localhost:8770/
-```
-
-浏览器菜单里选择 **「安装应用 / 添加到主屏幕」**。  
-PWA 支持离线缓存；账号数据通过导入 `account_snapshot.json` 获取，PWA 本身不读取游戏进程。
-
-## 6. 常见问题
+## 5. 常见问题
 
 ### 提示找不到 Python
 
@@ -174,7 +148,7 @@ PWA 支持离线缓存；账号数据通过导入 `account_snapshot.json` 获取
 
 ### PowerShell 不允许运行脚本
 
-直接双击 `run.bat` / `run_web.bat` 即可，它们会绕过执行策略调用 `.ps1`。
+直接双击 `run.bat` 即可，它会绕过执行策略调用 `.ps1`。
 
 ### 实时提取没有响应
 
@@ -186,9 +160,9 @@ PWA 支持离线缓存；账号数据通过导入 `account_snapshot.json` 获取
 
 不会。快照只保存在本机 `snapshots/`，`.gitignore` 已排除该目录；本工具没有上传逻辑。
 
-## 7. 版权
+## 6. 版权
 
 - 代码、脚本、文档、数据表：**MIT**
-- `assets/`、`web/assets/`、`web/icons/`、`docs/screenshots/` 和根目录榜单图片：**不属于 MIT**，版权归 Sunborn / 散爆及各自权利人，仅用于个人非商业展示
+- `assets/`、`docs/screenshots/` 和根目录榜单图片：**不属于 MIT**，版权归 Sunborn / 散爆及各自权利人，仅用于个人非商业展示
 
 详见 [LICENSE](LICENSE) 和 [ASSETS_LICENSE.md](ASSETS_LICENSE.md)。

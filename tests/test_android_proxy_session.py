@@ -11,7 +11,9 @@ class AndroidProxySessionTests(unittest.TestCase):
     def test_region_profiles(self):
         self.assertTrue(REGIONS["tw"].packages)
         self.assertFalse(REGIONS["tw"].bridge)
+        self.assertFalse(REGIONS["tw"].fresh_login)
         self.assertTrue(REGIONS["cn_revival"].bridge)
+        self.assertTrue(REGIONS["cn_revival"].fresh_login)
         self.assertFalse(REGIONS["cn_revival"].needs_ca)
 
     def test_free_port(self):

@@ -4,8 +4,7 @@
 
 但以下美术素材 **不属于 MIT 协议**：
 
-- `assets/`：人形、妖精、融合势力头像
-- `web/assets/`、`web/icons/`：PWA 使用的头像和图标
+- `assets/`：人形、妖精、融合势力头像，游戏头像 / Spine 小人与相关素材
 - `docs/screenshots/`：界面截图
 - 根目录的榜单图片：`人形强度榜.jpeg`、`妖精强度榜.png`、`机动装甲武器.png`、`装备需求一图流.jpeg`、`铁血强度榜.png`
 

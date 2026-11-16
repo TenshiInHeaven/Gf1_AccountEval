@@ -201,8 +201,8 @@ class AndroidProxyDialog(QDialog):
             )
         else:
             self.notice.setText(
-                "开始后请在游戏里「退出登录 / 切换账号」并重新输入账密，"
-                "让抓包看到新的登录包；只重启客户端可能复用缓存，抓不到 sign。"
+                "开始后重启游戏即可，和 PC 国服流程一样；不需要退出登录。"
+                "客户端重启后会重新走登录并抓取 Index。"
             )
 
     def _refresh_packages(self) -> None:

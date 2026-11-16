@@ -39,6 +39,7 @@ class AndroidRegion:
     packages: tuple[str, ...]
     bridge: bool = False
     needs_ca: bool = True
+    fresh_login: bool = False
     note: str = ""
 
 
@@ -61,6 +62,7 @@ REGIONS: dict[str, AndroidRegion] = {
         ("com.sunborn.girlsfrontline.pt",),
         bridge=True,
         needs_ca=False,
+        fresh_login=True,
         note="额外使用 18765/18766 本地桥接，必须全新登录",
     ),
 }
@@ -246,7 +248,12 @@ class AndroidProxyWorker(QThread):
         )
         if launched.returncode != 0:
             raise AndroidError((launched.stderr or launched.stdout).strip() or "启动游戏失败")
-        self.log.emit("游戏已启动；请在游戏中退出登录 / 切换账号，再重新输入账密")
+        if self.region.fresh_login:
+            self.log.emit(
+                "游戏已启动；请在游戏中退出登录 / 切换账号，再重新输入账密"
+            )
+        else:
+            self.log.emit("游戏已重启；等待客户端重新登录并抓取 Index")
 
     def _restore(self) -> None:
         try:

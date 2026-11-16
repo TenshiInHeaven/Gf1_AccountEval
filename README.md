@@ -12,11 +12,12 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 |---|---|---|
 | PC 国服 / 正常登录的官方客户端 | 支持 | XLua 实时读取；Frida attach 后读 `CS.GameData` |
 | 正常 HTTP 登录、登录响应中返回 `uid/sign` 的客户端 | 支持（实验） | 本地代理先解出 `SYS_KEY_UPGRADE`，再用当前 sign 解 `Index/index` |
+| **台服 / 日服 / 美服 Android** | 支持 | 重启客户端即可，和 PC 国服流程一样 |
 | **国服复活版 / PC 继承客户端（`.pt` / 日服壳）** | **支持，但必须全新登录** | 抓包生效后要完成一次**退出登录 / 切换账号 → 重新输入账密**；只重启客户端会复用缓存登录态，不产生 `getUidPC`，sign 为空 |
 
 > 国服复活版的关键不是“代理不行”，而是**登录时机**：  
-> 必须让游戏在抓包期间重新走一次完整登录，日志里出现 `POST Index/getUidPC` → `[KEY] uid/sign`，后面的 `Index/index` 才能解密。  
-> 只重启客户端、直接回到主界面，通常只会看到 `Index/index` 密文和靶机请求，抓不到 sign。
+> 抓包运行期间必须退出登录 / 切换账号并重新输入账密；日志里出现 `Index/getUidPC` 和 `[KEY] uid/sign` 后，`Index/index` 才能解密。  
+> 台服 / 日服 / 美服只需要重启客户端，和 PC 国服流程一样。
 
 
 ## 第一次使用（3 步）
@@ -25,7 +26,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 2. 双击 **`run.bat`** 打开桌面版
 3. 点右上角 **「提取账号」**：游戏已登录就选实时提取，否则导入 `account_snapshot.json`
 
-完整图文步骤（实时提取、快照导入、Android/PWA 安装、常见问题）见 **[USAGE.md](USAGE.md)**。  
+完整图文步骤（实时提取、快照导入、Android 抓包、常见问题）见 **[USAGE.md](USAGE.md)**。  
 应用内点右上角 **「帮助」**（或按 **F1**）可查看正常流程和 Android 抓包流程，对应文档：[HELP.md](HELP.md)。
 
 
@@ -48,7 +49,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 - **多强度条件同时筛选**：人形 / 妖精 / 融合势力 / 图鉴页的强度 chip 支持多选，例如同时看 `SS + S`，再叠加类型、搜索和「只看已拥有」。
 - **逐条复制详情**：点击任意单位卡片可查看每一条复制记录（妖精按 5★/4★/3★/2★/1★ 分组，显示等级、技能、装备、编队；人形显示等级、改造、好感、编队；融合势力显示扩编、解析）。
 - **平滑过渡**：Qt `QPropertyAnimation` + `QGraphicsOpacityEffect` 做页面淡入和筛选结果淡入，不依赖第三方动画库。
-- **Android 一键抓包**：自动检测 MuMu / LDPlayer / BlueStacks / Nox / Android SDK 的 `adb`，选择台服 / 日服 / 美服 / 国服复活版后自动选端口、配置代理和 `adb reverse`；国服复活版额外处理 `18765/18766` 桥接。抓包期间在游戏里退出登录 / 切换账号并重新登录，成功后直接载入账号。也支持从 `/sdcard/Download/` 拉取显式导出的快照。
+- **Android 一键抓包**：自动检测 MuMu / LDPlayer / BlueStacks / Nox / Android SDK 的 `adb`，选择台服 / 日服 / 美服 / 国服复活版后自动选端口、配置代理和 `adb reverse`；国服复活版额外处理 `18765/18766` 桥接。国服复活版需要退出登录 / 切换账号并重新输入账密；其他区服重启游戏即可。成功后直接载入账号，也支持从 `/sdcard/Download/` 拉取显式导出的快照。
 - **头像标识**：人形/妖精优先使用游戏 `resourceiconspinehead` / `resourcefairy` 资源包中的头像；融合势力改为提取 `character*spine.ab` 的战场 Q 版 Spine 小人并渲染成小全身头像，活动皮肤也使用对应皮肤的 Q 版模型；只有缺少 Q 版模型时才回退官方小图/占位图。
 - **本地优先**：不上传账号数据，不写入游戏，不修改内存；快照默认保存在项目目录。
 
@@ -84,9 +85,10 @@ build.bat
 
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
-3. 安装 `requirements.txt`
-4. 运行 17 个单元测试
-5. 运行 `tools/build_web.py` 生成 PWA 数据与头像副本
+3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
+4. 运行 18 个单元测试
+
+> Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
 
 需要运行头像/素材提取脚本时，先安装可选依赖（这一步**不会自动重提取**）：
 
@@ -174,20 +176,19 @@ python -m venv .venv
 
 Android 端只需要把快照 JSON 放到上述路径，桌面端即可导入并参与四维评分。快照 schema 与 PC 端一致，可直接参考 [`app/data/sample_account.json`](app/data/sample_account.json)。
 
-### Android 模拟器 HTTPS 抓包（无需 root）
+### Android 模拟器一键抓包（无需 root）
 
-这是和 targetForge 相同的 **MITM 代理**路线：不读进程内存，而是让模拟器通过 PC 上的代理登录，抓取登录后的 `Index/index` 全量账号响应。
+桌面端 **「提取账号」→「一键抓包」** 会自动检测 ADB / 模拟器、选择区服、配置端口和代理。也可以手动运行：
 
 ```powershell
-build.bat --with-android
+build.bat
 python tools\android_proxy_capture.py --port 18080 --push-ca
 ```
 
-1. 模拟器 Wi-Fi 代理设置为工具打印的 **PC 局域网 IP:18080**（不要填 127.0.0.1）
-2. 在模拟器安装 CA：设置 → 安全 → 加密与凭据 → 安装证书 → CA 证书
-3. 完全退出并重启游戏，重新登录到主界面
-4. 工具出现 `[SNAP]` 后会自动停止，并写入 `snapshots/account_android_*.json`
-5. 在桌面版「提取账号 → 导入快照」选择它
+1. 选择台服 / 日服 / 美服 / 国服复活版
+2. 台服 / 日服 / 美服：重启游戏即可；国服复活版：退出登录 / 切换账号并重新输入账密
+3. 看到 `[SNAP]` 后自动生成 `snapshots/account_android_*.json`
+4. 桌面版「提取账号 → 导入快照」选择它
 
 抓到的原始 `Index` 也会保留为 `snapshots/index_*.json`。如果已经保存了原始响应，可以离线转换：
 
@@ -198,7 +199,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 注意：这是 **协议层抓包**，不是 Frida 进程读取；它依赖客户端信任本地 CA。若客户端升级后启用证书固定，则需要改抓包方式。详见 [USAGE.md](USAGE.md)。
 
 > **国服复活版 / PC 继承客户端支持，但必须“全新登录”。**  
-> 抓包运行期间要在游戏里退出登录 / 切换账号，再重新输入账密；日志里出现 `Index/getUidPC` 和 `[KEY] uid/sign` 后，`Index/index` 才能解密。只重启客户端会复用缓存登录态，通常抓不到 sign。
+> 抓包运行期间要在游戏里退出登录 / 切换账号，再重新输入账密；日志里出现 `Index/getUidPC` 和 `[KEY] uid/sign` 后，`Index/index` 才能解密。台服 / 日服 / 美服只需要重启客户端。
 
 
 ![Android ADB 桥接](docs/screenshots/android_capture.png)
@@ -208,54 +209,6 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 - `adb devices`、`pm list packages`、`pidof` 属于普通 ADB 调试查询，不等同于越权读取；但开启 USB 调试 / root 本身会扩大攻击面。
 - **本项目的 Android 路径不读取游戏内存、不注入进程**。如果要像 PC 端那样在 Android 进程内读 `GameData`，需要 root + Frida + 针对 Android 的 IL2CPP/XLua 偏移，这可能被反外挂或安全软件判定为异常/越权，风险由使用者承担。
 - 更稳妥的 Android 方案是从游戏侧导出快照后由 ADB 拉取；不建议在主账号上默认开启 root/Frida。
-
-## 两套形态：PC Qt + Android PWA
-
-当前先按“两套”拆：
-
-| 形态 | 入口 | 负责 |
-|---|---|---|
-| PC Qt 应用 | `run.ps1` | 账号提取（Windows XLua / Android ADB 拉取）、完整评分、导出快照 |
-| PWA | `run_web.ps1` | 手机/平板离线查看、四维评分、多强度筛选、逐条复制详情 |
-
-PWA 现在可以通过 Android Chrome 安装到主屏幕；暂未生成原生 APK，后续可用 TWA/WebView 套壳或 Kotlin + Compose 重写。PWA 不读取游戏进程，账号数据需要从 PC 快照导入。
-
-PWA 使用同一份 `app/data` 榜单和头像数据，起始页在 `web/index.html`，说明见 [web/README.md](web/README.md)。
-
-### PWA 启动
-
-```powershell
-cd E:\python\gf_forge\account_evaluate
-.\run_web.ps1
-# http://127.0.0.1:8770/
-```
-
-Android 模拟器/真机安装建议用 `adb reverse`，让手机访问自己的 localhost 以获得安全上下文：
-
-```powershell
-adb reverse tcp:8770 tcp:8770
-# 手机 Chrome 打开 http://localhost:8770/，菜单里安装 PWA
-```
-
-PWA 不读取游戏进程、不需要 root；账号快照仍需 PC 端提取或从设备导入。它可以直接导入 PC 导出的 `account_snapshot.json`，也内置示例账号。
-
-### PWA 有什么用
-
-PWA 是**手机端查看器**，不是抓包工具：
-
-- 在手机 / 平板上查看已提取的账号
-- 离线查看四维评分、单位筛选、逐条复制详情
-- 安装到主屏幕，像 App 一样打开
-- 不读取游戏进程、不参与抓包、不需要 root
-
-抓包仍然在 PC 端完成；PWA 只负责导入并展示快照。这样手机端不需要任何特殊权限。
-
-
-![PWA 总览](docs/screenshots/pwa_dashboard.png)
-
-![PWA 人形多选筛选](docs/screenshots/pwa_doll.png)
-
-![PWA 妖精复制详情](docs/screenshots/pwa_detail.png)
 
 ## 评分口径
 
@@ -326,7 +279,6 @@ account_evaluate/
 │  └─ ui/                     # Qt 页面 / 主题 / 组件
 ├─ assets/avatars/            # 已提取的人形 / 妖精 / 融合势力头像
 ├─ tools/                     # 数据构建、头像提取、示例快照生成
-├─ web/                       # Android/手机 PWA 查看器
 ├─ tests/                     # 纯标准库 unittest
 ├─ docs/screenshots/          # README 截图
 ├─ 人形强度榜.jpeg
@@ -339,7 +291,7 @@ account_evaluate/
 └─ run.ps1
 ```
 
-根目录这几张榜单图/Excel 只用于来源标注和人工核对，**不是运行时依赖**；运行 app / PWA 读取的是 `app/data/tierlists/*.json` 和 `app/data/equipment_targets.json`。如果删掉它们，程序仍可运行，但建议同步更新 `ASSETS_LICENSE.md` 和上面的来源说明。
+根目录这几张榜单图/Excel 只用于来源标注和人工核对，**不是运行时依赖**；运行 app 读取的是 `app/data/tierlists/*.json` 和 `app/data/equipment_targets.json`。如果删掉它们，程序仍可运行，但建议同步更新 `ASSETS_LICENSE.md` 和上面的来源说明。
 
 ## 重建数据 / 头像
 
