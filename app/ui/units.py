@@ -349,8 +349,8 @@ class UnitPage(QWidget):
             rows.append((item, owned))
         rows.sort(key=lambda pair: (
             0 if pair[1] else 1,
-            -int(self.tiers.is_crown(code=pair[0].code, name=pair[0].name)),
             -self.tiers.tier_for(code=pair[0].code, name=pair[0].name).score,
+            -int(self.tiers.is_crown(code=pair[0].code, name=pair[0].name)),
             -int(pair[1].level if pair[1] else 0),
             pair[0].name,
         ))
