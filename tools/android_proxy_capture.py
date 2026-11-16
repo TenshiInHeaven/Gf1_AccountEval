@@ -39,6 +39,7 @@ import sys
 import time
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qs, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -227,6 +228,15 @@ class Recorder:
         path.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
         return path
 
+    def _scan(self, payload: Any) -> None:
+        if not isinstance(payload, dict):
+            return
+        uid = payload.get("uid")
+        sign = payload.get("sign")
+        if uid and sign and str(sign) != self.sign:
+            self.sign = str(sign)
+            print(f"[KEY] uid={uid} sign 已获取", flush=True)
+
     def request(self, flow) -> None:
         try:
             url = str(flow.request.pretty_url)
@@ -234,8 +244,8 @@ class Recorder:
                 return
             body = flow.request.get_text(strict=False) or ""
             print(
-                f"[REQ] {flow.request.method} {url} len={len(body)} "
-                f"prefix={body[:160]!r}",
+                f"[REQ] {getattr(flow.request, 'method', '')} {url} "
+                f"len={len(body)} prefix={body[:160]!r}",
                 flush=True,
             )
             raw_dir = self.out_dir / "raw"
@@ -244,6 +254,20 @@ class Recorder:
             (raw_dir / f"req_{_stamp()}_{self.req_count:03d}.txt").write_text(
                 f"# {url}\n{body[:200_000]}", encoding="utf-8", errors="replace"
             )
+            # GFL requests carry encrypted JSON in outdatacode/signcode.  This
+            # is where targetForge gets uid/sign when the login packet is not
+            # a response body.
+            fields = parse_qs(body)
+            for field in ("outdatacode", "signcode"):
+                for raw in fields.get(field) or []:
+                    decoded = decode_any(unquote(raw), self.sign, self.static_key)
+                    if not decoded:
+                        continue
+                    print(f"[C2S] {url}\n     {decoded[:300]}", flush=True)
+                    try:
+                        self._scan(json.loads(decoded))
+                    except ValueError:
+                        pass
         except Exception as exc:  # noqa: BLE001
             print(f"[WARN] 读取请求失败：{type(exc).__name__}: {exc}", flush=True)
 
@@ -282,11 +306,7 @@ class Recorder:
                     return
                 payload = json.loads(decoded)
             self.packets += 1
-            if isinstance(payload, dict):
-                # Login packets reveal the session sign; use it for later Index.
-                if payload.get("uid") and payload.get("sign"):
-                    self.sign = str(payload["sign"])
-                    print(f"[KEY] uid={payload['uid']} sign 已获取", flush=True)
+            self._scan(payload)
             if "Index/index" not in url:
                 return
             print(f"[INDEX] 收到 Index/index，{len(decoded)} chars", flush=True)
