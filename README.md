@@ -8,13 +8,15 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 
 ## 支持范围（重要）
 
-| 客户端 | 支持情况 | 原因 |
+| 客户端 | 支持情况 | 说明 |
 |---|---|---|
 | PC 国服 / 正常登录的官方客户端 | 支持 | XLua 实时读取；Frida attach 后读 `CS.GameData` |
 | 正常 HTTP 登录、登录响应中返回 `uid/sign` 的客户端 | 支持（实验） | 本地代理先解出 `SYS_KEY_UPGRADE`，再用当前 sign 解 `Index/index` |
-| **国服复活版 / PC 继承客户端（`.pt` / 日服壳）** | **不支持** | **sign 不在登录流程中返回**，而是由 `libgfcompat` / `pc_session_ciphertext` 在进程内提供；HTTP 代理只能抓到加密的 `Index/index`，拿不到当前 sign，无法解密 |
+| **国服复活版 / PC 继承客户端（`.pt` / 日服壳）** | **支持，但必须全新登录** | 抓包生效后要完成一次**退出登录 / 切换账号 → 重新输入账密**；只重启客户端会复用缓存登录态，不产生 `getUidPC`，sign 为空 |
 
-国服复活版请改用 **PC 端实时提取同一账号**，或导入已有 `account_snapshot.json`。不要指望 Android 代理抓包，当前版本不会成功。
+> 国服复活版的关键不是“代理不行”，而是**登录时机**：  
+> 必须让游戏在抓包期间重新走一次完整登录，日志里出现 `POST Index/getUidPC` → `[KEY] uid/sign`，后面的 `Index/index` 才能解密。  
+> 只重启客户端、直接回到主界面，通常只会看到 `Index/index` 密文和靶机请求，抓不到 sign。
 
 
 ## 第一次使用（3 步）
@@ -194,8 +196,8 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 注意：这是 **协议层抓包**，不是 Frida 进程读取；它依赖客户端信任本地 CA。若客户端升级后启用证书固定，则需要改抓包方式。详见 [USAGE.md](USAGE.md)。
 
-> **国服复活版 / PC 继承客户端不支持这条路径（明确声明）。**  
-> 原因：这类客户端的 **sign 不在登录 HTTP 流程中返回**，而是由 `libgfcompat` / `pc_session_ciphertext` 在进程内提供。代理只能抓到 `Index/index` 密文，拿不到当前 sign，无法解密。请改用 PC 端实时提取或已有快照。
+> **国服复活版 / PC 继承客户端支持，但必须“全新登录”。**  
+> 抓包运行期间要在游戏里退出登录 / 切换账号，再重新输入账密；日志里出现 `Index/getUidPC` 和 `[KEY] uid/sign` 后，`Index/index` 才能解密。只重启客户端会复用缓存登录态，通常抓不到 sign。
 
 
 ![Android ADB 桥接](docs/screenshots/android_capture.png)

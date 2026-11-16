@@ -3,8 +3,8 @@
 这是一个本地优先的《少女前线 1》账号查看与四维强度评估工具。  
 **不修改游戏、不绕过登录、不上传账号数据。**
 
-> **明确不支持：国服复活版 / PC 继承客户端（`.pt` / 日服壳）。**  
-> 原因：这类客户端的 **sign 不在登录流程中返回**，而是由 `libgfcompat` / `pc_session_ciphertext` 在进程内提供；Android 代理只能抓到加密的 `Index/index`，拿不到当前 sign，无法解密。请使用 PC 端实时提取同一账号，或导入已有快照。
+> **国服复活版 / PC 继承客户端：支持，但必须全新登录。**  
+> 抓包生效后，在游戏里退出登录 / 切换账号，再重新输入账密；日志出现 `Index/getUidPC` 和 `[KEY] uid/sign` 才算成功。只重启客户端会复用缓存登录态，通常抓不到 sign，也就解不开 `Index/index`。
 
 ## 你需要什么
 
@@ -107,8 +107,8 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 > 如果客户端启用了证书固定，或者当前区服的登录协议发生变化，抓包可能解不开；这时仍可使用下面的快照导入。
 
-> **CN 复活版 / PC 继承客户端：不支持。**  
-> 原因：**sign 不在登录 HTTP 流程中返回**，而在 `libgfcompat` / `pc_session_ciphertext` 的进程内 session 里；代理拿不到当前 sign，`Index/index` 无法解密。请使用 PC 端实时提取或已有快照。
+> **CN 复活版 / PC 继承客户端：支持，但必须全新登录。**  
+> 抓包期间要在游戏里退出登录 / 切换账号并重新输入账密，让日志出现 `Index/getUidPC` → `[KEY] uid/sign`；只重启客户端不会产生新的登录包，sign 为空，`Index/index` 无法解密。
 
 ### 方式 D：Android 模拟器显式快照 fallback
 
