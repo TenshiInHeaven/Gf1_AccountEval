@@ -261,16 +261,22 @@ class AccountLoader:
         for code, items in grouped.items():
             ordered = sorted(
                 items,
-                key=lambda row: (_int(row.get("level")), _int(row.get("advance"))),
+                key=lambda row: (
+                    _int(row.get("level")),
+                    _int(row.get("advance")),
+                    _int(row.get("resolution_level") or row.get("resolution")),
+                ),
                 reverse=True,
             )
             best = ordered[0]
             copies = [
                 {
+                    "uid": _int(row.get("id")),
                     "info_id": _int(row.get("info_id") or row.get("infoId")),
                     "level": _int(row.get("level")),
                     "advance": _int(row.get("advance")),
-                    "resolution_level": _int(row.get("resolution_level") or row.get("resolutionLevel")),
+                    "resolution": _int(row.get("resolution")),
+                    "resolution_level": _int(row.get("resolution_level") or row.get("resolution")),
                     "team_id": _int(row.get("team_id") or row.get("teamId")),
                     "sign": _int(row.get("sign")),
                 }

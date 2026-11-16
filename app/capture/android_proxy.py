@@ -38,11 +38,25 @@ def _int(value: Any, default: int = 0) -> int:
         return default
 
 
+def _dict_rows(value: Any) -> list[dict]:
+    if isinstance(value, dict):
+        return [item for item in value.values() if isinstance(item, dict)]
+    return []
+
+
 def _list_at(payload: dict, keys: tuple[str, ...]) -> list[dict]:
     wanted = {_norm(key) for key in keys}
     for key, value in payload.items():
-        if _norm(key) in wanted and isinstance(value, list):
+        if _norm(key) not in wanted:
+            continue
+        if isinstance(value, list):
             return [item for item in value if isinstance(item, dict)]
+        # Several CN Index lists are keyed by their own row id:
+        #   "equip_with_user_info": {"3826248": {...}, ...}
+        #   "fairy_with_user_info": {"95690": {...}, ...}
+        rows = _dict_rows(value)
+        if rows:
+            return rows
     # Some responses nest the actual index payload under data/result.
     for key in ("data", "result", "index", "user_data"):
         value = payload.get(key)
@@ -57,14 +71,15 @@ def _find_list_by_shape(payload: dict, markers: tuple[str, ...]) -> list[dict]:
     """Best-effort fallback when the server uses a different key name."""
     wanted = {_norm(marker) for marker in markers}
     for key, value in payload.items():
-        if not isinstance(value, list) or not value:
+        rows = value if isinstance(value, list) else _dict_rows(value)
+        if not rows:
             continue
-        first = value[0]
+        first = rows[0]
         if not isinstance(first, dict):
             continue
         row_keys = {_norm(item) for item in first}
         if row_keys & wanted:
-            return [item for item in value if isinstance(item, dict)]
+            return [item for item in rows if isinstance(item, dict)]
     for key in ("data", "result", "index", "user_data"):
         value = payload.get(key)
         if isinstance(value, dict):
@@ -138,14 +153,22 @@ def _dolls(payload: dict, codex: dict[str, str]) -> list[dict]:
             {
                 "uid": _int(_get(row, "id", "user_id", "userId", "uid")),
                 "code": code,
-                "level": _int(_get(row, "level")),
-                "exp": _int(_get(row, "exp", "experience")),
+                "level": _int(_get(row, "gun_level", "gunLevel", "level")),
+                "exp": _int(_get(row, "gun_exp", "gunExp", "exp", "experience")),
                 "favor": _int(_get(row, "favor", "favorability")),
                 "team_id": _int(_get(row, "team_id", "teamId")),
                 "skin_id": _int(_get(row, "skin_id", "skinId", "skin")),
                 "location": _int(_get(row, "location")),
                 "number": _int(_get(row, "number", "count")),
-                "mod": _int(_get(row, "mod", "mod_level", "modLevel")),
+                "mod": _int(
+                    _get(row, "if_modification", "ifModification", "mod", "mod_level", "modLevel")
+                ),
+                "skill1": _int(_get(row, "skill1")),
+                "skill2": _int(_get(row, "skill2")),
+                "equip1": _int(_get(row, "equip1")),
+                "equip2": _int(_get(row, "equip2")),
+                "equip3": _int(_get(row, "equip3")),
+                "equip4": _int(_get(row, "equip4")),
             }
         )
     return result
@@ -162,18 +185,17 @@ def _fairies(payload: dict, codex: dict[str, str]) -> list[dict]:
         code = str(_get(row, "code", "fairy_code", "fairyCode", default="") or "")
         if not code:
             code = codex.get(str(info_id), str(info_id or ""))
+        quality = _int(_get(row, "quality_lv", "qualityLv", "quality", "quality_level", "qualityLevel"))
         result.append(
             {
                 "id": _int(_get(row, "id", "user_id", "userId", "uid")),
                 "code": code,
-                "level": _int(_get(row, "level")),
-                "exp": _int(_get(row, "exp", "experience")),
-                "quality": _int(_get(row, "quality", "quality_level", "qualityLevel")),
-                "quality_level": _int(
-                    _get(row, "quality", "quality_level", "qualityLevel")
-                ),
+                "level": _int(_get(row, "fairy_lv", "fairyLv", "level")),
+                "exp": _int(_get(row, "fairy_exp", "fairyExp", "exp", "experience")),
+                "quality": quality,
+                "quality_level": quality,
                 "skill_level": _int(
-                    _get(row, "skill_level", "skillLevel", "main_skill_level", "mainSkillLevel")
+                    _get(row, "skill_lv", "skillLv", "skill_level", "skillLevel", "main_skill_level", "mainSkillLevel")
                 ),
                 "mod": _int(_get(row, "mod")),
                 "mod_exp": _int(_get(row, "mod_exp", "modExp")),
@@ -196,18 +218,20 @@ def _equipment(payload: dict) -> list[dict]:
         info_id = _get(row, "info_id", "infoId", "equip_id", "equipId")
         if info_id is None:
             info_id = _get(info, "id", "info_id")
+        level = _int(_get(row, "equip_level", "equipLevel", "level"))
+        exp = _int(_get(row, "equip_exp", "equipExp", "exp"))
         result.append(
             {
                 "id": _int(_get(row, "id", "user_id", "userId", "uid")),
-                "gun_id": _int(_get(row, "gun_id", "gunId")),
+                "gun_id": _int(_get(row, "gun_with_user_id", "gunWithUserId", "gun_id", "gunId")),
                 "info_id": _int(info_id),
                 "own_number": _int(
-                    _get(row, "own_number", "ownNumber", "number", "count")
+                    _get(row, "own_number", "ownNumber", "number", "count", default=1)
                 ),
-                "equip_level": _int(
-                    _get(row, "equip_level", "equipLevel", "level")
-                ),
-                "equip_exp": _int(_get(row, "equip_exp", "equipExp", "exp")),
+                "level": level,
+                "exp": exp,
+                "equip_level": level,
+                "equip_exp": exp,
             }
         )
     return result
@@ -224,15 +248,26 @@ def _sangvis(payload: dict, codex: dict[str, str]) -> list[dict]:
         code = str(_get(row, "code", "sangvis_code", "sangvisCode", default="") or "")
         if not code:
             code = codex.get(str(info_id), str(info_id or ""))
+        resolution = _int(
+            _get(row, "sangvis_resolution", "sangvisResolution", "resolution", "resolution_level", "resolutionLevel")
+        )
+        resolution_level = _int(
+            _get(row, "sangvis_resolution_level", "sangvisResolutionLevel", "resolution_level", "resolutionLevel")
+        )
+        if resolution_level == 0 and resolution:
+            resolution_level = resolution
         result.append(
             {
+                "id": _int(_get(row, "id", "user_id", "userId", "uid")),
                 "info_id": _int(info_id),
                 "code": code,
-                "level": _int(_get(row, "level")),
-                "advance": _int(_get(row, "advance", "advance_level", "advanceLevel")),
-                "resolution_level": _int(
-                    _get(row, "resolution_level", "resolutionLevel")
+                "level": _int(_get(row, "sangvis_level", "sangvisLevel", "level")),
+                "exp": _int(_get(row, "sangvis_exp", "sangvisExp", "exp")),
+                "advance": _int(
+                    _get(row, "sangvis_advance", "sangvisAdvance", "advance", "advance_level", "advanceLevel")
                 ),
+                "resolution": resolution,
+                "resolution_level": resolution_level,
                 "sign": _int(_get(row, "sign")),
                 "skin": _int(_get(row, "skin", "skin_id", "skinId")),
                 "break_through": _int(
@@ -240,6 +275,11 @@ def _sangvis(payload: dict, codex: dict[str, str]) -> list[dict]:
                 ),
                 "chip1": _get(row, "chip1"),
                 "chip2": _get(row, "chip2"),
+                "skill1": _int(_get(row, "skill1")),
+                "skill2": _int(_get(row, "skill2")),
+                "skill3": _int(_get(row, "skill3")),
+                "skill_advance": _int(_get(row, "skill_advance", "skillAdvance")),
+                "favor": _int(_get(row, "favor")),
             }
         )
     return result

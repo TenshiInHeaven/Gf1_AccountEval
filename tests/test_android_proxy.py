@@ -71,6 +71,55 @@ class AndroidProxyConversionTests(unittest.TestCase):
         self.assertEqual(snapshot["sangvis"][0]["code"], "Scarecrow")
         self.assertEqual(snapshot["equipment"][0]["own_number"], 5)
 
+    def test_cn_field_names_and_dict_lists(self):
+        payload = {
+            "user_info": {"uid": "1", "level": "209"},
+            "gun_with_user_info": [
+                {"id": "1", "gun_id": "2", "gun_level": "100", "gun_exp": "123", "if_modification": "3"}
+            ],
+            "fairy_with_user_info": {
+                "11": {
+                    "id": "11",
+                    "fairy_id": "1",
+                    "fairy_lv": "90",
+                    "fairy_exp": "999",
+                    "quality_lv": "5",
+                    "skill_lv": "10",
+                }
+            },
+            "equip_with_user_info": {
+                "22": {
+                    "id": "22",
+                    "equip_id": "4",
+                    "equip_level": "10",
+                    "equip_exp": "10150",
+                }
+            },
+            "sangvis_with_user_info": [
+                {
+                    "id": "33",
+                    "sangvis_id": "1001",
+                    "sangvis_level": "92",
+                    "sangvis_exp": "2211830",
+                    "sangvis_advance": "5",
+                    "sangvis_resolution": "4",
+                    "sangvis_resolution_level": "4",
+                }
+            ],
+        }
+        snapshot = build_snapshot(payload, project_root=ROOT)
+        doll = snapshot["dolls"][0]
+        fairy = snapshot["fairies"][0]
+        equip = snapshot["equipment"][0]
+        sangvis = snapshot["sangvis"][0]
+        self.assertEqual((doll["level"], doll["mod"]), (100, 3))
+        self.assertEqual((fairy["level"], fairy["quality"], fairy["skill_level"]), (90, 5, 10))
+        self.assertEqual((equip["info_id"], equip["level"], equip["exp"]), (4, 10, 10150))
+        self.assertEqual(
+            (sangvis["level"], sangvis["advance"], sangvis["resolution_level"]),
+            (92, 5, 4),
+        )
+
     def test_targettrain_only_payload_is_rejected(self):
         with self.assertRaises(AndroidCaptureError):
             build_snapshot(

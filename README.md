@@ -86,7 +86,7 @@ build.bat
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
 3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
-4. 运行 21 个单元测试
+4. 运行 22 个单元测试
 
 > Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
 
