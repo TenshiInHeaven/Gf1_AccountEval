@@ -27,7 +27,18 @@ from .dashboard import DashboardPage
 from .equipment_page import EquipmentPage
 from .help_dialog import HelpDialog
 from .settings_page import SettingsPage
-from .theme import BG, BG_SOFT, BORDER, GOLD, MUTED, PANEL, PANEL_2, TEXT, TEXT_SOFT
+from .theme import (
+    BG,
+    BG_SOFT,
+    BORDER,
+    FRAME_COLORS,
+    GOLD,
+    MUTED,
+    PANEL,
+    PANEL_2,
+    TEXT,
+    TEXT_SOFT,
+)
 from .units import DollPage, FairyPage, SangvisPage
 from .widgets import AvatarLabel, rgba
 
@@ -166,6 +177,39 @@ class MainWindow(QMainWindow):
         self.side_meta.setWordWrap(True)
         account_layout.addWidget(self.side_meta)
         layout.addWidget(account_card)
+
+        legend = QFrame()
+        legend.setStyleSheet(
+            f"QFrame {{ background: {PANEL_2}; border: 1px solid {BORDER};"
+            " border-radius: 12px; }"
+        )
+        legend_layout = QVBoxLayout(legend)
+        legend_layout.setContentsMargins(12, 10, 12, 9)
+        legend_layout.setSpacing(4)
+        legend_title = QLabel("怎么看档位 / 边框")
+        legend_title.setStyleSheet(f"color: {TEXT}; font-size: 11px; font-weight: 700;")
+        legend_layout.addWidget(legend_title)
+        legend_text = QLabel(
+            f"<span style='color:{FRAME_COLORS['SS']}'><b>● SS / 金框</b></span>"
+            "：极度推荐<br>"
+            f"<span style='color:{FRAME_COLORS['S']}'><b>● S / 绿框</b></span>"
+            "：推荐新人可练<br>"
+            f"<span style='color:{FRAME_COLORS['A-']}'><b>● A- / A / S 蓝框</b></span>"
+            "：蓝色（不管是 S 还是非 S），不推荐新人练，但本身有强度<br>"
+            "<span style='color:#8A9CB3'><b>● B 白 / C 灰</b></span>"
+            "：不建议练<br>"
+            f"<span style='color:{FRAME_COLORS['Sp']}'><b>● Sp / 紫框</b></span>"
+            "：生产资料"
+        )
+        legend_text.setTextFormat(Qt.RichText)
+        legend_text.setWordWrap(True)
+        legend_text.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 9px;")
+        legend_layout.addWidget(legend_text)
+        legend_note = QLabel("此推荐仅从强度角度考虑，若与 XP 冲突请以 XP 为准。")
+        legend_note.setWordWrap(True)
+        legend_note.setStyleSheet("color: #8A9CB3; font-size: 9px;")
+        legend_layout.addWidget(legend_note)
+        layout.addWidget(legend)
 
         layout.addStretch(1)
         self.status_label = QLabel("就绪")

@@ -262,7 +262,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 卡片边框：**SS 金 / S 绿 / A-、A 蓝 / B、C 白 / Sp 紫**。  
 档位牌：**SS 金光 / S 绿 / A-、A 蓝 / B 白 / C 灰 / Sp 紫**。  
-S 档中 `NTW-20`、`MG338`、`MPL`、`MPK`、`TEC-9`、`MP-443`、`MG15`、`HP-35`、`汉阳造88式` 使用 A- 蓝框；`KLIN` 为 Sp 紫框。
+S 档中 `NTW-20`、`MG338`、`MPL`、`MPK`、`TEC-9`、`MP-443`、`MG15`、`HP-35`、`汉阳造88式`、`MG3`、`佩可拉`、`AK-15`、`M200`、`QBZ-191` 使用 A- 蓝框；`KLIN` 为 Sp 紫框。
 
 ### 装备
 

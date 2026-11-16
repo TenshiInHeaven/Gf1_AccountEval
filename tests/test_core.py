@@ -126,7 +126,12 @@ class TierDataTests(unittest.TestCase):
         dolls = get_tierlists()["doll"]
         self.assertEqual(dolls.frame_for(name="NTW-20"), "A-")
         self.assertEqual(dolls.frame_for(name="TEC-9"), "A-")
-        self.assertEqual(dolls.frame_for(name="MG3"), "S")
+        self.assertEqual(dolls.frame_for(name="MG3"), "A-")
+        self.assertEqual(dolls.frame_for(name="佩克拉"), "A-")
+        self.assertEqual(dolls.frame_for(name="AK15"), "A-")
+        self.assertEqual(dolls.frame_for(name="M200"), "A-")
+        self.assertEqual(dolls.frame_for(name="QBZ191"), "A-")
+        self.assertEqual(dolls.frame_for(name="SPAS-12"), "S")
         self.assertEqual(dolls.frame_for(name="KLIN"), "Sp")
         sangvis = get_tierlists()["sangvis"]
         self.assertEqual(sangvis.frame_for(name="稻草人"), "SS")
