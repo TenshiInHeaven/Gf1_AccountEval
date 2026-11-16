@@ -209,7 +209,8 @@
   "kind": "sangvis",
   "aliases": [
    "Intruder_Halloween",
-   "干扰者-终幕魔女"
+   "干扰者-终幕魔女",
+   "万圣魔女"
   ]
  },
  {
@@ -360,7 +361,8 @@
   "kind": "sangvis",
   "aliases": [
    "Dragoon",
-   "龙骑兵"
+   "龙骑兵",
+   "龙骑"
   ]
  },
  {
@@ -405,7 +407,8 @@
   "kind": "sangvis",
   "aliases": [
    "Tarantula",
-   "狼蛛"
+   "狼蛛",
+   "银蛛"
   ]
  },
  {
@@ -450,7 +453,8 @@
   "kind": "sangvis",
   "aliases": [
    "Ripper_SWAP",
-   "切割者SWAP"
+   "切割者SWAP",
+   "EX切割者"
   ]
  },
  {
@@ -480,7 +484,8 @@
   "kind": "sangvis",
   "aliases": [
    "Prowler_SWAP",
-   "巡游者SWAP"
+   "巡游者SWAP",
+   "EX巡游"
   ]
  },
  {
@@ -495,7 +500,8 @@
   "kind": "sangvis",
   "aliases": [
    "Dragoon_SWAP",
-   "龙骑兵SWAP"
+   "龙骑兵SWAP",
+   "EX龙骑"
   ]
  },
  {
@@ -510,7 +516,8 @@
   "kind": "sangvis",
   "aliases": [
    "Striker_SWAP",
-   "痛击者SWAP"
+   "痛击者SWAP",
+   "EX机枪"
   ]
  },
  {
@@ -525,7 +532,8 @@
   "kind": "sangvis",
   "aliases": [
    "Aegis_SWAP",
-   "圣盾SWAP"
+   "圣盾SWAP",
+   "EX圣盾"
   ]
  },
  {
@@ -540,7 +548,8 @@
   "kind": "sangvis",
   "aliases": [
    "Jaeger_SWAP",
-   "猎鸥SWAP"
+   "猎鸥SWAP",
+   "EX狙"
   ]
  },
  {
@@ -555,7 +564,8 @@
   "kind": "sangvis",
   "aliases": [
    "Guard_chm",
-   "姜饼护卫者"
+   "姜饼护卫者",
+   "美饼护卫者"
   ]
  },
  {
@@ -661,7 +671,8 @@
   "kind": "sangvis",
   "aliases": [
    "Jaeger",
-   "猎鸥"
+   "猎鸥",
+   "狙"
   ]
  },
  {
@@ -676,7 +687,8 @@
   "kind": "sangvis",
   "aliases": [
    "Striker",
-   "痛击者"
+   "痛击者",
+   "机枪"
   ]
  },
  {
@@ -736,7 +748,8 @@
   "kind": "sangvis",
   "aliases": [
    "Jaguar",
-   "劫豹"
+   "劫豹",
+   "猎豹"
   ]
  },
  {
@@ -751,7 +764,11 @@
   "kind": "sangvis",
   "aliases": [
    "Golyat_Factory",
-   "歌利亚工厂"
+   "歌利亚工厂",
+   "黑雷",
+   "鏨厂",
+   "厂",
+   "车"
   ]
  },
  {

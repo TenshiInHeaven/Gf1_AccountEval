@@ -29,6 +29,7 @@ class OwnedUnit:
     team_id: int = 0
     item: CodexItem | None = None
     tier: Tier | None = None
+    crown: bool = False
     copies: list[dict] = field(default_factory=list)
 
     @property
@@ -146,7 +147,8 @@ class AccountLoader:
             name = item.name
         else:
             name = name or code
-        tier = self.tiers[kind].tier_for(code=code, name=name)
+        tier_list = self.tiers[kind]
+        tier = tier_list.tier_for(code=code, name=name)
         return OwnedUnit(
             kind=kind,
             code=code,
@@ -155,6 +157,7 @@ class AccountLoader:
             rank=int(item.rank if item else 0),
             item=item,
             tier=tier,
+            crown=tier_list.is_crown(code=code, name=name),
             **kwargs,
         )
 
@@ -196,7 +199,7 @@ class AccountLoader:
                     copies=copies,
                 )
             )
-        result.sort(key=lambda unit: (-unit.tier_score, -unit.level, unit.name))
+        result.sort(key=lambda unit: (-unit.tier_score, -int(unit.crown), -unit.level, unit.name))
         return result
 
     def _fairies(self, rows: list[dict]) -> list[OwnedUnit]:
@@ -245,7 +248,7 @@ class AccountLoader:
                     copies=copies,
                 )
             )
-        result.sort(key=lambda unit: (-unit.tier_score, -unit.quality, -unit.level, unit.name))
+        result.sort(key=lambda unit: (-unit.tier_score, -int(unit.crown), -unit.quality, -unit.level, unit.name))
         return result
 
     def _sangvis(self, rows: list[dict]) -> list[OwnedUnit]:
@@ -285,5 +288,5 @@ class AccountLoader:
                     copies=copies,
                 )
             )
-        result.sort(key=lambda unit: (-unit.tier_score, -unit.level, unit.name))
+        result.sort(key=lambda unit: (-unit.tier_score, -int(unit.crown), -unit.level, unit.name))
         return result

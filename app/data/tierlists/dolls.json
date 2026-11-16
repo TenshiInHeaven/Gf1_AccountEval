@@ -2,7 +2,7 @@
   "version": "2026-05-30",
   "title": "人形强度榜",
   "source": "烧钱强度表.xlsx（强度表） + 人形强度榜.jpeg",
-  "note": "按用户口径：三体人 SS，常用好手 S，其下 A- / B / C；生产资料 Sp。未上榜默认 C。",
+  "note": "按用户口径：三体人 SS，常用好手 S，其下 A- / B / C；生产资料 Sp。未上榜默认 C。A- 皇冠：卡尔卡诺M91/38。",
   "tiers": [
     {"id": "SS", "label": "SS", "name": "三体人", "color": "#F2C14E", "score": 100},
     {"id": "S", "label": "S", "name": "常用好手", "color": "#E98A3C", "score": 86},
@@ -81,7 +81,7 @@
     {"name": "贝奥武夫", "tier": "A-"},
     {"name": "FM24", "tier": "A-"},
     {"name": "XM556", "tier": "A-"},
-    {"name": "卡尔卡诺M91/38", "tier": "A-"},
+    {"name": "卡尔卡诺M91/38", "tier": "A-", "crown": true, "note": "A- 皇冠卡；A- 档内置顶并加金框"},
     {"name": "G36", "tier": "A-"},
     {"name": "微型乌兹", "tier": "A-"},
     {"name": "防卫者", "tier": "A-"},

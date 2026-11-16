@@ -106,6 +106,23 @@ class AndroidBridgeTests(unittest.TestCase):
         self.assertTrue(any("gf_account_snapshot.json" in path for path in SNAPSHOT_CANDIDATES))
 
 
+class TierDataTests(unittest.TestCase):
+    def test_sangvis_a_minus_and_image_aliases(self):
+        tiers = get_tierlists()
+        sangvis = tiers["sangvis"]
+        self.assertIn("A-", {tier.id for tier in sangvis.tiers})
+        self.assertEqual(sangvis.tier_for(name="钢狮").id, "A-")
+        self.assertEqual(sangvis.tier_for(name="猎豹").id, "A-")
+        self.assertEqual(sangvis.tier_for(name="EX狙").id, "A-")
+        self.assertEqual(sangvis.tier_for(name="黑雷").id, "A-")
+        self.assertEqual(sangvis.tier_for(name="万圣魔女").id, "A-")
+
+    def test_carcano_a_minus_crown(self):
+        dolls = get_tierlists()["doll"]
+        self.assertEqual(dolls.tier_for(name="卡尔卡诺M91/38").id, "A-")
+        self.assertTrue(dolls.is_crown(name="卡尔卡诺M91/38"))
+
+
 class LiveParserTests(unittest.TestCase):
     def test_parse_sections(self):
         text = (

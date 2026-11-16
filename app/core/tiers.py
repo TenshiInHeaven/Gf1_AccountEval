@@ -31,6 +31,8 @@ class TierList:
     tier_by_id: dict[str, Tier] = field(default_factory=dict)
     code_tier: dict[tuple[str, str], str] = field(default_factory=dict)
     name_tier: dict[str, str] = field(default_factory=dict)
+    crown_codes: set[tuple[str, str]] = field(default_factory=set)
+    crown_names: set[str] = field(default_factory=set)
 
     def __post_init__(self) -> None:
         self.tier_by_id = {tier.id: tier for tier in self.tiers}
@@ -47,9 +49,20 @@ class TierList:
                 for item in codex.by_norm.get(norm, []):
                     if item.kind == self.kind:
                         self.code_tier.setdefault((self.kind, item.code), tier_id)
+                        if entry.get("crown"):
+                            self.crown_codes.add((self.kind, item.code))
+                if entry.get("crown") and norm:
+                    self.crown_names.add(norm)
             explicit_code = str(entry.get("code") or "")
             if explicit_code:
                 self.code_tier.setdefault((self.kind, explicit_code), tier_id)
+                if entry.get("crown"):
+                    self.crown_codes.add((self.kind, explicit_code))
+
+    def is_crown(self, code: str = "", name: str = "") -> bool:
+        if code and (self.kind, code) in self.crown_codes:
+            return True
+        return bool(name and normalize_name(name) in self.crown_names)
 
     def tier_for(self, code: str = "", name: str = "") -> Tier:
         tier_id = self.code_tier.get((self.kind, code))

@@ -349,6 +349,7 @@ class UnitPage(QWidget):
             rows.append((item, owned))
         rows.sort(key=lambda pair: (
             0 if pair[1] else 1,
+            -int(self.tiers.is_crown(code=pair[0].code, name=pair[0].name)),
             -self.tiers.tier_for(code=pair[0].code, name=pair[0].name).score,
             -int(pair[1].level if pair[1] else 0),
             pair[0].name,
@@ -383,6 +384,7 @@ class UnitPage(QWidget):
                 owned=owned is not None,
                 footer=footer,
                 letter=item.name[:2],
+                crown=self.tiers.is_crown(code=item.code, name=item.name),
             )
             card.set_payload((item, owned))
             card.clicked.connect(self._open_detail)

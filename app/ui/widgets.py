@@ -185,6 +185,7 @@ class UnitCard(QFrame):
         owned: bool = True,
         footer: str = "",
         letter: str = "",
+        crown: bool = False,
         parent: QWidget | None = None,
     ):
         super().__init__(parent)
@@ -196,6 +197,12 @@ class UnitCard(QFrame):
             f"QFrame#SoftCard {{ background: {PANEL_2}; border: 1px solid {BORDER}; border-radius: 14px; }}"
             f"QFrame#SoftCard:hover {{ border: 1px solid {rgba(GOLD, 150)}; background: #F0F7FF; }}"
         )
+        if crown:
+            self.setStyleSheet(
+                f"QFrame#SoftCard {{ background: #FFF9E8; border: 2px solid {GOLD};"
+                " border-radius: 14px; }"
+                f"QFrame#SoftCard:hover {{ border: 2px solid {GOLD}; background: #FFF4D6; }}"
+            )
         layout = QVBoxLayout(self)
         layout.setContentsMargins(12, 12, 12, 10)
         layout.setSpacing(6)
@@ -225,6 +232,9 @@ class UnitCard(QFrame):
         bottom.setSpacing(6)
         bottom.addStretch(1)
         self.badge = TierBadge(tier)
+        if crown:
+            self.badge.setText(f"♛ {tier}")
+            self.badge.setToolTip("A- 皇冠卡")
         bottom.addWidget(self.badge)
         bottom.addStretch(1)
         layout.addLayout(bottom)
