@@ -3,7 +3,7 @@ from __future__ import annotations
 import unittest
 from pathlib import Path
 
-from app.capture.android_proxy_session import REGIONS, available_port
+from app.capture.android_proxy_session import REGIONS, available_port, region_for_package
 from app.ui.help_dialog import parse_help
 
 
@@ -15,6 +15,11 @@ class AndroidProxySessionTests(unittest.TestCase):
         self.assertTrue(REGIONS["cn_revival"].bridge)
         self.assertTrue(REGIONS["cn_revival"].fresh_login)
         self.assertFalse(REGIONS["cn_revival"].needs_ca)
+
+    def test_package_region_mapping(self):
+        self.assertEqual(region_for_package("com.sunborn.girlsfrontline.pt"), "cn_revival")
+        self.assertEqual(region_for_package("tw.txwy.and.snqx"), "tw")
+        self.assertIsNone(region_for_package("com.example.other"))
 
     def test_free_port(self):
         port = available_port(18080)

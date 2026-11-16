@@ -24,6 +24,7 @@ from ..capture.android_proxy_session import (
     available_port,
     candidate_packages,
     region,
+    region_for_package,
 )
 from ..state import AppState
 from .theme import BORDER, GOLD, MUTED, PANEL, PANEL_2, TEXT
@@ -158,6 +159,7 @@ class AndroidProxyDialog(QDialog):
 
     def _detect(self) -> None:
         self.device = None
+        self.log_box.clear()
         self.device_label.setText("正在检测 ADB / 模拟器…")
         if not self.bridge.available:
             self.device_label.setText("未找到 adb.exe")
@@ -175,12 +177,34 @@ class AndroidProxyDialog(QDialog):
             return
         self.device = devices[0]
         self.device_label.setText(f"已检测：{self.device.label}")
+        selected = None
         try:
             installed = self.bridge.installed_packages(self.device.serial)
-            for index, (key, profile) in enumerate(REGIONS.items()):
-                if any(item in installed for item in profile.packages):
-                    self.region_combo.setCurrentIndex(index)
-                    break
+            selected = region_for_package(self.package)
+            if selected is None:
+                foreground = self.bridge.foreground_package(self.device.serial)
+                selected = region_for_package(foreground)
+            if selected is None:
+                # Prefer the package that is actually running.  This avoids
+                # defaulting to 台服 just because both TW and PT are installed.
+                for key, profile in REGIONS.items():
+                    if any(
+                        item in installed
+                        and self.bridge.is_package_running(self.device.serial, item)
+                        for item in profile.packages
+                    ):
+                        selected = key
+                        break
+            if selected is None:
+                # CN revival's .pt is the most specific package; check it
+                # before the generic TW/JP/EN profiles.
+                for key in ("cn_revival", "jp", "en", "tw"):
+                    if any(item in installed for item in REGIONS[key].packages):
+                        selected = key
+                        break
+            if selected is not None:
+                index = list(REGIONS).index(selected)
+                self.region_combo.setCurrentIndex(index)
         except AndroidError:
             pass
         self._refresh_packages()

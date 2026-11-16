@@ -72,6 +72,17 @@ def region(key: str) -> AndroidRegion:
     return REGIONS.get(key, REGIONS["cn_revival"])
 
 
+def region_for_package(package: str | None) -> str | None:
+    """Map an installed package to the most specific capture profile."""
+    value = str(package or "").strip()
+    if not value:
+        return None
+    for key, profile in REGIONS.items():
+        if value in profile.packages:
+            return key
+    return None
+
+
 def available_port(start: int = 18080) -> int:
     for port in range(start, start + 80):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
@@ -88,14 +99,7 @@ def candidate_packages(
 ) -> list[str]:
     installed = bridge.installed_packages(serial)
     profile = region(region_key)
-    ordered = [item for item in profile.packages if item in installed]
-    extras = sorted(
-        item
-        for item in installed
-        if item.startswith(("com.sunborn.girlsfrontline", "tw.txwy.and.snqx"))
-        and item not in ordered
-    )
-    return ordered + extras
+    return [item for item in profile.packages if item in installed]
 
 
 def _run(

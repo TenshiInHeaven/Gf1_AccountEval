@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 import subprocess
 from dataclasses import dataclass
@@ -185,6 +186,24 @@ class AndroidBridge:
         """
         result = self._run("-s", serial, "shell", "pidof", package, timeout=5)
         return result.returncode == 0 and bool(result.stdout.strip())
+
+    def foreground_package(self, serial: str) -> str | None:
+        """Best-effort foreground app lookup via dumpsys (no root/memory read)."""
+        try:
+            result = self._run(
+                "-s", serial, "shell", "dumpsys", "activity", "activities", timeout=8
+            )
+        except AndroidError:
+            return None
+        if result.returncode != 0:
+            return None
+        for line in result.stdout.splitlines():
+            if "mResumedActivity" not in line and "mCurrentFocus" not in line:
+                continue
+            match = re.search(r"([A-Za-z0-9_.]+)/\.?[A-Za-z0-9_.$]+", line)
+            if match:
+                return match.group(1)
+        return None
 
     def pull_snapshot(self, serial: str, package: str | None = None) -> dict:
         package = package or self.detect_package(serial)
