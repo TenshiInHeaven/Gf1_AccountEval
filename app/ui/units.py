@@ -4,7 +4,7 @@ from __future__ import annotations
 import html
 from collections import defaultdict
 
-from PySide6.QtCore import Qt, Signal
+from PySide6.QtCore import QPoint, Qt, Signal
 from PySide6.QtWidgets import (
     QButtonGroup,
     QComboBox,
@@ -28,6 +28,16 @@ from ..core.tiers import get_tierlists
 from .animations import fade_in
 from .theme import BORDER, FRAME_COLORS, GOLD, MUTED, PANEL, TEXT, TEXT_SOFT, TIER_COLORS
 from .widgets import AvatarLabel, FlowLayout, TierBadge, UnitCard
+
+
+class StableComboBox(QComboBox):
+    """Open the popup below the field instead of jumping above the window."""
+
+    def showPopup(self) -> None:  # noqa: N802
+        super().showPopup()
+        popup = self.view().window()
+        if popup is not None:
+            popup.move(self.mapToGlobal(QPoint(0, self.height())))
 
 
 def clear_flow(layout: FlowLayout) -> None:
@@ -225,7 +235,8 @@ class UnitPage(QWidget):
             self.tier_buttons[tier] = button
             toolbar_layout.addWidget(button)
 
-        self.type_combo = QComboBox()
+        self.type_combo = StableComboBox()
+        self.type_combo.setMaxVisibleItems(12)
         self.type_combo.addItem("全部类型", 0)
         for type_id, label in ((1, "HG 手枪"), (2, "SMG 冲锋枪"), (3, "RF 步枪"), (4, "AR 突击步枪"), (5, "MG 机枪"), (6, "SG 霰弹枪")):
             self.type_combo.addItem(label, type_id)

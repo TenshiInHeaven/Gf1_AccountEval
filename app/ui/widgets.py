@@ -18,6 +18,7 @@ from PySide6.QtGui import (
 )
 from PySide6.QtWidgets import (
     QFrame,
+    QGraphicsDropShadowEffect,
     QHBoxLayout,
     QLabel,
     QLayout,
@@ -26,7 +27,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from .theme import BORDER, FRAME_GOLD, GOLD, MUTED, PANEL_2, TEXT, TIER_COLORS
+from .theme import BORDER, FRAME_GOLD, GOLD, MUTED, PANEL_2, TEXT, TIER_COLORS, TIER_TEXT_COLORS
 
 
 def rgba(hex_color: str, alpha: int) -> str:
@@ -161,13 +162,29 @@ class TierBadge(QLabel):
 
     def set_tier(self, tier: str) -> None:
         color = TIER_COLORS.get(tier, "#6F8299")
+        text_color = TIER_TEXT_COLORS.get(tier, "#FFFFFF")
         self.setText(tier)
         self.setAlignment(Qt.AlignCenter)
         self.setFixedHeight(22)
         self.setMinimumWidth(34)
+        if tier == "SS":
+            background = (
+                "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+                " stop:0 #F8E7A6, stop:0.55 #E2C04A, stop:1 #C99B1F)"
+            )
+            border = "#B08A1E"
+            effect = QGraphicsDropShadowEffect(self)
+            effect.setBlurRadius(16)
+            effect.setOffset(0, 0)
+            effect.setColor(QColor(212, 175, 55, 220))
+            self.setGraphicsEffect(effect)
+        else:
+            background = rgba(color, 235)
+            border = rgba(color, 255) if tier != "B" else "#C9D6E5"
+            self.setGraphicsEffect(None)
         self.setStyleSheet(
-            f"QLabel {{ color: #FFFFFF; background: {rgba(color, 235)};"
-            f" border: 1px solid {rgba(color, 255)}; border-radius: 6px;"
+            f"QLabel {{ color: {text_color}; background: {background};"
+            f" border: 1px solid {border}; border-radius: 6px;"
             f" font-size: 13px; font-weight: 800; padding: 0 6px; }}"
         )
 

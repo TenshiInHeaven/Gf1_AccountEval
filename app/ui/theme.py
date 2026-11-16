@@ -24,13 +24,22 @@ BLUE = "#2474E5"
 PURPLE = "#6D5BD0"
 
 TIER_COLORS = {
-    "SS": "#1D4ED8",
-    "S": "#2F80ED",
-    "A-": "#4A86C7",
-    "A": "#4A86C7",
-    "B": "#2E9E8F",
-    "C": "#6F8299",
+    "SS": "#D4AF37",
+    "S": "#2E9E6B",
+    "A-": "#2474E5",
+    "A": "#2474E5",
+    "B": "#FFFFFF",
+    "C": "#7C8896",
     "Sp": "#6D5BD0",
+}
+TIER_TEXT_COLORS = {
+    "SS": "#3B2C00",
+    "S": "#FFFFFF",
+    "A-": "#FFFFFF",
+    "A": "#FFFFFF",
+    "B": "#334A63",
+    "C": "#FFFFFF",
+    "Sp": "#FFFFFF",
 }
 
 # Card frames requested by tier.  ``GOLD`` above is the app's blue accent;
