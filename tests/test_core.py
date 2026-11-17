@@ -63,9 +63,29 @@ class SampleEvaluationTests(unittest.TestCase):
         cls.evaluation = Evaluator().evaluate(cls.account)
 
     def test_sample_kind_counts(self):
-        self.assertEqual(len(self.account.dolls), 351)
+        self.assertEqual(len(self.account.dolls), 342)
         self.assertEqual(len(self.account.fairies), 38)
         self.assertEqual(len(self.account.sangvis), 10)
+
+    def test_mod3_merges_with_prototype(self):
+        payload = {
+            "meta": {"uid": "1", "nickname": "test", "level": 1},
+            "dolls": [
+                {"uid": 1, "code": "M4A1", "level": 100},
+                {"uid": 2, "code": "M4A1Mod", "level": 120, "mod": 3},
+            ],
+            "fairies": [],
+            "equipment": [],
+            "sangvis": [],
+        }
+        view = AccountLoader().from_payload(payload)
+        m4a1 = next(unit for unit in view.dolls if unit.code == "M4A1")
+        self.assertEqual(m4a1.count, 2)
+        self.assertEqual(m4a1.level, 120)
+        self.assertEqual(
+            [copy["source_name"] for copy in m4a1.copies],
+            ["M4A1（三改）", "M4A1"],
+        )
 
     def test_fairy_copy_breakdown(self):
         airborne = next(unit for unit in self.account.fairies if unit.code == "airborne")

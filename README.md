@@ -86,7 +86,7 @@ build.bat
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
 3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
-4. 运行 23 个单元测试
+4. 运行 24 个单元测试
 
 > Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
 
@@ -345,6 +345,11 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_spine.py ^
 - **榜单是主观的**：人形档位来自表格作者，融合势力 A- / A / B / C 是按图内层级与配队图归并的；本项目只做落库和评分，不代表官方。
 - **装备「低穿 / 高穿」是社区口径**：目标表没有给出每一件装备的 ID，本项目按 STC 的名称/代码归类；如果版本新增装备，可在 `app/data/equipment_targets.json` 调整匹配规则。
 - **账号隐私**：快照包含 UID、昵称、仓库；默认只写本地 `snapshots/`，请不要把快照公开上传。
+
+## 致谢
+
+感谢群友 **ルネツア.** 指出 Mod3 / 剧情人物 codex 的名称与匹配问题，以及对人形、妖精、融合势力、装备强度排行和资料整理提供帮助的大佬们。  
+没有你们的校对、榜单和数据，这个项目不会这么完整。
 
 ## 免责声明
 

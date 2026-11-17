@@ -102,6 +102,16 @@ class Codex:
                     return item
         return None
 
+    def base_code(self, kind: str, code: str) -> str:
+        """Map a doll's Mod3 code back to its prototype card."""
+        value = str(code or "")
+        if kind == "doll" and value.endswith("Mod") and (kind, value[:-3]) in self.by_code:
+            return value[:-3]
+        return value
+
+    def is_mod_variant(self, kind: str, code: str) -> bool:
+        return self.base_code(kind, code) != str(code or "")
+
     def find_all(self, kind: str, query: str) -> list[CodexItem]:
         norm = normalize_name(query)
         if not norm:

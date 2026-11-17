@@ -114,6 +114,9 @@ def _copy_detail_html(unit: OwnedUnit, kind: str, note: str) -> str:
                 f"改造 {copy.get('mod', 0)}",
                 f"好感 {favor_display(copy.get('favor', 0))}",
             ]
+            source_name = str(copy.get("source_name") or "")
+            if source_name and source_name != unit.name:
+                meta.insert(0, source_name)
             if copy.get("team_id"):
                 meta.append(f"编队 {copy['team_id']}")
             if copy.get("skin_id"):
@@ -355,6 +358,8 @@ class UnitPage(QWidget):
         owned = self._owned_map()
         result: list[tuple[CodexItem, OwnedUnit | None]] = []
         for item in self.codex.by_kind[self.kind]:
+            if self.kind == "doll" and self.codex.is_mod_variant("doll", item.code):
+                continue
             result.append((item, owned.get(item.code)))
         # Include owned codes that are not in the codex (rare NPC / event units).
         known = {item.code for item in self.codex.by_kind[self.kind]}

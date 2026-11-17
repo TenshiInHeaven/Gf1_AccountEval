@@ -161,12 +161,17 @@ class AccountLoader:
             **kwargs,
         )
 
+    def _doll_source_name(self, code: str, fallback: str) -> str:
+        item = self.codex.get("doll", code=code)
+        return item.name if item else fallback
+
     def _dolls(self, rows: list[dict]) -> list[OwnedUnit]:
         grouped: dict[str, list[dict]] = {}
         for row in rows:
             code = str(row.get("code") or "").strip()
             if code:
-                grouped.setdefault(code, []).append(row)
+                base = self.codex.base_code("doll", code)
+                grouped.setdefault(base, []).append(row)
         result = []
         for code, items in grouped.items():
             ordered = sorted(
@@ -178,6 +183,10 @@ class AccountLoader:
             copies = [
                 {
                     "uid": _int(row.get("uid")),
+                    "source_code": str(row.get("code") or code),
+                    "source_name": self._doll_source_name(
+                        str(row.get("code") or code), code
+                    ),
                     "level": _int(row.get("level")),
                     "mod": _int(row.get("mod")),
                     "favor": _int(row.get("favor")),
