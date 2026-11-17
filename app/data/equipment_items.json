@@ -5,7 +5,8 @@
   "category": 1,
   "type": 1,
   "code": "配件_光学瞄准镜_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 2,
@@ -13,7 +14,8 @@
   "category": 1,
   "type": 1,
   "code": "配件_光学瞄准镜_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 3,
@@ -21,7 +23,8 @@
   "category": 1,
   "type": 1,
   "code": "配件_光学瞄准镜_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 4,
@@ -29,7 +32,8 @@
   "category": 1,
   "type": 1,
   "code": "配件_光学瞄准镜_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 5,
@@ -37,7 +41,8 @@
   "category": 1,
   "type": 2,
   "code": "配件_全息瞄准镜_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 6,
@@ -45,7 +50,8 @@
   "category": 1,
   "type": 2,
   "code": "配件_全息瞄准镜_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 7,
@@ -53,7 +59,8 @@
   "category": 1,
   "type": 2,
   "code": "配件_全息瞄准镜_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 8,
@@ -61,7 +68,8 @@
   "category": 1,
   "type": 2,
   "code": "配件_全息瞄准镜_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 9,
@@ -69,7 +77,8 @@
   "category": 1,
   "type": 3,
   "code": "配件_ACOG瞄准镜_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 10,
@@ -77,7 +86,8 @@
   "category": 1,
   "type": 3,
   "code": "配件_ACOG瞄准镜_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 11,
@@ -85,7 +95,8 @@
   "category": 1,
   "type": 3,
   "code": "配件_ACOG瞄准镜_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 12,
@@ -93,7 +104,8 @@
   "category": 1,
   "type": 3,
   "code": "配件_ACOG瞄准镜_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 13,
@@ -101,7 +113,8 @@
   "category": 1,
   "type": 4,
   "code": "配件_红外夜视仪_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 14,
@@ -109,7 +122,8 @@
   "category": 1,
   "type": 4,
   "code": "配件_红外夜视仪_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 15,
@@ -117,7 +131,8 @@
   "category": 1,
   "type": 4,
   "code": "配件_红外夜视仪_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 16,
@@ -125,7 +140,8 @@
   "category": 1,
   "type": 4,
   "code": "配件_红外夜视仪_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 17,
@@ -133,7 +149,8 @@
   "category": 2,
   "type": 5,
   "code": "弹匣_穿甲弹_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": "45,55"
  },
  {
   "id": 18,
@@ -141,7 +158,8 @@
   "category": 2,
   "type": 5,
   "code": "弹匣_穿甲弹_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": "65,75"
  },
  {
   "id": 19,
@@ -149,7 +167,8 @@
   "category": 2,
   "type": 5,
   "code": "弹匣_穿甲弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": "90,100"
  },
  {
   "id": 20,
@@ -157,7 +176,8 @@
   "category": 2,
   "type": 5,
   "code": "弹匣_穿甲弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 21,
@@ -165,7 +185,8 @@
   "category": 2,
   "type": 6,
   "code": "21",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 22,
@@ -173,7 +194,8 @@
   "category": 2,
   "type": 6,
   "code": "22",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 23,
@@ -181,7 +203,8 @@
   "category": 2,
   "type": 6,
   "code": "23",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 24,
@@ -189,7 +212,8 @@
   "category": 2,
   "type": 6,
   "code": "24",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 25,
@@ -197,7 +221,8 @@
   "category": 2,
   "type": 6,
   "code": "25",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 26,
@@ -205,7 +230,8 @@
   "category": 2,
   "type": 6,
   "code": "26",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 27,
@@ -213,7 +239,8 @@
   "category": 2,
   "type": 6,
   "code": "27",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 28,
@@ -221,7 +248,8 @@
   "category": 2,
   "type": 6,
   "code": "28",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 29,
@@ -229,7 +257,8 @@
   "category": 2,
   "type": 8,
   "code": "弹匣_高速弹_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 30,
@@ -237,7 +266,8 @@
   "category": 2,
   "type": 8,
   "code": "弹匣_高速弹_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 31,
@@ -245,7 +275,8 @@
   "category": 2,
   "type": 8,
   "code": "弹匣_高速弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 32,
@@ -253,7 +284,8 @@
   "category": 2,
   "type": 8,
   "code": "弹匣_高速弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 33,
@@ -261,7 +293,8 @@
   "category": 3,
   "type": 9,
   "code": "33",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 34,
@@ -269,7 +302,8 @@
   "category": 3,
   "type": 9,
   "code": "34",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 35,
@@ -277,7 +311,8 @@
   "category": 3,
   "type": 9,
   "code": "35",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 36,
@@ -285,7 +320,8 @@
   "category": 3,
   "type": 9,
   "code": "36",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 37,
@@ -293,7 +329,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 38,
@@ -301,7 +338,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 39,
@@ -309,7 +347,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 40,
@@ -317,7 +356,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 42,
@@ -325,7 +365,8 @@
   "category": 3,
   "type": 11,
   "code": "人形装备_防弹插板_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 43,
@@ -333,7 +374,8 @@
   "category": 3,
   "type": 11,
   "code": "人形装备_防弹插板_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 44,
@@ -341,7 +383,8 @@
   "category": 3,
   "type": 11,
   "code": "人形装备_防弹插板_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 45,
@@ -349,7 +392,8 @@
   "category": 3,
   "type": 12,
   "code": "45",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 46,
@@ -357,7 +401,8 @@
   "category": 3,
   "type": 12,
   "code": "46",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 47,
@@ -365,7 +410,8 @@
   "category": 3,
   "type": 12,
   "code": "47",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 48,
@@ -373,7 +419,8 @@
   "category": 3,
   "type": 12,
   "code": "48",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 49,
@@ -381,7 +428,8 @@
   "category": 1,
   "type": 4,
   "code": "配件_红外夜视仪_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 50,
@@ -389,7 +437,8 @@
   "category": 2,
   "type": 5,
   "code": "弹匣_穿甲弹_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "120,120"
  },
  {
   "id": 51,
@@ -397,7 +446,8 @@
   "category": 2,
   "type": 5,
   "code": "51",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": "15,25"
  },
  {
   "id": 52,
@@ -405,7 +455,8 @@
   "category": 2,
   "type": 5,
   "code": "52",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": "35,50"
  },
  {
   "id": 53,
@@ -413,7 +464,8 @@
   "category": 2,
   "type": 5,
   "code": "53",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": "60,75"
  },
  {
   "id": 54,
@@ -421,7 +473,8 @@
   "category": 2,
   "type": 5,
   "code": "54",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "85,100"
  },
  {
   "id": 55,
@@ -429,7 +482,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_X_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 56,
@@ -437,7 +491,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_X_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 57,
@@ -445,7 +500,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_X_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 58,
@@ -453,7 +509,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_X_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 59,
@@ -461,7 +518,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_穿甲弹_Springfield",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "120,130"
  },
  {
   "id": 60,
@@ -469,7 +527,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_高速弹_AR15",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 61,
@@ -477,7 +536,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_战术核芯片_M1918",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 62,
@@ -485,7 +545,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_外骨骼_MP5",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 63,
@@ -493,7 +554,8 @@
   "category": 1,
   "type": 13,
   "code": "配件_消音器_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 64,
@@ -501,7 +563,8 @@
   "category": 1,
   "type": 13,
   "code": "配件_消音器_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 65,
@@ -509,7 +572,8 @@
   "category": 1,
   "type": 13,
   "code": "配件_消音器_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 66,
@@ -517,7 +581,8 @@
   "category": 1,
   "type": 13,
   "code": "配件_消音器_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 67,
@@ -525,7 +590,8 @@
   "category": 3,
   "type": 14,
   "code": "人形装备_弹链箱_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 68,
@@ -533,7 +599,8 @@
   "category": 3,
   "type": 14,
   "code": "人形装备_弹链箱_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 69,
@@ -541,7 +608,8 @@
   "category": 2,
   "type": 6,
   "code": "弹匣_状态弹_空尖弹_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": "-1,-1"
  },
  {
   "id": 70,
@@ -549,7 +617,8 @@
   "category": 2,
   "type": 6,
   "code": "弹匣_状态弹_空尖弹_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": "-3,-2"
  },
  {
   "id": 71,
@@ -557,7 +626,8 @@
   "category": 2,
   "type": 6,
   "code": "弹匣_状态弹_空尖弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": "-6,-4"
  },
  {
   "id": 72,
@@ -565,7 +635,8 @@
   "category": 2,
   "type": 6,
   "code": "弹匣_状态弹_空尖弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 73,
@@ -573,7 +644,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_鹿弹_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 74,
@@ -581,7 +653,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_鹿弹_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 75,
@@ -589,7 +662,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_鹿弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 76,
@@ -597,7 +671,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_鹿弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 77,
@@ -605,7 +680,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_独头弹_N",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 78,
@@ -613,7 +689,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_独头弹_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 79,
@@ -621,7 +698,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_独头弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 80,
@@ -629,7 +707,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_独头弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 81,
@@ -637,7 +716,8 @@
   "category": 3,
   "type": 11,
   "code": "人形装备_防弹插板_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 82,
@@ -645,7 +725,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_鹿弹_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 83,
@@ -653,7 +734,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_AK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 84,
@@ -661,7 +743,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_AK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 85,
@@ -669,7 +752,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_AK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 86,
@@ -677,7 +761,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_战术核芯片_莫辛纳甘",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 87,
@@ -685,7 +770,8 @@
   "category": 3,
   "type": 15,
   "code": "人形装备_伪装披风_N1",
-  "rank": 2
+  "rank": 2,
+  "armor_piercing": ""
  },
  {
   "id": 88,
@@ -693,7 +779,8 @@
   "category": 3,
   "type": 15,
   "code": "人形装备_伪装披风_N1",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 89,
@@ -701,7 +788,8 @@
   "category": 3,
   "type": 15,
   "code": "人形装备_伪装披风_N2",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 90,
@@ -709,7 +797,8 @@
   "category": 3,
   "type": 15,
   "code": "人形装备_伪装披风_N3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 91,
@@ -717,7 +806,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_防弹插板_M16A1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 92,
@@ -725,7 +815,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_外骨骼_UMP",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 93,
@@ -733,7 +824,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_红外夜视仪_9A91",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 94,
@@ -741,7 +833,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_战术核芯片_阿梅利",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 95,
@@ -749,7 +842,8 @@
   "category": 2,
   "type": 6,
   "code": "弹匣_状态弹_空尖弹_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-7,-7"
  },
  {
   "id": 96,
@@ -757,7 +851,8 @@
   "category": 3,
   "type": 15,
   "code": "人形装备_伪装披风_N3_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 97,
@@ -765,7 +860,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_防弹插板_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 98,
@@ -773,7 +869,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_穿甲弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "500,500"
  },
  {
   "id": 99,
@@ -781,7 +878,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_特殊_M4A1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 100,
@@ -789,7 +887,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_AR15",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 101,
@@ -797,7 +896,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_空尖弹_M1911",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 102,
@@ -805,7 +905,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_战术核芯片_IDW",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 103,
@@ -813,7 +914,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_消音器_64式",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 104,
@@ -821,7 +923,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_FN49",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 105,
@@ -829,7 +932,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_Kar98k",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 106,
@@ -837,7 +941,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_全息瞄准镜_HK416",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 107,
@@ -845,7 +950,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_弹链箱_MG3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 108,
@@ -853,7 +959,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_伪装披风_PTRD",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 109,
@@ -861,7 +968,8 @@
   "category": 1,
   "type": 1,
   "code": "配件_光学瞄准镜_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 110,
@@ -869,7 +977,8 @@
   "category": 2,
   "type": 8,
   "code": "弹匣_高速弹_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 111,
@@ -877,7 +986,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_莫辛纳甘",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 112,
@@ -885,7 +995,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_ACOG瞄准镜_M1918",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 113,
@@ -893,7 +1004,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_消音器_纳甘左轮",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 114,
@@ -901,7 +1013,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_MP446",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 115,
@@ -909,7 +1022,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_伪装披风_SV98",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 117,
@@ -917,7 +1031,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_clear",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 118,
@@ -925,7 +1040,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_fail",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 119,
@@ -933,7 +1049,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_FAMAS",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 120,
@@ -941,7 +1058,8 @@
   "category": 1,
   "type": 3,
   "code": "配件_ACOG瞄准镜_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 121,
@@ -949,7 +1067,8 @@
   "category": 3,
   "type": 10,
   "code": "人形装备_外骨骼_S",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 122,
@@ -957,7 +1076,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_柯尔特左轮",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 123,
@@ -965,7 +1085,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_布伦",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 124,
@@ -973,7 +1094,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_G3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 125,
@@ -981,7 +1103,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_UMP45",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 126,
@@ -989,7 +1112,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_M4SOPMODII",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 127,
@@ -997,7 +1121,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_特殊_G41",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 128,
@@ -1005,7 +1130,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_消音器_司登",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 129,
@@ -1013,7 +1139,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_M14",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 130,
@@ -1021,7 +1148,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_G36",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 131,
@@ -1029,7 +1157,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_ACOG瞄准镜_LWMMG",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 132,
@@ -1037,7 +1166,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_ACOG瞄准镜_MG4",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 133,
@@ -1045,7 +1175,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_斯捷奇金",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 134,
@@ -1053,7 +1184,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_ACOG瞄准镜_乌兹",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 135,
@@ -1061,7 +1193,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_高速弹_ASVal",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 136,
@@ -1069,7 +1202,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_高速弹_StG44",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 137,
@@ -1077,7 +1211,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊1_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 138,
@@ -1085,7 +1220,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊2_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 139,
@@ -1093,7 +1229,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊1_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 140,
@@ -1101,7 +1238,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊2_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 141,
@@ -1109,7 +1247,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊1_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 142,
@@ -1117,7 +1256,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊3_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 143,
@@ -1125,7 +1265,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊3_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 144,
@@ -1133,7 +1274,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊2_吉尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 145,
@@ -1141,7 +1283,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_达娜",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 146,
@@ -1149,7 +1292,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_状态弹_多萝西",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 147,
@@ -1157,7 +1301,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_外骨骼_赛伊",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 148,
@@ -1165,7 +1310,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_史黛拉",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 149,
@@ -1173,7 +1319,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_阿尔玛",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 150,
@@ -1181,7 +1328,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_FG42",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 151,
@@ -1189,7 +1337,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_霰弹_鹿弹_KS23",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 152,
@@ -1197,7 +1346,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_SIG510",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 153,
@@ -1205,7 +1355,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_BM59",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 154,
@@ -1213,7 +1364,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_消音器_M3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 155,
@@ -1221,7 +1373,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_消音器_PPK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 156,
@@ -1229,7 +1382,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_ACOG_UMP9",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 157,
@@ -1237,7 +1391,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_其它_MP5",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 158,
@@ -1245,7 +1400,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_其它_汉阳造",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 159,
@@ -1253,7 +1409,8 @@
   "category": 3,
   "type": 20,
   "code": "配件_人形_hk416",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 160,
@@ -1261,7 +1418,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光瞄_lee",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 161,
@@ -1269,7 +1427,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光瞄_9597",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 162,
@@ -1277,7 +1436,8 @@
   "category": 3,
   "type": 20,
   "code": "配件_特殊_RPD",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 163,
@@ -1285,7 +1445,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_上机匣_MAC10",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 164,
@@ -1293,7 +1454,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_聚合物握把_M9",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 165,
@@ -1301,7 +1463,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_其它_Tar21",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 166,
@@ -1309,7 +1472,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_全息_伯莱塔38",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 167,
@@ -1317,7 +1481,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_C96",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 168,
@@ -1325,7 +1490,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_樱花",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 169,
@@ -1333,7 +1499,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_导轨_RFB",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 170,
@@ -1341,7 +1508,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_NTW20",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 171,
@@ -1349,7 +1517,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_呆毛_斯捷奇金",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 172,
@@ -1357,7 +1526,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光瞄_M21",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 173,
@@ -1365,7 +1535,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_ots12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 174,
@@ -1373,7 +1544,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_高爆弹_AA12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 175,
@@ -1381,7 +1553,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_消音_MDR",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 176,
@@ -1389,7 +1562,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_Gsh18",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "16,20"
  },
  {
   "id": 177,
@@ -1397,7 +1571,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_M500",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 178,
@@ -1405,7 +1580,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_KSVK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 179,
@@ -1413,7 +1589,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_M950A",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 180,
@@ -1421,7 +1598,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_枪托_马卡洛夫",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 181,
@@ -1429,7 +1607,8 @@
   "category": 2,
   "type": 19,
   "code": "弹闸_子弹_蝎式",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 182,
@@ -1437,7 +1616,8 @@
   "category": 2,
   "type": 19,
   "code": "弹闸_子弹_79式",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 183,
@@ -1445,7 +1625,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_莉可",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 184,
@@ -1453,7 +1634,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_安洁莉卡",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 185,
@@ -1461,7 +1643,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_库拉耶丝",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 186,
@@ -1469,7 +1652,8 @@
   "category": 2,
   "type": 19,
   "code": "配件_特殊_崔耶拉",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 187,
@@ -1477,7 +1661,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_海莉艾塔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 188,
@@ -1485,7 +1670,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_陨石_库拉耶丝",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 189,
@@ -1493,7 +1679,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_手表_库拉耶丝",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 190,
@@ -1501,7 +1688,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_Gbox_G11",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 191,
@@ -1509,7 +1697,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_枪托_Super SASS",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 192,
@@ -1517,7 +1706,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_特殊_RO635",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 193,
@@ -1525,7 +1715,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_插板_97霰",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 194,
@@ -1533,7 +1724,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_谢尔久科夫",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 195,
@@ -1541,7 +1733,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_阿斯特拉",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 196,
@@ -1549,7 +1742,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_幽灵",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 197,
@@ -1557,7 +1751,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_特殊_索米",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 198,
@@ -1565,7 +1760,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_枪托_NZ75",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 199,
@@ -1573,7 +1769,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_消音器_特工Vector",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 200,
@@ -1581,7 +1778,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_状态弹_空尖弹_特工Vector",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-7,-7"
  },
  {
   "id": 201,
@@ -1589,7 +1787,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_外骨骼_特工Vector",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 202,
@@ -1597,7 +1796,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_特工416",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 203,
@@ -1605,7 +1805,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_高速弹_特工416",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 204,
@@ -1613,7 +1814,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_外骨骼_X_特工416",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 205,
@@ -1621,7 +1823,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_护木_加利尔",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 206,
@@ -1629,7 +1832,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_霰弹_鹿弹_M1897",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 207,
@@ -1637,7 +1841,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_PP19",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 208,
@@ -1645,7 +1850,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光瞄_Ots-44",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 209,
@@ -1653,7 +1859,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_63式",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 210,
@@ -1661,7 +1868,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_SCW",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 211,
@@ -1669,7 +1877,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_四式",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 212,
@@ -1677,7 +1886,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_56式半",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 213,
@@ -1685,7 +1895,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_行动包_维尔德",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 214,
@@ -1693,7 +1904,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_求生刀_F1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 215,
@@ -1701,7 +1913,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_80式",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 216,
@@ -1709,7 +1922,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_独头弹_防卫者",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 217,
@@ -1717,7 +1931,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光瞄_WA2000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 218,
@@ -1725,7 +1940,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_特殊_64式",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 219,
@@ -1733,7 +1949,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_ppsh41",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 220,
@@ -1741,7 +1958,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_1919",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 221,
@@ -1749,7 +1967,8 @@
   "category": 2,
   "type": 19,
   "code": "弹闸_子弹_汉阳造",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 222,
@@ -1757,7 +1976,8 @@
   "category": 1,
   "type": 16,
   "code": "配件_备用瞄具_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 223,
@@ -1765,7 +1985,8 @@
   "category": 1,
   "type": 16,
   "code": "配件_备用瞄具_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 224,
@@ -1773,7 +1994,8 @@
   "category": 1,
   "type": 16,
   "code": "配件_备用瞄具_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 225,
@@ -1781,7 +2003,8 @@
   "category": 2,
   "type": 6,
   "code": "弹匣_信号弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 226,
@@ -1789,7 +2012,8 @@
   "category": 2,
   "type": 5,
   "code": "弹匣_狙击弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": "50,60"
  },
  {
   "id": 227,
@@ -1797,7 +2021,8 @@
   "category": 2,
   "type": 5,
   "code": "弹匣_狙击弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "70,80"
  },
  {
   "id": 228,
@@ -1805,7 +2030,8 @@
   "category": 2,
   "type": 17,
   "code": "弹匣_脱壳穿甲弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": "190,200"
  },
  {
   "id": 229,
@@ -1813,7 +2039,8 @@
   "category": 2,
   "type": 17,
   "code": "弹匣_脱壳穿甲弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "240,250"
  },
  {
   "id": 230,
@@ -1821,7 +2048,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_鸟弹_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 231,
@@ -1829,7 +2057,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_鸟弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 232,
@@ -1837,7 +2066,8 @@
   "category": 3,
   "type": 9,
   "code": "人形装备_运算芯片_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 233,
@@ -1845,7 +2075,8 @@
   "category": 3,
   "type": 9,
   "code": "人形装备_运算芯片_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 234,
@@ -1853,7 +2084,8 @@
   "category": 3,
   "type": 9,
   "code": "人形装备_运算芯片_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 235,
@@ -1861,7 +2093,8 @@
   "category": 2,
   "type": 7,
   "code": "弹匣_霰弹_闪光弹_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 236,
@@ -1869,7 +2102,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_外骨骼_THOMPSON",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 237,
@@ -1877,7 +2111,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_外骨骼_灰熊MkV",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 238,
@@ -1885,7 +2120,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_马卡洛夫",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 239,
@@ -1893,7 +2129,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_MG4",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "300,300"
  },
  {
   "id": 240,
@@ -1901,7 +2138,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_插板_RMB93",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 241,
@@ -1909,7 +2147,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_XM3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 242,
@@ -1917,7 +2156,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_子弹_SVD",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 243,
@@ -1925,7 +2165,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄具_F2000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 244,
@@ -1933,7 +2174,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_全息瞄具_PP2000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 245,
@@ -1941,7 +2183,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_备用瞄具_Glock17",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 246,
@@ -1949,7 +2192,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_枪托_杰里科",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 247,
@@ -1957,7 +2201,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_光学瞄准镜_TAC50",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 248,
@@ -1965,7 +2210,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_芯片_9A91",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 249,
@@ -1973,7 +2219,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊人形_SR3MP",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 250,
@@ -1981,7 +2228,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_PDW",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 251,
@@ -1989,7 +2237,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_米诺斯",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 252,
@@ -1997,7 +2246,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_百合铃",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 253,
@@ -2005,7 +2255,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_特殊_小邪神",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 254,
@@ -2013,7 +2264,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_佩柯拉",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 255,
@@ -2021,7 +2273,8 @@
   "category": 3,
   "type": 20,
   "code": "人形装备_外骨骼_美杜莎",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 256,
@@ -2029,7 +2282,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_M249SAW",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 257,
@@ -2037,7 +2291,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_DP28",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 258,
@@ -2045,7 +2300,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_PzB39",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 259,
@@ -2053,7 +2309,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_MondragonM1908",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 260,
@@ -2061,7 +2318,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_G36C",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 261,
@@ -2069,7 +2327,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_利贝罗勒",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 262,
@@ -2077,7 +2336,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_猎豹M1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "95,100"
  },
  {
   "id": 263,
@@ -2085,7 +2345,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_MP443",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 264,
@@ -2093,7 +2354,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_PK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 265,
@@ -2101,7 +2363,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_M37",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 266,
@@ -2109,7 +2372,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_Px4Storm",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 267,
@@ -2117,7 +2381,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_P38",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 268,
@@ -2125,7 +2390,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_Type03",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 269,
@@ -2133,7 +2399,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_Mk23",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 270,
@@ -2141,7 +2408,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_CZ75",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 271,
@@ -2149,7 +2417,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_蟒蛇",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-7,-7"
  },
  {
   "id": 272,
@@ -2157,7 +2426,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_PPsh41",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 273,
@@ -2165,7 +2435,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_XM8",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 274,
@@ -2173,7 +2444,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_AN94",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 275,
@@ -2181,7 +2453,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_AK15",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 276,
@@ -2189,7 +2462,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_P7",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 277,
@@ -2197,7 +2471,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_P90",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 278,
@@ -2205,7 +2480,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_P22",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 279,
@@ -2213,7 +2489,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_加兰德",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 280,
@@ -2221,7 +2498,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_T77",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 281,
@@ -2229,7 +2507,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_SVT38",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 282,
@@ -2237,7 +2516,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_64式自",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 283,
@@ -2245,7 +2525,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_M82A1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 284,
@@ -2253,7 +2534,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_PPK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 285,
@@ -2261,7 +2543,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_MG3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 286,
@@ -2269,7 +2552,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_索米",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 287,
@@ -2277,7 +2561,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_OBR",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 288,
@@ -2285,7 +2570,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_Ak5",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 289,
@@ -2293,7 +2579,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_ARX160",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 290,
@@ -2301,7 +2588,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_MG42",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 291,
@@ -2309,7 +2597,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_P08",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 292,
@@ -2317,7 +2606,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_Saiga12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 293,
@@ -2325,7 +2615,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_M6ASW",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 294,
@@ -2333,7 +2624,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_ACR",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 295,
@@ -2341,7 +2633,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_AUG",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 296,
@@ -2349,7 +2642,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_92type",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 297,
@@ -2357,7 +2651,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_98K",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 298,
@@ -2365,7 +2660,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_MLEMK1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "195,200"
  },
  {
   "id": 299,
@@ -2373,7 +2669,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_56-1type",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 300,
@@ -2381,7 +2678,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_QBU88",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 301,
@@ -2389,7 +2687,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_G43",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 302,
@@ -2397,7 +2696,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_P99",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 303,
@@ -2405,7 +2705,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_EVO3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 304,
@@ -2413,7 +2714,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_K2",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 305,
@@ -2421,7 +2723,8 @@
   "category": 1,
   "type": 4,
   "code": "配件_武器灯_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 306,
@@ -2429,7 +2732,8 @@
   "category": 1,
   "type": 22,
   "code": "配件_喉缩管_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 307,
@@ -2437,7 +2741,8 @@
   "category": 1,
   "type": 22,
   "code": "配件_喉缩管_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 308,
@@ -2445,7 +2750,8 @@
   "category": 1,
   "type": 22,
   "code": "配件_喉缩管_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 309,
@@ -2453,7 +2759,8 @@
   "category": 3,
   "type": 9,
   "code": "人形装备_专注芯片_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 310,
@@ -2461,7 +2768,8 @@
   "category": 3,
   "type": 23,
   "code": "人形装备_测距仪_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 311,
@@ -2469,7 +2777,8 @@
   "category": 3,
   "type": 23,
   "code": "人形装备_测距仪_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 312,
@@ -2477,7 +2786,8 @@
   "category": 3,
   "type": 21,
   "code": "人形装备_固定脚架_N",
-  "rank": 3
+  "rank": 3,
+  "armor_piercing": ""
  },
  {
   "id": 313,
@@ -2485,7 +2795,8 @@
   "category": 3,
   "type": 21,
   "code": "人形装备_固定脚架_N",
-  "rank": 4
+  "rank": 4,
+  "armor_piercing": ""
  },
  {
   "id": 314,
@@ -2493,7 +2804,8 @@
   "category": 3,
   "type": 21,
   "code": "人形装备_固定脚架_N",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 315,
@@ -2501,7 +2813,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_FP6",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 316,
@@ -2509,7 +2822,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_PKP",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 317,
@@ -2517,7 +2831,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_SCARL",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 318,
@@ -2525,7 +2840,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_SCARH",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "155,160"
  },
  {
   "id": 319,
@@ -2533,7 +2849,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_ADS",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 320,
@@ -2541,7 +2858,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_PA15",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 321,
@@ -2549,7 +2867,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_ZB26",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "270,275"
  },
  {
   "id": 322,
@@ -2557,7 +2876,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_八一式马",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 323,
@@ -2565,7 +2885,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_HK33",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 324,
@@ -2573,7 +2894,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_MG34",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 325,
@@ -2581,7 +2903,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_Sakura",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 326,
@@ -2589,7 +2912,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_Yuugiri",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 327,
@@ -2597,7 +2921,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_Tae",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 328,
@@ -2605,7 +2930,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_Lily",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 329,
@@ -2613,7 +2939,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_Ai",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 330,
@@ -2621,7 +2948,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_Junko",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 331,
@@ -2629,7 +2957,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_Saki",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 332,
@@ -2637,7 +2966,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_FN57",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 333,
@@ -2645,7 +2975,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_M1919A4",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 334,
@@ -2653,7 +2984,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_K5",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 335,
@@ -2661,7 +2993,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_樱花",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 336,
@@ -2669,7 +3002,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_DP12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 337,
@@ -2677,7 +3011,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_莫辛纳甘Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "155,160"
  },
  {
   "id": 338,
@@ -2685,7 +3020,8 @@
   "category": 1,
   "type": 16,
   "code": "配件_特殊_AR15Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 339,
@@ -2693,7 +3029,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_SL8",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 340,
@@ -2701,7 +3038,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_M1918",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "250,250"
  },
  {
   "id": 341,
@@ -2709,7 +3047,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_UKM2000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 342,
@@ -2717,7 +3056,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_斯捷奇金Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 343,
@@ -2725,7 +3065,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_64式Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 344,
@@ -2733,7 +3074,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_BrenTen",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 345,
@@ -2741,7 +3083,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_M1A1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 346,
@@ -2749,7 +3092,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_托卡列夫",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 347,
@@ -2757,7 +3101,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_M1887",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 348,
@@ -2765,7 +3110,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_MP5Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 349,
@@ -2773,7 +3119,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_MG4Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 350,
@@ -2781,7 +3128,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_CMS",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 351,
@@ -2789,7 +3137,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_马卡洛夫Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 352,
@@ -2797,7 +3146,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_PPSh41Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 353,
@@ -2805,7 +3155,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_C96",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 354,
@@ -2813,7 +3164,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_VSK94",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 355,
@@ -2821,7 +3173,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_PPKMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 356,
@@ -2829,7 +3182,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_HK416Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 357,
@@ -2837,7 +3191,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_竞争者",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 358,
@@ -2845,7 +3200,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_UMP45Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 359,
@@ -2853,7 +3209,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_UMP9Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 360,
@@ -2861,7 +3218,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_ASVal",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 361,
@@ -2869,7 +3227,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_6P62",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "95,100"
  },
  {
   "id": 362,
@@ -2877,7 +3236,8 @@
   "category": 2,
   "type": 19,
   "code": "弹匣_特殊_AAT52",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 363,
@@ -2885,7 +3245,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_AR70",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 364,
@@ -2893,7 +3254,8 @@
   "category": 3,
   "type": 20,
   "code": "人形_特殊_M870",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 365,
@@ -2901,7 +3263,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_88typeMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 366,
@@ -2909,7 +3272,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_M1919A4Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 367,
@@ -2917,7 +3281,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_CF05",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 368,
@@ -2925,7 +3290,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_56-1typeMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 369,
@@ -2933,7 +3299,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_MG3Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "270,275"
  },
  {
   "id": 370,
@@ -2941,7 +3308,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_K11",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 371,
@@ -2949,7 +3317,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_NTW20Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 372,
@@ -2957,7 +3326,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_97typeSMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 373,
@@ -2965,7 +3335,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_K31",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "110,120"
  },
  {
   "id": 374,
@@ -2973,7 +3344,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_G3Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 375,
@@ -2981,7 +3353,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_M1911Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 376,
@@ -2989,7 +3362,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Liberator",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 377,
@@ -2997,7 +3371,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_L85A1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 378,
@@ -3005,7 +3380,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Z62",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 379,
@@ -3013,7 +3389,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_TMP",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 380,
@@ -3021,7 +3398,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_EVO3",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 381,
@@ -3029,7 +3407,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Px4Storm",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 382,
@@ -3037,7 +3416,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Falcon",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "115,120"
  },
  {
   "id": 383,
@@ -3045,7 +3425,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_EM2",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 384,
@@ -3053,7 +3434,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M950AMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 385,
@@ -3061,7 +3443,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_LWMMGMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 386,
@@ -3069,7 +3452,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_MG5",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 387,
@@ -3077,7 +3461,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Motoko",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 388,
@@ -3085,7 +3470,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Ezaki",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 389,
@@ -3093,7 +3479,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_Mizukinn",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 390,
@@ -3101,7 +3488,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_G36",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 391,
@@ -3109,7 +3497,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_RO635",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 392,
@@ -3117,7 +3506,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Shipka",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "-10,-7"
  },
  {
   "id": 393,
@@ -3125,7 +3515,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_BrenMKMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 394,
@@ -3133,7 +3524,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_AA12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 395,
@@ -3141,7 +3533,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_PP90",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 396,
@@ -3149,7 +3542,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_79Type",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 397,
@@ -3157,7 +3551,8 @@
   "category": 1,
   "type": 18,
   "code": "配件_特殊_USAS12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 398,
@@ -3165,7 +3560,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_SV98Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "115,120"
  },
  {
   "id": 399,
@@ -3173,7 +3569,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_PKP",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 400,
@@ -3181,7 +3578,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M2HB",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 401,
@@ -3189,7 +3587,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Modell",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 402,
@@ -3197,7 +3596,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_USPC",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 403,
@@ -3205,7 +3605,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Vector",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 404,
@@ -3213,7 +3614,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_RexZero1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 405,
@@ -3221,7 +3623,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_DSR50",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 406,
@@ -3229,7 +3632,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_WelrodMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 407,
@@ -3237,7 +3641,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_StenMK2Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 408,
@@ -3245,7 +3650,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Thunder50",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "20,25"
  },
  {
   "id": 409,
@@ -3253,7 +3659,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_SR3MP",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 410,
@@ -3261,7 +3668,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_STG44Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 411,
@@ -3269,7 +3677,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_OTs14",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 412,
@@ -3277,7 +3686,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_AK12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 413,
@@ -3285,7 +3695,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Webley",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 414,
@@ -3293,7 +3704,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_WA2000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "95,100"
  },
  {
   "id": 415,
@@ -3301,7 +3713,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M1895Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 416,
@@ -3309,7 +3722,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_SPAS12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 417,
@@ -3317,7 +3731,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_HS2000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 418,
@@ -3325,7 +3740,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_KLIN",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 419,
@@ -3333,7 +3749,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_G41",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 420,
@@ -3341,7 +3758,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M500Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 421,
@@ -3349,7 +3767,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_MP7",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 422,
@@ -3357,7 +3776,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_RFB",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 423,
@@ -3365,7 +3785,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_M1873Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 424,
@@ -3373,7 +3794,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_ZasM21",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 425,
@@ -3381,7 +3803,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_HS50",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "95,100"
  },
  {
   "id": 426,
@@ -3389,7 +3812,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_SSG3000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 427,
@@ -3397,7 +3821,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_M82A1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "115,120"
  },
  {
   "id": 428,
@@ -3405,7 +3830,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_IDWMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 429,
@@ -3413,7 +3839,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Evita",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 430,
@@ -3421,7 +3848,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Hecate",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 431,
@@ -3429,7 +3857,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_CR21",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 432,
@@ -3437,7 +3866,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_M99",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 433,
@@ -3445,7 +3875,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_ZB26",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 434,
@@ -3453,7 +3884,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_ColtDefender",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 435,
@@ -3461,7 +3893,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_MP41",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 436,
@@ -3469,7 +3902,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_DesertEagle",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 437,
@@ -3477,7 +3911,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_GeneralLiu",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 438,
@@ -3485,7 +3920,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_Fedorov",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 439,
@@ -3493,7 +3929,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_M1928A1",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 440,
@@ -3501,7 +3938,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_92typeMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 441,
@@ -3509,7 +3947,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_AKAlfa",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 442,
@@ -3517,7 +3956,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_MDR",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 443,
@@ -3525,7 +3965,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M14Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 444,
@@ -3533,7 +3974,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Mk48",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 445,
@@ -3541,7 +3983,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_FP6",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 446,
@@ -3549,7 +3992,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_80typeMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 447,
@@ -3557,7 +4001,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_Lewis",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 448,
@@ -3565,7 +4010,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Grizzly",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 449,
@@ -3573,7 +4019,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_MAB38Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 450,
@@ -3581,7 +4028,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_SuperShorty",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 451,
@@ -3589,7 +4037,8 @@
   "category": 1,
   "type": 16,
   "code": "Accessories_SP_M4SOPMODII",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 452,
@@ -3597,7 +4046,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_DSR50",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 453,
@@ -3605,7 +4055,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_ARMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 454,
@@ -3613,7 +4064,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_SAT8",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 455,
@@ -3621,7 +4073,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_MG5",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 456,
@@ -3629,7 +4082,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_RMB93Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 457,
@@ -3637,7 +4091,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_P30",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 458,
@@ -3645,7 +4100,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_P90",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 459,
@@ -3653,7 +4109,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_K5Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 460,
@@ -3661,7 +4118,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_C93",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 461,
@@ -3669,7 +4127,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Kord",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 462,
@@ -3677,7 +4136,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_AUG",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 463,
@@ -3685,7 +4145,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M1903",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 464,
@@ -3693,7 +4154,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_SAF",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 465,
@@ -3701,7 +4163,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_Saiga12",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 466,
@@ -3709,7 +4172,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_PK",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 467,
@@ -3717,7 +4181,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Carcano1891",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "130,130"
  },
  {
   "id": 468,
@@ -3725,7 +4190,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_AUGPARA",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 469,
@@ -3733,7 +4199,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_CZ75",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "20,25"
  },
  {
   "id": 470,
@@ -3741,7 +4208,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_F1Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 471,
@@ -3749,7 +4217,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_Carcano1938",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 472,
@@ -3757,7 +4226,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_TT33",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 473,
@@ -3765,7 +4235,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_G28",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 474,
@@ -3773,7 +4244,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_VSK94",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "115,120"
  },
  {
   "id": 475,
@@ -3781,7 +4253,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_RibeyrollesMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 476,
@@ -3789,7 +4262,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_IWS2000",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "155,160"
  },
  {
   "id": 477,
@@ -3797,7 +4271,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_M82",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 478,
@@ -3805,7 +4280,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_FAL",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 479,
@@ -3813,7 +4289,8 @@
   "category": 3,
   "type": 20,
   "code": "Accessories_SP_ChauchatM1915",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 480,
@@ -3821,7 +4298,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_NEGEV",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 481,
@@ -3829,7 +4307,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M590",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 482,
@@ -3837,7 +4316,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_KSG",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 483,
@@ -3845,7 +4325,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_Lewis",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "245,250"
  },
  {
   "id": 484,
@@ -3853,7 +4334,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M1897Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 485,
@@ -3861,7 +4343,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M1911Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 486,
@@ -3869,7 +4352,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_M1895Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "16,20"
  },
  {
   "id": 487,
@@ -3877,7 +4361,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_StenMK2Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 488,
@@ -3885,7 +4370,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_C96Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "16,20"
  },
  {
   "id": 489,
@@ -3893,7 +4379,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_SV98Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 490,
@@ -3901,7 +4388,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_StG44Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 491,
@@ -3909,7 +4397,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_G3Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 492,
@@ -3917,7 +4406,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_G36Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 493,
@@ -3925,7 +4415,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_M1873Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 494,
@@ -3933,7 +4424,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_NTW20Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 495,
@@ -3941,7 +4433,8 @@
   "category": 3,
   "type": 20,
   "code": "TDoll_SP_MLEMK1Mod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 496,
@@ -3949,7 +4442,8 @@
   "category": 2,
   "type": 19,
   "code": "Magazine_SP_98KMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": "195,200"
  },
  {
   "id": 497,
@@ -3957,7 +4451,8 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_ASVALMod",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  },
  {
   "id": 498,
@@ -3965,6 +4460,7 @@
   "category": 1,
   "type": 18,
   "code": "Accessories_SP_M200",
-  "rank": 5
+  "rank": 5,
+  "armor_piercing": ""
  }
 ]

@@ -4,7 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from functools import lru_cache
 
-from .paths import DATA_DIR, read_json
+from .paths import DATA_DIR, PROJECT_ROOT, read_json, write_json
 
 
 @dataclass(frozen=True)
@@ -15,6 +15,7 @@ class EquipmentItem:
     type: int
     code: str
     rank: int
+    armor_piercing: int = 0
 
 
 @dataclass
@@ -87,10 +88,50 @@ class EquipmentReport:
         )[:limit]
 
 
+def _stat_max(value) -> int:
+    """Read the upper value from an STC stat such as ``110,120``."""
+    try:
+        parts = [int(float(part.strip())) for part in str(value or "").split(",") if part.strip()]
+    except ValueError:
+        return 0
+    return max(parts) if parts else 0
+
+
+EQUIPMENT_TARGETS_FILE = DATA_DIR / "equipment_targets.json"
+EQUIPMENT_OVERRIDE_FILE = PROJECT_ROOT / "equipment_rules.local.json"
+
+
+def load_equipment_payload() -> dict:
+    """Load the user override when valid, otherwise the bundled defaults."""
+    override = read_json(EQUIPMENT_OVERRIDE_FILE, None)
+    if isinstance(override, dict) and isinstance(override.get("categories"), list):
+        return override
+    return read_json(EQUIPMENT_TARGETS_FILE, {}) or {}
+
+
+def save_equipment_payload(payload: dict) -> None:
+    write_json(EQUIPMENT_OVERRIDE_FILE, payload)
+
+
+def reset_equipment_payload() -> None:
+    try:
+        EQUIPMENT_OVERRIDE_FILE.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def reset_equipment_engine() -> None:
+    get_equipment_engine.cache_clear()
+
+
 def _matches(item: EquipmentItem, rule: dict) -> bool:
     if "category" in rule and item.category != int(rule["category"]):
         return False
     if "type" in rule and item.type != int(rule["type"]):
+        return False
+    if "armor_piercing_min" in rule and item.armor_piercing < int(rule["armor_piercing_min"]):
+        return False
+    if "armor_piercing_max" in rule and item.armor_piercing > int(rule["armor_piercing_max"]):
         return False
     code = item.code.lower()
     name = item.name.lower()
@@ -118,11 +159,12 @@ class EquipmentEngine:
                 type=int(row.get("type") or 0),
                 code=str(row.get("code") or ""),
                 rank=int(row.get("rank") or 0),
+                armor_piercing=_stat_max(row.get("armor_piercing")),
             )
             for row in (read_json(DATA_DIR / "equipment_items.json", []) or [])
         ]
         self.by_id = {item.id: item for item in self.items}
-        payload = read_json(DATA_DIR / "equipment_targets.json", {}) or {}
+        payload = load_equipment_payload()
         self.title = str(payload.get("title") or "装备需求")
         self.source = str(payload.get("source") or "")
         self.note = str(payload.get("note") or "")

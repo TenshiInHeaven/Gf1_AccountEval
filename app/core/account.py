@@ -115,6 +115,12 @@ class AccountLoader:
         self.tiers = get_tierlists()
         self.equipment_engine = get_equipment_engine()
 
+    def reload_equipment_engine(self) -> None:
+        from .equipment import get_equipment_engine
+
+        get_equipment_engine.cache_clear()
+        self.equipment_engine = get_equipment_engine()
+
     def load(self, path: Path) -> AccountView:
         payload = read_json(path)
         if not isinstance(payload, dict):

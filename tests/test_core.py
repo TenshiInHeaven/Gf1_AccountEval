@@ -112,7 +112,12 @@ class SampleEvaluationTests(unittest.TestCase):
         self.assertEqual(by_name["高速"].target, 25)
         self.assertEqual(by_name["T骨"].target, 16)
         self.assertGreater(by_name["光喵"].current, 0)
-        self.assertEqual(by_name["高穿"].current, 0)
+        self.assertEqual(by_name["高穿（500穿）"].current, 0)
+
+    def test_high_penetration_matches_500_penetration(self):
+        report = get_equipment_engine().evaluate([{"info_id": 98}, {"info_id": 51}])
+        high = next(item for item in report.all_targets if item.id == "ap_high")
+        self.assertEqual(high.current, 1)
 
 
 class AndroidBridgeTests(unittest.TestCase):

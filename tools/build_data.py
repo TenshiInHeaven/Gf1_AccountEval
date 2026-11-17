@@ -165,6 +165,7 @@ def main() -> int:
                 "type": int(row.get("type") or 0),
                 "code": str(row.get("code") or ""),
                 "rank": int(row.get("rank") or 0),
+                "armor_piercing": str(row.get("armor_piercing") or ""),
             }
         )
     equip_items.sort(key=lambda item: item["id"])

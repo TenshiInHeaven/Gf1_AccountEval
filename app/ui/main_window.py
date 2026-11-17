@@ -272,7 +272,7 @@ class MainWindow(QMainWindow):
         self.dolls = DollPage()
         self.fairies = FairyPage()
         self.sangvis = SangvisPage()
-        self.equipment = EquipmentPage()
+        self.equipment = EquipmentPage(self.state)
         self.codex = CodexPage()
         self.settings = SettingsPage(self.state)
         self.pages = {

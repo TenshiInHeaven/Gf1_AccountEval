@@ -57,6 +57,13 @@ class AppState(QObject):
     def load_sample(self, *, announce: bool = True) -> bool:
         return self.load_path(SAMPLE_ACCOUNT, announce=announce)
 
+    def reload_equipment_rules(self) -> bool:
+        self.loader.reload_equipment_engine()
+        if self.source_path and self.source_path.is_file():
+            return self.load_path(self.source_path, announce=False)
+        self.notice.emit("装备规则已保存；重新载入账号后生效。")
+        return True
+
     # ------------------------------------------------------------------
     def save_last_path(self, path: Path) -> None:
         try:

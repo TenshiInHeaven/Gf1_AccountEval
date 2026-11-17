@@ -14,3 +14,4 @@ build/
 dist/
 *.spec
 *.zip
+equipment_rules.local.json

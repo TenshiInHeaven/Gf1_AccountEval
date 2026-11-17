@@ -7,6 +7,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QProgressBar,
+    QPushButton,
     QScrollArea,
     QVBoxLayout,
     QWidget,
@@ -24,8 +25,9 @@ def state_color(target: EquipmentTarget) -> str:
 
 
 class EquipmentPage(QWidget):
-    def __init__(self, parent: QWidget | None = None):
+    def __init__(self, state=None, parent: QWidget | None = None):
         super().__init__(parent)
+        self.state = state
         root = QVBoxLayout(self)
         root.setContentsMargins(0, 0, 0, 0)
         scroll = QScrollArea()
@@ -54,6 +56,10 @@ class EquipmentPage(QWidget):
         self.subtitle = QLabel("按「装备需求一图流」比较目标个数与当前个数")
         self.subtitle.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
         left.addWidget(self.subtitle)
+        self.rules_button = QPushButton("调整对应规则")
+        self.rules_button.setObjectName("Ghost")
+        self.rules_button.clicked.connect(self._open_rules)
+        left.addWidget(self.rules_button, 0, Qt.AlignLeft)
         left.addStretch(1)
         summary_layout.addLayout(left, 3)
 
@@ -94,6 +100,13 @@ class EquipmentPage(QWidget):
         self.sections.setSpacing(14)
         self.layout.addLayout(self.sections)
         self.layout.addStretch(1)
+
+    def _open_rules(self) -> None:
+        if self.state is None:
+            return
+        from .equipment_rules_dialog import EquipmentRulesDialog
+
+        EquipmentRulesDialog(self.state, self).exec()
 
     def refresh(self, evaluation: Evaluation) -> None:
         report: EquipmentReport = evaluation.equipment.extra["report"]
