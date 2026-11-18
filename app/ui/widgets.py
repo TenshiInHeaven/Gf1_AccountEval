@@ -220,20 +220,20 @@ RECOMMEND_STYLES = {
     "white": {
         "background": (
             "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
-            " stop:0 #FFFFFF, stop:0.5 #FAFCFF,"
-            " stop:0.8 #F0F5FB, stop:1 #FFFFFF)"
+            " stop:0 #FFFFFF, stop:0.4 #EDF5FF,"
+            " stop:0.75 #DCEAFA, stop:1 #F7FBFF)"
         ),
-        "border": "#C9D8E8",
-        "hover": "#F5FAFF",
+        "border": "#B7CADF",
+        "hover": "#EEF6FF",
     },
     "gray": {
         "background": (
             "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
-            " stop:0 #FBFCFD, stop:0.45 #EEF1F4,"
-            " stop:0.8 #DDE3E9, stop:1 #F8FAFB)"
+            " stop:0 #F4F6F8, stop:0.4 #E2E7EC,"
+            " stop:0.75 #CFD7E0, stop:1 #EEF1F4)"
         ),
-        "border": "#AAB5C1",
-        "hover": "#F1F4F7",
+        "border": "#8D99A6",
+        "hover": "#E9EDF1",
     },
 }
 
@@ -328,11 +328,6 @@ class UnitCard(QFrame):
         self.footer_label.setAlignment(Qt.AlignCenter)
         self.footer_label.setStyleSheet(f"color: {MUTED}; font-size: 11px;")
         layout.addWidget(self.footer_label)
-        if not owned:
-            self.setStyleSheet(
-                self.styleSheet()
-                + f"QFrame#SoftCard {{ background: #F8FBFF; }}"
-            )
 
     def set_payload(self, payload) -> None:
         self._payload = payload

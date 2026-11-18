@@ -284,7 +284,8 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 }
 ```
 
-导入后会写入本地 `app/data/tierlists/*.local.json`，不修改仓库内置榜单；设置页也可以一键恢复内置评分。
+导入后会写入本地 `app/data/tierlists/*.local.json`，不修改仓库内置榜单；设置页也可以一键恢复内置评分。  
+启动时优先读取这些 `*.local.json`，没有本地覆盖时才读取内置 `dolls.json / fairies.json / sangvis.json`。`ratings_export.json` 只是手动导出的备份，**不会**在启动时自动加载，必须在设置页重新导入。
 
 ### 装备
 

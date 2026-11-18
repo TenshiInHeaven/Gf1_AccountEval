@@ -78,7 +78,8 @@
 `高穿` 当前定义为 **500 穿甲值**，对应第三方穿甲弹；可用 `armor_piercing_min: 500` 匹配。
 
 设置页 **「评分数据（可导入 / 导出）」** 可以导出人形 / 妖精 / 融合势力全部档位与萌新推荐。  
-修改 JSON 后直接导入即可更新评分，不需要重新打包；`recommend` 支持 `gold / green / blue / white / gray`，分别显示金色、绿色、蓝色、白色、灰色渐变卡面。
+修改 JSON 后直接导入即可更新评分，不需要重新打包；`recommend` 支持 `gold / green / blue / white / gray`，分别显示金色、绿色、蓝色、白色、灰色渐变卡面。  
+启动时只自动读取本地 `app/data/tierlists/*.local.json`；导出的 `ratings_export.json` 不会自动加载，需要在设置页手动导入。
 
 ### 4. 导出 / 备份
 

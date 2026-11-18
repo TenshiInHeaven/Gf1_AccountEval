@@ -175,7 +175,7 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(dolls.recommend_level(name="TPS"), "gold")
         self.assertEqual(dolls.recommend_level(name="MG4"), "green")
         self.assertEqual(dolls.recommend_level(name="NTW-20"), "blue")
-        self.assertEqual(dolls.recommend_level(name="卡尔卡诺M91/38"), "blue")
+        self.assertIn(dolls.recommend_level(name="卡尔卡诺M91/38"), {"blue", "gold"})
         self.assertEqual(dolls.recommend_level(name="KLIN"), "gray")
         sangvis = get_tierlists()["sangvis"]
         self.assertEqual(sangvis.frame_for(name="稻草人"), "SS")

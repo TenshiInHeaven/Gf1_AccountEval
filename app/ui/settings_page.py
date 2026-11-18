@@ -18,9 +18,10 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from ..core.paths import PROJECT_ROOT, SAMPLE_ACCOUNT, read_json
+from ..core.paths import PROJECT_ROOT, SAMPLE_ACCOUNT, TIER_DIR, read_json
 from ..core.ratings import Evaluation
 from ..core.ratings_io import (
+    LOCAL_FILES,
     bundle_path_from_file,
     export_bundle,
     import_bundle,
@@ -115,6 +116,10 @@ class SettingsPage(QWidget):
         ratings_body.setWordWrap(True)
         ratings_body.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 12px;")
         ratings.layout().addWidget(ratings_body)
+        self.ratings_status = QLabel()
+        self.ratings_status.setWordWrap(True)
+        self.ratings_status.setStyleSheet(f"color: {MUTED}; font-size: 11px;")
+        ratings.layout().addWidget(self.ratings_status)
         rating_buttons = QHBoxLayout()
         export = QPushButton("导出评分 JSON")
         export.setObjectName("Ghost")
@@ -218,6 +223,16 @@ class SettingsPage(QWidget):
         self.state.load_sample()
 
     def refresh(self, evaluation: Evaluation) -> None:
+        active = [name for name in LOCAL_FILES.values() if (TIER_DIR / name).is_file()]
+        if active:
+            self.ratings_status.setText(
+                "当前生效：本地覆盖 " + " / ".join(active)
+                + "（启动时自动读取；ratings_export.json 不会自动加载，需手动导入）"
+            )
+        else:
+            self.ratings_status.setText(
+                "当前生效：内置榜单 app/data/tierlists/*.json（ratings_export.json 不会自动加载）"
+            )
         account = evaluation.account
         source = account.source or "未知"
         path = account.source_path or "内置数据"
