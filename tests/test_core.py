@@ -1,23 +1,34 @@
 from __future__ import annotations
 
+import copy
 import json
+import os
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+os.environ["GF1_IGNORE_LOCAL_RATINGS"] = "1"
 
 from app.capture.android import AndroidBridge, AndroidError, SNAPSHOT_CANDIDATES
 from app.capture.live import parse_capture
 from app.core.account import AccountLoader
 from app.core.codex import get_codex
-from app.core.equipment import get_equipment_engine
+from app.core.equipment import (
+    get_equipment_engine,
+    load_equipment_payload,
+    reset_equipment_engine,
+    save_equipment_payload,
+)
 from app.core.normalize import normalize_name, slugify, type_label
-from app.core.paths import SAMPLE_ACCOUNT
+from app.core.paths import SAMPLE_ACCOUNT, read_json
 from app.core.ratings import Evaluator, grade_for
 from app.core.ratings_io import export_bundle, validate_bundle
 from app.core.tiers import get_tierlists
+from app.state import AppState
+import app.core.equipment as equipment_module
 
 
 class NormalizeTests(unittest.TestCase):
@@ -120,6 +131,34 @@ class SampleEvaluationTests(unittest.TestCase):
         report = get_equipment_engine().evaluate([{"info_id": 98}, {"info_id": 51}])
         high = next(item for item in report.all_targets if item.id == "ap_high")
         self.assertEqual(high.current, 1)
+
+
+class EquipmentRuleReloadTests(unittest.TestCase):
+    def test_payload_account_reloads_after_rule_change(self):
+        payload = copy.deepcopy(read_json(SAMPLE_ACCOUNT))
+        old_override = equipment_module.EQUIPMENT_OVERRIDE_FILE
+        with tempfile.TemporaryDirectory() as tmp:
+            equipment_module.EQUIPMENT_OVERRIDE_FILE = Path(tmp) / "equipment_rules.local.json"
+            reset_equipment_engine()
+            try:
+                state = AppState()
+                self.assertTrue(state.load_payload(payload, announce=False))
+                rules = copy.deepcopy(load_equipment_payload())
+                for category in rules["categories"]:
+                    for target in category["items"]:
+                        if target["id"] == "scope":
+                            target["target"] = 777
+                save_equipment_payload(rules)
+                self.assertTrue(state.reload_equipment_rules())
+                scope = next(
+                    target
+                    for target in state.evaluation.equipment.extra["report"].all_targets
+                    if target.id == "scope"
+                )
+                self.assertEqual(scope.target, 777)
+            finally:
+                equipment_module.EQUIPMENT_OVERRIDE_FILE = old_override
+                reset_equipment_engine()
 
 
 class AndroidBridgeTests(unittest.TestCase):

@@ -1,6 +1,7 @@
 """Tier-list loading and resolution."""
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass, field
 from functools import lru_cache
 from pathlib import Path
@@ -158,7 +159,9 @@ class TierList:
 def _load(kind: str, filename: str, codex: Codex) -> TierList:
     base = TIER_DIR / filename
     local = TIER_DIR / f"{Path(filename).stem}.local.json"
-    payload = read_json(local, None)
+    payload = None
+    if os.environ.get("GF1_IGNORE_LOCAL_RATINGS") != "1":
+        payload = read_json(local, None)
     if not isinstance(payload, dict) or not isinstance(payload.get("tiers"), list):
         payload = read_json(base, {}) or {}
     tiers = [

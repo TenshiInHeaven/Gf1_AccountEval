@@ -22,14 +22,17 @@ class AppState(QObject):
         self.account: AccountView | None = None
         self.evaluation: Evaluation | None = None
         self.source_path: Path | None = None
+        self.last_payload: dict | None = None
 
     # ------------------------------------------------------------------
     def load_path(self, path: Path, *, announce: bool = True) -> bool:
         try:
             account = self.loader.load(path)
+            payload = read_json(path, None)
         except (OSError, SnapshotError, ValueError) as exc:
             self.error.emit(f"读取快照失败：{exc}")
             return False
+        self.last_payload = payload if isinstance(payload, dict) else None
         return self._apply(account, path, announce=announce)
 
     def load_payload(self, payload: dict, source_path: Path | None = None, *, announce: bool = True) -> bool:
@@ -38,6 +41,7 @@ class AppState(QObject):
         except (SnapshotError, ValueError) as exc:
             self.error.emit(f"解析快照失败：{exc}")
             return False
+        self.last_payload = payload
         return self._apply(account, source_path, announce=announce)
 
     def _apply(self, account: AccountView, path: Path | None, *, announce: bool) -> bool:
@@ -61,6 +65,8 @@ class AppState(QObject):
         self.loader.reload_equipment_engine()
         if self.source_path and self.source_path.is_file():
             return self.load_path(self.source_path, announce=False)
+        if self.last_payload is not None:
+            return self.load_payload(self.last_payload, self.source_path, announce=False)
         self.notice.emit("装备规则已保存；重新载入账号后生效。")
         return True
 
@@ -72,6 +78,8 @@ class AppState(QObject):
         self.evaluator.tiers = get_tierlists()
         if self.source_path and self.source_path.is_file():
             return self.load_path(self.source_path, announce=False)
+        if self.last_payload is not None:
+            return self.load_payload(self.last_payload, self.source_path, announce=False)
         self.notice.emit("评分规则已更新；重新载入账号后生效。")
         return True
 

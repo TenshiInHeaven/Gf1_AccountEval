@@ -87,7 +87,7 @@ build.bat
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
 3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
-4. 运行 26 个单元测试
+4. 运行 27 个单元测试
 
 > Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
 
@@ -370,7 +370,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
 - **融合势力示例不完整**：内置示例只从 2026-11-07 的编队里观察到 10 个单位；实时提取会读取完整的 `listSangvisGun`。
 - **融合势力 Q 版头像**：大部分单位使用 `character*spine.ab` 的战场 Q 版小人；`Striker_SWAP`、`Dragoon_SWAP`、`Aegis_SWAP`、`Jaeger_SWAP` 没有可用 Spine 骨架，已改为从对应 `character*swap.ab` 提取官方 `_SS` 立绘/战斗 sprite，不再裁切头像。
 - **榜单是主观的**：人形档位来自表格作者，融合势力 A- / A / B / C 是按图内层级与配队图归并的；本项目只做落库和评分，不代表官方。
-- **装备「低穿 / 高穿」是社区口径**：本版把「高穿」明确为 **500 穿甲值**，当前对应 **第三方穿甲弹**（唯一 500 穿装备）；点装备页「调整对应规则」可修改三个分区（配件 / 子弹 / 人形）的 match JSON 与目标数量，保存到本地 `equipment_rules.local.json`。
+- **装备「低穿 / 高穿」是社区口径**：本版把「高穿」明确为 **500 穿甲值**，当前对应 **第三方穿甲弹**（唯一 500 穿装备）；装备页「调整对应规则」可分三个区（配件 / 子弹 / 人形）编辑 match JSON 与目标数量，也支持导入 / 导出规则 JSON，保存到本地 `equipment_rules.local.json` 并立即重算。
 - **账号隐私**：快照包含 UID、昵称、仓库；默认只写本地 `snapshots/`，请不要把快照公开上传。
 
 ## 致谢

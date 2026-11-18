@@ -3,10 +3,12 @@ from __future__ import annotations
 
 import copy
 import json
+from pathlib import Path
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
     QDialog,
+    QFileDialog,
     QHBoxLayout,
     QLabel,
     QLineEdit,
@@ -24,6 +26,7 @@ from ..core.equipment import (
     reset_equipment_payload,
     save_equipment_payload,
 )
+from ..core.paths import PROJECT_ROOT, read_json
 from ..state import AppState
 from .theme import BORDER, MUTED, PANEL, TEXT, TEXT_SOFT
 
@@ -59,6 +62,14 @@ class EquipmentRulesDialog(QDialog):
         layout.addWidget(tabs, 1)
 
         footer = QHBoxLayout()
+        import_button = QPushButton("导入规则 JSON")
+        import_button.setObjectName("Ghost")
+        import_button.clicked.connect(self._import_json)
+        footer.addWidget(import_button)
+        export_button = QPushButton("导出规则 JSON")
+        export_button.setObjectName("Ghost")
+        export_button.clicked.connect(self._export_json)
+        footer.addWidget(export_button)
         reset = QPushButton("恢复默认")
         reset.setObjectName("Ghost")
         reset.clicked.connect(self._reset)
@@ -124,6 +135,56 @@ class EquipmentRulesDialog(QDialog):
             target["target"] = int(count.value())
             target["match"] = rule
         return payload
+
+    def _export_json(self) -> None:
+        try:
+            payload = self._collect()
+        except ValueError as exc:
+            QMessageBox.warning(self, "导出失败", str(exc))
+            return
+        path, _ = QFileDialog.getSaveFileName(
+            self,
+            "导出装备规则 JSON",
+            str(PROJECT_ROOT / "equipment_rules.json"),
+            "JSON (*.json);;所有文件 (*.*)",
+        )
+        if not path:
+            return
+        target = Path(path)
+        if target.suffix.lower() != ".json":
+            target = target.with_suffix(".json")
+        try:
+            target.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+        except OSError as exc:
+            QMessageBox.warning(self, "导出失败", str(exc))
+            return
+        QMessageBox.information(self, "导出完成", f"装备规则已保存：\n{target}")
+
+    def _import_json(self) -> None:
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "导入装备规则 JSON",
+            str(PROJECT_ROOT),
+            "JSON (*.json);;所有文件 (*.*)",
+        )
+        if not path:
+            return
+        payload = read_json(Path(path), None)
+        if (
+            not isinstance(payload, dict)
+            or not isinstance(payload.get("categories"), list)
+            or not payload["categories"]
+        ):
+            QMessageBox.warning(self, "导入失败", "JSON 缺少有效的 categories")
+            return
+        try:
+            save_equipment_payload(payload)
+            self.state.reload_equipment_rules()
+        except OSError as exc:
+            QMessageBox.warning(self, "导入失败", str(exc))
+            return
+        QMessageBox.information(self, "导入完成", "装备规则已更新并重新计算。")
+        self.accept()
 
     def _save(self) -> None:
         try:
