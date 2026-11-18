@@ -14,6 +14,7 @@
   "entries": [
     {"name": "稻草人", "tier": "SS", "note": "SS 保留；图中为核心队长，不降级"},
     {"name": "炼金术士", "tier": "A"},
+    {"name": "蝎甲兽", "tier": "A-", "aliases": ["Manticore", "强无敌"]},
     {"name": "干扰者-终幕魔女", "tier": "A-", "aliases": ["万圣魔女"]},
     {"name": "稻草人-魇渊夕来", "tier": "A", "aliases": ["稻草人-魔渊夕来"]},
     {"name": "纱那", "tier": "A"},

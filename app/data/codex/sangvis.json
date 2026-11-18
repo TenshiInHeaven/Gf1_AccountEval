@@ -423,7 +423,8 @@
   "kind": "sangvis",
   "aliases": [
    "Manticore",
-   "蝎甲兽"
+   "蝎甲兽",
+   "强无敌"
   ]
  },
  {
@@ -597,21 +598,6 @@
    "RecceCentreSwim",
    "RecceCentreSwim_buhuo",
    "大白鲨乐园"
-  ]
- },
- {
-  "id": 90001,
-  "code": "ISC",
-  "name": "PPSh-41",
-  "en_name": "PPSh-41",
-  "forces": 1,
-  "type": 2,
-  "rank": 5,
-  "avatar": "assets/avatars/sangvis/ISC.webp",
-  "kind": "sangvis",
-  "aliases": [
-   "ISC",
-   "PPSh-41"
   ]
  },
  {

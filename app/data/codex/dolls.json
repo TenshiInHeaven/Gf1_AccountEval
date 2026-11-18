@@ -3327,15 +3327,14 @@
  {
   "id": 90001,
   "code": "ISC",
-  "name": "PPSh-41",
+  "name": "PPSh-41（剧情）",
   "en_name": "PPSh-41",
   "type": 2,
   "rank": 5,
   "avatar": "assets/avatars/dolls/ISC.webp",
   "kind": "doll",
   "aliases": [
-   "ISC",
-   "PPSh-41"
+   "ISC"
   ]
  },
  {

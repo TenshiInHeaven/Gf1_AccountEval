@@ -138,7 +138,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 - **图鉴**：查看全部单位，区分已拥有/未拥有
 - **设置**：账号来源、快照路径、项目说明
 
-融合势力头像是从游戏 Spine 资源提取的战场 Q 版小全身，少数没有独立 Q 版模型的 SWAP/特殊单位会回退到官方小图。
+融合势力头像大部分从游戏 Spine 资源提取；`Striker_SWAP`、`Dragoon_SWAP`、`Aegis_SWAP`、`Jaeger_SWAP` 没有可用 Spine 骨架，已从 `character*swap.ab` 提取官方 `_SS` 2D sprite，不再回退到裁切头像。
 
 ## 5. 常见问题
 

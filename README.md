@@ -45,7 +45,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
   - `CS.GameData.userInfo`（UID / 昵称 / 等级 / 上限）
 - **快照导入 / 导出**：所有提取结果保存为 `snapshots/account_*.json`，可跨机器导入。
 - **评分 JSON 导入 / 导出**：设置页可导出人形 / 妖精 / 融合势力的完整档位、`recommend` 萌新推荐等级和备注；修改 JSON 后直接导入，无需重新打包。
-- **图鉴**：607 个人形、50 种妖精、58 个融合势力单位（去重后）全量展示，区分已拥有 / 未拥有。
+- **图鉴**：607 个人形、50 种妖精、57 个融合势力单位（去重后）全量展示，区分已拥有 / 未拥有。
 - **四维评分**：人形 40% + 妖精 20% + 融合势力 20% + 装备 20%，带雷达图、等级分布、短板建议。
 - **多强度条件同时筛选**：人形 / 妖精 / 融合势力 / 图鉴页的强度 chip 支持多选，例如同时看 `SS + S`，再叠加类型、搜索、只看已拥有 / 只看未拥有。
 - **逐条复制详情**：点击任意单位卡片可查看每一条复制记录（妖精按 5★/4★/3★/2★/1★ 分组，显示等级、技能、装备、编队；人形显示等级、改造、好感、编队；融合势力显示扩编、解析）。好感按 **0–200** 显示，不再显示六位原始值。
@@ -97,7 +97,7 @@ build.bat
 build.bat --with-extract
 ```
 
-然后按 `## 重建数据 / 头像` 里的命令显式运行 `tools/extract_avatars.py` / `tools/extract_sf_spine.py`，并传入 `--game-root`。
+然后按 `## 重建数据 / 头像` 里的命令显式运行 `tools/extract_avatars.py` / `tools/extract_sf_spine.py` / `tools/extract_sf_static_avatars.py`，并传入 `--game-root`。
 
 （会额外安装 `UnityPy`；仍需要本机游戏 `Res/Pc` 目录和 `local_paths.json`。）
 
@@ -346,9 +346,13 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_avatars.py ^
 # 4) 融合势力 Spine 素材（可选，仅在需要重渲染 Q 版头像时）
 E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_spine.py ^
   --game-root "D:\work_software\steam\steamapps\common\GIRLS' FRONTLINE"
+
+# 5) 无 Spine 的 SWAP 使用官方 2D sprite（Striker/Dragoon/Aegis/Jaeger）
+E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
+  --game-root "D:\work_software\steam\steamapps\common\GIRLS' FRONTLINE"
 ```
 
-`tools/extract_avatars.py` 负责普通人形/妖精头像和占位图；融合势力已改为从 `character*spine.ab` 提取 Spine 2.1 战场 Q 版小人并渲染成小全身头像，活动皮肤使用对应皮肤模型（例如 `Dreamer_Halloween` 用 `dreamerhalloween` 模型）。当前头像已生成在 `assets/avatars/`，正常使用不需要重跑；`extract_sf_spine.py` 只负责导出模型，渲染步骤依赖 Edge/Chromium + Spine 2.1 runtime（当前使用 `Portrait_showcase` 的 vendor 文件）。若某单位没有 Q 版 Spine 模型（例如部分 SWAP 或特殊活动单位），保留官方小图或占位图。
+`tools/extract_avatars.py` 负责普通人形/妖精头像和占位图；融合势力大部分从 `character*spine.ab` 提取 Spine 2.1 战场 Q 版小人并渲染成小全身头像。`Striker_SWAP`、`Dragoon_SWAP`、`Aegis_SWAP`、`Jaeger_SWAP` 没有可用 Spine 骨架，但对应 `character*swap.ab` 内含官方 `_SS` 2D sprite，已用 `extract_sf_static_avatars.py` 提取，不再裁切原画头部。当前头像已生成在 `assets/avatars/`，正常使用不需要重跑。
 
 ## 测试
 
@@ -363,7 +367,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_spine.py ^
 - **实时提取依赖当前 PC 客户端版本**：Frida 偏移、`xlua.dll`、`CS.GameData` 字段名都可能随更新变化；当前国服客户端已实测可读到 UID / 昵称 / 等级 / 仓库计数，但游戏更新后可能需要重新定位；失败会明确提示改用导入快照。
 - **实时提取不包含队伍/梯队配置**：当前 Lua 脚本读取人形、妖精、装备、融合势力和载具；`teams` / `squads` 为空，不影响四维评分，但“账号完整队伍配置”尚未覆盖。
 - **融合势力示例不完整**：内置示例只从 2026-11-07 的编队里观察到 10 个单位；实时提取会读取完整的 `listSangvisGun`。
-- **融合势力 Q 版头像**：大部分单位已使用 `character*spine.ab` 的战场 Q 版小人；少量 SWAP / 特殊活动单位没有独立 Spine 模型，会回退到官方小图或占位图，不再用错误 head 图标硬匹配。
+- **融合势力 Q 版头像**：大部分单位使用 `character*spine.ab` 的战场 Q 版小人；`Striker_SWAP`、`Dragoon_SWAP`、`Aegis_SWAP`、`Jaeger_SWAP` 没有可用 Spine 骨架，已改为从对应 `character*swap.ab` 提取官方 `_SS` 立绘/战斗 sprite，不再裁切头像。
 - **榜单是主观的**：人形档位来自表格作者，融合势力 A- / A / B / C 是按图内层级与配队图归并的；本项目只做落库和评分，不代表官方。
 - **装备「低穿 / 高穿」是社区口径**：本版把「高穿」明确为 **500 穿甲值**，当前对应 **第三方穿甲弹**（唯一 500 穿装备）；点装备页「调整对应规则」可修改三个分区（配件 / 子弹 / 人形）的 match JSON 与目标数量，保存到本地 `equipment_rules.local.json`。
 - **账号隐私**：快照包含 UID、昵称、仓库；默认只写本地 `snapshots/`，请不要把快照公开上传。

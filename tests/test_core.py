@@ -42,6 +42,7 @@ class CodexAndTierTests(unittest.TestCase):
         self.assertGreater(len(self.codex.dolls), 500)
         self.assertEqual(len(self.codex.fairies), 50)
         self.assertGreaterEqual(len(self.codex.sangvis), 50)
+        self.assertFalse(any(item.code == "ISC" for item in self.codex.sangvis))
 
     def test_tier_resolution(self):
         self.assertEqual(self.tiers["doll"].tier_for(code="KP31", name="索米").id, "SS")
@@ -142,6 +143,8 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(sangvis.tier_for(name="EX狙").id, "A-")
         self.assertEqual(sangvis.tier_for(name="黑雷").id, "A-")
         self.assertEqual(sangvis.tier_for(name="万圣魔女").id, "A-")
+        self.assertEqual(sangvis.tier_for(name="蝎甲兽").id, "A-")
+        self.assertEqual(sangvis.tier_for(name="强无敌").id, "A-")
 
     def test_carcano_a_minus_crown(self):
         dolls = get_tierlists()["doll"]
