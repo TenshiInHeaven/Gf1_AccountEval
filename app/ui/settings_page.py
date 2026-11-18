@@ -7,9 +7,11 @@ from pathlib import Path
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import (
+    QFileDialog,
     QFrame,
     QHBoxLayout,
     QLabel,
+    QMessageBox,
     QPushButton,
     QScrollArea,
     QVBoxLayout,
@@ -18,6 +20,12 @@ from PySide6.QtWidgets import (
 
 from ..core.paths import PROJECT_ROOT, SAMPLE_ACCOUNT, read_json
 from ..core.ratings import Evaluation
+from ..core.ratings_io import (
+    bundle_path_from_file,
+    export_bundle,
+    import_bundle,
+    reset_local_ratings,
+)
 from ..state import AppState
 from .theme import BORDER, GOLD, MUTED, PANEL_2, TEXT, TEXT_SOFT
 from .widgets import rgba
@@ -98,6 +106,32 @@ class SettingsPage(QWidget):
         sources.layout().addWidget(self.sources_body)
         layout.addWidget(sources)
 
+        ratings = self._card("评分数据（可导入 / 导出）", "档位强度与萌新推荐分开维护")
+        ratings_body = QLabel(
+            "导出后得到包含人形 / 妖精 / 融合势力全部档位、推荐标记和备注的 JSON。"
+            "修改 JSON 后可直接导入，不需要重新打包；导入结果写入本地 "
+            "`*.local.json`，不修改内置榜单。"
+        )
+        ratings_body.setWordWrap(True)
+        ratings_body.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 12px;")
+        ratings.layout().addWidget(ratings_body)
+        rating_buttons = QHBoxLayout()
+        export = QPushButton("导出评分 JSON")
+        export.setObjectName("Ghost")
+        export.clicked.connect(self._export_ratings)
+        rating_buttons.addWidget(export)
+        load = QPushButton("导入评分 JSON")
+        load.setObjectName("Primary")
+        load.clicked.connect(self._import_ratings)
+        rating_buttons.addWidget(load)
+        reset = QPushButton("恢复内置评分")
+        reset.setObjectName("Ghost")
+        reset.clicked.connect(self._reset_ratings)
+        rating_buttons.addWidget(reset)
+        rating_buttons.addStretch(1)
+        ratings.layout().addLayout(rating_buttons)
+        layout.addWidget(ratings)
+
         thanks = self._card("致谢", "")
         thanks_body = QLabel(
             "感谢群友 ルネツア. 指出 Mod3 / 剧情人物 codex 的名称与匹配问题，"
@@ -125,6 +159,60 @@ class SettingsPage(QWidget):
             sub.setStyleSheet(f"color: {MUTED}; font-size: 11px;")
             card_layout.addWidget(sub)
         return card
+
+    def _export_ratings(self) -> None:
+        path, _ = QFileDialog.getSaveFileName(
+            self,
+            "导出评分 JSON",
+            str(PROJECT_ROOT / "ratings_export.json"),
+            "JSON (*.json);;所有文件 (*.*)",
+        )
+        if not path:
+            return
+        target = Path(path)
+        if target.suffix.lower() != ".json":
+            target = target.with_suffix(".json")
+        try:
+            target.write_text(
+                json.dumps(export_bundle(), ensure_ascii=False, indent=1),
+                encoding="utf-8",
+            )
+        except OSError as exc:
+            QMessageBox.warning(self, "导出失败", str(exc))
+            return
+        QMessageBox.information(self, "导出完成", f"评分 JSON 已保存：\n{target}")
+
+    def _import_ratings(self) -> None:
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "导入评分 JSON",
+            str(PROJECT_ROOT),
+            "JSON (*.json);;所有文件 (*.*)",
+        )
+        if not path:
+            return
+        try:
+            payload = bundle_path_from_file(Path(path))
+            import_bundle(payload)
+            self.state.reload_ratings()
+        except (OSError, ValueError) as exc:
+            QMessageBox.warning(self, "导入失败", str(exc))
+            return
+        QMessageBox.information(self, "导入完成", "评分已更新，并已重新计算当前账号。")
+
+    def _reset_ratings(self) -> None:
+        answer = QMessageBox.question(
+            self,
+            "恢复内置评分",
+            "删除本地评分覆盖并恢复内置榜单？",
+            QMessageBox.Yes | QMessageBox.No,
+            QMessageBox.No,
+        )
+        if answer != QMessageBox.Yes:
+            return
+        reset_local_ratings()
+        self.state.reload_ratings()
+        QMessageBox.information(self, "已恢复", "已恢复内置评分。")
 
     def _reload_sample(self) -> None:
         self.state.load_sample()

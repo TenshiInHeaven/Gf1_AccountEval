@@ -44,6 +44,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
   - `CS.GameData.listVehicle`（载具）
   - `CS.GameData.userInfo`（UID / 昵称 / 等级 / 上限）
 - **快照导入 / 导出**：所有提取结果保存为 `snapshots/account_*.json`，可跨机器导入。
+- **评分 JSON 导入 / 导出**：设置页可导出人形 / 妖精 / 融合势力的完整档位、`recommend` 萌新推荐标记和备注；修改 JSON 后直接导入，无需重新打包。
 - **图鉴**：607 个人形、50 种妖精、58 个融合势力单位（去重后）全量展示，区分已拥有 / 未拥有。
 - **四维评分**：人形 40% + 妖精 20% + 融合势力 20% + 装备 20%，带雷达图、等级分布、短板建议。
 - **多强度条件同时筛选**：人形 / 妖精 / 融合势力 / 图鉴页的强度 chip 支持多选，例如同时看 `SS + S`，再叠加类型、搜索、只看已拥有 / 只看未拥有。
@@ -86,7 +87,7 @@ build.bat
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
 3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
-4. 运行 25 个单元测试
+4. 运行 26 个单元测试
 
 > Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
 
@@ -258,11 +259,32 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 ### 人形 A- 皇冠
 
-`卡尔卡诺M91/38` 为 **A- 档皇冠卡**：A- 档内置顶，卡片使用金色边框和 `♛ A-` 徽标。
+`卡尔卡诺M91/38` 为 **A- 档皇冠卡**：A- 档内置顶，金色渐变卡面和 `♛ A-` 徽标。
 
-卡片边框：**SS 金 / S 绿 / A-、A 蓝 / B、C 白 / Sp 紫**。  
-档位牌：**SS 金光 / S 绿 / A-、A 蓝 / B 白 / C 灰 / Sp 紫**。  
-S 档中 `NTW-20`、`MG338`、`MPL`、`MPK`、`TEC-9`、`MP-443`、`MG15`、`HP-35`、`汉阳造88式`、`MG3`、`佩可拉`、`AK-15`、`M200`、`QBZ-191` 使用 A- 蓝框；`KLIN` 为 Sp 紫框。
+档位牌只表示强度：**SS 金 / S 绿 / A-、A 蓝 / B 白 / C 灰 / Sp 紫**。  
+**金色渐变卡面**与强度档位分离，表示「推荐萌新练」，可在评分 JSON 中单独设置 `recommend`。
+
+### 评分 JSON
+
+设置页 → **评分数据（可导入 / 导出）**。导出后结构大致为：
+
+```json
+{
+  "schema": 1,
+  "kinds": {
+    "doll": {
+      "tiers": [{"id": "SS", "label": "SS", "score": 100}],
+      "entries": [
+        {"name": "TPS", "tier": "SS", "recommend": true}
+      ]
+    },
+    "fairy": {"tiers": [], "entries": []},
+    "sangvis": {"tiers": [], "entries": []}
+  }
+}
+```
+
+导入后会写入本地 `app/data/tierlists/*.local.json`，不修改仓库内置榜单；设置页也可以一键恢复内置评分。
 
 ### 装备
 

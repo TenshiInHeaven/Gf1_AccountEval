@@ -64,6 +64,17 @@ class AppState(QObject):
         self.notice.emit("装备规则已保存；重新载入账号后生效。")
         return True
 
+    def reload_ratings(self) -> bool:
+        from .core.tiers import get_tierlists
+
+        get_tierlists.cache_clear()
+        self.loader.tiers = get_tierlists()
+        self.evaluator.tiers = get_tierlists()
+        if self.source_path and self.source_path.is_file():
+            return self.load_path(self.source_path, announce=False)
+        self.notice.emit("评分规则已更新；重新载入账号后生效。")
+        return True
+
     # ------------------------------------------------------------------
     def save_last_path(self, path: Path) -> None:
         try:

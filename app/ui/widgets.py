@@ -203,7 +203,7 @@ class UnitCard(QFrame):
         footer: str = "",
         letter: str = "",
         crown: bool = False,
-        frame_color: str | None = None,
+        recommend: bool = False,
         parent: QWidget | None = None,
     ):
         super().__init__(parent)
@@ -211,14 +211,34 @@ class UnitCard(QFrame):
         self.setFixedSize(164, 218)
         self.setCursor(Qt.PointingHandCursor)
         self._payload = None
-        frame = FRAME_GOLD if crown else (frame_color or BORDER)
-        border_width = 2 if (crown or frame_color) else 1
-        background = "#FFF9E8" if crown else PANEL_2
+        gold = crown or recommend
+        if gold:
+            background = (
+                "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+                " stop:0 #FFFDF7, stop:0.35 #FFF3C4,"
+                " stop:0.7 #F1D06A, stop:1 #FFF9E6)"
+            )
+            border = FRAME_GOLD
+            hover = "#FFF4CE"
+        else:
+            background = (
+                "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+                " stop:0 #FFFFFF, stop:1 #F4F9FF)"
+            )
+            border = BORDER
+            hover = "#F0F7FF"
         self.setStyleSheet(
             f"QFrame#SoftCard {{ background: {background};"
-            f" border: {border_width}px solid {frame}; border-radius: 14px; }}"
-            f"QFrame#SoftCard:hover {{ border: 2px solid {frame}; background: #F0F7FF; }}"
+            f" border: 1px solid {border}; border-radius: 14px; }}"
+            f"QFrame#SoftCard:hover {{ border: 1px solid {FRAME_GOLD if gold else BORDER};"
+            f" background: {hover}; }}"
         )
+        if recommend and not crown:
+            effect = QGraphicsDropShadowEffect(self)
+            effect.setBlurRadius(14)
+            effect.setOffset(0, 0)
+            effect.setColor(QColor(212, 175, 55, 110))
+            self.setGraphicsEffect(effect)
         layout = QVBoxLayout(self)
         layout.setContentsMargins(12, 12, 12, 10)
         layout.setSpacing(6)

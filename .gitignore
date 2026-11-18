@@ -15,3 +15,4 @@ dist/
 *.spec
 *.zip
 equipment_rules.local.json
+app/data/tierlists/*.local.json

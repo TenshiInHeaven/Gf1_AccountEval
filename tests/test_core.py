@@ -16,6 +16,7 @@ from app.core.equipment import get_equipment_engine
 from app.core.normalize import normalize_name, slugify, type_label
 from app.core.paths import SAMPLE_ACCOUNT
 from app.core.ratings import Evaluator, grade_for
+from app.core.ratings_io import export_bundle, validate_bundle
 from app.core.tiers import get_tierlists
 
 
@@ -147,6 +148,14 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(dolls.tier_for(name="卡尔卡诺M91/38").id, "A-")
         self.assertTrue(dolls.is_crown(name="卡尔卡诺M91/38"))
 
+    def test_ratings_bundle_contains_recommendation(self):
+        bundle = export_bundle()
+        validate_bundle(bundle)
+        self.assertEqual(set(bundle["kinds"]), {"doll", "fairy", "sangvis"})
+        doll = bundle["kinds"]["doll"]
+        tps = next(item for item in doll["entries"] if item["name"] == "TPS")
+        self.assertTrue(tps["recommend"])
+
     def test_frame_overrides(self):
         dolls = get_tierlists()["doll"]
         self.assertEqual(dolls.frame_for(name="NTW-20"), "A-")
@@ -158,6 +167,8 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(dolls.frame_for(name="QBZ191"), "A-")
         self.assertEqual(dolls.frame_for(name="SPAS-12"), "S")
         self.assertEqual(dolls.frame_for(name="KLIN"), "Sp")
+        self.assertTrue(dolls.is_recommended(name="TPS"))
+        self.assertFalse(dolls.is_recommended(name="NTW-20"))
         sangvis = get_tierlists()["sangvis"]
         self.assertEqual(sangvis.frame_for(name="稻草人"), "SS")
 

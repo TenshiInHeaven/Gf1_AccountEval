@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from functools import lru_cache
+from pathlib import Path
 
 from .codex import Codex, get_codex
 from .normalize import normalize_name
@@ -34,6 +35,7 @@ class TierList:
     crown_codes: set[tuple[str, str]] = field(default_factory=set)
     crown_names: set[str] = field(default_factory=set)
     frame_overrides: dict[str, str] = field(default_factory=dict)
+    recommend_overrides: dict[str, bool] = field(default_factory=dict)
 
     def __post_init__(self) -> None:
         self.tier_by_id = {tier.id: tier for tier in self.tiers}
@@ -44,12 +46,16 @@ class TierList:
                 continue
             names = [entry.get("name", ""), *(entry.get("aliases") or [])]
             frame = str(entry.get("frame") or "").strip()
+            has_recommend = "recommend" in entry
+            recommend = bool(entry.get("recommend"))
             for name in names:
                 norm = normalize_name(name)
                 if norm:
                     self.name_tier.setdefault(norm, tier_id)
                     if frame:
                         self.frame_overrides[norm] = frame
+                    if has_recommend:
+                        self.recommend_overrides[norm] = recommend
                 for item in codex.by_norm.get(norm, []):
                     if item.kind == self.kind:
                         self.code_tier.setdefault((self.kind, item.code), tier_id)
@@ -57,6 +63,8 @@ class TierList:
                             self.crown_codes.add((self.kind, item.code))
                         if frame:
                             self.frame_overrides[normalize_name(item.code)] = frame
+                        if has_recommend:
+                            self.recommend_overrides[normalize_name(item.code)] = recommend
                 if entry.get("crown") and norm:
                     self.crown_names.add(norm)
             explicit_code = str(entry.get("code") or "")
@@ -66,6 +74,8 @@ class TierList:
                     self.crown_codes.add((self.kind, explicit_code))
                 if frame:
                     self.frame_overrides[normalize_name(explicit_code)] = frame
+                if has_recommend:
+                    self.recommend_overrides[normalize_name(explicit_code)] = recommend
 
     def is_crown(self, code: str = "", name: str = "") -> bool:
         if code and (self.kind, code) in self.crown_codes:
@@ -79,6 +89,16 @@ class TierList:
             if norm and norm in self.frame_overrides:
                 return self.frame_overrides[norm]
         return self.tier_for(code=code, name=name).id
+
+    def is_recommended(self, code: str = "", name: str = "") -> bool:
+        """Whether this unit should get the gold 'newbie recommended' card."""
+        for value in (code, name):
+            norm = normalize_name(value)
+            if norm and norm in self.recommend_overrides:
+                return self.recommend_overrides[norm]
+        return self.tier_for(code=code, name=name).id in ("SS", "S") and self.frame_for(
+            code=code, name=name
+        ) != "A-"
 
     def tier_for(self, code: str = "", name: str = "") -> Tier:
         tier_id = self.code_tier.get((self.kind, code))
@@ -96,7 +116,11 @@ class TierList:
 
 
 def _load(kind: str, filename: str, codex: Codex) -> TierList:
-    payload = read_json(TIER_DIR / filename, {}) or {}
+    base = TIER_DIR / filename
+    local = TIER_DIR / f"{Path(filename).stem}.local.json"
+    payload = read_json(local, None)
+    if not isinstance(payload, dict) or not isinstance(payload.get("tiers"), list):
+        payload = read_json(base, {}) or {}
     tiers = [
         Tier(
             id=str(row["id"]),

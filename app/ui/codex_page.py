@@ -99,7 +99,9 @@ class CodexPage(QWidget):
 
     def refresh(self, evaluation: Evaluation) -> None:
         counts = {
-            "doll": len(self.codex.dolls),
+            "doll": sum(
+                1 for item in self.codex.dolls if not self.codex.is_mod_variant("doll", item.code)
+            ),
             "fairy": len(self.codex.fairies),
             "sangvis": len(self.codex.sangvis),
         }
