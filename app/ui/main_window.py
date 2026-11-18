@@ -190,18 +190,18 @@ class MainWindow(QMainWindow):
         legend_title.setStyleSheet(f"color: {TEXT}; font-size: 13px; font-weight: 700;")
         legend_layout.addWidget(legend_title)
         legend_text = QLabel(
-            f"<span style='color:{FRAME_COLORS['SS']}'><b>● SS 金标</b></span>"
-            "：强度极高 / 极度推荐<br>"
-            f"<span style='color:{FRAME_COLORS['S']}'><b>● S 绿标</b></span>"
-            "：强度高 / 推荐新人可练<br>"
-            f"<span style='color:{FRAME_COLORS['A-']}'><b>● A- / A / S 蓝标</b></span>"
-            "：不推荐新人练，但本身有强度<br>"
-            "<span style='color:#8A9CB3'><b>● B 白 / C 灰标</b></span>"
-            "：不建议练<br>"
-            f"<span style='color:{FRAME_COLORS['Sp']}'><b>● Sp 紫标</b></span>"
-            "：生产资料<br>"
-            "<span style='color:#B08A1E'><b>● 金色渐变卡面</b></span>"
-            "：推荐萌新练（独立于强度档位）"
+            "<b>强度牌</b>："
+            f"<span style='color:{FRAME_COLORS['SS']}'>SS 金</span> / "
+            f"<span style='color:{FRAME_COLORS['S']}'>S 绿</span> / "
+            f"<span style='color:{FRAME_COLORS['A-']}'>A- 蓝</span> / "
+            "B 白 / C 灰 / "
+            f"<span style='color:{FRAME_COLORS['Sp']}'>Sp 紫</span><br>"
+            "<b>推荐卡面</b>（与强度独立）：<br>"
+            "<span style='color:#C9A227'>● 金</span>：优先推荐萌新练<br>"
+            "<span style='color:#3F9B69'>● 绿</span>：推荐萌新练<br>"
+            "<span style='color:#3E82C4'>● 蓝</span>：可选 / 有强度但不优先<br>"
+            "<span style='color:#9AA8B6'>● 白</span>：暂不推荐<br>"
+            "<span style='color:#7D8791'>● 灰</span>：不推荐"
         )
         legend_text.setTextFormat(Qt.RichText)
         legend_text.setWordWrap(True)

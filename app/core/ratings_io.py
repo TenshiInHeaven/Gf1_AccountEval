@@ -5,6 +5,7 @@ import datetime as dt
 from pathlib import Path
 
 from .paths import TIER_DIR, read_json, write_json
+from .tiers import RECOMMEND_LEVELS, normalize_recommend
 
 LOCAL_FILES = {
     "doll": "dolls.local.json",
@@ -19,7 +20,7 @@ def _payload_from_tierlist(kind: str, tierlist) -> dict:
     for entry in tierlist.entries:
         row = dict(entry)
         if "recommend" not in row:
-            row["recommend"] = tierlist.is_recommended(
+            row["recommend"] = tierlist.recommend_level(
                 code=str(row.get("code") or ""),
                 name=str(row.get("name") or ""),
             )
@@ -84,6 +85,11 @@ def validate_bundle(payload: dict) -> None:
             if str(entry.get("tier") or "") not in ids:
                 raise ValueError(
                     f"{kind} 的 {entry.get('name')} 使用未知档位 {entry.get('tier')!r}"
+                )
+            if "recommend" in entry and normalize_recommend(entry.get("recommend")) not in RECOMMEND_LEVELS:
+                raise ValueError(
+                    f"{kind} 的 {entry.get('name')} recommend 必须是 "
+                    "gold/green/blue/white/gray"
                 )
 
 

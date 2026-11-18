@@ -189,6 +189,55 @@ class TierBadge(QLabel):
         )
 
 
+RECOMMEND_STYLES = {
+    "gold": {
+        "background": (
+            "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+            " stop:0 #FFFDF7, stop:0.35 #FFF3C4,"
+            " stop:0.7 #F1D06A, stop:1 #FFF9E6)"
+        ),
+        "border": "#D4AF37",
+        "hover": "#FFF4CE",
+    },
+    "green": {
+        "background": (
+            "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+            " stop:0 #F8FFFA, stop:0.4 #DDF5E5,"
+            " stop:0.75 #BFE8CC, stop:1 #F7FFFA)"
+        ),
+        "border": "#5BB98B",
+        "hover": "#E8F8EE",
+    },
+    "blue": {
+        "background": (
+            "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+            " stop:0 #F8FCFF, stop:0.4 #DCEBFF,"
+            " stop:0.75 #B9D6FF, stop:1 #F6FBFF)"
+        ),
+        "border": "#5B9BD5",
+        "hover": "#E8F3FF",
+    },
+    "white": {
+        "background": (
+            "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+            " stop:0 #FFFFFF, stop:0.5 #FAFCFF,"
+            " stop:0.8 #F0F5FB, stop:1 #FFFFFF)"
+        ),
+        "border": "#C9D8E8",
+        "hover": "#F5FAFF",
+    },
+    "gray": {
+        "background": (
+            "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
+            " stop:0 #FBFCFD, stop:0.45 #EEF1F4,"
+            " stop:0.8 #DDE3E9, stop:1 #F8FAFB)"
+        ),
+        "border": "#AAB5C1",
+        "hover": "#F1F4F7",
+    },
+}
+
+
 class UnitCard(QFrame):
     clicked = Signal(object)
 
@@ -203,7 +252,7 @@ class UnitCard(QFrame):
         footer: str = "",
         letter: str = "",
         crown: bool = False,
-        recommend: bool = False,
+        recommend: str | None = None,
         parent: QWidget | None = None,
     ):
         super().__init__(parent)
@@ -211,15 +260,12 @@ class UnitCard(QFrame):
         self.setFixedSize(164, 218)
         self.setCursor(Qt.PointingHandCursor)
         self._payload = None
-        gold = crown or recommend
-        if gold:
-            background = (
-                "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
-                " stop:0 #FFFDF7, stop:0.35 #FFF3C4,"
-                " stop:0.7 #F1D06A, stop:1 #FFF9E6)"
-            )
-            border = FRAME_GOLD
-            hover = "#FFF4CE"
+        level = "gold" if crown else recommend
+        style = RECOMMEND_STYLES.get(level)
+        if style:
+            background = style["background"]
+            border = style["border"]
+            hover = style["hover"]
         else:
             background = (
                 "qlineargradient(x1:0, y1:0, x2:1, y2:1,"
@@ -230,15 +276,18 @@ class UnitCard(QFrame):
         self.setStyleSheet(
             f"QFrame#SoftCard {{ background: {background};"
             f" border: 1px solid {border}; border-radius: 14px; }}"
-            f"QFrame#SoftCard:hover {{ border: 1px solid {FRAME_GOLD if gold else BORDER};"
+            f"QFrame#SoftCard:hover {{ border: 1px solid {border};"
             f" background: {hover}; }}"
         )
-        if recommend and not crown:
+        if level in ("gold", "green", "blue"):
             effect = QGraphicsDropShadowEffect(self)
-            effect.setBlurRadius(14)
+            effect.setBlurRadius(14 if level == "gold" else 10)
             effect.setOffset(0, 0)
-            effect.setColor(QColor(212, 175, 55, 110))
+            glow = {"gold": (212, 175, 55, 110), "green": (91, 185, 139, 75), "blue": (91, 155, 213, 75)}
+            effect.setColor(QColor(*glow[level]))
             self.setGraphicsEffect(effect)
+        if recommend:
+            self.setToolTip(f"推荐：{ {'gold':'金','green':'绿','blue':'蓝','white':'白','gray':'灰'}.get(recommend, recommend) }")
         layout = QVBoxLayout(self)
         layout.setContentsMargins(12, 12, 12, 10)
         layout.setSpacing(6)

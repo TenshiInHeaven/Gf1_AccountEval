@@ -154,7 +154,7 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(set(bundle["kinds"]), {"doll", "fairy", "sangvis"})
         doll = bundle["kinds"]["doll"]
         tps = next(item for item in doll["entries"] if item["name"] == "TPS")
-        self.assertTrue(tps["recommend"])
+        self.assertEqual(tps["recommend"], "gold")
 
     def test_frame_overrides(self):
         dolls = get_tierlists()["doll"]
@@ -169,6 +169,11 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(dolls.frame_for(name="KLIN"), "Sp")
         self.assertTrue(dolls.is_recommended(name="TPS"))
         self.assertFalse(dolls.is_recommended(name="NTW-20"))
+        self.assertEqual(dolls.recommend_level(name="TPS"), "gold")
+        self.assertEqual(dolls.recommend_level(name="MG4"), "green")
+        self.assertEqual(dolls.recommend_level(name="NTW-20"), "blue")
+        self.assertEqual(dolls.recommend_level(name="卡尔卡诺M91/38"), "blue")
+        self.assertEqual(dolls.recommend_level(name="KLIN"), "gray")
         sangvis = get_tierlists()["sangvis"]
         self.assertEqual(sangvis.frame_for(name="稻草人"), "SS")
 

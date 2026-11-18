@@ -44,7 +44,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
   - `CS.GameData.listVehicle`（载具）
   - `CS.GameData.userInfo`（UID / 昵称 / 等级 / 上限）
 - **快照导入 / 导出**：所有提取结果保存为 `snapshots/account_*.json`，可跨机器导入。
-- **评分 JSON 导入 / 导出**：设置页可导出人形 / 妖精 / 融合势力的完整档位、`recommend` 萌新推荐标记和备注；修改 JSON 后直接导入，无需重新打包。
+- **评分 JSON 导入 / 导出**：设置页可导出人形 / 妖精 / 融合势力的完整档位、`recommend` 萌新推荐等级和备注；修改 JSON 后直接导入，无需重新打包。
 - **图鉴**：607 个人形、50 种妖精、58 个融合势力单位（去重后）全量展示，区分已拥有 / 未拥有。
 - **四维评分**：人形 40% + 妖精 20% + 融合势力 20% + 装备 20%，带雷达图、等级分布、短板建议。
 - **多强度条件同时筛选**：人形 / 妖精 / 融合势力 / 图鉴页的强度 chip 支持多选，例如同时看 `SS + S`，再叠加类型、搜索、只看已拥有 / 只看未拥有。
@@ -262,7 +262,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 `卡尔卡诺M91/38` 为 **A- 档皇冠卡**：A- 档内置顶，金色渐变卡面和 `♛ A-` 徽标。
 
 档位牌只表示强度：**SS 金 / S 绿 / A-、A 蓝 / B 白 / C 灰 / Sp 紫**。  
-**金色渐变卡面**与强度档位分离，表示「推荐萌新练」，可在评分 JSON 中单独设置 `recommend`。
+**金色渐变卡面**与强度档位分离，表示「推荐萌新练」，可在评分 JSON 中单独设置 `recommend`。推荐等级分 `gold / green / blue / white / gray` 五档，对应金色、绿色、蓝色、白色、灰色卡面（淡色玻璃渐变，不抢强度牌的颜色）。
 
 ### 评分 JSON
 
@@ -275,7 +275,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
     "doll": {
       "tiers": [{"id": "SS", "label": "SS", "score": 100}],
       "entries": [
-        {"name": "TPS", "tier": "SS", "recommend": true}
+        {"name": "TPS", "tier": "SS", "recommend": "gold"}
       ]
     },
     "fairy": {"tiers": [], "entries": []},

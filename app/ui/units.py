@@ -433,7 +433,7 @@ class UnitPage(QWidget):
                 footer=footer,
                 letter=item.name[:2],
                 crown=self.tiers.is_crown(code=item.code, name=item.name),
-                recommend=self.tiers.is_recommended(code=item.code, name=item.name),
+                recommend=self.tiers.recommend_level(code=item.code, name=item.name),
             )
             card.set_payload((item, owned))
             card.clicked.connect(self._open_detail)
