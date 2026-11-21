@@ -45,6 +45,8 @@ SNAPSHOT_CANDIDATES = (
 COMMON_ADB_PATHS = (
     r"D:\Program Files\Netease\MuMu\nx_device\15.0\shell\adb.exe",
     r"C:\Program Files\Netease\MuMu\nx_device\15.0\shell\adb.exe",
+    r"D:\Program Files\Netease\MuMu\nx_main\adb.exe",
+    r"C:\Program Files\Netease\MuMu\nx_main\adb.exe",
     r"C:\LDPlayer\LDPlayer9\adb.exe",
     r"D:\LDPlayer\LDPlayer9\adb.exe",
     r"C:\LDPlayer\LDPlayer4.0\adb.exe",
@@ -54,6 +56,10 @@ COMMON_ADB_PATHS = (
     r"D:\Program Files\Nox\bin\adb.exe",
     r"C:\Program Files (x86)\Nox\bin\adb.exe",
 )
+
+# MuMu 12 uses 16384 + 32*n; older MuMu uses 7555/7556.  These are not
+# necessarily present in ``adb devices`` until an explicit ``adb connect``.
+MUMU_ADB_PORTS = (16384, 16416, 16448, 16480, 7555, 7556)
 
 
 class AndroidError(RuntimeError):
@@ -141,6 +147,22 @@ class AndroidBridge:
                     model = part.split(":", 1)[1].replace("_", " ")
             devices.append(AndroidDevice(serial=serial, state=state, model=model))
         return devices
+
+    def connect_common_emulators(self) -> list[str]:
+        """Connect to MuMu/LDPlayer/Nox ports that ``adb devices`` may omit."""
+        if not self.available:
+            return []
+        connected: list[str] = []
+        for port in MUMU_ADB_PORTS:
+            serial = f"127.0.0.1:{port}"
+            try:
+                result = self._run("connect", serial, timeout=3)
+            except AndroidError:
+                continue
+            text = f"{result.stdout}\n{result.stderr}".lower()
+            if "connected" in text or "already connected" in text:
+                connected.append(serial)
+        return connected
 
     def installed_packages(self, serial: str) -> set[str]:
         result = self._run("-s", serial, "shell", "pm", "list", "packages")

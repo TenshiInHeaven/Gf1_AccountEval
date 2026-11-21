@@ -40,6 +40,19 @@ class StableComboBox(QComboBox):
             popup.move(self.mapToGlobal(QPoint(0, self.height())))
 
 
+RECOMMEND_RANK = {"gold": 5, "green": 4, "blue": 3, "white": 2, "gray": 1}
+
+
+def sort_mode_label(mode: str) -> str:
+    return {
+        "default": "默认排序",
+        "overall": "综合推荐度",
+        "newbie": "萌新推荐度",
+        "id": "游戏编号",
+        "rarity": "星级",
+    }.get(mode, mode)
+
+
 def favor_display(value) -> int:
     """Convert the raw 0..2,000,000 favor field to the 0..200 UI scale."""
     try:
@@ -222,15 +235,19 @@ class UnitPage(QWidget):
 
         toolbar = QFrame()
         toolbar.setStyleSheet(f"QFrame {{ background: transparent; border-bottom: 1px solid {BORDER}; }}")
-        toolbar_layout = QHBoxLayout(toolbar)
-        toolbar_layout.setContentsMargins(28, 12, 28, 12)
-        toolbar_layout.setSpacing(10)
+        toolbar_layout = QVBoxLayout(toolbar)
+        toolbar_layout.setContentsMargins(28, 10, 28, 10)
+        toolbar_layout.setSpacing(6)
+        top_row = QHBoxLayout()
+        top_row.setSpacing(8)
+        tier_row = QHBoxLayout()
+        tier_row.setSpacing(8)
 
         self.search = QLineEdit()
         self.search.setPlaceholderText("搜索名称 / 代号…")
-        self.search.setFixedWidth(220)
+        self.search.setFixedWidth(190)
         self.search.textChanged.connect(self._on_filter_changed)
-        toolbar_layout.addWidget(self.search)
+        top_row.addWidget(self.search)
 
         self.tier_group = QButtonGroup(self)
         self.tier_group.setExclusive(False)
@@ -247,7 +264,7 @@ class UnitPage(QWidget):
             )
             self.tier_group.addButton(button)
             self.tier_buttons[tier] = button
-            toolbar_layout.addWidget(button)
+            tier_row.addWidget(button)
 
         self.type_combo = StableComboBox()
         self.type_combo.setMaxVisibleItems(12)
@@ -256,27 +273,41 @@ class UnitPage(QWidget):
             self.type_combo.addItem(label, type_id)
         self.type_combo.currentIndexChanged.connect(self._on_filter_changed)
         if kind == "doll":
-            toolbar_layout.addWidget(self.type_combo)
+            top_row.addWidget(self.type_combo)
         else:
             self.type_combo.hide()
 
-        toolbar_layout.addStretch(1)
+        self.sort_combo = StableComboBox()
+        self.sort_combo.setFixedWidth(132)
+        for mode in ("default", "overall", "newbie", "id", "rarity"):
+            self.sort_combo.addItem(sort_mode_label(mode), mode)
+        self.sort_combo.currentIndexChanged.connect(self._on_filter_changed)
+        self.sort_combo.setToolTip(
+            "综合：强度优先，同强度看推荐；"
+            "萌新：金/绿/蓝/白/灰优先，同色按 SS>S>A->B 的强度排序"
+        )
+        top_row.addWidget(self.sort_combo)
+
+        top_row.addStretch(1)
         self.owned_toggle = QPushButton("只看已拥有")
         self.owned_toggle.setObjectName("Chip")
         self.owned_toggle.setCheckable(True)
         self.owned_toggle.setChecked(True)
         self.owned_toggle.setCursor(Qt.PointingHandCursor)
         self.owned_toggle.clicked.connect(self._on_owned_clicked)
-        toolbar_layout.addWidget(self.owned_toggle)
+        top_row.addWidget(self.owned_toggle)
         self.unowned_toggle = QPushButton("只看未拥有")
         self.unowned_toggle.setObjectName("Chip")
         self.unowned_toggle.setCheckable(True)
         self.unowned_toggle.setCursor(Qt.PointingHandCursor)
         self.unowned_toggle.clicked.connect(self._on_unowned_clicked)
-        toolbar_layout.addWidget(self.unowned_toggle)
+        top_row.addWidget(self.unowned_toggle)
         self.count_label = QLabel()
         self.count_label.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
-        toolbar_layout.addWidget(self.count_label)
+        top_row.addWidget(self.count_label)
+        tier_row.addStretch(1)
+        toolbar_layout.addLayout(top_row)
+        toolbar_layout.addLayout(tier_row)
         root.addWidget(toolbar)
 
         scroll = QScrollArea()
@@ -395,13 +426,33 @@ class UnitPage(QWidget):
             if query and query not in item.name.lower() and query not in item.code.lower():
                 continue
             rows.append((item, owned))
-        rows.sort(key=lambda pair: (
-            0 if pair[1] else 1,
-            -self.tiers.tier_for(code=pair[0].code, name=pair[0].name).score,
-            -int(self.tiers.is_crown(code=pair[0].code, name=pair[0].name)),
-            -int(pair[1].level if pair[1] else 0),
-            pair[0].name,
-        ))
+
+        mode = str(self.sort_combo.currentData() or "default")
+
+        def sort_key(pair: tuple[CodexItem, OwnedUnit | None]):
+            item, owned = pair
+            tier = self.tiers.tier_for(code=item.code, name=item.name)
+            rec = RECOMMEND_RANK.get(
+                self.tiers.recommend_level(code=item.code, name=item.name), 0
+            )
+            level = int(owned.level if owned else 0)
+            if mode == "overall":
+                return (-tier.score, -rec, -level, int(item.id or 999999), item.name)
+            if mode == "newbie":
+                return (-rec, -tier.score, -level, int(item.id or 999999), item.name)
+            if mode == "id":
+                return (int(item.id or 999999), item.name)
+            if mode == "rarity":
+                return (-int(item.rank or 0), -tier.score, -level, item.name)
+            return (
+                0 if owned else 1,
+                -tier.score,
+                -int(self.tiers.is_crown(code=item.code, name=item.name)),
+                -level,
+                item.name,
+            )
+
+        rows.sort(key=sort_key)
         total = len(rows)
         shown = rows[: self._limit]
         tier_text = " + ".join(sorted(self._tier_filters)) if self._tier_filters else "全部"

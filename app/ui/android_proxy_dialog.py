@@ -166,6 +166,9 @@ class AndroidProxyDialog(QDialog):
             self._append("未找到 adb；请安装 Platform Tools，或使用 MuMu/LDPlayer 自带的 adb。")
             return
         try:
+            connected = self.bridge.connect_common_emulators()
+            for serial in connected:
+                self._append(f"已连接模拟器端口：{serial}")
             devices = [item for item in self.bridge.devices() if item.state == "device"]
         except AndroidError as exc:
             self.device_label.setText("ADB 调用失败")
@@ -175,6 +178,7 @@ class AndroidProxyDialog(QDialog):
             self.device_label.setText("未检测到设备")
             self._append("请先启动模拟器，并确认 ADB 调试已开启。")
             return
+        devices.sort(key=lambda item: (0 if item.serial in connected else 1, item.serial))
         self.device = devices[0]
         self.device_label.setText(f"已检测：{self.device.label}")
         selected = None
