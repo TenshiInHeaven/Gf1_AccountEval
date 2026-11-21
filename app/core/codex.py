@@ -104,10 +104,38 @@ class Codex:
 
     def base_code(self, kind: str, code: str) -> str:
         """Map a doll's Mod3 code back to its prototype card."""
-        value = str(code or "")
+        value = self.canonical_code(kind, code)
         if kind == "doll" and value.endswith("Mod") and (kind, value[:-3]) in self.by_code:
             return value[:-3]
         return value
+
+    def canonical_code(self, kind: str, code: str) -> str:
+        """Resolve formatting variants such as ``AK-15_Mod`` / numeric ids."""
+        raw = str(code or "").strip()
+        item = self.get(kind, code=raw)
+        if item is not None:
+            return item.code
+        norm = normalize_name(raw)
+        for candidate in self.by_kind.get(kind, []):
+            if normalize_name(candidate.code) == norm:
+                return candidate.code
+        if raw.isdigit():
+            value = int(raw)
+            for candidate in self.by_kind.get(kind, []):
+                if candidate.id == value:
+                    return candidate.code
+            # Android CN reports modded dolls as 20000 + the base gun id
+            # (e.g. AK-15's 20293) instead of the codex ``AK15Mod`` code.
+            if kind == "doll" and value >= 20000:
+                base_id = value - 20000
+                base = next(
+                    (candidate for candidate in self.by_kind[kind] if candidate.id == base_id),
+                    None,
+                )
+                if base is not None:
+                    mod = self.by_code.get((kind, f"{base.code}Mod"))
+                    return mod.code if mod is not None else base.code
+        return raw
 
     def is_mod_variant(self, kind: str, code: str) -> bool:
         return self.base_code(kind, code) != str(code or "")

@@ -43,7 +43,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
   - `CS.GameData.listSangvisGun`（融合势力，含等级 / 扩编 / 解析）
   - `CS.GameData.listVehicle`（载具）
   - `CS.GameData.userInfo`（UID / 昵称 / 等级 / 上限）
-- **快照导入 / 导出**：所有提取结果保存为 `snapshots/account_*.json`，可跨机器导入。
+- **快照导入 / 导出**：所有提取结果保存为 `snapshots/account_*.json`，可跨机器导入；窗口右上角 **「导出账号」** 可把当前账号原始配置另存为 JSON。
 - **评分 JSON 导入 / 导出**：设置页可导出人形 / 妖精 / 融合势力的完整档位、`recommend` 萌新推荐等级和备注；修改 JSON 后直接导入，无需重新打包。
 - **图鉴**：607 个人形、50 种妖精、57 个融合势力单位（去重后）全量展示，区分已拥有 / 未拥有。
 - **四维评分**：人形 40% + 妖精 20% + 融合势力 20% + 装备 20%，带雷达图、等级分布、短板建议。
@@ -88,7 +88,7 @@ build.bat
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
 3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
-4. 运行 27 个单元测试
+4. 运行 28 个单元测试
 
 > Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
 

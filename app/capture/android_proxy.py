@@ -105,6 +105,16 @@ def _codex_maps(root: Path) -> dict[str, dict[str, str]]:
             info_id = str(row.get("id") or "")
             if code and info_id:
                 by_id[info_id] = code
+        if kind == "dolls":
+            # Android CN reports modded dolls as 20000 + base gun id.
+            codes = {str(row.get("code") or "") for row in rows if isinstance(row, dict)}
+            for row in rows:
+                if not isinstance(row, dict):
+                    continue
+                code = str(row.get("code") or "")
+                info_id = str(row.get("id") or "")
+                if code and info_id.isdigit() and f"{code}Mod" in codes:
+                    by_id[str(20000 + int(info_id))] = f"{code}Mod"
         result[kind] = by_id
     return result
 

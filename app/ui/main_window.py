@@ -1,11 +1,13 @@
 """Main window and navigation shell."""
 from __future__ import annotations
 
+import datetime as dt
 from pathlib import Path
 
 from PySide6.QtCore import QEasingCurve, QPropertyAnimation, QRect, QTimer, QSize, Qt
 from PySide6.QtGui import QIcon, QKeySequence, QPixmap, QShortcut
 from PySide6.QtWidgets import (
+    QFileDialog,
     QFrame,
     QGraphicsOpacityEffect,
     QHBoxLayout,
@@ -18,7 +20,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from ..core.paths import ASSETS_DIR, SAMPLE_ACCOUNT
+from ..core.paths import ASSETS_DIR, PROJECT_ROOT, SAMPLE_ACCOUNT, write_json
 from .. import __version__
 from ..state import AppState
 from .capture_dialog import CaptureDialog
@@ -253,6 +255,11 @@ class MainWindow(QMainWindow):
         self.refresh_button.setObjectName("Ghost")
         self.refresh_button.clicked.connect(self._refresh_current)
         header_layout.addWidget(self.refresh_button)
+        self.export_button = QPushButton("导出账号")
+        self.export_button.setObjectName("Ghost")
+        self.export_button.setToolTip("把当前账号的原始快照 JSON 另存为文件")
+        self.export_button.clicked.connect(self._export_account)
+        header_layout.addWidget(self.export_button)
         self.import_button = QPushButton("导入快照")
         self.import_button.setObjectName("Ghost")
         self.import_button.clicked.connect(self.open_capture)
@@ -420,3 +427,27 @@ class MainWindow(QMainWindow):
     def _refresh_current(self) -> None:
         if self.state.evaluation:
             self._on_account_changed(self.state.evaluation)
+
+    def _export_account(self) -> None:
+        payload = self.state.export_payload()
+        if payload is None:
+            QMessageBox.warning(self, "导出失败", "当前还没有载入账号。")
+            return
+        default_name = f"account_export_{dt.datetime.now():%Y%m%d_%H%M%S}.json"
+        path, _ = QFileDialog.getSaveFileName(
+            self,
+            "导出当前账号配置",
+            str(PROJECT_ROOT / "snapshots" / default_name),
+            "JSON (*.json);;所有文件 (*.*)",
+        )
+        if not path:
+            return
+        target = Path(path)
+        if target.suffix.lower() != ".json":
+            target = target.with_suffix(".json")
+        try:
+            write_json(target, payload)
+        except OSError as exc:
+            QMessageBox.warning(self, "导出失败", str(exc))
+            return
+        QMessageBox.information(self, "导出完成", f"当前账号配置已保存：\n{target}")

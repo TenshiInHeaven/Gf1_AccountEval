@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT))
 os.environ["GF1_IGNORE_LOCAL_RATINGS"] = "1"
 
 from app.capture.android import AndroidBridge, AndroidError, SNAPSHOT_CANDIDATES
+from app.capture.android_proxy import _codex_maps
 from app.capture.live import parse_capture
 from app.core.account import AccountLoader
 from app.core.codex import get_codex
@@ -86,6 +87,8 @@ class SampleEvaluationTests(unittest.TestCase):
             "dolls": [
                 {"uid": 1, "code": "M4A1", "level": 100},
                 {"uid": 2, "code": "M4A1Mod", "level": 120, "mod": 3},
+                {"uid": 3, "code": "AK-15_Mod", "level": 115, "mod": 3},
+                {"uid": 4, "code": "20293", "level": 96, "mod": 3},
             ],
             "fairies": [],
             "equipment": [],
@@ -99,6 +102,13 @@ class SampleEvaluationTests(unittest.TestCase):
             [copy["source_name"] for copy in m4a1.copies],
             ["M4A1（三改）", "M4A1"],
         )
+        ak15 = next(unit for unit in view.dolls if unit.code == "AK15")
+        self.assertEqual(ak15.name, "AK-15")
+        self.assertEqual(
+            {copy["source_code"] for copy in ak15.copies},
+            {"AK-15_Mod", "20293"},
+        )
+        self.assertEqual(ak15.copies[0]["source_name"], "AK-15（三改）")
 
     def test_fairy_copy_breakdown(self):
         airborne = next(unit for unit in self.account.fairies if unit.code == "airborne")
@@ -162,6 +172,11 @@ class EquipmentRuleReloadTests(unittest.TestCase):
 
 
 class AndroidBridgeTests(unittest.TestCase):
+    def test_android_mod_id_map(self):
+        maps = _codex_maps(ROOT)
+        self.assertEqual(maps["dolls"]["20293"], "AK15Mod")
+        self.assertEqual(maps["dolls"]["20055"], "M4A1Mod")
+
     def test_missing_adb_is_reported(self):
         bridge = AndroidBridge(adb_path=Path("Z:/definitely-missing/adb.exe"))
         self.assertFalse(bridge.available)

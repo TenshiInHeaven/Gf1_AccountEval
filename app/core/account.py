@@ -147,7 +147,8 @@ class AccountLoader:
 
     # ------------------------------------------------------------------
     def _unit(self, kind: str, code: str, name: str = "", **kwargs) -> OwnedUnit:
-        item = self.codex.get(kind, code=code, name=name or code)
+        canonical = self.codex.canonical_code(kind, code)
+        item = self.codex.get(kind, code=canonical, name=name or code)
         if item is not None:
             code = item.code
             name = item.name
@@ -168,7 +169,7 @@ class AccountLoader:
         )
 
     def _doll_source_name(self, code: str, fallback: str) -> str:
-        item = self.codex.get("doll", code=code)
+        item = self.codex.get("doll", code=self.codex.canonical_code("doll", code))
         return item.name if item else fallback
 
     def _dolls(self, rows: list[dict]) -> list[OwnedUnit]:

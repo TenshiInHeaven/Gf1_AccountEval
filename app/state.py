@@ -84,6 +84,17 @@ class AppState(QObject):
         return True
 
     # ------------------------------------------------------------------
+    def export_payload(self) -> dict | None:
+        """Return the raw snapshot payload currently used by the app."""
+        if isinstance(self.last_payload, dict):
+            return self.last_payload
+        if self.source_path and self.source_path.is_file():
+            payload = read_json(self.source_path, None)
+            if isinstance(payload, dict):
+                self.last_payload = payload
+                return payload
+        return None
+
     def save_last_path(self, path: Path) -> None:
         try:
             from .core.paths import SETTINGS_FILE
