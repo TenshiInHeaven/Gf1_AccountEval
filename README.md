@@ -147,6 +147,8 @@ python -m venv .venv
 
 ### 实际路径
 
+`app/capture/live.py` 检测进程时优先使用 Frida；如果 Frida 进程枚举被反作弊/权限拦截，会回退到 Windows `tasklist`，因此「检测游戏」仍能显示 `GrilsFrontLine.exe` 的 PID。
+
 `app/capture/live.py` 通过 `app/capture/lua_eval.py` 附身 `GrilsFrontLine.exe`：
 
 1. 在 `XLua.LuaEnv.Tick` 上挂一次性 hook；

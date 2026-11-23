@@ -161,17 +161,57 @@ class CaptureError(RuntimeError):
     pass
 
 
+def _windows_game_pid() -> int | None:
+    """Fallback process lookup for cases where Frida's process list is empty."""
+    try:
+        import csv
+        import io
+
+        result = subprocess.run(
+            ["tasklist", "/FO", "CSV", "/NH"],
+            capture_output=True,
+            text=True,
+            encoding="mbcs",
+            errors="replace",
+            timeout=8,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if result.returncode != 0:
+        return None
+    for row in csv.reader(io.StringIO(result.stdout)):
+        if len(row) < 2:
+            continue
+        name = row[0].strip().lower()
+        if any(key in name for key in ("grilsfrontline", "girlsfrontline", "frontline")):
+            try:
+                return int(row[1])
+            except ValueError:
+                continue
+    return None
+
+
 def find_game_pid() -> int | None:
     try:
         import frida
     except Exception as exc:
+        fallback = _windows_game_pid()
+        if fallback:
+            return fallback
         raise CaptureError(f"未安装 frida：{exc}") from exc
-    device = frida.get_local_device()
-    for process in device.enumerate_processes():
-        name = (process.name or "").lower()
-        if name in {"grilsfrontline.exe", "girlsfrontline.exe"}:
-            return int(process.pid)
-    return None
+    try:
+        device = frida.get_local_device()
+        for process in device.enumerate_processes():
+            name = (process.name or "").lower()
+            if any(
+                key in name
+                for key in ("grilsfrontline", "girlsfrontline", "frontline")
+            ):
+                return int(process.pid)
+    except Exception:
+        # Anti-cheat / permission issues can make Frida's process list empty.
+        pass
+    return _windows_game_pid()
 
 
 def capture(pid: int | None = None, timeout: int = 35) -> tuple[dict, str]:
