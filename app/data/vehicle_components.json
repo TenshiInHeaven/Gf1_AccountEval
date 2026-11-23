@@ -1,0 +1,1015 @@
+{
+ "version": "2026-11-24",
+ "types": {
+  "0": "通用",
+  "1": "重武器",
+  "2": "轻武器",
+  "3": "功能组件",
+  "4": "防护组件"
+ },
+ "components": {
+  "1001": {
+   "name": "装填芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1002": {
+   "name": "攻速芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1003": {
+   "name": "精度芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1004": {
+   "name": "命中芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1005": {
+   "name": "护甲芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1006": {
+   "name": "回避芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1007": {
+   "name": "火力芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1008": {
+   "name": "全速芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1009": {
+   "name": "鹰眼芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1010": {
+   "name": "暴击芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1011": {
+   "name": "防御芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1012": {
+   "name": "重武芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1013": {
+   "name": "轻武芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 5,
+   "skill": ""
+  },
+  "1101": {
+   "name": "通用机枪MK-I",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:770002"
+  },
+  "1102": {
+   "name": "反装甲狙击枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:770004"
+  },
+  "1103": {
+   "name": "机枪组",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:770009"
+  },
+  "1104": {
+   "name": "重机枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:220205"
+  },
+  "1105": {
+   "name": "车载夜视仪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770006"
+  },
+  "1106": {
+   "name": "烈焰喷射器",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:770054"
+  },
+  "1107": {
+   "name": "机枪炮",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:770056"
+  },
+  "1108": {
+   "name": "榴弹发射器",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220110"
+  },
+  "1109": {
+   "name": "激光武器",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220119"
+  },
+  "1110": {
+   "name": "加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220111"
+  },
+  "1111": {
+   "name": "高射加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220125"
+  },
+  "1112": {
+   "name": "脉冲加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220126"
+  },
+  "1113": {
+   "name": "装甲加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220129"
+  },
+  "1114": {
+   "name": "干扰枪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770065"
+  },
+  "1115": {
+   "name": "干扰器",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770074"
+  },
+  "1116": {
+   "name": "信号塔",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770076"
+  },
+  "1117": {
+   "name": "烟雾发射器",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770075"
+  },
+  "1118": {
+   "name": "导弹发射器MK1",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220132"
+  },
+  "1119": {
+   "name": "导弹发射器MK2",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220157"
+  },
+  "1120": {
+   "name": "电磁炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:220161"
+  },
+  "1121": {
+   "name": "爆炸反应装甲",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 5,
+   "skill": "1:770119"
+  },
+  "1122": {
+   "name": "旋转炮台",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:770057"
+  },
+  "1123": {
+   "name": "无人机仓",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770071"
+  },
+  "1124": {
+   "name": "防护发生器",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 5,
+   "skill": "1:770067"
+  },
+  "1125": {
+   "name": "相控阵雷达",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "2:9981"
+  },
+  "1126": {
+   "name": "轻机枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:220209"
+  },
+  "1127": {
+   "name": "自动防卫系统",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 5,
+   "skill": "1:770116"
+  },
+  "1128": {
+   "name": "轻型速射电磁枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:220211"
+  },
+  "1129": {
+   "name": "激光压制装置",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770117"
+  },
+  "1130": {
+   "name": "车载霰弹枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 5,
+   "skill": "1:770129"
+  },
+  "1131": {
+   "name": "小型迫击炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 5,
+   "skill": "1:770133"
+  },
+  "1132": {
+   "name": "镭射测距仪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 5,
+   "skill": "1:770134"
+  },
+  "1133": {
+   "name": "迷彩网",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 5,
+   "skill": "2:9982"
+  },
+  "1134": {
+   "name": "顶部格栅装甲",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 5,
+   "skill": "1:770131"
+  },
+  "2001": {
+   "name": "装填芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2002": {
+   "name": "攻速芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2003": {
+   "name": "精度芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2004": {
+   "name": "命中芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2005": {
+   "name": "护甲芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2006": {
+   "name": "回避芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2007": {
+   "name": "火力芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2008": {
+   "name": "全速芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2009": {
+   "name": "鹰眼芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2010": {
+   "name": "暴击芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2011": {
+   "name": "防御芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2012": {
+   "name": "重武芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2013": {
+   "name": "轻武芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 4,
+   "skill": ""
+  },
+  "2101": {
+   "name": "通用机枪MK-I",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:770002"
+  },
+  "2102": {
+   "name": "反装甲狙击枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:770004"
+  },
+  "2103": {
+   "name": "机枪组",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:770009"
+  },
+  "2104": {
+   "name": "重机枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:220205"
+  },
+  "2105": {
+   "name": "车载夜视仪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770006"
+  },
+  "2106": {
+   "name": "烈焰喷射器",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:770054"
+  },
+  "2107": {
+   "name": "机枪炮",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:770056"
+  },
+  "2108": {
+   "name": "榴弹发射器",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220110"
+  },
+  "2109": {
+   "name": "激光武器",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220119"
+  },
+  "2110": {
+   "name": "加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220111"
+  },
+  "2111": {
+   "name": "高射加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220125"
+  },
+  "2112": {
+   "name": "脉冲加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220126"
+  },
+  "2113": {
+   "name": "装甲加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220129"
+  },
+  "2114": {
+   "name": "干扰枪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770065"
+  },
+  "2115": {
+   "name": "干扰器",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770074"
+  },
+  "2116": {
+   "name": "信号塔",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770076"
+  },
+  "2117": {
+   "name": "烟雾发射器",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770075"
+  },
+  "2118": {
+   "name": "导弹发射器MK1",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220132"
+  },
+  "2119": {
+   "name": "导弹发射器MK2",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220157"
+  },
+  "2120": {
+   "name": "电磁炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:220161"
+  },
+  "2121": {
+   "name": "爆炸反应装甲",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 4,
+   "skill": "1:770119"
+  },
+  "2122": {
+   "name": "旋转炮台",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:770057"
+  },
+  "2123": {
+   "name": "无人机仓",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770071"
+  },
+  "2124": {
+   "name": "防护发生器",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 4,
+   "skill": "1:770067"
+  },
+  "2125": {
+   "name": "相控阵雷达",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "2:9981"
+  },
+  "2126": {
+   "name": "轻机枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:220209"
+  },
+  "2127": {
+   "name": "自动防卫系统",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 4,
+   "skill": "1:770116"
+  },
+  "2128": {
+   "name": "轻型速射电磁枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:220211"
+  },
+  "2129": {
+   "name": "激光压制装置",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770117"
+  },
+  "2130": {
+   "name": "车载霰弹枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 4,
+   "skill": "1:770129"
+  },
+  "2131": {
+   "name": "小型迫击炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 4,
+   "skill": "1:770133"
+  },
+  "2132": {
+   "name": "镭射测距仪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 4,
+   "skill": "1:770134"
+  },
+  "2133": {
+   "name": "迷彩网",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 4,
+   "skill": "2:9982"
+  },
+  "2134": {
+   "name": "顶部格栅装甲",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 4,
+   "skill": "1:770131"
+  },
+  "3001": {
+   "name": "装填芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3002": {
+   "name": "攻速芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3003": {
+   "name": "精度芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3004": {
+   "name": "命中芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3005": {
+   "name": "护甲芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3006": {
+   "name": "回避芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3007": {
+   "name": "火力芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3008": {
+   "name": "全速芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3009": {
+   "name": "鹰眼芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3010": {
+   "name": "暴击芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3011": {
+   "name": "防御芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3012": {
+   "name": "重武芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3013": {
+   "name": "轻武芯片",
+   "type": 0,
+   "type_name": "通用",
+   "rank": 3,
+   "skill": ""
+  },
+  "3101": {
+   "name": "通用机枪MK-I",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:770002"
+  },
+  "3102": {
+   "name": "反装甲狙击枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:770004"
+  },
+  "3103": {
+   "name": "机枪组",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:770009"
+  },
+  "3104": {
+   "name": "重机枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:220205"
+  },
+  "3105": {
+   "name": "车载夜视仪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770006"
+  },
+  "3106": {
+   "name": "烈焰喷射器",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:770054"
+  },
+  "3107": {
+   "name": "机枪炮",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:770056"
+  },
+  "3108": {
+   "name": "榴弹发射器",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220110"
+  },
+  "3109": {
+   "name": "激光武器",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220119"
+  },
+  "3110": {
+   "name": "加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220111"
+  },
+  "3111": {
+   "name": "高射加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220125"
+  },
+  "3112": {
+   "name": "脉冲加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220126"
+  },
+  "3113": {
+   "name": "装甲加农炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220129"
+  },
+  "3114": {
+   "name": "干扰枪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770065"
+  },
+  "3115": {
+   "name": "干扰器",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770074"
+  },
+  "3116": {
+   "name": "信号塔",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770076"
+  },
+  "3117": {
+   "name": "烟雾发射器",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770075"
+  },
+  "3118": {
+   "name": "导弹发射器MK1",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220132"
+  },
+  "3119": {
+   "name": "导弹发射器MK2",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220157"
+  },
+  "3120": {
+   "name": "电磁炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:220161"
+  },
+  "3121": {
+   "name": "爆炸反应装甲",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 3,
+   "skill": "1:770119"
+  },
+  "3122": {
+   "name": "旋转炮台",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:770057"
+  },
+  "3123": {
+   "name": "无人机仓",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770071"
+  },
+  "3124": {
+   "name": "防护发生器",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 3,
+   "skill": "1:770067"
+  },
+  "3125": {
+   "name": "相控阵雷达",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "2:9981"
+  },
+  "3126": {
+   "name": "轻机枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:220209"
+  },
+  "3127": {
+   "name": "自动防卫系统",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 3,
+   "skill": "1:770116"
+  },
+  "3128": {
+   "name": "轻型速射电磁枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:220211"
+  },
+  "3129": {
+   "name": "激光压制装置",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770117"
+  },
+  "3130": {
+   "name": "车载霰弹枪",
+   "type": 2,
+   "type_name": "轻武器",
+   "rank": 3,
+   "skill": "1:770129"
+  },
+  "3131": {
+   "name": "小型迫击炮",
+   "type": 1,
+   "type_name": "重武器",
+   "rank": 3,
+   "skill": "1:770133"
+  },
+  "3132": {
+   "name": "镭射测距仪",
+   "type": 3,
+   "type_name": "功能组件",
+   "rank": 3,
+   "skill": "1:770134"
+  },
+  "3133": {
+   "name": "迷彩网",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 3,
+   "skill": "2:9982"
+  },
+  "3134": {
+   "name": "顶部格栅装甲",
+   "type": 4,
+   "type_name": "防护组件",
+   "rank": 3,
+   "skill": "1:770131"
+  }
+ },
+ "roll_names": {
+  "heavy_damage": "重武伤害",
+  "reload": "装填",
+  "precision": "精度",
+  "H_armor_piercing": "重武穿甲",
+  "light_damage": "轻武伤害",
+  "atk_speed": "攻速",
+  "hit": "命中",
+  "L_armor_piercing": "轻武穿甲",
+  "crit_rate": "暴击概率",
+  "crit_damage": "暴击伤害",
+  "armor": "护甲",
+  "dodge": "回避",
+  "def_break": "破防",
+  "": "蓄能转化"
+ }
+}

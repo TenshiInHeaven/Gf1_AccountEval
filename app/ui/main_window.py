@@ -284,7 +284,7 @@ class MainWindow(QMainWindow):
         self.fairies = FairyPage()
         self.sangvis = SangvisPage()
         self.equipment = EquipmentPage(self.state)
-        self.components = ComponentPage()
+        self.components = ComponentPage(self.state)
         self.codex = CodexPage()
         self.settings = SettingsPage(self.state)
         self.pages = {
@@ -417,6 +417,7 @@ class MainWindow(QMainWindow):
         self.fairies.refresh(evaluation)
         self.sangvis.refresh(evaluation)
         self.equipment.refresh(evaluation)
+        self.components.refresh(evaluation)
         self.codex.refresh(evaluation)
         self.settings.refresh(evaluation)
         self.status_label.setText(f"评分 {evaluation.overall_score:.1f} · {evaluation.overall_grade}")
