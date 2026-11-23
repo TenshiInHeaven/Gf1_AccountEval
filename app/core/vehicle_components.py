@@ -24,7 +24,7 @@ def latest_index_path() -> Path | None:
     return candidates[0] if candidates else None
 
 
-def _roll_parts(value: str, names: dict[str, str]) -> str:
+def _roll_parts(value: str, names: dict[str, str], skill_names: dict[str, str] | None = None) -> str:
     text = str(value or "").strip()
     if not text:
         return ""
@@ -32,7 +32,7 @@ def _roll_parts(value: str, names: dict[str, str]) -> str:
         return text
     code, number = text.split(":", 1)
     if code == "skill":
-        return f"技能 {number}"
+        return f"技能 {((skill_names or {}).get(number) or number)}"
     return f"{names.get(code, code)} {number}"
 
 
@@ -49,6 +49,7 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
     catalog = load_catalog()
     components = catalog.get("components") or {}
     roll_names = catalog.get("roll_names") or {}
+    skill_names = catalog.get("skill_names") or {}
     guide = load_guide()
     recommended = {
         str(item.get("name") or ""): list(item.get("schemes") or [])
@@ -68,7 +69,7 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
         entry = grouped.get(key)
         if entry is None:
             words = " / ".join(
-                part for part in (_roll_parts(value, roll_names) for value in rolls) if part
+                part for part in (_roll_parts(value, roll_names, skill_names) for value in rolls) if part
             )
             entry = {
                 "id": f"{component_id}:{abs(hash(rolls))}",
