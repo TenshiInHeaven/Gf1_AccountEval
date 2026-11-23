@@ -8,7 +8,7 @@ from .paths import DATA_DIR, read_json
 
 @lru_cache(maxsize=1)
 def get_mecha_data() -> dict:
-    payload = read_json(DATA_DIR / "mecha_components.json", {}) or {}
+    payload = read_json(DATA_DIR / "components.json", {}) or {}
     return payload
 
 

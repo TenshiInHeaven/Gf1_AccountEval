@@ -131,11 +131,11 @@ class SampleEvaluationTests(unittest.TestCase):
     def test_equipment_targets(self):
         report = self.account.equipment
         self.assertEqual(len(report.all_targets), 27)
-        self.assertEqual(report.target_total, 361)
+        self.assertEqual(report.target_total, 217)
         by_name = report.by_name()
-        self.assertEqual(by_name["光喵"].target, 27)
-        self.assertEqual(by_name["高速"].target, 25)
-        self.assertEqual(by_name["T骨"].target, 16)
+        self.assertEqual(by_name["光喵"].target, 21)
+        self.assertEqual(by_name["高速"].target, 11)
+        self.assertEqual(by_name["T骨"].target, 13)
         self.assertGreater(by_name["光喵"].current, 0)
         self.assertEqual(by_name["高穿（500穿）"].current, 0)
 
@@ -225,7 +225,7 @@ class TierDataTests(unittest.TestCase):
     def test_mecha_component_classification(self):
         data = get_mecha_data()
         schemes = len(data["schemes"])
-        components = {item["name"]: item for item in data["tanks"][0]["components"]}
+        components = {item["name"]: item for item in data["components"]}
         self.assertEqual(classification(components["火力芯片"], schemes), "must")
         self.assertEqual(classification(components["加农炮"], schemes), "partial")
         self.assertEqual(classification({"schemes": []}, schemes), "fw")

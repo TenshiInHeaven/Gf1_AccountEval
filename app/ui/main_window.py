@@ -25,6 +25,7 @@ from .. import __version__
 from ..state import AppState
 from .capture_dialog import CaptureDialog
 from .codex_page import CodexPage
+from .components_page import ComponentPage
 from .dashboard import DashboardPage
 from .equipment_page import EquipmentPage
 from .help_dialog import HelpDialog
@@ -62,8 +63,9 @@ class MainWindow(QMainWindow):
         ("fairies", "妖精", "空降与战略妖精储备", "03"),
         ("sangvis", "融合势力", "铁血捕获单位", "04"),
         ("equipment", "装备", "目标个数 vs 当前个数", "05"),
-        ("codex", "图鉴", "全量单位与拥有状态", "06"),
-        ("settings", "设置", "数据来源与评分口径", "07"),
+        ("components", "组件", "机动装甲组件与三套方案", "06"),
+        ("codex", "图鉴", "全量单位与拥有状态", "07"),
+        ("settings", "设置", "数据来源与评分口径", "08"),
     )
 
     def __init__(self, state: AppState, parent: QWidget | None = None):
@@ -282,6 +284,7 @@ class MainWindow(QMainWindow):
         self.fairies = FairyPage()
         self.sangvis = SangvisPage()
         self.equipment = EquipmentPage(self.state)
+        self.components = ComponentPage()
         self.codex = CodexPage()
         self.settings = SettingsPage(self.state)
         self.pages = {
@@ -290,6 +293,7 @@ class MainWindow(QMainWindow):
             "fairies": self.fairies,
             "sangvis": self.sangvis,
             "equipment": self.equipment,
+            "components": self.components,
             "codex": self.codex,
             "settings": self.settings,
         }

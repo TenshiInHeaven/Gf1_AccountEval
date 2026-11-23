@@ -99,10 +99,6 @@ class EquipmentPage(QWidget):
         self.sections = QVBoxLayout()
         self.sections.setSpacing(14)
         self.layout.addLayout(self.sections)
-        from .mecha_section import MechaSection
-
-        self.mecha = MechaSection()
-        self.layout.addWidget(self.mecha)
         self.layout.addStretch(1)
 
     def _open_rules(self) -> None:

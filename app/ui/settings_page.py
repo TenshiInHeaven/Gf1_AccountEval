@@ -154,8 +154,8 @@ class SettingsPage(QWidget):
         thanks = self._card("致谢", "")
         thanks_body = QLabel(
             "感谢群友 ルネツア. 指出 Mod3 / 剧情人物 codex 的名称与匹配问题，"
-            "以及宁姆格福王朝灵庙和其他为人形、妖精、融合势力、装备强度排行"
-            "和资料整理提供帮助的大佬们。"
+            "宁姆格福王朝灵庙的帮助，以及反熵盒afla、秋水Ameth、归海临渊"
+            "提供的强度排行、养成方案、装备与组件资料。"
         )
         thanks_body.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 12px;")
         thanks_body.setWordWrap(True)
