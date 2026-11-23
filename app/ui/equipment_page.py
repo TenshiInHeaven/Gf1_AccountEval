@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (
+    QComboBox,
     QFrame,
     QHBoxLayout,
     QLabel,
@@ -13,8 +14,9 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from ..core.equipment import EquipmentCategory, EquipmentReport, EquipmentTarget
-from ..core.ratings import Evaluation
+from ..core.equipment import EquipmentCategory, EquipmentEngine, EquipmentReport, EquipmentTarget, get_equipment_engine
+from ..core.paths import DATA_DIR, read_json
+from ..core.ratings import Evaluation, grade_for
 from .dashboard import clear_layout
 from .theme import BORDER, GOLD, GREEN, MUTED, ORANGE, RED, TEXT, TEXT_SOFT
 from .widgets import ProgressLine, TierBadge
@@ -28,6 +30,9 @@ class EquipmentPage(QWidget):
     def __init__(self, state=None, parent: QWidget | None = None):
         super().__init__(parent)
         self.state = state
+        self.evaluation: Evaluation | None = None
+        self.raw_rows: list[dict] = []
+        self.activities = (read_json(DATA_DIR / "equipment_activities.json", {}) or {}).get("activities") or []
         root = QVBoxLayout(self)
         root.setContentsMargins(0, 0, 0, 0)
         scroll = QScrollArea()
@@ -56,6 +61,20 @@ class EquipmentPage(QWidget):
         self.subtitle = QLabel("按「装备需求一图流」比较目标个数与当前个数")
         self.subtitle.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
         left.addWidget(self.subtitle)
+        activity_row = QHBoxLayout()
+        activity_row.setSpacing(6)
+        activity_label = QLabel("评价范围")
+        activity_label.setStyleSheet(f"color: {MUTED}; font-size: 11px;")
+        activity_row.addWidget(activity_label)
+        self.activity_combo = QComboBox()
+        self.activity_combo.addItem("全量最大（所有活动取并集）", "")
+        for activity in self.activities:
+            suffix = "" if activity.get("available", True) else "（无数据）"
+            self.activity_combo.addItem(str(activity.get("name") or activity.get("id")) + suffix, activity.get("id"))
+        self.activity_combo.currentIndexChanged.connect(self._update_activity)
+        activity_row.addWidget(self.activity_combo)
+        activity_row.addStretch(1)
+        left.addLayout(activity_row)
         self.rules_button = QPushButton("调整对应规则")
         self.rules_button.setObjectName("Ghost")
         self.rules_button.clicked.connect(self._open_rules)
@@ -109,13 +128,52 @@ class EquipmentPage(QWidget):
         EquipmentRulesDialog(self.state, self).exec()
 
     def refresh(self, evaluation: Evaluation) -> None:
-        report: EquipmentReport = evaluation.equipment.extra["report"]
+        self.evaluation = evaluation
+        payload = self.state.export_payload() if self.state is not None else None
+        self.raw_rows = list((payload or {}).get("equipment") or [])
+        self._update_activity()
+
+    def _update_activity(self) -> None:
+        if self.evaluation is None:
+            return
+        report: EquipmentReport = self.evaluation.equipment.extra["report"]
+        grade = self.evaluation.equipment.grade
+        activity_id = str(self.activity_combo.currentData() or "")
+        if activity_id:
+            activity = next(
+                (item for item in self.activities if item.get("id") == activity_id),
+                None,
+            )
+            counts = dict((activity or {}).get("counts") or {})
+            report = get_equipment_engine().evaluate(self.raw_rows, counts)
+            grade = grade_for(report.score)
+            if activity is not None and not activity.get("available", True):
+                grade = "C"
+                self.subtitle.setText("该活动没有可读取的配置表数据")
+            else:
+                self.subtitle.setText(
+                    f"{activity.get('name') if activity else activity_id} · "
+                    f"{report.current_total}/{report.target_total} 件 · "
+                    f"完成度 {report.completion:.0f}%"
+                )
+        else:
+            self.subtitle.setText(
+                f"{report.current_total}/{report.target_total} 件 · 完成度 {report.completion:.0f}% · "
+                f"{sum(1 for item in report.all_targets if item.state == 'ok')}/{len(report.all_targets)} 项达标"
+            )
+        self._show_report(report, grade)
+
+    def _show_report(self, report: EquipmentReport, grade: str) -> None:
         self.score.setText(f"{report.score:.0f}")
-        self.grade.set_tier(evaluation.equipment.grade)
-        self.subtitle.setText(
-            f"{report.current_total}/{report.target_total} 件 · 完成度 {report.completion:.0f}% · "
-            f"{sum(1 for item in report.all_targets if item.state == 'ok')}/{len(report.all_targets)} 项达标"
-        )
+        self.grade.set_tier(grade)
+        if str(self.activity_combo.currentData() or ""):
+            # Activity subtitle is set by _update_activity.
+            pass
+        else:
+            self.subtitle.setText(
+                f"{report.current_total}/{report.target_total} 件 · 完成度 {report.completion:.0f}% · "
+                f"{sum(1 for item in report.all_targets if item.state == 'ok')}/{len(report.all_targets)} 项达标"
+            )
         clear_layout(self.categories_box)
         for category in report.categories:
             card = QFrame()

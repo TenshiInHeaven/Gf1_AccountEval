@@ -202,13 +202,29 @@ class EquipmentEngine:
                     if _matches(item, rule):
                         self._hits.setdefault(item.id, []).append((category, target))
 
-    def evaluate(self, equipment_rows: list[dict]) -> EquipmentReport:
+    def evaluate(
+        self,
+        equipment_rows: list[dict],
+        target_counts: dict[str, int] | None = None,
+    ) -> EquipmentReport:
+        counts = target_counts or {}
         categories = [
             EquipmentCategory(
                 id=category.id,
                 name=category.name,
                 weight=category.weight,
-                targets=[EquipmentTarget(id=item.id, name=item.name, target=item.target) for item in category.targets],
+                targets=[
+                    EquipmentTarget(
+                        id=item.id,
+                        name=item.name,
+                        target=(
+                            int(counts.get(item.id, item.target))
+                            if target_counts is None
+                            else int(counts.get(item.id, 0))
+                        ),
+                    )
+                    for item in category.targets
+                ],
             )
             for category in self.categories
         ]
