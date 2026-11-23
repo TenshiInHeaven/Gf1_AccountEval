@@ -18,3 +18,5 @@ equipment_rules.local.json
 app/data/tierlists/*.local.json
 ratings_export.json
 .account_forge_settings.json
+favorites.json
+favorites_export.json

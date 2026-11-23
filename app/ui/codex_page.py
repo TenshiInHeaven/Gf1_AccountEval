@@ -100,10 +100,13 @@ class CodexPage(QWidget):
     def refresh(self, evaluation: Evaluation) -> None:
         counts = {
             "doll": sum(
-                1 for item in self.codex.dolls if not self.codex.is_mod_variant("doll", item.code)
+                1
+                for item in self.codex.dolls
+                if self.codex.is_deployable("doll", item)
+                and not self.codex.is_mod_variant("doll", item.code)
             ),
-            "fairy": len(self.codex.fairies),
-            "sangvis": len(self.codex.sangvis),
+            "fairy": sum(1 for item in self.codex.fairies if self.codex.is_deployable("fairy", item)),
+            "sangvis": sum(1 for item in self.codex.sangvis if self.codex.is_deployable("sangvis", item)),
         }
         owned = {
             "doll": len(evaluation.account.dolls),

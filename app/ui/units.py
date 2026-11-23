@@ -22,6 +22,7 @@ from PySide6.QtWidgets import (
 
 from ..core.account import AccountView, OwnedUnit
 from ..core.codex import CodexItem, get_codex
+from ..core.favorites import get_favorites
 from ..core.normalize import type_label
 from ..core.ratings import Evaluation
 from ..core.tiers import get_tierlists
@@ -221,6 +222,7 @@ class UnitPage(QWidget):
         self.kind = kind
         self.codex = get_codex()
         self.tiers = get_tierlists()[kind]
+        self.favorites = get_favorites()
         self.account: AccountView | None = None
         self._tier_filters: set[str] = set()
         self._updating_filters = False
@@ -302,6 +304,12 @@ class UnitPage(QWidget):
         self.unowned_toggle.setCursor(Qt.PointingHandCursor)
         self.unowned_toggle.clicked.connect(self._on_unowned_clicked)
         top_row.addWidget(self.unowned_toggle)
+        self.favorites_toggle = QPushButton("只看收藏")
+        self.favorites_toggle.setObjectName("Chip")
+        self.favorites_toggle.setCheckable(True)
+        self.favorites_toggle.setCursor(Qt.PointingHandCursor)
+        self.favorites_toggle.clicked.connect(self._on_filter_changed)
+        top_row.addWidget(self.favorites_toggle)
         self.count_label = QLabel()
         self.count_label.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
         top_row.addWidget(self.count_label)
@@ -381,6 +389,18 @@ class UnitPage(QWidget):
         self._limit = 120
         self._render()
 
+    def _toggle_favorite(self, payload) -> None:
+        if not payload:
+            return
+        item, _owned = payload
+        value = self.favorites.toggle(self.kind, item.code)
+        for card in self._cards:
+            card_payload = getattr(card, "_payload", None)
+            if card_payload and card_payload[0].code == item.code:
+                card.set_favorite(value)
+        if self.favorites_toggle.isChecked():
+            self._render()
+
     def _owned_map(self) -> dict[str, OwnedUnit]:
         if not self.account:
             return {}
@@ -390,13 +410,15 @@ class UnitPage(QWidget):
         owned = self._owned_map()
         result: list[tuple[CodexItem, OwnedUnit | None]] = []
         for item in self.codex.by_kind[self.kind]:
+            if not self.codex.is_deployable(self.kind, item):
+                continue
             if self.kind == "doll" and self.codex.is_mod_variant("doll", item.code):
                 continue
             result.append((item, owned.get(item.code)))
         # Include owned codes that are not in the codex (rare NPC / event units).
         known = {item.code for item in self.codex.by_kind[self.kind]}
         for code, unit in owned.items():
-            if code not in known and unit.item is not None:
+            if code not in known and unit.item is not None and self.codex.is_deployable(self.kind, unit.item):
                 result.append((unit.item, unit))
         return result
 
@@ -410,12 +432,15 @@ class UnitPage(QWidget):
         query = self.search.text().strip().lower()
         only_owned = self.owned_toggle.isChecked()
         only_unowned = self.unowned_toggle.isChecked()
+        only_favorites = self.favorites_toggle.isChecked()
         type_filter = int(self.type_combo.currentData() or 0)
         rows: list[tuple[CodexItem, OwnedUnit | None]] = []
         for item, owned in self._all_items():
             if only_owned and owned is None:
                 continue
             if only_unowned and owned is not None:
+                continue
+            if only_favorites and not self.favorites.is_favorite(self.kind, item.code):
                 continue
             if self._tier_filters:
                 tier = self.tiers.tier_for(code=item.code, name=item.name)
@@ -485,9 +510,11 @@ class UnitPage(QWidget):
                 letter=item.name[:2],
                 crown=self.tiers.is_crown(code=item.code, name=item.name),
                 recommend=self.tiers.recommend_level(code=item.code, name=item.name),
+                favorite=self.favorites.is_favorite(self.kind, item.code),
             )
             card.set_payload((item, owned))
             card.clicked.connect(self._open_detail)
+            card.favorite_clicked.connect(self._toggle_favorite)
             self.flow.addWidget(card)
             self._cards.append(card)
         self.more.setVisible(total > len(shown))

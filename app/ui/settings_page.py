@@ -20,6 +20,7 @@ from PySide6.QtWidgets import (
 
 from ..core.paths import PROJECT_ROOT, SAMPLE_ACCOUNT, TIER_DIR, read_json
 from ..core.ratings import Evaluation
+from ..core.favorites import get_favorites
 from ..core.ratings_io import (
     LOCAL_FILES,
     bundle_path_from_file,
@@ -137,6 +138,19 @@ class SettingsPage(QWidget):
         ratings.layout().addLayout(rating_buttons)
         layout.addWidget(ratings)
 
+        favorites = self._card("收藏", "星标单位可筛选，也可导出给其他人截图")
+        self.favorites_status = QLabel()
+        self.favorites_status.setStyleSheet(f"color: {MUTED}; font-size: 11px;")
+        favorites.layout().addWidget(self.favorites_status)
+        favorite_buttons = QHBoxLayout()
+        export_favorites = QPushButton("导出收藏 JSON")
+        export_favorites.setObjectName("Ghost")
+        export_favorites.clicked.connect(self._export_favorites)
+        favorite_buttons.addWidget(export_favorites)
+        favorite_buttons.addStretch(1)
+        favorites.layout().addLayout(favorite_buttons)
+        layout.addWidget(favorites)
+
         thanks = self._card("致谢", "")
         thanks_body = QLabel(
             "感谢群友 ルネツア. 指出 Mod3 / 剧情人物 codex 的名称与匹配问题，"
@@ -219,10 +233,37 @@ class SettingsPage(QWidget):
         self.state.reload_ratings()
         QMessageBox.information(self, "已恢复", "已恢复内置评分。")
 
+    def _export_favorites(self) -> None:
+        path, _ = QFileDialog.getSaveFileName(
+            self,
+            "导出收藏 JSON",
+            str(PROJECT_ROOT / "favorites_export.json"),
+            "JSON (*.json);;所有文件 (*.*)",
+        )
+        if not path:
+            return
+        target = Path(path)
+        if target.suffix.lower() != ".json":
+            target = target.with_suffix(".json")
+        try:
+            target.write_text(
+                json.dumps(get_favorites().export_payload(), ensure_ascii=False, indent=1),
+                encoding="utf-8",
+            )
+        except OSError as exc:
+            QMessageBox.warning(self, "导出失败", str(exc))
+            return
+        QMessageBox.information(self, "导出完成", f"收藏已保存：\n{target}")
+
     def _reload_sample(self) -> None:
         self.state.load_sample()
 
     def refresh(self, evaluation: Evaluation) -> None:
+        favorites = get_favorites()
+        self.favorites_status.setText(
+            f"已收藏 {favorites.count()} 个单位：人形 {len(favorites.codes('doll'))} / "
+            f"妖精 {len(favorites.codes('fairy'))} / 融合势力 {len(favorites.codes('sangvis'))}"
+        )
         active = [name for name in LOCAL_FILES.values() if (TIER_DIR / name).is_file()]
         if active:
             self.ratings_status.setText(

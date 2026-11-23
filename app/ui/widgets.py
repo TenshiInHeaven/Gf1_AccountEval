@@ -22,6 +22,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QLayout,
+    QPushButton,
     QSizePolicy,
     QVBoxLayout,
     QWidget,
@@ -240,6 +241,7 @@ RECOMMEND_STYLES = {
 
 class UnitCard(QFrame):
     clicked = Signal(object)
+    favorite_clicked = Signal(object)
 
     def __init__(
         self,
@@ -253,6 +255,7 @@ class UnitCard(QFrame):
         letter: str = "",
         crown: bool = False,
         recommend: str | None = None,
+        favorite: bool = False,
         parent: QWidget | None = None,
     ):
         super().__init__(parent)
@@ -328,6 +331,26 @@ class UnitCard(QFrame):
         self.footer_label.setAlignment(Qt.AlignCenter)
         self.footer_label.setStyleSheet(f"color: {MUTED}; font-size: 11px;")
         layout.addWidget(self.footer_label)
+
+        self.favorite_button = QPushButton(self)
+        self.favorite_button.setObjectName("FavoriteStar")
+        self.favorite_button.setFixedSize(28, 28)
+        self.favorite_button.setCursor(Qt.PointingHandCursor)
+        self.favorite_button.clicked.connect(lambda _checked=False: self.favorite_clicked.emit(self._payload))
+        self.set_favorite(favorite)
+        self.favorite_button.move(self.width() - 36, 6)
+        self.favorite_button.raise_()
+
+    def set_favorite(self, value: bool) -> None:
+        self.favorite_button.setText("★" if value else "☆")
+        self.favorite_button.setToolTip("取消收藏" if value else "收藏（方便筛选和截图）")
+        color = "#C9A227" if value else "#8A9CB3"
+        self.favorite_button.setStyleSheet(
+            f"QPushButton#FavoriteStar {{ background: rgba(255,255,255,190);"
+            f" color: {color}; border: 1px solid rgba(210,220,232,200);"
+            " border-radius: 14px; font-size: 17px; padding: 0; }"
+            "QPushButton#FavoriteStar:hover { background: #FFFFFF; }"
+        )
 
     def set_payload(self, payload) -> None:
         self._payload = payload

@@ -23,6 +23,8 @@ from app.core.equipment import (
     reset_equipment_engine,
     save_equipment_payload,
 )
+from app.core.favorites import Favorites
+from app.core.mecha import classification, get_mecha_data
 from app.core.normalize import normalize_name, slugify, type_label
 from app.core.paths import SAMPLE_ACCOUNT, read_json
 from app.core.ratings import Evaluator, grade_for
@@ -212,6 +214,29 @@ class TierDataTests(unittest.TestCase):
         doll = bundle["kinds"]["doll"]
         tps = next(item for item in doll["entries"] if item["name"] == "TPS")
         self.assertEqual(tps["recommend"], "gold")
+
+    def test_story_units_are_hidden(self):
+        codex = get_codex()
+        self.assertFalse(codex.is_deployable("doll", codex.get("doll", code="M4A1_Motor")))
+        self.assertFalse(codex.is_deployable("doll", codex.get("doll", code="M16A1_NPC")))
+        self.assertTrue(codex.is_deployable("doll", codex.get("doll", code="AK15")))
+        self.assertTrue(codex.is_deployable("sangvis", codex.get("sangvis", code="Manticore")))
+
+    def test_mecha_component_classification(self):
+        data = get_mecha_data()
+        schemes = len(data["schemes"])
+        components = {item["name"]: item for item in data["tanks"][0]["components"]}
+        self.assertEqual(classification(components["火力芯片"], schemes), "must")
+        self.assertEqual(classification(components["加农炮"], schemes), "partial")
+        self.assertEqual(classification({"schemes": []}, schemes), "fw")
+
+    def test_favorite_roundtrip(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            store = Favorites(Path(tmp) / "favorites.json")
+            self.assertTrue(store.toggle("doll", "AK15"))
+            self.assertTrue(store.is_favorite("doll", "AK15"))
+            payload = store.export_payload()
+            self.assertEqual(payload["favorites"]["doll"], ["AK15"])
 
     def test_frame_overrides(self):
         dolls = get_tierlists()["doll"]

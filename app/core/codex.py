@@ -140,6 +140,17 @@ class Codex:
     def is_mod_variant(self, kind: str, code: str) -> bool:
         return self.base_code(kind, code) != str(code or "")
 
+    def is_deployable(self, kind: str, item: CodexItem) -> bool:
+        """Filter story-only NPCs/allies that cannot be placed in a normal echelon."""
+        code = str(item.code or "").lower()
+        if code in {"isc"}:
+            return False
+        if code.startswith("npc_") or any(
+            marker in code for marker in ("_npc", "_ally", "_motor", "_ogas")
+        ):
+            return False
+        return True
+
     def find_all(self, kind: str, query: str) -> list[CodexItem]:
         norm = normalize_name(query)
         if not norm:
