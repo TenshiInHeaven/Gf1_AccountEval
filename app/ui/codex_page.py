@@ -14,15 +14,21 @@ from PySide6.QtWidgets import (
 )
 
 from ..core.codex import get_codex
+from ..core.paths import DATA_DIR, read_json
 from ..core.ratings import Evaluation
+from ..core.vehicle_components import build_inventory, index_path_for_account
+from .component_codex_page import ComponentCodexPage
 from .theme import BORDER, GOLD, MUTED, PANEL_2, TEXT
 from .units import DollPage, FairyPage, SangvisPage
 
 
 class CodexPage(QWidget):
-    def __init__(self, parent: QWidget | None = None):
+    def __init__(self, state=None, parent: QWidget | None = None):
         super().__init__(parent)
+        self.state = state
         self.codex = get_codex()
+        self.component_codex = read_json(DATA_DIR / "component_codex.json", {}) or {}
+        self.component_total = len(self.component_codex.get("components") or [])
         root = QVBoxLayout(self)
         root.setContentsMargins(28, 20, 28, 0)
         root.setSpacing(12)
@@ -37,12 +43,14 @@ class CodexPage(QWidget):
         title = QLabel("全量图鉴")
         title.setStyleSheet(f"color: {TEXT}; font-size: 18px; font-weight: 700;")
         left.addWidget(title)
-        sub = QLabel("不依赖仓库快照：所有人形 / 妖精 / 融合势力，含未拥有单位。")
+        sub = QLabel("不依赖仓库快照：所有人形 / 妖精 / 融合势力 / 组件，含未拥有单位。")
         sub.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
         left.addWidget(sub)
         intro_layout.addLayout(left, 1)
         self.count_labels = {}
-        for kind, label in (("doll", "人形"), ("fairy", "妖精"), ("sangvis", "融合势力")):
+        for kind, label in (
+            ("doll", "人形"), ("fairy", "妖精"), ("sangvis", "融合势力"), ("component", "组件")
+        ):
             box = QFrame()
             box.setStyleSheet(f"QFrame {{ background: {PANEL_2}; border: 1px solid {BORDER}; border-radius: 10px; }}")
             box_layout = QVBoxLayout(box)
@@ -66,7 +74,7 @@ class CodexPage(QWidget):
         self.group.setExclusive(True)
         self.tab_buttons = []
         for index, (label, cls) in enumerate(
-            (("人形", DollPage), ("妖精", FairyPage), ("融合势力", SangvisPage))
+            (("人形", DollPage), ("妖精", FairyPage), ("融合势力", SangvisPage), ("组件", ComponentCodexPage))
         ):
             button = QPushButton(label)
             button.setObjectName("Chip")
@@ -82,9 +90,12 @@ class CodexPage(QWidget):
 
         self.stack = QStackedWidget()
         self.pages = []
-        for index, cls in enumerate((DollPage, FairyPage, SangvisPage)):
-            page = cls()
-            page.set_owned_only(False)
+        for cls in (DollPage, FairyPage, SangvisPage, ComponentCodexPage):
+            if cls is ComponentCodexPage:
+                page = cls(self.state)
+            else:
+                page = cls()
+                page.set_owned_only(False)
             page.layout().setContentsMargins(0, 0, 0, 0)
             self.pages.append(page)
             self.stack.addWidget(page)
@@ -107,11 +118,19 @@ class CodexPage(QWidget):
             ),
             "fairy": sum(1 for item in self.codex.fairies if self.codex.is_deployable("fairy", item)),
             "sangvis": sum(1 for item in self.codex.sangvis if self.codex.is_deployable("sangvis", item)),
+            "component": self.component_total,
         }
+        index_path = index_path_for_account(self.state) if self.state is not None else None
+        inventory = build_inventory(index_path) if index_path is not None else []
+        component_names = {str(entry.get("name") or "") for entry in inventory if entry.get("name")}
         owned = {
             "doll": len(evaluation.account.dolls),
             "fairy": len(evaluation.account.fairies),
             "sangvis": len(evaluation.account.sangvis),
+            "component": sum(
+                1 for entry in self.component_codex.get("components") or []
+                if str(entry.get("name") or "") in component_names
+            ),
         }
         for kind in counts:
             self.count_labels[kind].setText(f"{owned[kind]}/{counts[kind]}")

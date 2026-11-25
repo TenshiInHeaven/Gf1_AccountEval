@@ -289,7 +289,7 @@ class MainWindow(QMainWindow):
         self.components = ComponentPage(self.state)
         self.scheme_page = SchemePage(self.state)
         self.components.open_schemes.connect(lambda: self.show_page("schemes"))
-        self.codex = CodexPage()
+        self.codex = CodexPage(self.state)
         self.settings = SettingsPage(self.state)
         self.pages = {
             "dashboard": self.dashboard,

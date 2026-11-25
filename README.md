@@ -46,6 +46,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 - **快照导入 / 导出**：所有提取结果保存为 `snapshots/account_*.json`，可跨机器导入；窗口右上角 **「导出账号」** 可把当前账号原始配置另存为 JSON。
 - **评分 JSON 导入 / 导出**：设置页可导出人形 / 妖精 / 融合势力的完整档位、`recommend` 萌新推荐等级和备注；修改 JSON 后直接导入，无需重新打包。
 - **图鉴**：499 个可编入人形（三改合并到原型）、50 种妖精、57 个融合势力单位；剧情 NPC / 友军 / 不可编队单位不展示，区分已拥有 / 未拥有。
+- **组件图鉴**：141 件机动装甲组件的词条池 / 配件技能池 / 主技能，本地 `component_codex.json`，不导入账号也能看。
 - **四维评分**：人形 40% + 妖精 20% + 融合势力 20% + 装备 20%，带雷达图、等级分布、短板建议。
 - **多强度条件同时筛选**：人形 / 妖精 / 融合势力 / 图鉴页的强度 chip 支持多选，例如同时看 `SS + S`，再叠加类型、搜索、只看已拥有 / 只看未拥有。
 - **排序**：支持综合推荐度（强度优先，推荐次之）、萌新推荐度（推荐卡面优先，同推荐按强度）、游戏编号、星级。
@@ -344,6 +345,10 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 | 组件图鉴（141 件 / 词条 / 配件） |
 |---|
 | ![组件图鉴](docs/screenshots/pwa_component_codex.png) |
+
+| Qt 组件图鉴 |
+|---|
+| ![Qt 组件图鉴](docs/screenshots/qt_component_codex.png) |
 
 | PWA 方案（秋水各关卡） |
 |---|
