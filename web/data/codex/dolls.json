@@ -1,0 +1,8449 @@
+[
+ {
+  "id": 2,
+  "code": "M1911",
+  "name": "M1911",
+  "en_name": "M1911",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/M1911.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1911"
+  ]
+ },
+ {
+  "id": 5,
+  "code": "M1895",
+  "name": "纳甘左轮",
+  "en_name": "M1895",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/M1895.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1895",
+   "纳甘左轮"
+  ]
+ },
+ {
+  "id": 9,
+  "code": "P38",
+  "name": "P38",
+  "en_name": "P38",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/P38.webp",
+  "kind": "doll",
+  "aliases": [
+   "P38"
+  ]
+ },
+ {
+  "id": 10,
+  "code": "PPK",
+  "name": "PPK",
+  "en_name": "PPK",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/PPK.webp",
+  "kind": "doll",
+  "aliases": [
+   "PPK"
+  ]
+ },
+ {
+  "id": 90,
+  "code": "FNP9",
+  "name": "FNP-9",
+  "en_name": "FNP-9",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/FNP9.webp",
+  "kind": "doll",
+  "aliases": [
+   "FNP-9",
+   "FNP9"
+  ]
+ },
+ {
+  "id": 91,
+  "code": "MP446",
+  "name": "MP-446",
+  "en_name": "MP-446",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/MP446.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP-446",
+   "MP446"
+  ]
+ },
+ {
+  "id": 139,
+  "code": "BrenTen",
+  "name": "布伦·坦",
+  "en_name": "Bren Ten",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/BrenTen.webp",
+  "kind": "doll",
+  "aliases": [
+   "Bren Ten",
+   "BrenTen",
+   "布伦·坦"
+  ]
+ },
+ {
+  "id": 141,
+  "code": "USPCompact",
+  "name": "USP-C",
+  "en_name": "USP Compact",
+  "type": 1,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/USPCompact.webp",
+  "kind": "doll",
+  "aliases": [
+   "USP Compact",
+   "USP-C",
+   "USPCompact"
+  ]
+ },
+ {
+  "id": 3,
+  "code": "M9",
+  "name": "M9",
+  "en_name": "M9",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M9.webp",
+  "kind": "doll",
+  "aliases": [
+   "M9"
+  ]
+ },
+ {
+  "id": 6,
+  "code": "TT33",
+  "name": "托卡列夫",
+  "en_name": "TT33",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/TT33.webp",
+  "kind": "doll",
+  "aliases": [
+   "TT33",
+   "托卡列夫"
+  ]
+ },
+ {
+  "id": 8,
+  "code": "PM",
+  "name": "马卡洛夫",
+  "en_name": "PM",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/PM.webp",
+  "kind": "doll",
+  "aliases": [
+   "PM",
+   "马卡洛夫"
+  ]
+ },
+ {
+  "id": 11,
+  "code": "P08",
+  "name": "P08",
+  "en_name": "P08",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/P08.webp",
+  "kind": "doll",
+  "aliases": [
+   "P08"
+  ]
+ },
+ {
+  "id": 12,
+  "code": "C96",
+  "name": "C96",
+  "en_name": "C96",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/C96.webp",
+  "kind": "doll",
+  "aliases": [
+   "C96"
+  ]
+ },
+ {
+  "id": 13,
+  "code": "92type",
+  "name": "92式",
+  "en_name": "Type 92",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/92type.webp",
+  "kind": "doll",
+  "aliases": [
+   "92type",
+   "92式",
+   "Type 92"
+  ]
+ },
+ {
+  "id": 14,
+  "code": "357",
+  "name": "阿斯特拉左轮",
+  "en_name": "357",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/357.webp",
+  "kind": "doll",
+  "aliases": [
+   "357",
+   "阿斯特拉左轮"
+  ]
+ },
+ {
+  "id": 15,
+  "code": "Glock17",
+  "name": "格洛克17",
+  "en_name": "Glock 17",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Glock17.webp",
+  "kind": "doll",
+  "aliases": [
+   "Glock 17",
+   "Glock17",
+   "格洛克17"
+  ]
+ },
+ {
+  "id": 113,
+  "code": "SPS",
+  "name": "谢尔久科夫",
+  "en_name": "SPS",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/SPS.webp",
+  "kind": "doll",
+  "aliases": [
+   "SPS",
+   "谢尔久科夫"
+  ]
+ },
+ {
+  "id": 123,
+  "code": "P99",
+  "name": "P99",
+  "en_name": "P99",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/P99.webp",
+  "kind": "doll",
+  "aliases": [
+   "P99"
+  ]
+ },
+ {
+  "id": 132,
+  "code": "59type",
+  "name": "59式",
+  "en_name": "Type 59",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/59type.webp",
+  "kind": "doll",
+  "aliases": [
+   "59type",
+   "59式",
+   "Type 59"
+  ]
+ },
+ {
+  "id": 140,
+  "code": "PSM",
+  "name": "PSM",
+  "en_name": "PSM",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/PSM.webp",
+  "kind": "doll",
+  "aliases": [
+   "PSM"
+  ]
+ },
+ {
+  "id": 167,
+  "code": "HK45",
+  "name": "HK45",
+  "en_name": "HK45",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/HK45.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK45"
+  ]
+ },
+ {
+  "id": 186,
+  "code": "P226",
+  "name": "P226",
+  "en_name": "P226",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/P226.webp",
+  "kind": "doll",
+  "aliases": [
+   "P226"
+  ]
+ },
+ {
+  "id": 210,
+  "code": "CZ52",
+  "name": "CZ52",
+  "en_name": "CZ52",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/CZ52.webp",
+  "kind": "doll",
+  "aliases": [
+   "CZ52"
+  ]
+ },
+ {
+  "id": 220,
+  "code": "MP443",
+  "name": "MP-443",
+  "en_name": "MP-443",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MP443.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP-443",
+   "MP443"
+  ]
+ },
+ {
+  "id": 221,
+  "code": "GSH18",
+  "name": "GSh-18",
+  "en_name": "GSh-18",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/GSH18.webp",
+  "kind": "doll",
+  "aliases": [
+   "GSH18",
+   "GSh-18"
+  ]
+ },
+ {
+  "id": 232,
+  "code": "MP448",
+  "name": "MP-448",
+  "en_name": "MP-448",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MP448.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP-448",
+   "MP448"
+  ]
+ },
+ {
+  "id": 244,
+  "code": "TEC9",
+  "name": "TEC-9",
+  "en_name": "TEC-9",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/TEC9.webp",
+  "kind": "doll",
+  "aliases": [
+   "TEC-9",
+   "TEC9"
+  ]
+ },
+ {
+  "id": 277,
+  "code": "VP70",
+  "name": "VP70",
+  "en_name": "VP70",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/VP70.webp",
+  "kind": "doll",
+  "aliases": [
+   "VP70"
+  ]
+ },
+ {
+  "id": 309,
+  "code": "WKP",
+  "name": "WKp",
+  "en_name": "WKp",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/WKP.webp",
+  "kind": "doll",
+  "aliases": [
+   "WKP",
+   "WKp"
+  ]
+ },
+ {
+  "id": 322,
+  "code": "QSB91",
+  "name": "QSB-91",
+  "en_name": "QSB-91",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/QSB91.webp",
+  "kind": "doll",
+  "aliases": [
+   "QSB-91",
+   "QSB91"
+  ]
+ },
+ {
+  "id": 9055,
+  "code": "HostageCommander",
+  "name": "指挥官",
+  "en_name": "HostageCommander",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/HostageCommander.webp",
+  "kind": "doll",
+  "aliases": [
+   "HostageCommander",
+   "指挥官"
+  ]
+ },
+ {
+  "id": 9089,
+  "code": "empty",
+  "name": "指挥官2",
+  "en_name": "HostageCommander",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/empty.webp",
+  "kind": "doll",
+  "aliases": [
+   "HostageCommander",
+   "empty",
+   "指挥官2"
+  ]
+ },
+ {
+  "id": 9101,
+  "code": "summer_commander",
+  "name": "泳装指挥官",
+  "en_name": "summer_commander",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/summer_commander.webp",
+  "kind": "doll",
+  "aliases": [
+   "summer_commander",
+   "泳装指挥官"
+  ]
+ },
+ {
+  "id": 9109,
+  "code": "CommanderSelf",
+  "name": "指挥官",
+  "en_name": "CommanderSelf",
+  "type": 1,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/CommanderSelf.webp",
+  "kind": "doll",
+  "aliases": [
+   "CommanderSelf",
+   "指挥官"
+  ]
+ },
+ {
+  "id": 1,
+  "code": "M1873",
+  "name": "柯尔特左轮",
+  "en_name": "M1873",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1873.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1873",
+   "柯尔特左轮"
+  ]
+ },
+ {
+  "id": 7,
+  "code": "APS",
+  "name": "斯捷奇金",
+  "en_name": "APS",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/APS.webp",
+  "kind": "doll",
+  "aliases": [
+   "APS",
+   "斯捷奇金"
+  ]
+ },
+ {
+  "id": 98,
+  "code": "SPP1",
+  "name": "SPP-1",
+  "en_name": "SPP-1",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SPP1.webp",
+  "kind": "doll",
+  "aliases": [
+   "SPP-1",
+   "SPP1"
+  ]
+ },
+ {
+  "id": 99,
+  "code": "Mk23",
+  "name": "Mk23",
+  "en_name": "Mk23",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Mk23.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mk23"
+  ]
+ },
+ {
+  "id": 100,
+  "code": "P7",
+  "name": "P7",
+  "en_name": "P7",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/P7.webp",
+  "kind": "doll",
+  "aliases": [
+   "P7"
+  ]
+ },
+ {
+  "id": 168,
+  "code": "Spitfire",
+  "name": "喷火",
+  "en_name": "Spitfire",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Spitfire.webp",
+  "kind": "doll",
+  "aliases": [
+   "Spitfire",
+   "喷火"
+  ]
+ },
+ {
+  "id": 202,
+  "code": "Thunder50",
+  "name": "雷电",
+  "en_name": "Thunder.50",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Thunder50.webp",
+  "kind": "doll",
+  "aliases": [
+   "Thunder.50",
+   "Thunder50",
+   "雷电"
+  ]
+ },
+ {
+  "id": 212,
+  "code": "K5",
+  "name": "K5",
+  "en_name": "K5",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/K5.webp",
+  "kind": "doll",
+  "aliases": [
+   "K5"
+  ]
+ },
+ {
+  "id": 248,
+  "code": "Jericho",
+  "name": "杰里科",
+  "en_name": "Jericho",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Jericho.webp",
+  "kind": "doll",
+  "aliases": [
+   "Jericho",
+   "杰里科"
+  ]
+ },
+ {
+  "id": 269,
+  "code": "P30",
+  "name": "P30",
+  "en_name": "P30",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/P30.webp",
+  "kind": "doll",
+  "aliases": [
+   "P30"
+  ]
+ },
+ {
+  "id": 310,
+  "code": "RexZero1",
+  "name": "Rex-0-1",
+  "en_name": "Rex Zero 1",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/RexZero1.webp",
+  "kind": "doll",
+  "aliases": [
+   "Rex Zero 1",
+   "Rex-0-1",
+   "RexZero1"
+  ]
+ },
+ {
+  "id": 332,
+  "code": "Derringer",
+  "name": "德林加",
+  "en_name": "Derringer",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Derringer.webp",
+  "kind": "doll",
+  "aliases": [
+   "Derringer",
+   "德林加"
+  ]
+ },
+ {
+  "id": 346,
+  "code": "CZ100",
+  "name": "CZ 100",
+  "en_name": "CZ 100",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/CZ100.webp",
+  "kind": "doll",
+  "aliases": [
+   "CZ 100",
+   "CZ100"
+  ]
+ },
+ {
+  "id": 354,
+  "code": "ZIP22",
+  "name": "ZiP .22",
+  "en_name": "ZiP .22",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/ZIP22.webp",
+  "kind": "doll",
+  "aliases": [
+   "ZIP22",
+   "ZiP .22"
+  ]
+ },
+ {
+  "id": 358,
+  "code": "PPQ",
+  "name": "PPQ",
+  "en_name": "PPQ",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PPQ.webp",
+  "kind": "doll",
+  "aliases": [
+   "PPQ"
+  ]
+ },
+ {
+  "id": 370,
+  "code": "P290",
+  "name": "P290",
+  "en_name": "P290",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/P290.webp",
+  "kind": "doll",
+  "aliases": [
+   "P290"
+  ]
+ },
+ {
+  "id": 379,
+  "code": "P10C",
+  "name": "P10C",
+  "en_name": "P10C",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/P10C.webp",
+  "kind": "doll",
+  "aliases": [
+   "P10C"
+  ]
+ },
+ {
+  "id": 383,
+  "code": "VP9",
+  "name": "VP9",
+  "en_name": "VP9",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/VP9.webp",
+  "kind": "doll",
+  "aliases": [
+   "VP9"
+  ]
+ },
+ {
+  "id": 408,
+  "code": "Maxim9",
+  "name": "Maxim 9",
+  "en_name": "Maxim 9",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Maxim9.webp",
+  "kind": "doll",
+  "aliases": [
+   "Maxim 9",
+   "Maxim9"
+  ]
+ },
+ {
+  "id": 414,
+  "code": "M&P9",
+  "name": "M&P9",
+  "en_name": "M&P9",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MandP9.webp",
+  "kind": "doll",
+  "aliases": [
+   "M&P9"
+  ]
+ },
+ {
+  "id": 420,
+  "code": "RexAlpha",
+  "name": "Rex Alpha",
+  "en_name": "Rex Alpha",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/RexAlpha.webp",
+  "kind": "doll",
+  "aliases": [
+   "Rex Alpha",
+   "RexAlpha"
+  ]
+ },
+ {
+  "id": 421,
+  "code": "HiPointC9",
+  "name": "Hi-Point C9",
+  "en_name": "Hi-Point C9",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/HiPointC9.webp",
+  "kind": "doll",
+  "aliases": [
+   "Hi-Point C9",
+   "HiPointC9"
+  ]
+ },
+ {
+  "id": 9061,
+  "code": "refugee_hg",
+  "name": "游荡难民",
+  "en_name": "refugee_hg",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/refugee_hg.webp",
+  "kind": "doll",
+  "aliases": [
+   "refugee_hg",
+   "游荡难民"
+  ]
+ },
+ {
+  "id": 9062,
+  "code": "refugee_smg",
+  "name": "暴走难民",
+  "en_name": "refugee_smg",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/refugee_smg.webp",
+  "kind": "doll",
+  "aliases": [
+   "refugee_smg",
+   "暴走难民"
+  ]
+ },
+ {
+  "id": 9128,
+  "code": "Dandelion_TT33",
+  "name": "丹德莱",
+  "en_name": "Dandelion_TT33",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Dandelion_TT33.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dandelion_TT33",
+   "丹德莱"
+  ]
+ },
+ {
+  "id": 20002,
+  "code": "M1911Mod",
+  "name": "M1911（三改）",
+  "en_name": "M1911",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1911Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1911Mod",
+   "M1911（三改）"
+  ]
+ },
+ {
+  "id": 20005,
+  "code": "M1895Mod",
+  "name": "纳甘左轮（三改）",
+  "en_name": "M1895",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1895Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1895Mod",
+   "纳甘左轮（三改）"
+  ]
+ },
+ {
+  "id": 20006,
+  "code": "TT33Mod",
+  "name": "托卡列夫（三改）",
+  "en_name": "TT33",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/TT33Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "TT33Mod",
+   "托卡列夫（三改）"
+  ]
+ },
+ {
+  "id": 20008,
+  "code": "PMMod",
+  "name": "马卡洛夫（三改）",
+  "en_name": "PM",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PMMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "PMMod",
+   "马卡洛夫（三改）"
+  ]
+ },
+ {
+  "id": 20010,
+  "code": "PPKMod",
+  "name": "PPK（三改）",
+  "en_name": "PPK",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PPKMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "PPKMod",
+   "PPK（三改）"
+  ]
+ },
+ {
+  "id": 20012,
+  "code": "C96Mod",
+  "name": "C96（三改）",
+  "en_name": "C96",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/C96Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "C96Mod",
+   "C96（三改）"
+  ]
+ },
+ {
+  "id": 20013,
+  "code": "92typeMod",
+  "name": "92式（三改）",
+  "en_name": "Type 92",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/92typeMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "92typeMod",
+   "92式（三改）",
+   "Type 92"
+  ]
+ },
+ {
+  "id": 20091,
+  "code": "MP446Mod",
+  "name": "MP-446（三改）",
+  "en_name": "MP-446",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MP446Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP446Mod",
+   "MP-446（三改）"
+  ]
+ },
+ {
+  "id": 20220,
+  "code": "MP443Mod",
+  "name": "MP-443（三改）",
+  "en_name": "MP-443",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MP443Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP443Mod",
+   "MP-443（三改）"
+  ]
+ },
+ {
+  "id": 20221,
+  "code": "GSH18Mod",
+  "name": "GSh-18（三改）",
+  "en_name": "GSh-18",
+  "type": 1,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/GSH18Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "GSH18Mod",
+   "GSh-18（三改）"
+  ]
+ },
+ {
+  "id": 4,
+  "code": "Python",
+  "name": "蟒蛇",
+  "en_name": "Python",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Python.webp",
+  "kind": "doll",
+  "aliases": [
+   "Python",
+   "蟒蛇"
+  ]
+ },
+ {
+  "id": 96,
+  "code": "Grizzly",
+  "name": "灰熊MkⅤ",
+  "en_name": "Grizzly",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Grizzly.webp",
+  "kind": "doll",
+  "aliases": [
+   "Grizzly",
+   "灰熊MkⅤ"
+  ]
+ },
+ {
+  "id": 97,
+  "code": "M950A",
+  "name": "M950A",
+  "en_name": "M950A",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M950A.webp",
+  "kind": "doll",
+  "aliases": [
+   "M950A"
+  ]
+ },
+ {
+  "id": 114,
+  "code": "Welrod",
+  "name": "维尔德MkⅡ",
+  "en_name": "Welrod Mk Ⅱ",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Welrod.webp",
+  "kind": "doll",
+  "aliases": [
+   "Welrod",
+   "Welrod Mk Ⅱ",
+   "维尔德MkⅡ"
+  ]
+ },
+ {
+  "id": 126,
+  "code": "NZ75",
+  "name": "NZ75",
+  "en_name": "NZ75",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NZ75.webp",
+  "kind": "doll",
+  "aliases": [
+   "NZ75"
+  ]
+ },
+ {
+  "id": 142,
+  "code": "FN57",
+  "name": "FN-57",
+  "en_name": "Five-seveN",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/FN57.webp",
+  "kind": "doll",
+  "aliases": [
+   "FN-57",
+   "FN57",
+   "Five-seveN"
+  ]
+ },
+ {
+  "id": 166,
+  "code": "CZ75",
+  "name": "CZ75",
+  "en_name": "CZ75",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/CZ75.webp",
+  "kind": "doll",
+  "aliases": [
+   "CZ75"
+  ]
+ },
+ {
+  "id": 183,
+  "code": "Contender",
+  "name": "竞争者",
+  "en_name": "Contender",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Contender.webp",
+  "kind": "doll",
+  "aliases": [
+   "Contender",
+   "竞争者"
+  ]
+ },
+ {
+  "id": 233,
+  "code": "Px4Storm",
+  "name": "Px4 风暴",
+  "en_name": "Px4 Storm",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Px4Storm.webp",
+  "kind": "doll",
+  "aliases": [
+   "Px4 Storm",
+   "Px4Storm",
+   "Px4 风暴"
+  ]
+ },
+ {
+  "id": 242,
+  "code": "P22",
+  "name": "P22",
+  "en_name": "P22",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/P22.webp",
+  "kind": "doll",
+  "aliases": [
+   "P22"
+  ]
+ },
+ {
+  "id": 250,
+  "code": "HS2000",
+  "name": "HS2000",
+  "en_name": "HS2000",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HS2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "HS2000"
+  ]
+ },
+ {
+  "id": 260,
+  "code": "PA15",
+  "name": "PA-15",
+  "en_name": "PA-15",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/PA15.webp",
+  "kind": "doll",
+  "aliases": [
+   "PA-15",
+   "PA15"
+  ]
+ },
+ {
+  "id": 272,
+  "code": "DesertEagle",
+  "name": "沙漠之鹰",
+  "en_name": "DesertEagle",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/DesertEagle.webp",
+  "kind": "doll",
+  "aliases": [
+   "DesertEagle",
+   "沙漠之鹰"
+  ]
+ },
+ {
+  "id": 285,
+  "code": "C93",
+  "name": "C-93",
+  "en_name": "C-93",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/C93.webp",
+  "kind": "doll",
+  "aliases": [
+   "C-93",
+   "C93"
+  ]
+ },
+ {
+  "id": 294,
+  "code": "Webley",
+  "name": "韦伯利",
+  "en_name": "Webley",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Webley.webp",
+  "kind": "doll",
+  "aliases": [
+   "Webley",
+   "韦伯利"
+  ]
+ },
+ {
+  "id": 303,
+  "code": "BrowningHP",
+  "name": "HP-35",
+  "en_name": "HP-35",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/BrowningHP.webp",
+  "kind": "doll",
+  "aliases": [
+   "BrowningHP",
+   "HP-35"
+  ]
+ },
+ {
+  "id": 331,
+  "code": "Kolibri",
+  "name": "蜂鸟",
+  "en_name": "Kolibri",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Kolibri.webp",
+  "kind": "doll",
+  "aliases": [
+   "Kolibri",
+   "蜂鸟"
+  ]
+ },
+ {
+  "id": 357,
+  "code": "Rhino",
+  "name": "芮诺",
+  "en_name": "Rhino",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Rhino.webp",
+  "kind": "doll",
+  "aliases": [
+   "Rhino",
+   "芮诺"
+  ]
+ },
+ {
+  "id": 369,
+  "code": "M327",
+  "name": "M327",
+  "en_name": "M327",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M327.webp",
+  "kind": "doll",
+  "aliases": [
+   "M327"
+  ]
+ },
+ {
+  "id": 375,
+  "code": "ColtWalker",
+  "name": "柯尔特沃克",
+  "en_name": "ColtWalker",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ColtWalker.webp",
+  "kind": "doll",
+  "aliases": [
+   "ColtWalker",
+   "柯尔特沃克"
+  ]
+ },
+ {
+  "id": 399,
+  "code": "P2000",
+  "name": "P2000",
+  "en_name": "P2000",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/P2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "P2000"
+  ]
+ },
+ {
+  "id": 400,
+  "code": "M1851N",
+  "name": "柯尔特M1851N",
+  "en_name": "M1851N",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M1851N.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1851N",
+   "柯尔特M1851N"
+  ]
+ },
+ {
+  "id": 413,
+  "code": "Unica6",
+  "name": "Unica 6",
+  "en_name": "Unica 6",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Unica6.webp",
+  "kind": "doll",
+  "aliases": [
+   "Unica 6",
+   "Unica6"
+  ]
+ },
+ {
+  "id": 419,
+  "code": "93R",
+  "name": "93R",
+  "en_name": "93R",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/93R.webp",
+  "kind": "doll",
+  "aliases": [
+   "93R"
+  ]
+ },
+ {
+  "id": 1001,
+  "code": "BB_Noel",
+  "name": "诺爱尔",
+  "en_name": "Noel",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/BB_Noel.webp",
+  "kind": "doll",
+  "aliases": [
+   "BB_Noel",
+   "Noel",
+   "诺爱尔"
+  ]
+ },
+ {
+  "id": 1003,
+  "code": "Kiana",
+  "name": "琪亚娜",
+  "en_name": "Kiana",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Kiana.webp",
+  "kind": "doll",
+  "aliases": [
+   "Kiana",
+   "琪亚娜"
+  ]
+ },
+ {
+  "id": 1006,
+  "code": "Theresa",
+  "name": "德丽莎",
+  "en_name": "Theresa",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Theresa.webp",
+  "kind": "doll",
+  "aliases": [
+   "Theresa",
+   "德丽莎"
+  ]
+ },
+ {
+  "id": 1009,
+  "code": "CLEAR",
+  "name": "克莉尔",
+  "en_name": "CLEAR",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/CLEAR.webp",
+  "kind": "doll",
+  "aliases": [
+   "CLEAR",
+   "克莉尔"
+  ]
+ },
+ {
+  "id": 1010,
+  "code": "FAIL",
+  "name": "菲尔",
+  "en_name": "FAIL",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/FAIL.webp",
+  "kind": "doll",
+  "aliases": [
+   "FAIL",
+   "菲尔"
+  ]
+ },
+ {
+  "id": 1017,
+  "code": "Jill",
+  "name": "吉尔·斯汀雷",
+  "en_name": "Jill Stingray",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Jill.webp",
+  "kind": "doll",
+  "aliases": [
+   "Jill",
+   "Jill Stingray",
+   "吉尔·斯汀雷"
+  ]
+ },
+ {
+  "id": 1018,
+  "code": "SEI",
+  "name": "赛伊·朝雾",
+  "en_name": "Sei Asagiri",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SEI.webp",
+  "kind": "doll",
+  "aliases": [
+   "SEI",
+   "Sei Asagiri",
+   "赛伊·朝雾"
+  ]
+ },
+ {
+  "id": 1035,
+  "code": "Tae",
+  "name": "山田多惠",
+  "en_name": "Tae",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Tae.webp",
+  "kind": "doll",
+  "aliases": [
+   "Tae",
+   "山田多惠"
+  ]
+ },
+ {
+  "id": 1042,
+  "code": "Motoko",
+  "name": "草薙素子",
+  "en_name": "Motoko",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Motoko.webp",
+  "kind": "doll",
+  "aliases": [
+   "Motoko",
+   "草薙素子"
+  ]
+ },
+ {
+  "id": 1045,
+  "code": "Evita",
+  "name": "艾薇塔",
+  "en_name": "Evita",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Evita.webp",
+  "kind": "doll",
+  "aliases": [
+   "Evita",
+   "艾薇塔"
+  ]
+ },
+ {
+  "id": 9049,
+  "code": "Scarecrow_Ally",
+  "name": "稻草人",
+  "en_name": "Scarecrow_Ally",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Scarecrow_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Scarecrow_Ally",
+   "稻草人"
+  ]
+ },
+ {
+  "id": 9050,
+  "code": "Excutioner_Griffin",
+  "name": "刽子手",
+  "en_name": "Excutioner_Griffin",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Excutioner_Griffin.webp",
+  "kind": "doll",
+  "aliases": [
+   "Excutioner_Griffin",
+   "刽子手"
+  ]
+ },
+ {
+  "id": 9052,
+  "code": "Hunter_Ally",
+  "name": "猎手",
+  "en_name": "Hunter_Ally",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Hunter_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Hunter_Ally",
+   "猎手"
+  ]
+ },
+ {
+  "id": 9054,
+  "code": "Scarecrow_shadow",
+  "name": "稻草人",
+  "en_name": "Scarecrow_shadow",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Scarecrow_shadow.webp",
+  "kind": "doll",
+  "aliases": [
+   "Scarecrow_shadow",
+   "稻草人"
+  ]
+ },
+ {
+  "id": 9063,
+  "code": "Ange_Suit",
+  "name": "安洁",
+  "en_name": "Ange",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ange_Suit.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ange",
+   "Ange_Suit",
+   "安洁"
+  ]
+ },
+ {
+  "id": 9069,
+  "code": "Dandelion_Gri",
+  "name": "丹德莱",
+  "en_name": "Dandelion_Gri",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Dandelion_Gri.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dandelion_Gri",
+   "丹德莱"
+  ]
+ },
+ {
+  "id": 9071,
+  "code": "NPC_Kevin",
+  "name": "J",
+  "en_name": "NPC_Kevin",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NPC_Kevin.webp",
+  "kind": "doll",
+  "aliases": [
+   "J",
+   "NPC_Kevin"
+  ]
+ },
+ {
+  "id": 9072,
+  "code": "Jason",
+  "name": "K",
+  "en_name": "Jason",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Jason.webp",
+  "kind": "doll",
+  "aliases": [
+   "Jason",
+   "K"
+  ]
+ },
+ {
+  "id": 9075,
+  "code": "Helianthus",
+  "name": "赫里安",
+  "en_name": "Helianthus",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Helianthus.webp",
+  "kind": "doll",
+  "aliases": [
+   "Helianthus",
+   "赫里安"
+  ]
+ },
+ {
+  "id": 9076,
+  "code": "NPC_Persica",
+  "name": "帕斯卡",
+  "en_name": "NPC_Persica",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NPC_Persica.webp",
+  "kind": "doll",
+  "aliases": [
+   "NPC_Persica",
+   "帕斯卡"
+  ]
+ },
+ {
+  "id": 9078,
+  "code": "Nele",
+  "name": "奈乐",
+  "en_name": "Nele",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Nele.webp",
+  "kind": "doll",
+  "aliases": [
+   "Nele",
+   "奈乐"
+  ]
+ },
+ {
+  "id": 9079,
+  "code": "Dandelion_M4",
+  "name": "丹德莱",
+  "en_name": "Dandelion_M4",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Dandelion_M4.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dandelion_M4",
+   "丹德莱"
+  ]
+ },
+ {
+  "id": 9081,
+  "code": "Dana_Car",
+  "name": "Dana",
+  "en_name": "Dana_Car",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Dana_Car.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dana",
+   "Dana_Car"
+  ]
+ },
+ {
+  "id": 9093,
+  "code": "DesertEagle_6501",
+  "name": "沙漠之鹰",
+  "en_name": "DesertEagle",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/DesertEagle_6501.webp",
+  "kind": "doll",
+  "aliases": [
+   "DesertEagle",
+   "DesertEagle_6501",
+   "沙漠之鹰"
+  ]
+ },
+ {
+  "id": 9103,
+  "code": "ColtWalker_NPC",
+  "name": "玛姬",
+  "en_name": "ColtWalker_NPC",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ColtWalker_NPC.webp",
+  "kind": "doll",
+  "aliases": [
+   "ColtWalker_NPC",
+   "玛姬"
+  ]
+ },
+ {
+  "id": 9113,
+  "code": "Ange_battle_01",
+  "name": "安洁莉娅",
+  "en_name": "Ange_01",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ange_battle_01.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ange_01",
+   "Ange_battle_01",
+   "安洁莉娅"
+  ]
+ },
+ {
+  "id": 9114,
+  "code": "Ange_battle_02",
+  "name": "安洁莉娅",
+  "en_name": "Ange_02",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ange_battle_02.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ange_02",
+   "Ange_battle_02",
+   "安洁莉娅"
+  ]
+ },
+ {
+  "id": 9115,
+  "code": "Ange_battle_03",
+  "name": "安洁莉娅",
+  "en_name": "Ange_03",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ange_battle_03.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ange_03",
+   "Ange_battle_03",
+   "安洁莉娅"
+  ]
+ },
+ {
+  "id": 9116,
+  "code": "Ange_battle_04",
+  "name": "安洁莉娅",
+  "en_name": "Ange_04",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ange_battle_04.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ange_04",
+   "Ange_battle_04",
+   "安洁莉娅"
+  ]
+ },
+ {
+  "id": 9117,
+  "code": "NPC_Laplace",
+  "name": "玛莎",
+  "en_name": "NPC_Laplace",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NPC_Laplace.webp",
+  "kind": "doll",
+  "aliases": [
+   "NPC_Laplace",
+   "玛莎"
+  ]
+ },
+ {
+  "id": 9119,
+  "code": "KalinaOL_battle",
+  "name": "格琳娜",
+  "en_name": "Kalina",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/KalinaOL_battle.webp",
+  "kind": "doll",
+  "aliases": [
+   "Kalina",
+   "KalinaOL_battle",
+   "格琳娜"
+  ]
+ },
+ {
+  "id": 9120,
+  "code": "hideaway",
+  "name": "平平无奇的纸箱",
+  "en_name": "hideaway",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/hideaway.webp",
+  "kind": "doll",
+  "aliases": [
+   "hideaway",
+   "平平无奇的纸箱"
+  ]
+ },
+ {
+  "id": 9129,
+  "code": "Lunasia",
+  "name": "露尼西亚(?)",
+  "en_name": "Lunasia",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Lunasia.webp",
+  "kind": "doll",
+  "aliases": [
+   "Lunasia",
+   "露尼西亚(?)"
+  ]
+ },
+ {
+  "id": 20001,
+  "code": "M1873Mod",
+  "name": "柯尔特左轮（三改）",
+  "en_name": "M1873",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M1873Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1873Mod",
+   "柯尔特左轮（三改）"
+  ]
+ },
+ {
+  "id": 20007,
+  "code": "APSMod",
+  "name": "斯捷奇金（三改）",
+  "en_name": "APS",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/APSMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "APSMod",
+   "斯捷奇金（三改）"
+  ]
+ },
+ {
+  "id": 20212,
+  "code": "K5Mod",
+  "name": "K5（三改）",
+  "en_name": "K5",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/K5Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "K5Mod",
+   "K5（三改）"
+  ]
+ },
+ {
+  "id": 20310,
+  "code": "RexZero1Mod",
+  "name": "Rex-0-1（三改）",
+  "en_name": "Rex Zero 1",
+  "type": 1,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/RexZero1Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "RexZero1Mod",
+   "Rex-0-1（三改）",
+   "Rex Zero 1"
+  ]
+ },
+ {
+  "id": 20097,
+  "code": "M950AMod",
+  "name": "M950A（三改）",
+  "en_name": "M950A",
+  "type": 1,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/M950AMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M950AMod",
+   "M950A（三改）"
+  ]
+ },
+ {
+  "id": 20114,
+  "code": "WelrodMod",
+  "name": "维尔德MkⅡ（三改）",
+  "en_name": "Welrod Mk Ⅱ",
+  "type": 1,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/WelrodMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "WelrodMod",
+   "维尔德MkⅡ（三改）",
+   "Welrod Mk Ⅱ"
+  ]
+ },
+ {
+  "id": 20233,
+  "code": "Px4StormMod",
+  "name": "Px4 风暴（三改）",
+  "en_name": "Px4 Storm",
+  "type": 1,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/Px4StormMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "Px4StormMod",
+   "Px4 风暴（三改）",
+   "Px4 Storm"
+  ]
+ },
+ {
+  "id": 17,
+  "code": "M3",
+  "name": "M3",
+  "en_name": "M3",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/M3.webp",
+  "kind": "doll",
+  "aliases": [
+   "M3"
+  ]
+ },
+ {
+  "id": 21,
+  "code": "PPsh41",
+  "name": "PPSh-41",
+  "en_name": "PPSh-41",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/PPsh41.webp",
+  "kind": "doll",
+  "aliases": [
+   "PPSh-41",
+   "PPsh41"
+  ]
+ },
+ {
+  "id": 24,
+  "code": "PP2000",
+  "name": "PP-2000",
+  "en_name": "PP-2000",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/PP2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "PP-2000",
+   "PP2000"
+  ]
+ },
+ {
+  "id": 25,
+  "code": "MP40",
+  "name": "MP40",
+  "en_name": "MP40",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/MP40.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP40"
+  ]
+ },
+ {
+  "id": 31,
+  "code": "MAB38",
+  "name": "伯莱塔38型",
+  "en_name": "MAB 38",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/MAB38.webp",
+  "kind": "doll",
+  "aliases": [
+   "MAB 38",
+   "MAB38",
+   "伯莱塔38型"
+  ]
+ },
+ {
+  "id": 33,
+  "code": "m45",
+  "name": "m45",
+  "en_name": "m45",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/m45.webp",
+  "kind": "doll",
+  "aliases": [
+   "m45"
+  ]
+ },
+ {
+  "id": 92,
+  "code": "SpectreM4",
+  "name": "幽灵M4",
+  "en_name": "Spectre M4",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/SpectreM4.webp",
+  "kind": "doll",
+  "aliases": [
+   "Spectre M4",
+   "SpectreM4",
+   "幽灵M4"
+  ]
+ },
+ {
+  "id": 93,
+  "code": "IDW",
+  "name": "IDW",
+  "en_name": "IDW",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/IDW.webp",
+  "kind": "doll",
+  "aliases": [
+   "IDW"
+  ]
+ },
+ {
+  "id": 94,
+  "code": "64type",
+  "name": "64式",
+  "en_name": "Type 64",
+  "type": 2,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/64type.webp",
+  "kind": "doll",
+  "aliases": [
+   "64type",
+   "64式",
+   "Type 64"
+  ]
+ },
+ {
+  "id": 18,
+  "code": "MAC10",
+  "name": "MAC-10",
+  "en_name": "MAC-10",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MAC10.webp",
+  "kind": "doll",
+  "aliases": [
+   "MAC-10",
+   "MAC10"
+  ]
+ },
+ {
+  "id": 19,
+  "code": "FMG9",
+  "name": "FMG-9",
+  "en_name": "FMG-9",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/FMG9.webp",
+  "kind": "doll",
+  "aliases": [
+   "FMG-9",
+   "FMG9"
+  ]
+ },
+ {
+  "id": 22,
+  "code": "PPS43",
+  "name": "PPS-43",
+  "en_name": "PPS-43",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/PPS43.webp",
+  "kind": "doll",
+  "aliases": [
+   "PPS-43",
+   "PPS43"
+  ]
+ },
+ {
+  "id": 27,
+  "code": "VZ61",
+  "name": "蝎式",
+  "en_name": "Vz. 61",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/VZ61.webp",
+  "kind": "doll",
+  "aliases": [
+   "VZ61",
+   "Vz. 61",
+   "蝎式"
+  ]
+ },
+ {
+  "id": 29,
+  "code": "StenMK2",
+  "name": "司登MkⅡ",
+  "en_name": "Sten Mk Ⅱ",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/StenMK2.webp",
+  "kind": "doll",
+  "aliases": [
+   "Sten Mk Ⅱ",
+   "StenMK2",
+   "司登MkⅡ"
+  ]
+ },
+ {
+  "id": 32,
+  "code": "MicroUZI",
+  "name": "微型乌兹",
+  "en_name": "Micro Uzi",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MicroUZI.webp",
+  "kind": "doll",
+  "aliases": [
+   "Micro Uzi",
+   "MicroUZI",
+   "微型乌兹"
+  ]
+ },
+ {
+  "id": 116,
+  "code": "Z62",
+  "name": "Z-62",
+  "en_name": "Z-62",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Z62.webp",
+  "kind": "doll",
+  "aliases": [
+   "Z-62",
+   "Z62"
+  ]
+ },
+ {
+  "id": 131,
+  "code": "EVO3",
+  "name": "EVO 3",
+  "en_name": "EVO 3",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/EVO3.webp",
+  "kind": "doll",
+  "aliases": [
+   "EVO 3",
+   "EVO3"
+  ]
+ },
+ {
+  "id": 144,
+  "code": "MT9",
+  "name": "MT-9",
+  "en_name": "MT-9",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MT9.webp",
+  "kind": "doll",
+  "aliases": [
+   "MT-9",
+   "MT9"
+  ]
+ },
+ {
+  "id": 169,
+  "code": "ColtSCW",
+  "name": "SCW",
+  "en_name": "Colt SCW",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/ColtSCW.webp",
+  "kind": "doll",
+  "aliases": [
+   "Colt SCW",
+   "ColtSCW",
+   "SCW"
+  ]
+ },
+ {
+  "id": 176,
+  "code": "TMP",
+  "name": "TMP",
+  "en_name": "TMP",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/TMP.webp",
+  "kind": "doll",
+  "aliases": [
+   "TMP"
+  ]
+ },
+ {
+  "id": 178,
+  "code": "F1",
+  "name": "F1",
+  "en_name": "F1",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/F1.webp",
+  "kind": "doll",
+  "aliases": [
+   "F1"
+  ]
+ },
+ {
+  "id": 191,
+  "code": "M12",
+  "name": "M12",
+  "en_name": "M12",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M12.webp",
+  "kind": "doll",
+  "aliases": [
+   "M12"
+  ]
+ },
+ {
+  "id": 209,
+  "code": "OTs39",
+  "name": "OTs-39",
+  "en_name": "OTs-39",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/OTs39.webp",
+  "kind": "doll",
+  "aliases": [
+   "OTs-39",
+   "OTs39"
+  ]
+ },
+ {
+  "id": 218,
+  "code": "T77",
+  "name": "T77",
+  "en_name": "T77",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/T77.webp",
+  "kind": "doll",
+  "aliases": [
+   "T77"
+  ]
+ },
+ {
+  "id": 267,
+  "code": "MP41",
+  "name": "MP41",
+  "en_name": "MP41",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MP41.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP41"
+  ]
+ },
+ {
+  "id": 291,
+  "code": "Danuvia43M",
+  "name": "43M",
+  "en_name": "Danuvia43M",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Danuvia43M.webp",
+  "kind": "doll",
+  "aliases": [
+   "43M",
+   "Danuvia43M"
+  ]
+ },
+ {
+  "id": 301,
+  "code": "MAS38",
+  "name": "MAS-38",
+  "en_name": "MAS-38",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MAS38.webp",
+  "kind": "doll",
+  "aliases": [
+   "MAS-38",
+   "MAS38"
+  ]
+ },
+ {
+  "id": 327,
+  "code": "SUB2000",
+  "name": "SUB-2000",
+  "en_name": "SUB-2000",
+  "type": 2,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/SUB2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "SUB-2000",
+   "SUB2000"
+  ]
+ },
+ {
+  "id": 23,
+  "code": "PP90",
+  "name": "PP-90",
+  "en_name": "PP-90",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PP90.webp",
+  "kind": "doll",
+  "aliases": [
+   "PP-90",
+   "PP90"
+  ]
+ },
+ {
+  "id": 26,
+  "code": "MP5",
+  "name": "MP5",
+  "en_name": "MP5",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MP5.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP5"
+  ]
+ },
+ {
+  "id": 101,
+  "code": "UMP9",
+  "name": "UMP9",
+  "en_name": "UMP9",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/UMP9.webp",
+  "kind": "doll",
+  "aliases": [
+   "UMP9"
+  ]
+ },
+ {
+  "id": 102,
+  "code": "UMP40",
+  "name": "UMP40",
+  "en_name": "UMP40",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/UMP40.webp",
+  "kind": "doll",
+  "aliases": [
+   "UMP40"
+  ]
+ },
+ {
+  "id": 103,
+  "code": "UMP45",
+  "name": "UMP45",
+  "en_name": "UMP45",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/UMP45.webp",
+  "kind": "doll",
+  "aliases": [
+   "UMP45"
+  ]
+ },
+ {
+  "id": 136,
+  "code": "PP19",
+  "name": "PP-19",
+  "en_name": "PP-19",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PP19.webp",
+  "kind": "doll",
+  "aliases": [
+   "PP-19",
+   "PP19"
+  ]
+ },
+ {
+  "id": 137,
+  "code": "PP1901",
+  "name": "PP-19-01",
+  "en_name": "PP1901",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PP1901.webp",
+  "kind": "doll",
+  "aliases": [
+   "PP-19-01",
+   "PP1901"
+  ]
+ },
+ {
+  "id": 150,
+  "code": "Shipka",
+  "name": "希普卡",
+  "en_name": "Shipka",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Shipka.webp",
+  "kind": "doll",
+  "aliases": [
+   "Shipka",
+   "希普卡"
+  ]
+ },
+ {
+  "id": 177,
+  "code": "KLIN",
+  "name": "KLIN",
+  "en_name": "KLIN",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/KLIN.webp",
+  "kind": "doll",
+  "aliases": [
+   "KLIN"
+  ]
+ },
+ {
+  "id": 203,
+  "code": "PDW",
+  "name": "蜜獾",
+  "en_name": "PDW",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PDW.webp",
+  "kind": "doll",
+  "aliases": [
+   "PDW",
+   "蜜獾"
+  ]
+ },
+ {
+  "id": 225,
+  "code": "Cx4Storm",
+  "name": "Cx4 风暴",
+  "en_name": "Cx4 Storm",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Cx4Storm.webp",
+  "kind": "doll",
+  "aliases": [
+   "Cx4 Storm",
+   "Cx4 风暴",
+   "Cx4Storm"
+  ]
+ },
+ {
+  "id": 280,
+  "code": "MAT49",
+  "name": "MAT-49",
+  "en_name": "MAT-49",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MAT49.webp",
+  "kind": "doll",
+  "aliases": [
+   "MAT-49",
+   "MAT49"
+  ]
+ },
+ {
+  "id": 286,
+  "code": "KAC",
+  "name": "KAC-PDW",
+  "en_name": "K-PDW",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/KAC.webp",
+  "kind": "doll",
+  "aliases": [
+   "K-PDW",
+   "KAC",
+   "KAC-PDW"
+  ]
+ },
+ {
+  "id": 295,
+  "code": "06TypeSMG",
+  "name": "CF05",
+  "en_name": "CF05",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/06TypeSMG.webp",
+  "kind": "doll",
+  "aliases": [
+   "06TypeSMG",
+   "CF05"
+  ]
+ },
+ {
+  "id": 304,
+  "code": "SAF",
+  "name": "SAF",
+  "en_name": "SAF",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SAF.webp",
+  "kind": "doll",
+  "aliases": [
+   "SAF"
+  ]
+ },
+ {
+  "id": 328,
+  "code": "AR57",
+  "name": "AR-57",
+  "en_name": "AR-57",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/AR57.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR-57",
+   "AR57"
+  ]
+ },
+ {
+  "id": 336,
+  "code": "PPD40",
+  "name": "PPD-40",
+  "en_name": "PPD-40",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PPD40.webp",
+  "kind": "doll",
+  "aliases": [
+   "PPD-40",
+   "PPD40"
+  ]
+ },
+ {
+  "id": 355,
+  "code": "VigneronM2",
+  "name": "维涅龙M2",
+  "en_name": "VigneronM2",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/VigneronM2.webp",
+  "kind": "doll",
+  "aliases": [
+   "VigneronM2",
+   "维涅龙M2"
+  ]
+ },
+ {
+  "id": 363,
+  "code": "MPL",
+  "name": "MPL",
+  "en_name": "MPL",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MPL.webp",
+  "kind": "doll",
+  "aliases": [
+   "MPL"
+  ]
+ },
+ {
+  "id": 364,
+  "code": "MPK",
+  "name": "MPK",
+  "en_name": "MPK",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MPK.webp",
+  "kind": "doll",
+  "aliases": [
+   "MPK"
+  ]
+ },
+ {
+  "id": 380,
+  "code": "APC9K",
+  "name": "APC9K",
+  "en_name": "APC9K",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/APC9K.webp",
+  "kind": "doll",
+  "aliases": [
+   "APC9K"
+  ]
+ },
+ {
+  "id": 392,
+  "code": "Owen",
+  "name": "欧文",
+  "en_name": "Owen",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Owen.webp",
+  "kind": "doll",
+  "aliases": [
+   "Owen",
+   "欧文"
+  ]
+ },
+ {
+  "id": 415,
+  "code": "wz63",
+  "name": "wz.63",
+  "en_name": "wz.63",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/wz63.webp",
+  "kind": "doll",
+  "aliases": [
+   "wz.63",
+   "wz63"
+  ]
+ },
+ {
+  "id": 422,
+  "code": "Mx4Storm",
+  "name": "Mx4 风暴",
+  "en_name": "Mx4 Storm",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Mx4Storm.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mx4 Storm",
+   "Mx4 风暴",
+   "Mx4Storm"
+  ]
+ },
+ {
+  "id": 9106,
+  "code": "Bathhouse_guest_2",
+  "name": "浴场客人",
+  "en_name": "Bathhouse_guest_2",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Bathhouse_guest_2.webp",
+  "kind": "doll",
+  "aliases": [
+   "Bathhouse_guest_2",
+   "浴场客人"
+  ]
+ },
+ {
+  "id": 20021,
+  "code": "PPsh41Mod",
+  "name": "PPSh-41（三改）",
+  "en_name": "PPSh-41",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PPsh41Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "PPsh41Mod",
+   "PPSh-41（三改）"
+  ]
+ },
+ {
+  "id": 20029,
+  "code": "StenMK2Mod",
+  "name": "司登MkⅡ（三改）",
+  "en_name": "Sten Mk Ⅱ",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/StenMK2Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "StenMK2Mod",
+   "司登MkⅡ（三改）",
+   "Sten Mk Ⅱ"
+  ]
+ },
+ {
+  "id": 20031,
+  "code": "MAB38Mod",
+  "name": "伯莱塔38型（三改）",
+  "en_name": "MAB 38",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MAB38Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MAB38Mod",
+   "伯莱塔38型（三改）",
+   "MAB 38"
+  ]
+ },
+ {
+  "id": 20032,
+  "code": "MicroUZIMod",
+  "name": "微型乌兹（三改）",
+  "en_name": "Micro Uzi",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MicroUZIMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MicroUZIMod",
+   "微型乌兹（三改）",
+   "Micro Uzi"
+  ]
+ },
+ {
+  "id": 20093,
+  "code": "IDWMod",
+  "name": "IDW（三改）",
+  "en_name": "IDW",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/IDWMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "IDWMod",
+   "IDW（三改）"
+  ]
+ },
+ {
+  "id": 20094,
+  "code": "64typeMod",
+  "name": "64式（三改）",
+  "en_name": "Type 64",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/64typeMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "64typeMod",
+   "64式（三改）",
+   "Type 64"
+  ]
+ },
+ {
+  "id": 20131,
+  "code": "EVO3Mod",
+  "name": "EVO 3（三改）",
+  "en_name": "EVO 3",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/EVO3Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "EVO3Mod",
+   "EVO 3（三改）"
+  ]
+ },
+ {
+  "id": 20178,
+  "code": "F1Mod",
+  "name": "F1（三改）",
+  "en_name": "F1",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/F1Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "F1Mod",
+   "F1（三改）"
+  ]
+ },
+ {
+  "id": 20267,
+  "code": "MP41Mod",
+  "name": "MP41（三改）",
+  "en_name": "MP41",
+  "type": 2,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MP41Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP41Mod",
+   "MP41（三改）"
+  ]
+ },
+ {
+  "id": 16,
+  "code": "M1928A1",
+  "name": "汤姆森",
+  "en_name": "M1928A1",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M1928A1.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1928A1",
+   "汤姆森"
+  ]
+ },
+ {
+  "id": 20,
+  "code": "Vector",
+  "name": "维克托",
+  "en_name": "Vector",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Vector.webp",
+  "kind": "doll",
+  "aliases": [
+   "Vector",
+   "维克托"
+  ]
+ },
+ {
+  "id": 28,
+  "code": "MP7",
+  "name": "MP7",
+  "en_name": "MP7",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MP7.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP7"
+  ]
+ },
+ {
+  "id": 59,
+  "code": "AK74U",
+  "name": "AK-74U",
+  "en_name": "AKS-74U",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AK74U.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK-74U",
+   "AK74U",
+   "AKS-74U"
+  ]
+ },
+ {
+  "id": 104,
+  "code": "G36C",
+  "name": "G36C",
+  "en_name": "G36C",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/G36C.webp",
+  "kind": "doll",
+  "aliases": [
+   "G36C"
+  ]
+ },
+ {
+  "id": 115,
+  "code": "KP31",
+  "name": "索米",
+  "en_name": "KP/-31 ",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/KP31.webp",
+  "kind": "doll",
+  "aliases": [
+   "KP/-31 ",
+   "KP31",
+   "索米"
+  ]
+ },
+ {
+  "id": 127,
+  "code": "79type",
+  "name": "79式",
+  "en_name": "Type 79",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/79type.webp",
+  "kind": "doll",
+  "aliases": [
+   "79type",
+   "79式",
+   "Type 79"
+  ]
+ },
+ {
+  "id": 135,
+  "code": "SR3MP",
+  "name": "SR-3MP",
+  "en_name": "SR-3MP",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SR3MP.webp",
+  "kind": "doll",
+  "aliases": [
+   "SR-3MP",
+   "SR3MP"
+  ]
+ },
+ {
+  "id": 143,
+  "code": "RO635",
+  "name": "RO635",
+  "en_name": "RO635",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/RO635.webp",
+  "kind": "doll",
+  "aliases": [
+   "RO635"
+  ]
+ },
+ {
+  "id": 213,
+  "code": "CBJMS",
+  "name": "C-MS",
+  "en_name": "C-MS",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/CBJMS.webp",
+  "kind": "doll",
+  "aliases": [
+   "C-MS",
+   "CBJMS"
+  ]
+ },
+ {
+  "id": 224,
+  "code": "PM06",
+  "name": "PM-06",
+  "en_name": "PM-06",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/PM06.webp",
+  "kind": "doll",
+  "aliases": [
+   "PM-06",
+   "PM06"
+  ]
+ },
+ {
+  "id": 228,
+  "code": "Type100",
+  "name": "樱花",
+  "en_name": "Sakura",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Type100.webp",
+  "kind": "doll",
+  "aliases": [
+   "Sakura",
+   "Type100",
+   "樱花"
+  ]
+ },
+ {
+  "id": 234,
+  "code": "JS9mm",
+  "name": "JS 9",
+  "en_name": "JS 9 mm",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/JS9mm.webp",
+  "kind": "doll",
+  "aliases": [
+   "JS 9",
+   "JS 9 mm",
+   "JS9mm"
+  ]
+ },
+ {
+  "id": 245,
+  "code": "P90",
+  "name": "P90",
+  "en_name": "P90",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/P90.webp",
+  "kind": "doll",
+  "aliases": [
+   "P90"
+  ]
+ },
+ {
+  "id": 251,
+  "code": "X95",
+  "name": "X95",
+  "en_name": "X95",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/X95.webp",
+  "kind": "doll",
+  "aliases": [
+   "X95"
+  ]
+ },
+ {
+  "id": 259,
+  "code": "PM9",
+  "name": "PM-9",
+  "en_name": "PM-9",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/PM9.webp",
+  "kind": "doll",
+  "aliases": [
+   "PM-9",
+   "PM9"
+  ]
+ },
+ {
+  "id": 311,
+  "code": "Lusa",
+  "name": "卢萨",
+  "en_name": "Lusa",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Lusa.webp",
+  "kind": "doll",
+  "aliases": [
+   "Lusa",
+   "卢萨"
+  ]
+ },
+ {
+  "id": 315,
+  "code": "AUGPARA",
+  "name": "AUG SMG",
+  "en_name": "AUG Para ",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AUGPARA.webp",
+  "kind": "doll",
+  "aliases": [
+   "AUG Para ",
+   "AUG SMG",
+   "AUGPARA"
+  ]
+ },
+ {
+  "id": 333,
+  "code": "VP1915",
+  "name": "VP1915",
+  "en_name": "VP1915",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/VP1915.webp",
+  "kind": "doll",
+  "aliases": [
+   "VP1915"
+  ]
+ },
+ {
+  "id": 341,
+  "code": "SP9",
+  "name": "SP9",
+  "en_name": "SP9",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SP9.webp",
+  "kind": "doll",
+  "aliases": [
+   "SP9"
+  ]
+ },
+ {
+  "id": 347,
+  "code": "SR2",
+  "name": "SR-2",
+  "en_name": "SR-2",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SR2.webp",
+  "kind": "doll",
+  "aliases": [
+   "SR-2",
+   "SR2"
+  ]
+ },
+ {
+  "id": 359,
+  "code": "Sterling",
+  "name": "斯特林",
+  "en_name": "Sterling",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Sterling.webp",
+  "kind": "doll",
+  "aliases": [
+   "Sterling",
+   "斯特林"
+  ]
+ },
+ {
+  "id": 376,
+  "code": "Erma",
+  "name": "Erma",
+  "en_name": "Erma",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Erma.webp",
+  "kind": "doll",
+  "aliases": [
+   "Erma"
+  ]
+ },
+ {
+  "id": 384,
+  "code": "Jatimatic",
+  "name": "Jatimatic",
+  "en_name": "Jatimatic",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Jatimatic.webp",
+  "kind": "doll",
+  "aliases": [
+   "Jatimatic"
+  ]
+ },
+ {
+  "id": 391,
+  "code": "Type82S",
+  "name": "82式",
+  "en_name": "Type82S",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Type82S.webp",
+  "kind": "doll",
+  "aliases": [
+   "82式",
+   "Type82S"
+  ]
+ },
+ {
+  "id": 401,
+  "code": "P50",
+  "name": "P50",
+  "en_name": "P50",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/P50.webp",
+  "kind": "doll",
+  "aliases": [
+   "P50"
+  ]
+ },
+ {
+  "id": 1019,
+  "code": "Dorothy",
+  "name": "多萝西·海兹",
+  "en_name": "Dorothy Haze",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Dorothy.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dorothy",
+   "Dorothy Haze",
+   "多萝西·海兹"
+  ]
+ },
+ {
+  "id": 1023,
+  "code": "Henrietta",
+  "name": "海莉艾塔",
+  "en_name": "Henrietta",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Henrietta.webp",
+  "kind": "doll",
+  "aliases": [
+   "Henrietta",
+   "海莉艾塔"
+  ]
+ },
+ {
+  "id": 1028,
+  "code": "VectorAgent",
+  "name": "特工维克托",
+  "en_name": "Vector",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/VectorAgent.webp",
+  "kind": "doll",
+  "aliases": [
+   "Vector",
+   "VectorAgent",
+   "特工维克托"
+  ]
+ },
+ {
+  "id": 1030,
+  "code": "Jashinchan",
+  "name": "邪神酱",
+  "en_name": "Jashin-chan",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Jashinchan.webp",
+  "kind": "doll",
+  "aliases": [
+   "Jashin-chan",
+   "Jashinchan",
+   "邪神酱"
+  ]
+ },
+ {
+  "id": 1036,
+  "code": "Lily",
+  "name": "星川莉莉",
+  "en_name": "Lily",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Lily.webp",
+  "kind": "doll",
+  "aliases": [
+   "Lily",
+   "星川莉莉"
+  ]
+ },
+ {
+  "id": 1046,
+  "code": "Hecate",
+  "name": "黑卡蒂",
+  "en_name": "Hecate",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Hecate.webp",
+  "kind": "doll",
+  "aliases": [
+   "Hecate",
+   "黑卡蒂"
+  ]
+ },
+ {
+  "id": 9067,
+  "code": "Rogue_D",
+  "name": "丹德莱",
+  "en_name": "Rogue_D",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Rogue_D.webp",
+  "kind": "doll",
+  "aliases": [
+   "Rogue_D",
+   "丹德莱"
+  ]
+ },
+ {
+  "id": 9077,
+  "code": "Plaincloth_Ally",
+  "name": "特工",
+  "en_name": "Plaincloth_Ally",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Plaincloth_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Plaincloth_Ally",
+   "特工"
+  ]
+ },
+ {
+  "id": 9100,
+  "code": "Dupijin",
+  "name": "杜皮约",
+  "en_name": "Dupijin",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Dupijin.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dupijin",
+   "杜皮约"
+  ]
+ },
+ {
+  "id": 9104,
+  "code": "Erma_NPC",
+  "name": "艾尔玛",
+  "en_name": "Erma_NPC",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Erma_NPC.webp",
+  "kind": "doll",
+  "aliases": [
+   "Erma_NPC",
+   "艾尔玛"
+  ]
+ },
+ {
+  "id": 9111,
+  "code": "Ahmin_battle",
+  "name": "艾赫明",
+  "en_name": "Ahmin",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ahmin_battle.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ahmin",
+   "Ahmin_battle",
+   "艾赫明"
+  ]
+ },
+ {
+  "id": 9112,
+  "code": "Pamazan_Young_NPC",
+  "name": "拉姆赞",
+  "en_name": "Pamzan_Young",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Pamazan_Young_NPC.webp",
+  "kind": "doll",
+  "aliases": [
+   "Pamazan_Young_NPC",
+   "Pamzan_Young",
+   "拉姆赞"
+  ]
+ },
+ {
+  "id": 9127,
+  "code": "Dandelion_Dinergate",
+  "name": "丹德莱",
+  "en_name": "Dandelion_Dinergate",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Dandelion_Dinergate.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dandelion_Dinergate",
+   "丹德莱"
+  ]
+ },
+ {
+  "id": 20026,
+  "code": "MP5Mod",
+  "name": "MP5（三改）",
+  "en_name": "MP5",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MP5Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MP5Mod",
+   "MP5（三改）"
+  ]
+ },
+ {
+  "id": 20101,
+  "code": "UMP9Mod",
+  "name": "UMP9（三改）",
+  "en_name": "UMP9",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/UMP9Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "UMP9Mod",
+   "UMP9（三改）"
+  ]
+ },
+ {
+  "id": 20103,
+  "code": "UMP45Mod",
+  "name": "UMP45（三改）",
+  "en_name": "UMP45",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/UMP45Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "UMP45Mod",
+   "UMP45（三改）"
+  ]
+ },
+ {
+  "id": 20136,
+  "code": "PP19Mod",
+  "name": "PP-19（三改）",
+  "en_name": "PP-19",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/PP19Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "PP19Mod",
+   "PP-19（三改）"
+  ]
+ },
+ {
+  "id": 90001,
+  "code": "ISC",
+  "name": "PPSh-41（剧情）",
+  "en_name": "PPSh-41",
+  "type": 2,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ISC.webp",
+  "kind": "doll",
+  "aliases": [
+   "ISC"
+  ]
+ },
+ {
+  "id": 20104,
+  "code": "G36CMod",
+  "name": "G36C（三改）",
+  "en_name": "G36C",
+  "type": 2,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/G36CMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "G36CMod",
+   "G36C（三改）"
+  ]
+ },
+ {
+  "id": 20115,
+  "code": "KP31Mod",
+  "name": "索米（三改）",
+  "en_name": "KP/-31 ",
+  "type": 2,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/KP31Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "KP31Mod",
+   "索米（三改）",
+   "KP/-31 "
+  ]
+ },
+ {
+  "id": 20127,
+  "code": "79typeMod",
+  "name": "79式（三改）",
+  "en_name": "Type 79",
+  "type": 2,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/79typeMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "79typeMod",
+   "79式（三改）",
+   "Type 79"
+  ]
+ },
+ {
+  "id": 20143,
+  "code": "RO635Mod",
+  "name": "RO635（三改）",
+  "en_name": "RO635",
+  "type": 2,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/RO635Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "RO635Mod",
+   "RO635（三改）"
+  ]
+ },
+ {
+  "id": 20228,
+  "code": "Type100Mod",
+  "name": "樱花（三改）",
+  "en_name": "Sakura",
+  "type": 2,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/Type100Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "Type100Mod",
+   "樱花（三改）",
+   "Sakura"
+  ]
+ },
+ {
+  "id": 40,
+  "code": "SVT38",
+  "name": "SVT-38",
+  "en_name": "SVT-38",
+  "type": 3,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/SVT38.webp",
+  "kind": "doll",
+  "aliases": [
+   "SVT-38",
+   "SVT38"
+  ]
+ },
+ {
+  "id": 41,
+  "code": "SKS",
+  "name": "西蒙诺夫",
+  "en_name": "SKS",
+  "type": 3,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/SKS.webp",
+  "kind": "doll",
+  "aliases": [
+   "SKS",
+   "西蒙诺夫"
+  ]
+ },
+ {
+  "id": 47,
+  "code": "G43",
+  "name": "G43",
+  "en_name": "G43",
+  "type": 3,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/G43.webp",
+  "kind": "doll",
+  "aliases": [
+   "G43"
+  ]
+ },
+ {
+  "id": 51,
+  "code": "FN49",
+  "name": "FN-49",
+  "en_name": "FN-49",
+  "type": 3,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/FN49.webp",
+  "kind": "doll",
+  "aliases": [
+   "FN-49",
+   "FN49"
+  ]
+ },
+ {
+  "id": 52,
+  "code": "BM59",
+  "name": "BM59",
+  "en_name": "BM59",
+  "type": 3,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/BM59.webp",
+  "kind": "doll",
+  "aliases": [
+   "BM59"
+  ]
+ },
+ {
+  "id": 34,
+  "code": "M1",
+  "name": "M1加兰德",
+  "en_name": "M1",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M1.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1",
+   "M1加兰德"
+  ]
+ },
+ {
+  "id": 35,
+  "code": "M1A1",
+  "name": "M1A1",
+  "en_name": "M1A1",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M1A1.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1A1"
+  ]
+ },
+ {
+  "id": 37,
+  "code": "M14",
+  "name": "M14",
+  "en_name": "M14",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M14.webp",
+  "kind": "doll",
+  "aliases": [
+   "M14"
+  ]
+ },
+ {
+  "id": 38,
+  "code": "M21",
+  "name": "M21",
+  "en_name": "M21",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M21.webp",
+  "kind": "doll",
+  "aliases": [
+   "M21"
+  ]
+ },
+ {
+  "id": 44,
+  "code": "SV98",
+  "name": "SV-98",
+  "en_name": "SV-98",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/SV98.webp",
+  "kind": "doll",
+  "aliases": [
+   "SV-98",
+   "SV98"
+  ]
+ },
+ {
+  "id": 49,
+  "code": "56typeR",
+  "name": "56式半",
+  "en_name": "Type 56 R",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/56typeR.webp",
+  "kind": "doll",
+  "aliases": [
+   "56typeR",
+   "56式半",
+   "Type 56 R"
+  ]
+ },
+ {
+  "id": 95,
+  "code": "88type",
+  "name": "汉阳造88式",
+  "en_name": "Type 88",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/88type.webp",
+  "kind": "doll",
+  "aliases": [
+   "88type",
+   "Type 88",
+   "汉阳造88式"
+  ]
+ },
+ {
+  "id": 124,
+  "code": "SuperSASS",
+  "name": "S-SASS",
+  "en_name": "Super SASS",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/SuperSASS.webp",
+  "kind": "doll",
+  "aliases": [
+   "S-SASS",
+   "Super SASS",
+   "SuperSASS"
+  ]
+ },
+ {
+  "id": 145,
+  "code": "OC44",
+  "name": "OTs-44",
+  "en_name": "OTs-44",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/OC44.webp",
+  "kind": "doll",
+  "aliases": [
+   "OC44",
+   "OTs-44"
+  ]
+ },
+ {
+  "id": 147,
+  "code": "SSG69",
+  "name": "SSG 69",
+  "en_name": "SSG 69",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/SSG69.webp",
+  "kind": "doll",
+  "aliases": [
+   "SSG 69",
+   "SSG69"
+  ]
+ },
+ {
+  "id": 174,
+  "code": "81typeR",
+  "name": "八一式马",
+  "en_name": "type 81 R",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/81typeR.webp",
+  "kind": "doll",
+  "aliases": [
+   "81typeR",
+   "type 81 R",
+   "八一式马"
+  ]
+ },
+ {
+  "id": 182,
+  "code": "wz29",
+  "name": "wz.29",
+  "en_name": "wz.29",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/wz29.webp",
+  "kind": "doll",
+  "aliases": [
+   "wz.29",
+   "wz29"
+  ]
+ },
+ {
+  "id": 201,
+  "code": "GepardM1",
+  "name": "猎豹M1",
+  "en_name": "Gepard M1",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/GepardM1.webp",
+  "kind": "doll",
+  "aliases": [
+   "Gepard M1",
+   "GepardM1",
+   "猎豹M1"
+  ]
+ },
+ {
+  "id": 217,
+  "code": "HEZISM1",
+  "name": "SM-1",
+  "en_name": "SM-1",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/HEZISM1.webp",
+  "kind": "doll",
+  "aliases": [
+   "HEZISM1",
+   "SM-1"
+  ]
+ },
+ {
+  "id": 230,
+  "code": "OBR",
+  "name": "OBR",
+  "en_name": "OBR",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/OBR.webp",
+  "kind": "doll",
+  "aliases": [
+   "OBR"
+  ]
+ },
+ {
+  "id": 241,
+  "code": "RT20",
+  "name": "RT-20",
+  "en_name": "RT-20",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/RT20.webp",
+  "kind": "doll",
+  "aliases": [
+   "RT-20",
+   "RT20"
+  ]
+ },
+ {
+  "id": 255,
+  "code": "scout",
+  "name": "侦察者",
+  "en_name": "Scout",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/scout.webp",
+  "kind": "doll",
+  "aliases": [
+   "Scout",
+   "scout",
+   "侦察者"
+  ]
+ },
+ {
+  "id": 256,
+  "code": "Falcon",
+  "name": "隼",
+  "en_name": "Falcon",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Falcon.webp",
+  "kind": "doll",
+  "aliases": [
+   "Falcon",
+   "隼"
+  ]
+ },
+ {
+  "id": 268,
+  "code": "TCMS",
+  "name": "T-CMS",
+  "en_name": "T-CMS",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/TCMS.webp",
+  "kind": "doll",
+  "aliases": [
+   "T-CMS",
+   "TCMS"
+  ]
+ },
+ {
+  "id": 284,
+  "code": "ZasM76",
+  "name": "Zas M76",
+  "en_name": "Zas M76",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/ZasM76.webp",
+  "kind": "doll",
+  "aliases": [
+   "Zas M76",
+   "ZasM76"
+  ]
+ },
+ {
+  "id": 308,
+  "code": "C14",
+  "name": "C14",
+  "en_name": "C14",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/C14.webp",
+  "kind": "doll",
+  "aliases": [
+   "C14"
+  ]
+ },
+ {
+  "id": 320,
+  "code": "Gm6Lynx",
+  "name": "GM6 Lynx",
+  "en_name": "GM6 Lynx",
+  "type": 3,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Gm6Lynx.webp",
+  "kind": "doll",
+  "aliases": [
+   "GM6 Lynx",
+   "Gm6Lynx"
+  ]
+ },
+ {
+  "id": 36,
+  "code": "M1903",
+  "name": "春田",
+  "en_name": "M1903",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1903.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1903",
+   "春田"
+  ]
+ },
+ {
+  "id": 39,
+  "code": "M1891",
+  "name": "莫辛-纳甘",
+  "en_name": "M1891",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1891.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1891",
+   "莫辛-纳甘"
+  ]
+ },
+ {
+  "id": 42,
+  "code": "PTRD",
+  "name": "PTRD",
+  "en_name": "PTRD",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PTRD.webp",
+  "kind": "doll",
+  "aliases": [
+   "PTRD"
+  ]
+ },
+ {
+  "id": 43,
+  "code": "SVD",
+  "name": "SVD",
+  "en_name": "SVD",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SVD.webp",
+  "kind": "doll",
+  "aliases": [
+   "SVD"
+  ]
+ },
+ {
+  "id": 117,
+  "code": "PSG1",
+  "name": "PSG-1",
+  "en_name": "PSG-1",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PSG1.webp",
+  "kind": "doll",
+  "aliases": [
+   "PSG-1",
+   "PSG1"
+  ]
+ },
+ {
+  "id": 146,
+  "code": "G28",
+  "name": "G28",
+  "en_name": "G28",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/G28.webp",
+  "kind": "doll",
+  "aliases": [
+   "G28"
+  ]
+ },
+ {
+  "id": 180,
+  "code": "PzB39",
+  "name": "PzB39",
+  "en_name": "PzB39",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PzB39.webp",
+  "kind": "doll",
+  "aliases": [
+   "PzB39"
+  ]
+ },
+ {
+  "id": 184,
+  "code": "T5000",
+  "name": "T-5000",
+  "en_name": "T-5000",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/T5000.webp",
+  "kind": "doll",
+  "aliases": [
+   "T-5000",
+   "T5000"
+  ]
+ },
+ {
+  "id": 200,
+  "code": "xm3",
+  "name": "XM3",
+  "en_name": "XM3",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/xm3.webp",
+  "kind": "doll",
+  "aliases": [
+   "XM3",
+   "xm3"
+  ]
+ },
+ {
+  "id": 226,
+  "code": "Mk12",
+  "name": "Mk 12",
+  "en_name": "Mk.12 Mod 01",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Mk12.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mk.12 Mod 01",
+   "Mk12",
+   "Mk 12"
+  ]
+ },
+ {
+  "id": 235,
+  "code": "FNSPR",
+  "name": "SPR A3G",
+  "en_name": "SPR A3G",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/FNSPR.webp",
+  "kind": "doll",
+  "aliases": [
+   "FNSPR",
+   "SPR A3G"
+  ]
+ },
+ {
+  "id": 247,
+  "code": "K31",
+  "name": "K31",
+  "en_name": "K31",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/K31.webp",
+  "kind": "doll",
+  "aliases": [
+   "K31"
+  ]
+ },
+ {
+  "id": 252,
+  "code": "KSVK",
+  "name": "KSVK",
+  "en_name": "KSVK",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/KSVK.webp",
+  "kind": "doll",
+  "aliases": [
+   "KSVK"
+  ]
+ },
+ {
+  "id": 270,
+  "code": "4type",
+  "name": "四式",
+  "en_name": "Type 4",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/4type.webp",
+  "kind": "doll",
+  "aliases": [
+   "4type",
+   "Type 4",
+   "四式"
+  ]
+ },
+ {
+  "id": 273,
+  "code": "SSG3000",
+  "name": "SSG3000",
+  "en_name": "SSG3000",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SSG3000.webp",
+  "kind": "doll",
+  "aliases": [
+   "SSG3000"
+  ]
+ },
+ {
+  "id": 305,
+  "code": "Tabuk",
+  "name": "塔布克",
+  "en_name": "Tabuk",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Tabuk.webp",
+  "kind": "doll",
+  "aliases": [
+   "Tabuk",
+   "塔布克"
+  ]
+ },
+ {
+  "id": 317,
+  "code": "MondragonM1908",
+  "name": "蒙德拉贡M1908",
+  "en_name": "MondragonM1908",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MondragonM1908.webp",
+  "kind": "doll",
+  "aliases": [
+   "MondragonM1908",
+   "蒙德拉贡M1908"
+  ]
+ },
+ {
+  "id": 360,
+  "code": "TFQ",
+  "name": "TF-Q",
+  "en_name": "TF-Q",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/TFQ.webp",
+  "kind": "doll",
+  "aliases": [
+   "TF-Q",
+   "TFQ"
+  ]
+ },
+ {
+  "id": 371,
+  "code": "Saiga308",
+  "name": "Saiga 308",
+  "en_name": "Saiga 308",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Saiga308.webp",
+  "kind": "doll",
+  "aliases": [
+   "Saiga 308",
+   "Saiga308"
+  ]
+ },
+ {
+  "id": 410,
+  "code": "Mini14",
+  "name": "Mini-14",
+  "en_name": "Mini-14",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Mini14.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mini-14",
+   "Mini14"
+  ]
+ },
+ {
+  "id": 416,
+  "code": "SSGM1",
+  "name": "SSG M1",
+  "en_name": "SSG M1",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SSGM1.webp",
+  "kind": "doll",
+  "aliases": [
+   "SSG M1",
+   "SSGM1"
+  ]
+ },
+ {
+  "id": 20037,
+  "code": "M14Mod",
+  "name": "M14（三改）",
+  "en_name": "M14",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M14Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M14Mod",
+   "M14（三改）"
+  ]
+ },
+ {
+  "id": 20044,
+  "code": "SV98Mod",
+  "name": "SV-98（三改）",
+  "en_name": "SV-98",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SV98Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "SV98Mod",
+   "SV-98（三改）"
+  ]
+ },
+ {
+  "id": 20049,
+  "code": "56typeRMod",
+  "name": "56式半（三改）",
+  "en_name": "Type 56 R",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/56typeRMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "56typeRMod",
+   "56式半（三改）",
+   "Type 56 R"
+  ]
+ },
+ {
+  "id": 20051,
+  "code": "FN49Mod",
+  "name": "FN-49（三改）",
+  "en_name": "FN-49",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/FN49Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "FN49Mod",
+   "FN-49（三改）"
+  ]
+ },
+ {
+  "id": 20095,
+  "code": "88typeMod",
+  "name": "汉阳造88式（三改）",
+  "en_name": "Type 88",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/88typeMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "88typeMod",
+   "汉阳造88式（三改）",
+   "Type 88"
+  ]
+ },
+ {
+  "id": 20124,
+  "code": "SuperSASSMod",
+  "name": "S-SASS（三改）",
+  "en_name": "Super SASS",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SuperSASSMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "SuperSASSMod",
+   "S-SASS（三改）",
+   "Super SASS"
+  ]
+ },
+ {
+  "id": 20201,
+  "code": "GepardM1Mod",
+  "name": "猎豹M1（三改）",
+  "en_name": "Gepard M1",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/GepardM1Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "GepardM1Mod",
+   "猎豹M1（三改）",
+   "Gepard M1"
+  ]
+ },
+ {
+  "id": 20230,
+  "code": "OBRMod",
+  "name": "OBR（三改）",
+  "en_name": "OBR",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/OBRMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "OBRMod",
+   "OBR（三改）"
+  ]
+ },
+ {
+  "id": 20256,
+  "code": "FalconMod",
+  "name": "隼（三改）",
+  "en_name": "Falcon",
+  "type": 3,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/FalconMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "FalconMod",
+   "隼（三改）"
+  ]
+ },
+ {
+  "id": 46,
+  "code": "98K",
+  "name": "Kar98k",
+  "en_name": "Kar98k",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/98K.webp",
+  "kind": "doll",
+  "aliases": [
+   "98K",
+   "Kar98k"
+  ]
+ },
+ {
+  "id": 48,
+  "code": "WA2000",
+  "name": "WA2000",
+  "en_name": "WA2000",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/WA2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "WA2000"
+  ]
+ },
+ {
+  "id": 50,
+  "code": "MLEMK1",
+  "name": "李-恩菲尔德",
+  "en_name": "MLE Mk I",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MLEMK1.webp",
+  "kind": "doll",
+  "aliases": [
+   "MLE Mk I",
+   "MLEMK1",
+   "李-恩菲尔德"
+  ]
+ },
+ {
+  "id": 53,
+  "code": "NTW20",
+  "name": "NTW-20",
+  "en_name": "NTW-20",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NTW20.webp",
+  "kind": "doll",
+  "aliases": [
+   "NTW-20",
+   "NTW20"
+  ]
+ },
+ {
+  "id": 128,
+  "code": "M99",
+  "name": "M99",
+  "en_name": "M99",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M99.webp",
+  "kind": "doll",
+  "aliases": [
+   "M99"
+  ]
+ },
+ {
+  "id": 148,
+  "code": "IWS2000",
+  "name": "IWS 2000",
+  "en_name": "IWS 2000",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/IWS2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "IWS 2000",
+   "IWS2000"
+  ]
+ },
+ {
+  "id": 179,
+  "code": "DSR50",
+  "name": "DSR-50",
+  "en_name": "DSR-50",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/DSR50.webp",
+  "kind": "doll",
+  "aliases": [
+   "DSR-50",
+   "DSR50"
+  ]
+ },
+ {
+  "id": 192,
+  "code": "JS-127",
+  "name": "JS05",
+  "en_name": "JS05",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/JS-127.webp",
+  "kind": "doll",
+  "aliases": [
+   "JS-127",
+   "JS05"
+  ]
+ },
+ {
+  "id": 197,
+  "code": "Carcano1891",
+  "name": "卡尔卡诺M1891",
+  "en_name": "Carcano M1891",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Carcano1891.webp",
+  "kind": "doll",
+  "aliases": [
+   "Carcano M1891",
+   "Carcano1891",
+   "卡尔卡诺M1891"
+  ]
+ },
+ {
+  "id": 198,
+  "code": "Carcano1938",
+  "name": "卡尔卡诺M91/38",
+  "en_name": "Carcano M91/38",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Carcano1938.webp",
+  "kind": "doll",
+  "aliases": [
+   "Carcano M91/38",
+   "Carcano1938",
+   "卡尔卡诺M91/38"
+  ]
+ },
+ {
+  "id": 204,
+  "code": "Ballista",
+  "name": "芭莉斯塔",
+  "en_name": "Ballista",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ballista.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ballista",
+   "芭莉斯塔"
+  ]
+ },
+ {
+  "id": 211,
+  "code": "DTASRS",
+  "name": "SRS",
+  "en_name": "DTASRS",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/DTASRS.webp",
+  "kind": "doll",
+  "aliases": [
+   "DTASRS",
+   "SRS"
+  ]
+ },
+ {
+  "id": 222,
+  "code": "TAC50",
+  "name": "TAC-50",
+  "en_name": "TAC-50",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/TAC50.webp",
+  "kind": "doll",
+  "aliases": [
+   "TAC-50",
+   "TAC50"
+  ]
+ },
+ {
+  "id": 231,
+  "code": "M82A1",
+  "name": "M82A1",
+  "en_name": "M82A1",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M82A1.webp",
+  "kind": "doll",
+  "aliases": [
+   "M82A1"
+  ]
+ },
+ {
+  "id": 257,
+  "code": "M200",
+  "name": "M200",
+  "en_name": "M200",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M200.webp",
+  "kind": "doll",
+  "aliases": [
+   "M200"
+  ]
+ },
+ {
+  "id": 261,
+  "code": "QBU88",
+  "name": "QBU-88",
+  "en_name": "QBU-88",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/QBU88.webp",
+  "kind": "doll",
+  "aliases": [
+   "QBU-88",
+   "QBU88"
+  ]
+ },
+ {
+  "id": 266,
+  "code": "R93",
+  "name": "R93",
+  "en_name": "R93",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/R93.webp",
+  "kind": "doll",
+  "aliases": [
+   "R93"
+  ]
+ },
+ {
+  "id": 296,
+  "code": "SL8",
+  "name": "SL8",
+  "en_name": "SL8",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SL8.webp",
+  "kind": "doll",
+  "aliases": [
+   "SL8"
+  ]
+ },
+ {
+  "id": 312,
+  "code": "VSK",
+  "name": "VSK-94",
+  "en_name": "VSK-94",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/VSK.webp",
+  "kind": "doll",
+  "aliases": [
+   "VSK",
+   "VSK-94"
+  ]
+ },
+ {
+  "id": 316,
+  "code": "GeneralLiu",
+  "name": "刘氏步枪",
+  "en_name": "GeneralLiu",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/GeneralLiu.webp",
+  "kind": "doll",
+  "aliases": [
+   "GeneralLiu",
+   "刘氏步枪"
+  ]
+ },
+ {
+  "id": 329,
+  "code": "SVCh",
+  "name": "SVCh",
+  "en_name": "SVCh",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SVCh.webp",
+  "kind": "doll",
+  "aliases": [
+   "SVCh"
+  ]
+ },
+ {
+  "id": 334,
+  "code": "Savage99",
+  "name": "沙维奇99型",
+  "en_name": "Savage 99",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Savage99.webp",
+  "kind": "doll",
+  "aliases": [
+   "Savage 99",
+   "Savage99",
+   "沙维奇99型"
+  ]
+ },
+ {
+  "id": 337,
+  "code": "Delisle",
+  "name": "德利尔",
+  "en_name": "Delisle",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Delisle.webp",
+  "kind": "doll",
+  "aliases": [
+   "Delisle",
+   "德利尔"
+  ]
+ },
+ {
+  "id": 348,
+  "code": "HS50",
+  "name": "HS.50",
+  "en_name": "HS.50",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HS50.webp",
+  "kind": "doll",
+  "aliases": [
+   "HS.50",
+   "HS50"
+  ]
+ },
+ {
+  "id": 377,
+  "code": "SCARH",
+  "name": "SCAR-H",
+  "en_name": "SCAR-H",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SCARH.webp",
+  "kind": "doll",
+  "aliases": [
+   "SCAR-H",
+   "SCARH"
+  ]
+ },
+ {
+  "id": 381,
+  "code": "M110",
+  "name": "M110",
+  "en_name": "M110",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M110.webp",
+  "kind": "doll",
+  "aliases": [
+   "M110"
+  ]
+ },
+ {
+  "id": 388,
+  "code": "QBU191",
+  "name": "QBU-191",
+  "en_name": "QBU-191",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/QBU191.webp",
+  "kind": "doll",
+  "aliases": [
+   "QBU-191",
+   "QBU191"
+  ]
+ },
+ {
+  "id": 389,
+  "code": "BoysAntiTank",
+  "name": "博斯",
+  "en_name": "Boys",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/BoysAntiTank.webp",
+  "kind": "doll",
+  "aliases": [
+   "Boys",
+   "BoysAntiTank",
+   "博斯"
+  ]
+ },
+ {
+  "id": 402,
+  "code": "MartiniHenry",
+  "name": "马提尼亨利",
+  "en_name": "MartiniHenry",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MartiniHenry.webp",
+  "kind": "doll",
+  "aliases": [
+   "MartiniHenry",
+   "马提尼亨利"
+  ]
+ },
+ {
+  "id": 403,
+  "code": "SIGCROSS",
+  "name": "SIG CROSS",
+  "en_name": "SIG CROSS",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SIGCROSS.webp",
+  "kind": "doll",
+  "aliases": [
+   "SIG CROSS",
+   "SIGCROSS"
+  ]
+ },
+ {
+  "id": 407,
+  "code": "HTI",
+  "name": "HTI",
+  "en_name": "HTI",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HTI.webp",
+  "kind": "doll",
+  "aliases": [
+   "HTI"
+  ]
+ },
+ {
+  "id": 409,
+  "code": "HecateII",
+  "name": "Hecate II",
+  "en_name": "Hecate II",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HecateII.webp",
+  "kind": "doll",
+  "aliases": [
+   "Hecate II",
+   "HecateII"
+  ]
+ },
+ {
+  "id": 425,
+  "code": "Type53",
+  "name": "53式",
+  "en_name": "Type53",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Type53.webp",
+  "kind": "doll",
+  "aliases": [
+   "53式",
+   "Type53"
+  ]
+ },
+ {
+  "id": 1004,
+  "code": "RaidenMei",
+  "name": "雷电芽衣",
+  "en_name": "Mei",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/RaidenMei.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mei",
+   "RaidenMei",
+   "雷电芽衣"
+  ]
+ },
+ {
+  "id": 1005,
+  "code": "Bronya",
+  "name": "布洛妮娅",
+  "en_name": "Bronya",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Bronya.webp",
+  "kind": "doll",
+  "aliases": [
+   "Bronya",
+   "布洛妮娅"
+  ]
+ },
+ {
+  "id": 1020,
+  "code": "Stella",
+  "name": "史黛拉·星井",
+  "en_name": "Stella Hoshii",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Stella.webp",
+  "kind": "doll",
+  "aliases": [
+   "Stella",
+   "Stella Hoshii",
+   "史黛拉·星井"
+  ]
+ },
+ {
+  "id": 1024,
+  "code": "Rico",
+  "name": "莉可",
+  "en_name": "Rico",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Rico.webp",
+  "kind": "doll",
+  "aliases": [
+   "Rico",
+   "莉可"
+  ]
+ },
+ {
+  "id": 1031,
+  "code": "Pekora",
+  "name": "佩可拉",
+  "en_name": "Pekola",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Pekora.webp",
+  "kind": "doll",
+  "aliases": [
+   "Pekola",
+   "Pekora",
+   "佩可拉"
+  ]
+ },
+ {
+  "id": 1037,
+  "code": "Sakura",
+  "name": "源樱",
+  "en_name": "Sakura",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Sakura.webp",
+  "kind": "doll",
+  "aliases": [
+   "Sakura",
+   "源樱"
+  ]
+ },
+ {
+  "id": 9051,
+  "code": "Boss9_Ally",
+  "name": "建筑师",
+  "en_name": "Boss9_Ally",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Boss9_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Boss9_Ally",
+   "建筑师"
+  ]
+ },
+ {
+  "id": 20039,
+  "code": "M1891Mod",
+  "name": "莫辛-纳甘（三改）",
+  "en_name": "M1891",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M1891Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1891Mod",
+   "莫辛-纳甘（三改）"
+  ]
+ },
+ {
+  "id": 20200,
+  "code": "XM3Mod",
+  "name": "XM3",
+  "en_name": "XM3",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/XM3Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "XM3",
+   "XM3Mod"
+  ]
+ },
+ {
+  "id": 20252,
+  "code": "KSVKMod",
+  "name": "KSVK（三改）",
+  "en_name": "KSVK",
+  "type": 3,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/KSVKMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "KSVKMod",
+   "KSVK（三改）"
+  ]
+ },
+ {
+  "id": 20046,
+  "code": "98KMod",
+  "name": "Kar98k（三改）",
+  "en_name": "Kar98k",
+  "type": 3,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/98KMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "98KMod",
+   "Kar98k（三改）"
+  ]
+ },
+ {
+  "id": 20050,
+  "code": "MLEMK1Mod",
+  "name": "李-恩菲尔德（三改）",
+  "en_name": "MLE Mk I",
+  "type": 3,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/MLEMK1Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MLEMK1Mod",
+   "李-恩菲尔德（三改）",
+   "MLE Mk I"
+  ]
+ },
+ {
+  "id": 20053,
+  "code": "NTW20Mod",
+  "name": "NTW-20（三改）",
+  "en_name": "NTW-20",
+  "type": 3,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/NTW20Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "NTW20Mod",
+   "NTW-20（三改）"
+  ]
+ },
+ {
+  "id": 63,
+  "code": "G3",
+  "name": "G3",
+  "en_name": "G3",
+  "type": 4,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/G3.webp",
+  "kind": "doll",
+  "aliases": [
+   "G3"
+  ]
+ },
+ {
+  "id": 68,
+  "code": "L85A1",
+  "name": "L85A1",
+  "en_name": "L85A1",
+  "type": 4,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/L85A1.webp",
+  "kind": "doll",
+  "aliases": [
+   "L85A1"
+  ]
+ },
+ {
+  "id": 71,
+  "code": "AR",
+  "name": "加利尔",
+  "en_name": "AR",
+  "type": 4,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/AR.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR",
+   "加利尔"
+  ]
+ },
+ {
+  "id": 74,
+  "code": "SIG510",
+  "name": "SIG-510",
+  "en_name": "SIG-510",
+  "type": 4,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/SIG510.webp",
+  "kind": "doll",
+  "aliases": [
+   "SIG-510",
+   "SIG510"
+  ]
+ },
+ {
+  "id": 107,
+  "code": "F2000",
+  "name": "F2000",
+  "en_name": "F2000",
+  "type": 4,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/F2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "F2000"
+  ]
+ },
+ {
+  "id": 133,
+  "code": "63type",
+  "name": "63式",
+  "en_name": "Type 63",
+  "type": 4,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/63type.webp",
+  "kind": "doll",
+  "aliases": [
+   "63type",
+   "63式",
+   "Type 63"
+  ]
+ },
+ {
+  "id": 58,
+  "code": "AK47",
+  "name": "AK-47",
+  "en_name": "AK-47",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/AK47.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK-47",
+   "AK47"
+  ]
+ },
+ {
+  "id": 61,
+  "code": "STG44",
+  "name": "StG44",
+  "en_name": "StG44",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/STG44.webp",
+  "kind": "doll",
+  "aliases": [
+   "STG44",
+   "StG44"
+  ]
+ },
+ {
+  "id": 70,
+  "code": "FNFNC",
+  "name": "FNC",
+  "en_name": "FNC",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/FNFNC.webp",
+  "kind": "doll",
+  "aliases": [
+   "FNC",
+   "FNFNC"
+  ]
+ },
+ {
+  "id": 105,
+  "code": "OTs12",
+  "name": "OTs-12",
+  "en_name": "OTs-12",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/OTs12.webp",
+  "kind": "doll",
+  "aliases": [
+   "OTs-12",
+   "OTs12"
+  ]
+ },
+ {
+  "id": 108,
+  "code": "CZ805",
+  "name": "CZ-805",
+  "en_name": "CZ-805",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/CZ805.webp",
+  "kind": "doll",
+  "aliases": [
+   "CZ-805",
+   "CZ805"
+  ]
+ },
+ {
+  "id": 120,
+  "code": "ARX160",
+  "name": "ARX-160",
+  "en_name": "ARX-160",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/ARX160.webp",
+  "kind": "doll",
+  "aliases": [
+   "ARX-160",
+   "ARX160"
+  ]
+ },
+ {
+  "id": 134,
+  "code": "AR70",
+  "name": "AR70",
+  "en_name": "AR70",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/AR70.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR70"
+  ]
+ },
+ {
+  "id": 138,
+  "code": "6P62",
+  "name": "6P62",
+  "en_name": "6P62",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/6P62.webp",
+  "kind": "doll",
+  "aliases": [
+   "6P62"
+  ]
+ },
+ {
+  "id": 170,
+  "code": "Ash127",
+  "name": "ASh-12.7",
+  "en_name": "ASh-12.7",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Ash127.webp",
+  "kind": "doll",
+  "aliases": [
+   "ASh-12.7",
+   "Ash127"
+  ]
+ },
+ {
+  "id": 193,
+  "code": "T65",
+  "name": "T65",
+  "en_name": "T65",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/T65.webp",
+  "kind": "doll",
+  "aliases": [
+   "T65"
+  ]
+ },
+ {
+  "id": 223,
+  "code": "CETME556",
+  "name": "Model L",
+  "en_name": "Model L",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/CETME556.webp",
+  "kind": "doll",
+  "aliases": [
+   "CETME556",
+   "Model L"
+  ]
+ },
+ {
+  "id": 239,
+  "code": "Type03",
+  "name": "03式",
+  "en_name": "Type03",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Type03.webp",
+  "kind": "doll",
+  "aliases": [
+   "03式",
+   "Type03"
+  ]
+ },
+ {
+  "id": 258,
+  "code": "Magal",
+  "name": "马盖尔",
+  "en_name": "Magal",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Magal.webp",
+  "kind": "doll",
+  "aliases": [
+   "Magal",
+   "马盖尔"
+  ]
+ },
+ {
+  "id": 265,
+  "code": "HK33",
+  "name": "HK33",
+  "en_name": "HK33",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/HK33.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK33"
+  ]
+ },
+ {
+  "id": 279,
+  "code": "INSAS",
+  "name": "英萨斯",
+  "en_name": "INSAS",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/INSAS.webp",
+  "kind": "doll",
+  "aliases": [
+   "INSAS",
+   "英萨斯"
+  ]
+ },
+ {
+  "id": 298,
+  "code": "VEPR",
+  "name": "Vepr",
+  "en_name": "Vepr",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/VEPR.webp",
+  "kind": "doll",
+  "aliases": [
+   "VEPR",
+   "Vepr"
+  ]
+ },
+ {
+  "id": 314,
+  "code": "stg940",
+  "name": "StG-940",
+  "en_name": "StG-940",
+  "type": 4,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/stg940.webp",
+  "kind": "doll",
+  "aliases": [
+   "StG-940",
+   "stg940"
+  ]
+ },
+ {
+  "id": 54,
+  "code": "M16A1",
+  "name": "M16A1",
+  "en_name": "M16A1",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M16A1.webp",
+  "kind": "doll",
+  "aliases": [
+   "M16A1"
+  ]
+ },
+ {
+  "id": 55,
+  "code": "M4A1",
+  "name": "M4A1",
+  "en_name": "M4A1",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M4A1.webp",
+  "kind": "doll",
+  "aliases": [
+   "M4A1"
+  ]
+ },
+ {
+  "id": 56,
+  "code": "M4 SOPMOD II",
+  "name": "M4 SOPMODII",
+  "en_name": "M4 SOPMOD II",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M4_SOPMOD_II.webp",
+  "kind": "doll",
+  "aliases": [
+   "M4 SOPMOD II",
+   "M4 SOPMODII",
+   "M4SOPMODII"
+  ]
+ },
+ {
+  "id": 57,
+  "code": "AR15",
+  "name": "ST AR-15",
+  "en_name": "ST AR-15",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/AR15.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR15",
+   "ST AR-15"
+  ]
+ },
+ {
+  "id": 60,
+  "code": "ASVAL",
+  "name": "AS Val",
+  "en_name": "AS Val",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/ASVAL.webp",
+  "kind": "doll",
+  "aliases": [
+   "AS Val",
+   "ASVAL"
+  ]
+ },
+ {
+  "id": 64,
+  "code": "G36",
+  "name": "G36",
+  "en_name": "G36",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/G36.webp",
+  "kind": "doll",
+  "aliases": [
+   "G36"
+  ]
+ },
+ {
+  "id": 66,
+  "code": "56-1type",
+  "name": "56-1式",
+  "en_name": "Type 56-1 A",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/56-1type.webp",
+  "kind": "doll",
+  "aliases": [
+   "56-1type",
+   "56-1式",
+   "Type 56-1 A"
+  ]
+ },
+ {
+  "id": 69,
+  "code": "FAMAS",
+  "name": "FAMAS",
+  "en_name": "FAMAS",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/FAMAS.webp",
+  "kind": "doll",
+  "aliases": [
+   "FAMAS"
+  ]
+ },
+ {
+  "id": 72,
+  "code": "TAR21",
+  "name": "TAR-21",
+  "en_name": "TAR-21",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/TAR21.webp",
+  "kind": "doll",
+  "aliases": [
+   "TAR-21",
+   "TAR21"
+  ]
+ },
+ {
+  "id": 118,
+  "code": "9A91",
+  "name": "9A-91",
+  "en_name": "9A-91",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/9A91.webp",
+  "kind": "doll",
+  "aliases": [
+   "9A-91",
+   "9A91"
+  ]
+ },
+ {
+  "id": 171,
+  "code": "Ribeyrolles",
+  "name": "利贝罗勒",
+  "en_name": "Ribeyrolles1918",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Ribeyrolles.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ribeyrolles",
+   "Ribeyrolles1918",
+   "利贝罗勒"
+  ]
+ },
+ {
+  "id": 187,
+  "code": "Ak5",
+  "name": "Ak 5",
+  "en_name": "Ak5",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Ak5.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ak5",
+   "Ak 5"
+  ]
+ },
+ {
+  "id": 207,
+  "code": "CZ2000",
+  "name": "CZ2000",
+  "en_name": "CZ2000",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/CZ2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "CZ2000"
+  ]
+ },
+ {
+  "id": 216,
+  "code": "XM8",
+  "name": "XM8",
+  "en_name": "XM8",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/XM8.webp",
+  "kind": "doll",
+  "aliases": [
+   "XM8"
+  ]
+ },
+ {
+  "id": 227,
+  "code": "A91",
+  "name": "A-91",
+  "en_name": "A-91",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/A91.webp",
+  "kind": "doll",
+  "aliases": [
+   "A-91",
+   "A91"
+  ]
+ },
+ {
+  "id": 237,
+  "code": "SAR21",
+  "name": "SAR-21",
+  "en_name": "SAR-21",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SAR21.webp",
+  "kind": "doll",
+  "aliases": [
+   "SAR-21",
+   "SAR21"
+  ]
+ },
+ {
+  "id": 262,
+  "code": "EM2",
+  "name": "EM-2",
+  "en_name": "EM-2",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/EM2.webp",
+  "kind": "doll",
+  "aliases": [
+   "EM-2",
+   "EM2"
+  ]
+ },
+ {
+  "id": 288,
+  "code": "CR21",
+  "name": "CR-21",
+  "en_name": "CR-21",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/CR21.webp",
+  "kind": "doll",
+  "aliases": [
+   "CR-21",
+   "CR21"
+  ]
+ },
+ {
+  "id": 297,
+  "code": "M82",
+  "name": "M82",
+  "en_name": "M82",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M82.webp",
+  "kind": "doll",
+  "aliases": [
+   "M82"
+  ]
+ },
+ {
+  "id": 330,
+  "code": "FX05",
+  "name": "FX-05",
+  "en_name": "FX-05",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/FX05.webp",
+  "kind": "doll",
+  "aliases": [
+   "FX-05",
+   "FX05"
+  ]
+ },
+ {
+  "id": 335,
+  "code": "Fedorov",
+  "name": "菲德洛夫",
+  "en_name": "Fedorov",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Fedorov.webp",
+  "kind": "doll",
+  "aliases": [
+   "Fedorov",
+   "菲德洛夫"
+  ]
+ },
+ {
+  "id": 343,
+  "code": "APC556",
+  "name": "APC556",
+  "en_name": "APC556",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/APC556.webp",
+  "kind": "doll",
+  "aliases": [
+   "APC556"
+  ]
+ },
+ {
+  "id": 344,
+  "code": "FARA83",
+  "name": "FARA 83",
+  "en_name": "FARA 83",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/FARA83.webp",
+  "kind": "doll",
+  "aliases": [
+   "FARA 83",
+   "FARA83"
+  ]
+ },
+ {
+  "id": 349,
+  "code": "AK74M",
+  "name": "AK74M",
+  "en_name": "AK74M",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/AK74M.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK74M"
+  ]
+ },
+ {
+  "id": 373,
+  "code": "CMR30",
+  "name": "CMR-30",
+  "en_name": "CMR-30",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/CMR30.webp",
+  "kind": "doll",
+  "aliases": [
+   "CMR-30",
+   "CMR30"
+  ]
+ },
+ {
+  "id": 382,
+  "code": "MSBS",
+  "name": "MSBS",
+  "en_name": "MSBS",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MSBS.webp",
+  "kind": "doll",
+  "aliases": [
+   "MSBS"
+  ]
+ },
+ {
+  "id": 394,
+  "code": "CM901",
+  "name": "CM901",
+  "en_name": "CM901",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/CM901.webp",
+  "kind": "doll",
+  "aliases": [
+   "CM901"
+  ]
+ },
+ {
+  "id": 405,
+  "code": "SIGM400",
+  "name": "SIG M400",
+  "en_name": "SIG M400",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SIGM400.webp",
+  "kind": "doll",
+  "aliases": [
+   "SIG M400",
+   "SIGM400"
+  ]
+ },
+ {
+  "id": 412,
+  "code": "XCR",
+  "name": "XCR",
+  "en_name": "XCR",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/XCR.webp",
+  "kind": "doll",
+  "aliases": [
+   "XCR"
+  ]
+ },
+ {
+  "id": 9036,
+  "code": "M4A1_Motor",
+  "name": "M4A1（剧情）",
+  "en_name": "M4A1_Motor",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M4A1_Motor.webp",
+  "kind": "doll",
+  "aliases": [
+   "M4A1_Motor"
+  ]
+ },
+ {
+  "id": 9037,
+  "code": "AR15_Motor",
+  "name": "ST AR-15（剧情）",
+  "en_name": "AR15_Motor",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/AR15_Motor.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR15_Motor"
+  ]
+ },
+ {
+  "id": 9044,
+  "code": "M16A1_NPC",
+  "name": "M16A1（剧情）",
+  "en_name": "M16A1",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M16A1_NPC.webp",
+  "kind": "doll",
+  "aliases": [
+   "M16A1_NPC",
+   "M16_BOSS"
+  ]
+ },
+ {
+  "id": 9045,
+  "code": "Tank_R_Ally",
+  "name": "阿尔戈-船底座",
+  "en_name": "Carina",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Tank_R_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Carina",
+   "Tank_R_Ally",
+   "阿尔戈-船底座"
+  ]
+ },
+ {
+  "id": 9046,
+  "code": "Tank_M_Ally",
+  "name": "阿尔戈-船帆座",
+  "en_name": "Vela ",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Tank_M_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Tank_M_Ally",
+   "Vela ",
+   "阿尔戈-船帆座"
+  ]
+ },
+ {
+  "id": 9047,
+  "code": "Tank_L_Ally",
+  "name": "阿尔戈-船尾座",
+  "en_name": "Puppis",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Tank_L_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Puppis",
+   "Tank_L_Ally",
+   "阿尔戈-船尾座"
+  ]
+ },
+ {
+  "id": 9086,
+  "code": "TOW_Ally",
+  "name": "BGM-71",
+  "en_name": "BGM-71",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/TOW_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "BGM-71",
+   "TOW_Ally"
+  ]
+ },
+ {
+  "id": 9087,
+  "code": "PP93_Ally",
+  "name": "PP-93",
+  "en_name": "PP93",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PP93_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "PP-93",
+   "PP93",
+   "PP93_Ally"
+  ]
+ },
+ {
+  "id": 9088,
+  "code": "QLZ04_Ally",
+  "name": "QLZ-04",
+  "en_name": "QLZ-04",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/QLZ04_Ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "QLZ-04",
+   "QLZ04_Ally"
+  ]
+ },
+ {
+  "id": 9118,
+  "code": "M16A1_533",
+  "name": "M16A1",
+  "en_name": "M16A1",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M16A1_533.webp",
+  "kind": "doll",
+  "aliases": [
+   "M16A1",
+   "M16A1_533"
+  ]
+ },
+ {
+  "id": 20061,
+  "code": "STG44Mod",
+  "name": "StG44（三改）",
+  "en_name": "StG44",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/STG44Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "STG44Mod",
+   "StG44（三改）"
+  ]
+ },
+ {
+  "id": 20063,
+  "code": "G3Mod",
+  "name": "G3（三改）",
+  "en_name": "G3",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/G3Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "G3Mod",
+   "G3（三改）"
+  ]
+ },
+ {
+  "id": 20071,
+  "code": "ARMod",
+  "name": "加利尔（三改）",
+  "en_name": "AR",
+  "type": 4,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/ARMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "ARMod",
+   "加利尔（三改）"
+  ]
+ },
+ {
+  "id": 62,
+  "code": "G41",
+  "name": "G41",
+  "en_name": "G41",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/G41.webp",
+  "kind": "doll",
+  "aliases": [
+   "G41"
+  ]
+ },
+ {
+  "id": 65,
+  "code": "HK416",
+  "name": "HK416",
+  "en_name": "HK416",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HK416.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK416"
+  ]
+ },
+ {
+  "id": 73,
+  "code": "AUG",
+  "name": "AUG",
+  "en_name": "AUG",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AUG.webp",
+  "kind": "doll",
+  "aliases": [
+   "AUG"
+  ]
+ },
+ {
+  "id": 106,
+  "code": "FNFAL",
+  "name": "FAL",
+  "en_name": "FAL",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/FNFAL.webp",
+  "kind": "doll",
+  "aliases": [
+   "FAL",
+   "FNFAL"
+  ]
+ },
+ {
+  "id": 119,
+  "code": "OTs14",
+  "name": "OTs-14",
+  "en_name": "OTs-14",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/OTs14.webp",
+  "kind": "doll",
+  "aliases": [
+   "OTs-14",
+   "OTs14"
+  ]
+ },
+ {
+  "id": 122,
+  "code": "G11",
+  "name": "G11",
+  "en_name": "G11",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/G11.webp",
+  "kind": "doll",
+  "aliases": [
+   "G11"
+  ]
+ },
+ {
+  "id": 129,
+  "code": "95type",
+  "name": "95式",
+  "en_name": "Type 95",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/95type.webp",
+  "kind": "doll",
+  "aliases": [
+   "95type",
+   "95式",
+   "Type 95"
+  ]
+ },
+ {
+  "id": 130,
+  "code": "97type",
+  "name": "97式",
+  "en_name": "Type 97",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/97type.webp",
+  "kind": "doll",
+  "aliases": [
+   "97type",
+   "97式",
+   "Type 97"
+  ]
+ },
+ {
+  "id": 172,
+  "code": "RFB",
+  "name": "RFB",
+  "en_name": "RFB",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/RFB.webp",
+  "kind": "doll",
+  "aliases": [
+   "RFB"
+  ]
+ },
+ {
+  "id": 175,
+  "code": "ART556",
+  "name": "ART556",
+  "en_name": "ART556",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ART556.webp",
+  "kind": "doll",
+  "aliases": [
+   "ART556"
+  ]
+ },
+ {
+  "id": 181,
+  "code": "T91",
+  "name": "T91",
+  "en_name": "T91",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/T91.webp",
+  "kind": "doll",
+  "aliases": [
+   "T91"
+  ]
+ },
+ {
+  "id": 194,
+  "code": "K2",
+  "name": "K2",
+  "en_name": "K2",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/K2.webp",
+  "kind": "doll",
+  "aliases": [
+   "K2"
+  ]
+ },
+ {
+  "id": 196,
+  "code": "ZastavaM21",
+  "name": "Zas M21",
+  "en_name": "Zastava M21",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ZastavaM21.webp",
+  "kind": "doll",
+  "aliases": [
+   "Zas M21",
+   "Zastava M21",
+   "ZastavaM21"
+  ]
+ },
+ {
+  "id": 205,
+  "code": "AN94",
+  "name": "AN-94",
+  "en_name": "AN94",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AN94.webp",
+  "kind": "doll",
+  "aliases": [
+   "AN-94",
+   "AN94"
+  ]
+ },
+ {
+  "id": 206,
+  "code": "AK12",
+  "name": "AK-12",
+  "en_name": "AK12",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AK12.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK-12",
+   "AK12"
+  ]
+ },
+ {
+  "id": 214,
+  "code": "ADS",
+  "name": "ADS",
+  "en_name": "ADS",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ADS.webp",
+  "kind": "doll",
+  "aliases": [
+   "ADS"
+  ]
+ },
+ {
+  "id": 215,
+  "code": "MDR",
+  "name": "MDR",
+  "en_name": "MDR",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MDR.webp",
+  "kind": "doll",
+  "aliases": [
+   "MDR"
+  ]
+ },
+ {
+  "id": 236,
+  "code": "K11",
+  "name": "K11",
+  "en_name": "K11",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/K11.webp",
+  "kind": "doll",
+  "aliases": [
+   "K11"
+  ]
+ },
+ {
+  "id": 243,
+  "code": "Type64-AR",
+  "name": "64式自",
+  "en_name": "Type64",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Type64-AR.webp",
+  "kind": "doll",
+  "aliases": [
+   "64式自",
+   "Type64",
+   "Type64-AR"
+  ]
+ },
+ {
+  "id": 274,
+  "code": "ACR",
+  "name": "ACR",
+  "en_name": "ACR",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ACR.webp",
+  "kind": "doll",
+  "aliases": [
+   "ACR"
+  ]
+ },
+ {
+  "id": 287,
+  "code": "SIG556",
+  "name": "SIG-556",
+  "en_name": "SIG556",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SIG556.webp",
+  "kind": "doll",
+  "aliases": [
+   "SIG-556",
+   "SIG556"
+  ]
+ },
+ {
+  "id": 289,
+  "code": "R5RGP",
+  "name": "R5",
+  "en_name": "R5",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/R5RGP.webp",
+  "kind": "doll",
+  "aliases": [
+   "R5",
+   "R5RGP"
+  ]
+ },
+ {
+  "id": 290,
+  "code": "HowaType89",
+  "name": "89式自",
+  "en_name": "Type89",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HowaType89.webp",
+  "kind": "doll",
+  "aliases": [
+   "89式自",
+   "HowaType89",
+   "Type89"
+  ]
+ },
+ {
+  "id": 293,
+  "code": "AK15",
+  "name": "AK-15",
+  "en_name": "AK-15",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AK15.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK-15",
+   "AK15"
+  ]
+ },
+ {
+  "id": 306,
+  "code": "AKAlfa",
+  "name": "AK-阿尔法",
+  "en_name": "AK-Alfa",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AKAlfa.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK-Alfa",
+   "AK-阿尔法",
+   "AKAlfa"
+  ]
+ },
+ {
+  "id": 313,
+  "code": "SACR",
+  "name": "S-ACR",
+  "en_name": "S-ACR",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SACR.webp",
+  "kind": "doll",
+  "aliases": [
+   "S-ACR",
+   "SACR"
+  ]
+ },
+ {
+  "id": 318,
+  "code": "VHS",
+  "name": "VHS",
+  "en_name": "VHS",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/VHS.webp",
+  "kind": "doll",
+  "aliases": [
+   "VHS"
+  ]
+ },
+ {
+  "id": 338,
+  "code": "SIGMCX",
+  "name": "SIG MCX",
+  "en_name": "SIG MCX",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SIGMCX.webp",
+  "kind": "doll",
+  "aliases": [
+   "SIG MCX",
+   "SIGMCX"
+  ]
+ },
+ {
+  "id": 340,
+  "code": "TKB408",
+  "name": "TKB-408",
+  "en_name": "TKB-408",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/TKB408.webp",
+  "kind": "doll",
+  "aliases": [
+   "TKB-408",
+   "TKB408"
+  ]
+ },
+ {
+  "id": 342,
+  "code": "KH2002",
+  "name": "KH2002",
+  "en_name": "KH2002",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/KH2002.webp",
+  "kind": "doll",
+  "aliases": [
+   "KH2002"
+  ]
+ },
+ {
+  "id": 356,
+  "code": "A545",
+  "name": "A-545",
+  "en_name": "A-545",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/A545.webp",
+  "kind": "doll",
+  "aliases": [
+   "A-545",
+   "A545"
+  ]
+ },
+ {
+  "id": 361,
+  "code": "QBZ191",
+  "name": "QBZ-191",
+  "en_name": "QBZ-191",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/QBZ191.webp",
+  "kind": "doll",
+  "aliases": [
+   "QBZ-191",
+   "QBZ191"
+  ]
+ },
+ {
+  "id": 365,
+  "code": "SCR",
+  "name": "SCR",
+  "en_name": "SCR",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SCR.webp",
+  "kind": "doll",
+  "aliases": [
+   "SCR"
+  ]
+ },
+ {
+  "id": 372,
+  "code": "AR18",
+  "name": "AR-18",
+  "en_name": "AR-18",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AR18.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR-18",
+   "AR18"
+  ]
+ },
+ {
+  "id": 378,
+  "code": "SCARL",
+  "name": "SCAR-L",
+  "en_name": "SCAR-L",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SCARL.webp",
+  "kind": "doll",
+  "aliases": [
+   "SCAR-L",
+   "SCARL"
+  ]
+ },
+ {
+  "id": 385,
+  "code": "VRB",
+  "name": "VRB",
+  "en_name": "VRB",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/VRB.webp",
+  "kind": "doll",
+  "aliases": [
+   "VRB"
+  ]
+ },
+ {
+  "id": 390,
+  "code": "HK433",
+  "name": "HK433",
+  "en_name": "HK433",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HK433.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK433"
+  ]
+ },
+ {
+  "id": 393,
+  "code": "Beowulf",
+  "name": "贝奥武夫",
+  "en_name": "Beowulf",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Beowulf.webp",
+  "kind": "doll",
+  "aliases": [
+   "Beowulf",
+   "贝奥武夫"
+  ]
+ },
+ {
+  "id": 404,
+  "code": "MK18",
+  "name": "Mk.18",
+  "en_name": "Mk.18",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MK18.webp",
+  "kind": "doll",
+  "aliases": [
+   "MK18",
+   "Mk.18"
+  ]
+ },
+ {
+  "id": 411,
+  "code": "IA2",
+  "name": "IA2",
+  "en_name": "IA2",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/IA2.webp",
+  "kind": "doll",
+  "aliases": [
+   "IA2"
+  ]
+ },
+ {
+  "id": 417,
+  "code": "EF88",
+  "name": "EF88",
+  "en_name": "EF88",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/EF88.webp",
+  "kind": "doll",
+  "aliases": [
+   "EF88"
+  ]
+ },
+ {
+  "id": 423,
+  "code": "LR300",
+  "name": "LR-300",
+  "en_name": "LR-300",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/LR300.webp",
+  "kind": "doll",
+  "aliases": [
+   "LR-300",
+   "LR300"
+  ]
+ },
+ {
+  "id": 1007,
+  "code": "Himeko",
+  "name": "无量塔姬子",
+  "en_name": "Himeko",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Himeko.webp",
+  "kind": "doll",
+  "aliases": [
+   "Himeko",
+   "无量塔姬子"
+  ]
+ },
+ {
+  "id": 1027,
+  "code": "Angelica",
+  "name": "安洁莉卡",
+  "en_name": "Angelica",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Angelica.webp",
+  "kind": "doll",
+  "aliases": [
+   "Angelica",
+   "安洁莉卡"
+  ]
+ },
+ {
+  "id": 1029,
+  "code": "HK416Agent",
+  "name": "特工416",
+  "en_name": "HK416",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HK416Agent.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK416",
+   "HK416Agent",
+   "特工416"
+  ]
+ },
+ {
+  "id": 1032,
+  "code": "Medusa",
+  "name": "美杜莎",
+  "en_name": "Medusa",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Medusa.webp",
+  "kind": "doll",
+  "aliases": [
+   "Medusa",
+   "美杜莎"
+  ]
+ },
+ {
+  "id": 1038,
+  "code": "Ai",
+  "name": "水野爱",
+  "en_name": "Ai",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ai.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ai",
+   "水野爱"
+  ]
+ },
+ {
+  "id": 1039,
+  "code": "Junko",
+  "name": "绀野纯子",
+  "en_name": "Junko",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Junko.webp",
+  "kind": "doll",
+  "aliases": [
+   "Junko",
+   "绀野纯子"
+  ]
+ },
+ {
+  "id": 1043,
+  "code": "Ezaki",
+  "name": "江崎普林",
+  "en_name": "Ezaki",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ezaki.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ezaki",
+   "江崎普林"
+  ]
+ },
+ {
+  "id": 9001,
+  "code": "Cyclops_F",
+  "name": "独眼巨人A",
+  "en_name": "Cyclops",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Cyclops_F.webp",
+  "kind": "doll",
+  "aliases": [
+   "Cyclops",
+   "Cyclops_F",
+   "独眼巨人A"
+  ]
+ },
+ {
+  "id": 9012,
+  "code": "M4A1Mod",
+  "name": "M4A1（三改）",
+  "en_name": "M4A1",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M4A1Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M4A1Mod",
+   "M4A1（三改）"
+  ]
+ },
+ {
+  "id": 9038,
+  "code": "AK12_Motor",
+  "name": "AK-12（剧情）",
+  "en_name": "AK12_Motor",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AK12_Motor.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK12_Motor"
+  ]
+ },
+ {
+  "id": 9039,
+  "code": "AN94_Motor",
+  "name": "AN-94（剧情）",
+  "en_name": "AN94_Motor",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AN94_Motor.webp",
+  "kind": "doll",
+  "aliases": [
+   "AN94_Motor"
+  ]
+ },
+ {
+  "id": 9048,
+  "code": "M4A1Mod_Ogas",
+  "name": "M4A1（OGAS）",
+  "en_name": "M4A1",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M4A1Mod_Ogas.webp",
+  "kind": "doll",
+  "aliases": [
+   "M4A1Mod_Ogas"
+  ]
+ },
+ {
+  "id": 9060,
+  "code": "Ange_Jump",
+  "name": "安洁",
+  "en_name": "Ange",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Ange_Jump.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ange",
+   "Ange_Jump",
+   "安洁"
+  ]
+ },
+ {
+  "id": 9066,
+  "code": "Mahelian",
+  "name": "玛赫莲",
+  "en_name": "Mahelian",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Mahelian.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mahelian",
+   "玛赫莲"
+  ]
+ },
+ {
+  "id": 9102,
+  "code": "AR18_NPC",
+  "name": "柳德米拉",
+  "en_name": "AR18_NPC",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AR18_NPC.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR18_NPC",
+   "柳德米拉"
+  ]
+ },
+ {
+  "id": 9124,
+  "code": "NPC_Kalina_Blazar1",
+  "name": "格琳娜",
+  "en_name": "Kalina",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NPC_Kalina_Blazar1.webp",
+  "kind": "doll",
+  "aliases": [
+   "Kalina",
+   "NPC_Kalina_Blazar1",
+   "格琳娜"
+  ]
+ },
+ {
+  "id": 20056,
+  "code": "M4 SOPMOD IIMod",
+  "name": "M4 SOPMODII（三改）",
+  "en_name": "M4 SOPMOD II",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M4_SOPMOD_IIMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M4 SOPMOD IIMod",
+   "M4 SOPMODII（三改）",
+   "M4SOPMODIIMod"
+  ]
+ },
+ {
+  "id": 20057,
+  "code": "AR15Mod",
+  "name": "ST AR-15（三改）",
+  "en_name": "ST AR-15",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AR15Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "AR15Mod",
+   "ST AR-15（三改）"
+  ]
+ },
+ {
+  "id": 20060,
+  "code": "ASVALMod",
+  "name": "AS Val（三改）",
+  "en_name": "AS Val",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ASVALMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "ASVALMod",
+   "AS Val（三改）"
+  ]
+ },
+ {
+  "id": 20064,
+  "code": "G36Mod",
+  "name": "G36（三改）",
+  "en_name": "G36",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/G36Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "G36Mod",
+   "G36（三改）"
+  ]
+ },
+ {
+  "id": 20066,
+  "code": "56-1typeMod",
+  "name": "56-1式（三改）",
+  "en_name": "Type 56-1 A",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/56-1typeMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "56-1typeMod",
+   "56-1式（三改）",
+   "Type 56-1 A"
+  ]
+ },
+ {
+  "id": 20171,
+  "code": "RibeyrollesMod",
+  "name": "利贝罗勒（三改）",
+  "en_name": "Ribeyrolles1918",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/RibeyrollesMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "RibeyrollesMod",
+   "利贝罗勒（三改）",
+   "Ribeyrolles1918"
+  ]
+ },
+ {
+  "id": 20216,
+  "code": "XM8Mod",
+  "name": "XM8（三改）",
+  "en_name": "XM8",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/XM8Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "XM8Mod",
+   "XM8（三改）"
+  ]
+ },
+ {
+  "id": 20262,
+  "code": "EM2Mod",
+  "name": "EM-2（三改）",
+  "en_name": "EM-2",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/EM2Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "EM2Mod",
+   "EM-2（三改）"
+  ]
+ },
+ {
+  "id": 20288,
+  "code": "CR21Mod",
+  "name": "CR-21（三改）",
+  "en_name": "CR-21",
+  "type": 4,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/CR21Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "CR21Mod",
+   "CR-21（三改）"
+  ]
+ },
+ {
+  "id": 9121,
+  "code": "Beak_M16_ally",
+  "name": "M16A1",
+  "en_name": "M16A1",
+  "type": 4,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/Beak_M16_ally.webp",
+  "kind": "doll",
+  "aliases": [
+   "Beak_M16_ally",
+   "M16A1"
+  ]
+ },
+ {
+  "id": 9130,
+  "code": "AK12Mod",
+  "name": "AK-12（三改）",
+  "en_name": "AK12",
+  "type": 4,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/AK12Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK12Mod",
+   "AK-12（三改）"
+  ]
+ },
+ {
+  "id": 9131,
+  "code": "AN94Mod",
+  "name": "AN-94（三改）",
+  "en_name": "AN94",
+  "type": 4,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/AN94Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "AN94Mod",
+   "AN-94（三改）"
+  ]
+ },
+ {
+  "id": 9132,
+  "code": "AK15Mod",
+  "name": "AK-15（三改）",
+  "en_name": "AK-15",
+  "type": 4,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/AK15Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "AK15Mod",
+   "AK-15（三改）"
+  ]
+ },
+ {
+  "id": 20065,
+  "code": "HK416Mod",
+  "name": "HK416（三改）",
+  "en_name": "HK416",
+  "type": 4,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/HK416Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK416Mod",
+   "HK416（三改）"
+  ]
+ },
+ {
+  "id": 20122,
+  "code": "G11Mod",
+  "name": "G11（三改）",
+  "en_name": "G11",
+  "type": 4,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/G11Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "G11Mod",
+   "G11（三改）"
+  ]
+ },
+ {
+  "id": 20196,
+  "code": "ZastavaM21Mod",
+  "name": "Zas M21（三改）",
+  "en_name": "Zastava M21",
+  "type": 4,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/ZastavaM21Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "ZastavaM21Mod",
+   "Zas M21（三改）",
+   "Zastava M21"
+  ]
+ },
+ {
+  "id": 81,
+  "code": "LWMMG",
+  "name": "LWMMG",
+  "en_name": "LWMMG",
+  "type": 5,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/LWMMG.webp",
+  "kind": "doll",
+  "aliases": [
+   "LWMMG"
+  ]
+ },
+ {
+  "id": 82,
+  "code": "DP28",
+  "name": "DP28",
+  "en_name": "DP28",
+  "type": 5,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/DP28.webp",
+  "kind": "doll",
+  "aliases": [
+   "DP28"
+  ]
+ },
+ {
+  "id": 87,
+  "code": "MG34",
+  "name": "MG34",
+  "en_name": "MG34",
+  "type": 5,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/MG34.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG34"
+  ]
+ },
+ {
+  "id": 110,
+  "code": "FG42",
+  "name": "FG42",
+  "en_name": "FG42",
+  "type": 5,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/FG42.webp",
+  "kind": "doll",
+  "aliases": [
+   "FG42"
+  ]
+ },
+ {
+  "id": 111,
+  "code": "AAT52",
+  "name": "AAT-52",
+  "en_name": "AAT-52",
+  "type": 5,
+  "rank": 2,
+  "avatar": "assets/avatars/dolls/AAT52.webp",
+  "kind": "doll",
+  "aliases": [
+   "AAT-52",
+   "AAT52"
+  ]
+ },
+ {
+  "id": 77,
+  "code": "M2HB",
+  "name": "M2HB",
+  "en_name": "M2HB",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M2HB.webp",
+  "kind": "doll",
+  "aliases": [
+   "M2HB"
+  ]
+ },
+ {
+  "id": 79,
+  "code": "M249SAW",
+  "name": "M249 SAW",
+  "en_name": "M249 SAW",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M249SAW.webp",
+  "kind": "doll",
+  "aliases": [
+   "M249 SAW",
+   "M249SAW"
+  ]
+ },
+ {
+  "id": 80,
+  "code": "M1919A4",
+  "name": "M1919A4",
+  "en_name": "M1919A4",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M1919A4.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1919A4"
+  ]
+ },
+ {
+  "id": 84,
+  "code": "RPD",
+  "name": "RPD",
+  "en_name": "RPD",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/RPD.webp",
+  "kind": "doll",
+  "aliases": [
+   "RPD"
+  ]
+ },
+ {
+  "id": 86,
+  "code": "MG42",
+  "name": "MG42",
+  "en_name": "MG42",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/MG42.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG42"
+  ]
+ },
+ {
+  "id": 89,
+  "code": "BrenMK",
+  "name": "布伦",
+  "en_name": "Bren MK I",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/BrenMK.webp",
+  "kind": "doll",
+  "aliases": [
+   "Bren MK I",
+   "BrenMK",
+   "布伦"
+  ]
+ },
+ {
+  "id": 195,
+  "code": "HK23",
+  "name": "HK23",
+  "en_name": "HK23",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/HK23.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK23"
+  ]
+ },
+ {
+  "id": 249,
+  "code": "Type62",
+  "name": "62式",
+  "en_name": "Type62",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Type62.webp",
+  "kind": "doll",
+  "aliases": [
+   "62式",
+   "Type62"
+  ]
+ },
+ {
+  "id": 271,
+  "code": "K3",
+  "name": "K3",
+  "en_name": "K3",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/K3.webp",
+  "kind": "doll",
+  "aliases": [
+   "K3"
+  ]
+ },
+ {
+  "id": 300,
+  "code": "CAR",
+  "name": "CAR",
+  "en_name": "CAR",
+  "type": 5,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/CAR.webp",
+  "kind": "doll",
+  "aliases": [
+   "CAR"
+  ]
+ },
+ {
+  "id": 75,
+  "code": "M1918",
+  "name": "M1918",
+  "en_name": "M1918",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1918.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1918"
+  ]
+ },
+ {
+  "id": 78,
+  "code": "M60",
+  "name": "M60",
+  "en_name": "M60",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M60.webp",
+  "kind": "doll",
+  "aliases": [
+   "M60"
+  ]
+ },
+ {
+  "id": 85,
+  "code": "PK",
+  "name": "PK",
+  "en_name": "PK",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PK.webp",
+  "kind": "doll",
+  "aliases": [
+   "PK"
+  ]
+ },
+ {
+  "id": 88,
+  "code": "MG3",
+  "name": "MG3",
+  "en_name": "MG3",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MG3.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG3"
+  ]
+ },
+ {
+  "id": 121,
+  "code": "Mk48",
+  "name": "Mk48",
+  "en_name": "Mk48",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Mk48.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mk48"
+  ]
+ },
+ {
+  "id": 149,
+  "code": "AEK999",
+  "name": "AEK-999",
+  "en_name": "AEK-999",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/AEK999.webp",
+  "kind": "doll",
+  "aliases": [
+   "AEK-999",
+   "AEK999"
+  ]
+ },
+ {
+  "id": 185,
+  "code": "Ameli",
+  "name": "阿梅利",
+  "en_name": "Ameli",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Ameli.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ameli",
+   "阿梅利"
+  ]
+ },
+ {
+  "id": 199,
+  "code": "80type",
+  "name": "80式",
+  "en_name": "80type",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/80type.webp",
+  "kind": "doll",
+  "aliases": [
+   "80type",
+   "80式"
+  ]
+ },
+ {
+  "id": 240,
+  "code": "Mk46",
+  "name": "Mk46",
+  "en_name": "Mk46",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Mk46.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mk46"
+  ]
+ },
+ {
+  "id": 254,
+  "code": "UKM2000",
+  "name": "UKM-2000",
+  "en_name": "UKM-2000",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/UKM2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "UKM-2000",
+   "UKM2000"
+  ]
+ },
+ {
+  "id": 264,
+  "code": "ChauchatM1915",
+  "name": "绍沙",
+  "en_name": "Chauchat",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/ChauchatM1915.webp",
+  "kind": "doll",
+  "aliases": [
+   "Chauchat",
+   "ChauchatM1915",
+   "绍沙"
+  ]
+ },
+ {
+  "id": 275,
+  "code": "M1895MG",
+  "name": "M1895 CB",
+  "en_name": "M1895",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1895MG.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1895",
+   "M1895 CB",
+   "M1895MG"
+  ]
+ },
+ {
+  "id": 319,
+  "code": "PM1910",
+  "name": "PM1910",
+  "en_name": "PM1910",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/PM1910.webp",
+  "kind": "doll",
+  "aliases": [
+   "PM1910"
+  ]
+ },
+ {
+  "id": 362,
+  "code": "LS26",
+  "name": "LS26",
+  "en_name": "LS26",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/LS26.webp",
+  "kind": "doll",
+  "aliases": [
+   "LS26"
+  ]
+ },
+ {
+  "id": 396,
+  "code": "MG15",
+  "name": "MG15",
+  "en_name": "MG15",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MG15.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG15"
+  ]
+ },
+ {
+  "id": 20080,
+  "code": "M1919A4Mod",
+  "name": "M1919A4（三改）",
+  "en_name": "M1919A4",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1919A4Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1919A4Mod",
+   "M1919A4（三改）"
+  ]
+ },
+ {
+  "id": 20081,
+  "code": "LWMMGMod",
+  "name": "LWMMG（三改）",
+  "en_name": "LWMMG",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/LWMMGMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "LWMMGMod",
+   "LWMMG（三改）"
+  ]
+ },
+ {
+  "id": 20089,
+  "code": "BrenMKMod",
+  "name": "布伦（三改）",
+  "en_name": "Bren MK I",
+  "type": 5,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/BrenMKMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "BrenMKMod",
+   "布伦（三改）",
+   "Bren MK I"
+  ]
+ },
+ {
+  "id": 109,
+  "code": "MG5",
+  "name": "MG5",
+  "en_name": "MG5",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MG5.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG5"
+  ]
+ },
+ {
+  "id": 112,
+  "code": "NEGEV",
+  "name": "内格夫",
+  "en_name": "NEGEV",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NEGEV.webp",
+  "kind": "doll",
+  "aliases": [
+   "NEGEV",
+   "内格夫"
+  ]
+ },
+ {
+  "id": 125,
+  "code": "MG4",
+  "name": "MG4",
+  "en_name": "MG4",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MG4.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG4"
+  ]
+ },
+ {
+  "id": 173,
+  "code": "PKP",
+  "name": "PKP",
+  "en_name": "Pecheneg",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/PKP.webp",
+  "kind": "doll",
+  "aliases": [
+   "PKP",
+   "Pecheneg"
+  ]
+ },
+ {
+  "id": 208,
+  "code": "HK21",
+  "name": "HK21",
+  "en_name": "HK21",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HK21.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK21"
+  ]
+ },
+ {
+  "id": 238,
+  "code": "Type88",
+  "name": "88式",
+  "en_name": "Type88",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Type88.webp",
+  "kind": "doll",
+  "aliases": [
+   "88式",
+   "Type88"
+  ]
+ },
+ {
+  "id": 253,
+  "code": "Lewis",
+  "name": "刘易斯",
+  "en_name": "Lewis",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Lewis.webp",
+  "kind": "doll",
+  "aliases": [
+   "Lewis",
+   "刘易斯"
+  ]
+ },
+ {
+  "id": 263,
+  "code": "MG36",
+  "name": "MG36",
+  "en_name": "MG36",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MG36.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG36"
+  ]
+ },
+ {
+  "id": 276,
+  "code": "Kord",
+  "name": "Kord",
+  "en_name": "Kord",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Kord.webp",
+  "kind": "doll",
+  "aliases": [
+   "Kord"
+  ]
+ },
+ {
+  "id": 292,
+  "code": "RPK16",
+  "name": "RPK-16",
+  "en_name": "RPK-16",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/RPK16.webp",
+  "kind": "doll",
+  "aliases": [
+   "RPK-16",
+   "RPK16"
+  ]
+ },
+ {
+  "id": 307,
+  "code": "ZB26",
+  "name": "ZB-26",
+  "en_name": "ZB-26",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ZB26.webp",
+  "kind": "doll",
+  "aliases": [
+   "ZB-26",
+   "ZB26"
+  ]
+ },
+ {
+  "id": 339,
+  "code": "RPK203",
+  "name": "RPK-203",
+  "en_name": "RPK-203",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/RPK203.webp",
+  "kind": "doll",
+  "aliases": [
+   "RPK-203",
+   "RPK203"
+  ]
+ },
+ {
+  "id": 345,
+  "code": "MG338",
+  "name": "MG338",
+  "en_name": "MG338",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MG338.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG338"
+  ]
+ },
+ {
+  "id": 374,
+  "code": "M240L",
+  "name": "M240L",
+  "en_name": "M240L",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M240L.webp",
+  "kind": "doll",
+  "aliases": [
+   "M240L"
+  ]
+ },
+ {
+  "id": 386,
+  "code": "LAMG",
+  "name": "LAMG",
+  "en_name": "LAMG",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/LAMG.webp",
+  "kind": "doll",
+  "aliases": [
+   "LAMG"
+  ]
+ },
+ {
+  "id": 395,
+  "code": "FM24",
+  "name": "FM24",
+  "en_name": "FM24",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/FM24.webp",
+  "kind": "doll",
+  "aliases": [
+   "FM24"
+  ]
+ },
+ {
+  "id": 406,
+  "code": "XM556",
+  "name": "XM556",
+  "en_name": "XM556",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/XM556.webp",
+  "kind": "doll",
+  "aliases": [
+   "XM556"
+  ]
+ },
+ {
+  "id": 1021,
+  "code": "Alma",
+  "name": "阿尔玛·阿玛斯",
+  "en_name": "Alma Armas",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Alma.webp",
+  "kind": "doll",
+  "aliases": [
+   "Alma",
+   "Alma Armas",
+   "阿尔玛·阿玛斯"
+  ]
+ },
+ {
+  "id": 1026,
+  "code": "Claes",
+  "name": "库拉耶丝",
+  "en_name": "Claes",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Claes.webp",
+  "kind": "doll",
+  "aliases": [
+   "Claes",
+   "库拉耶丝"
+  ]
+ },
+ {
+  "id": 1033,
+  "code": "Yurine",
+  "name": "花园百合铃",
+  "en_name": "Yurine Hanazono",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Yurine.webp",
+  "kind": "doll",
+  "aliases": [
+   "Yurine",
+   "Yurine Hanazono",
+   "花园百合铃"
+  ]
+ },
+ {
+  "id": 1040,
+  "code": "Yuugiri",
+  "name": "夕雾",
+  "en_name": "Yugiri",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Yuugiri.webp",
+  "kind": "doll",
+  "aliases": [
+   "Yugiri",
+   "Yuugiri",
+   "夕雾"
+  ]
+ },
+ {
+  "id": 1044,
+  "code": "Mizukinn",
+  "name": "水金铃鹿",
+  "en_name": "Mizukinn",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Mizukinn.webp",
+  "kind": "doll",
+  "aliases": [
+   "Mizukinn",
+   "水金铃鹿"
+  ]
+ },
+ {
+  "id": 9003,
+  "code": "Cerynitis_F",
+  "name": "牝鹿",
+  "en_name": "Cerynitis",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Cerynitis_F.webp",
+  "kind": "doll",
+  "aliases": [
+   "Cerynitis",
+   "Cerynitis_F",
+   "牝鹿"
+  ]
+ },
+ {
+  "id": 9004,
+  "code": "Hydra_F",
+  "name": "九头蛇",
+  "en_name": "Hydra",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Hydra_F.webp",
+  "kind": "doll",
+  "aliases": [
+   "Hydra",
+   "Hydra_F",
+   "九头蛇"
+  ]
+ },
+ {
+  "id": 20075,
+  "code": "M1918Mod",
+  "name": "M1918（三改）",
+  "en_name": "M1918",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M1918Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1918Mod",
+   "M1918（三改）"
+  ]
+ },
+ {
+  "id": 20088,
+  "code": "MG3Mod",
+  "name": "MG3（三改）",
+  "en_name": "MG3",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MG3Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG3Mod",
+   "MG3（三改）"
+  ]
+ },
+ {
+  "id": 20199,
+  "code": "80typeMod",
+  "name": "80式（三改）",
+  "en_name": "80type",
+  "type": 5,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/80typeMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "80typeMod",
+   "80式（三改）"
+  ]
+ },
+ {
+  "id": 20125,
+  "code": "MG4Mod",
+  "name": "MG4（三改）",
+  "en_name": "MG4",
+  "type": 5,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/MG4Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "MG4Mod",
+   "MG4（三改）"
+  ]
+ },
+ {
+  "id": 152,
+  "code": "M1897",
+  "name": "M1897",
+  "en_name": "M1897",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M1897.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1897"
+  ]
+ },
+ {
+  "id": 154,
+  "code": "M500",
+  "name": "M500",
+  "en_name": "M500",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/M500.webp",
+  "kind": "doll",
+  "aliases": [
+   "M500"
+  ]
+ },
+ {
+  "id": 158,
+  "code": "KS23",
+  "name": "KS-23",
+  "en_name": "KS-23",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/KS23.webp",
+  "kind": "doll",
+  "aliases": [
+   "KS-23",
+   "KS23"
+  ]
+ },
+ {
+  "id": 159,
+  "code": "RMB93",
+  "name": "RMB-93",
+  "en_name": "RMB-93",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/RMB93.webp",
+  "kind": "doll",
+  "aliases": [
+   "RMB-93",
+   "RMB93"
+  ]
+ },
+ {
+  "id": 190,
+  "code": "NS2000",
+  "name": "NS2000",
+  "en_name": "NS2000",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/NS2000.webp",
+  "kind": "doll",
+  "aliases": [
+   "NS2000"
+  ]
+ },
+ {
+  "id": 278,
+  "code": "Six12",
+  "name": "CPS-12",
+  "en_name": "Six12",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/Six12.webp",
+  "kind": "doll",
+  "aliases": [
+   "CPS-12",
+   "Six12"
+  ]
+ },
+ {
+  "id": 299,
+  "code": "HSM10",
+  "name": "高标10型",
+  "en_name": "HSM10",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/HSM10.webp",
+  "kind": "doll",
+  "aliases": [
+   "HSM10",
+   "高标10型"
+  ]
+ },
+ {
+  "id": 321,
+  "code": "TavorTS12",
+  "name": "TS12",
+  "en_name": "TS12",
+  "type": 6,
+  "rank": 3,
+  "avatar": "assets/avatars/dolls/TavorTS12.webp",
+  "kind": "doll",
+  "aliases": [
+   "TS12",
+   "TavorTS12"
+  ]
+ },
+ {
+  "id": 153,
+  "code": "Ithaca37",
+  "name": "M37",
+  "en_name": "M37",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Ithaca37.webp",
+  "kind": "doll",
+  "aliases": [
+   "Ithaca37",
+   "M37"
+  ]
+ },
+ {
+  "id": 155,
+  "code": "M590",
+  "name": "M590",
+  "en_name": "M590",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M590.webp",
+  "kind": "doll",
+  "aliases": [
+   "M590"
+  ]
+ },
+ {
+  "id": 156,
+  "code": "SuperShorty",
+  "name": "超级肖蒂",
+  "en_name": "Super-Shorty",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SuperShorty.webp",
+  "kind": "doll",
+  "aliases": [
+   "Super-Shorty",
+   "SuperShorty",
+   "超级肖蒂"
+  ]
+ },
+ {
+  "id": 161,
+  "code": "97typeS",
+  "name": "97式霰",
+  "en_name": "Type 97 S",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/97typeS.webp",
+  "kind": "doll",
+  "aliases": [
+   "97typeS",
+   "97式霰",
+   "Type 97 S"
+  ]
+ },
+ {
+  "id": 162,
+  "code": "SPAS12",
+  "name": "SPAS-12",
+  "en_name": "SPAS-12",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/SPAS12.webp",
+  "kind": "doll",
+  "aliases": [
+   "SPAS-12",
+   "SPAS12"
+  ]
+ },
+ {
+  "id": 165,
+  "code": "M1014",
+  "name": "M1014",
+  "en_name": "M1014",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1014.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1014"
+  ]
+ },
+ {
+  "id": 189,
+  "code": "USAS12",
+  "name": "USAS-12",
+  "en_name": "USAS12",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/USAS12.webp",
+  "kind": "doll",
+  "aliases": [
+   "USAS-12",
+   "USAS12"
+  ]
+ },
+ {
+  "id": 283,
+  "code": "Liberator",
+  "name": "解放者",
+  "en_name": "Liberator",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Liberator.webp",
+  "kind": "doll",
+  "aliases": [
+   "Liberator",
+   "解放者"
+  ]
+ },
+ {
+  "id": 302,
+  "code": "ColtDefender",
+  "name": "防卫者",
+  "en_name": "ColtDefender",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/ColtDefender.webp",
+  "kind": "doll",
+  "aliases": [
+   "ColtDefender",
+   "防卫者"
+  ]
+ },
+ {
+  "id": 325,
+  "code": "VPM5",
+  "name": "V-PM5",
+  "en_name": "V-PM5",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/VPM5.webp",
+  "kind": "doll",
+  "aliases": [
+   "V-PM5",
+   "VPM5"
+  ]
+ },
+ {
+  "id": 326,
+  "code": "HK512",
+  "name": "HK512",
+  "en_name": "HK512",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/HK512.webp",
+  "kind": "doll",
+  "aliases": [
+   "HK512"
+  ]
+ },
+ {
+  "id": 352,
+  "code": "Nova",
+  "name": "新星",
+  "en_name": "Nova",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/Nova.webp",
+  "kind": "doll",
+  "aliases": [
+   "Nova",
+   "新星"
+  ]
+ },
+ {
+  "id": 353,
+  "code": "MAG7",
+  "name": "MAG-7",
+  "en_name": "MAG-7",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/MAG7.webp",
+  "kind": "doll",
+  "aliases": [
+   "MAG-7",
+   "MAG7"
+  ]
+ },
+ {
+  "id": 368,
+  "code": "UTS15",
+  "name": "UTS-15",
+  "en_name": "UTS-15",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/UTS15.webp",
+  "kind": "doll",
+  "aliases": [
+   "UTS-15",
+   "UTS15"
+  ]
+ },
+ {
+  "id": 20152,
+  "code": "M1897Mod",
+  "name": "M1897（三改）",
+  "en_name": "M1897",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M1897Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1897Mod",
+   "M1897（三改）"
+  ]
+ },
+ {
+  "id": 20154,
+  "code": "M500Mod",
+  "name": "M500（三改）",
+  "en_name": "M500",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/M500Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "M500Mod",
+   "M500（三改）"
+  ]
+ },
+ {
+  "id": 20159,
+  "code": "RMB93Mod",
+  "name": "RMB-93（三改）",
+  "en_name": "RMB-93",
+  "type": 6,
+  "rank": 4,
+  "avatar": "assets/avatars/dolls/RMB93Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "RMB93Mod",
+   "RMB-93（三改）"
+  ]
+ },
+ {
+  "id": 151,
+  "code": "M1887",
+  "name": "M1887",
+  "en_name": "M1887",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M1887.webp",
+  "kind": "doll",
+  "aliases": [
+   "M1887"
+  ]
+ },
+ {
+  "id": 157,
+  "code": "KSG",
+  "name": "KSG",
+  "en_name": "KSG",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/KSG.webp",
+  "kind": "doll",
+  "aliases": [
+   "KSG"
+  ]
+ },
+ {
+  "id": 160,
+  "code": "Saiga12",
+  "name": "塞伽12型",
+  "en_name": "Saiga-12",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Saiga12.webp",
+  "kind": "doll",
+  "aliases": [
+   "Saiga-12",
+   "Saiga12",
+   "塞伽12型"
+  ]
+ },
+ {
+  "id": 163,
+  "code": "AA12",
+  "name": "AA-12",
+  "en_name": "AA-12",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/AA12.webp",
+  "kind": "doll",
+  "aliases": [
+   "AA-12",
+   "AA12"
+  ]
+ },
+ {
+  "id": 164,
+  "code": "FP6",
+  "name": "FP-6",
+  "en_name": "FP-6",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/FP6.webp",
+  "kind": "doll",
+  "aliases": [
+   "FP-6",
+   "FP6"
+  ]
+ },
+ {
+  "id": 188,
+  "code": "SAT8",
+  "name": "S.A.T.8",
+  "en_name": "SAT8",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SAT8.webp",
+  "kind": "doll",
+  "aliases": [
+   "S.A.T.8",
+   "SAT8"
+  ]
+ },
+ {
+  "id": 229,
+  "code": "M870P",
+  "name": "M870",
+  "en_name": "M870P",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M870P.webp",
+  "kind": "doll",
+  "aliases": [
+   "M870",
+   "M870P"
+  ]
+ },
+ {
+  "id": 281,
+  "code": "HKCAWS",
+  "name": "CAWS",
+  "en_name": "CAWS",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/HKCAWS.webp",
+  "kind": "doll",
+  "aliases": [
+   "CAWS",
+   "HKCAWS"
+  ]
+ },
+ {
+  "id": 282,
+  "code": "DP12",
+  "name": "DP-12",
+  "en_name": "DP-12",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/DP12.webp",
+  "kind": "doll",
+  "aliases": [
+   "DP-12",
+   "DP12"
+  ]
+ },
+ {
+  "id": 323,
+  "code": "LTLX7000",
+  "name": "LTLX7000",
+  "en_name": "LTLX7000",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/LTLX7000.webp",
+  "kind": "doll",
+  "aliases": [
+   "LTLX7000"
+  ]
+ },
+ {
+  "id": 324,
+  "code": "M6ASW",
+  "name": "M6 ASW",
+  "en_name": "M6 ASW",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M6ASW.webp",
+  "kind": "doll",
+  "aliases": [
+   "M6 ASW",
+   "M6ASW"
+  ]
+ },
+ {
+  "id": 350,
+  "code": "FO12",
+  "name": "FO-12",
+  "en_name": "FO-12",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/FO12.webp",
+  "kind": "doll",
+  "aliases": [
+   "FO-12",
+   "FO12"
+  ]
+ },
+ {
+  "id": 351,
+  "code": "M26MASS",
+  "name": "M26-MASS",
+  "en_name": "M26-MASS",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M26MASS.webp",
+  "kind": "doll",
+  "aliases": [
+   "M26-MASS",
+   "M26MASS"
+  ]
+ },
+ {
+  "id": 366,
+  "code": "SPAS15",
+  "name": "SPAS-15",
+  "en_name": "SPAS-15",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SPAS15.webp",
+  "kind": "doll",
+  "aliases": [
+   "SPAS-15",
+   "SPAS15"
+  ]
+ },
+ {
+  "id": 367,
+  "code": "MK3A1",
+  "name": "MK3A1",
+  "en_name": "MK3A1",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/MK3A1.webp",
+  "kind": "doll",
+  "aliases": [
+   "MK3A1"
+  ]
+ },
+ {
+  "id": 387,
+  "code": "TPS",
+  "name": "TPS",
+  "en_name": "TPS",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/TPS.webp",
+  "kind": "doll",
+  "aliases": [
+   "TPS"
+  ]
+ },
+ {
+  "id": 397,
+  "code": "Stevens520",
+  "name": "史蒂文斯520",
+  "en_name": "Stevens520",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Stevens520.webp",
+  "kind": "doll",
+  "aliases": [
+   "Stevens520",
+   "史蒂文斯520"
+  ]
+ },
+ {
+  "id": 398,
+  "code": "Stevens620",
+  "name": "史蒂文斯620",
+  "en_name": "Stevens620",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Stevens620.webp",
+  "kind": "doll",
+  "aliases": [
+   "Stevens620",
+   "史蒂文斯620"
+  ]
+ },
+ {
+  "id": 418,
+  "code": "ChiappaTripleCrown",
+  "name": "齐亚帕三重冕",
+  "en_name": "ChiappaTripleCrown",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/ChiappaTripleCrown.webp",
+  "kind": "doll",
+  "aliases": [
+   "ChiappaTripleCrown",
+   "齐亚帕三重冕"
+  ]
+ },
+ {
+  "id": 424,
+  "code": "M887",
+  "name": "M887",
+  "en_name": "M887",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/M887.webp",
+  "kind": "doll",
+  "aliases": [
+   "M887"
+  ]
+ },
+ {
+  "id": 1002,
+  "code": "GG_elfeldt",
+  "name": "艾尔菲尔特",
+  "en_name": "Elphelt",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/GG_elfeldt.webp",
+  "kind": "doll",
+  "aliases": [
+   "Elphelt",
+   "GG_elfeldt",
+   "艾尔菲尔特"
+  ]
+ },
+ {
+  "id": 1008,
+  "code": "Seele",
+  "name": "希儿",
+  "en_name": "Seele",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Seele.webp",
+  "kind": "doll",
+  "aliases": [
+   "Seele",
+   "希儿"
+  ]
+ },
+ {
+  "id": 1022,
+  "code": "Dana",
+  "name": "达娜·赞恩",
+  "en_name": "Dana Zane",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Dana.webp",
+  "kind": "doll",
+  "aliases": [
+   "Dana",
+   "Dana Zane",
+   "达娜·赞恩"
+  ]
+ },
+ {
+  "id": 1025,
+  "code": "Triela",
+  "name": "崔耶拉",
+  "en_name": "Triela",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Triela.webp",
+  "kind": "doll",
+  "aliases": [
+   "Triela",
+   "崔耶拉"
+  ]
+ },
+ {
+  "id": 1034,
+  "code": "Minosu",
+  "name": "米诺斯",
+  "en_name": "Minos",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Minosu.webp",
+  "kind": "doll",
+  "aliases": [
+   "Minos",
+   "Minosu",
+   "米诺斯"
+  ]
+ },
+ {
+  "id": 1041,
+  "code": "Saki",
+  "name": "二阶堂咲",
+  "en_name": "Saki",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Saki.webp",
+  "kind": "doll",
+  "aliases": [
+   "Saki",
+   "二阶堂咲"
+  ]
+ },
+ {
+  "id": 9002,
+  "code": "Cyclops_SG_F",
+  "name": "独眼巨人S",
+  "en_name": "Cyclops_SG",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Cyclops_SG_F.webp",
+  "kind": "doll",
+  "aliases": [
+   "Cyclops_SG",
+   "Cyclops_SG_F",
+   "独眼巨人S"
+  ]
+ },
+ {
+  "id": 9005,
+  "code": "Aegis_GA_F",
+  "name": "圣盾",
+  "en_name": "Aegis_GA",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Aegis_GA_F.webp",
+  "kind": "doll",
+  "aliases": [
+   "Aegis_GA",
+   "Aegis_GA_F",
+   "圣盾"
+  ]
+ },
+ {
+  "id": 9073,
+  "code": "NPC_Kryuger",
+  "name": "克鲁格",
+  "en_name": "NPC_Kryuger",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/NPC_Kryuger.webp",
+  "kind": "doll",
+  "aliases": [
+   "NPC_Kryuger",
+   "克鲁格"
+  ]
+ },
+ {
+  "id": 9074,
+  "code": "Kryuger_2021summer",
+  "name": "克鲁格",
+  "en_name": "Kryuger_2021summer",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Kryuger_2021summer.webp",
+  "kind": "doll",
+  "aliases": [
+   "Kryuger_2021summer",
+   "克鲁格"
+  ]
+ },
+ {
+  "id": 9099,
+  "code": "Beak",
+  "name": "喙",
+  "en_name": "Beak",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Beak.webp",
+  "kind": "doll",
+  "aliases": [
+   "Beak",
+   "喙"
+  ]
+ },
+ {
+  "id": 9123,
+  "code": "Beak_M16X",
+  "name": "喙",
+  "en_name": "Beak",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/Beak_M16X.webp",
+  "kind": "doll",
+  "aliases": [
+   "Beak",
+   "Beak_M16X",
+   "喙"
+  ]
+ },
+ {
+  "id": 20161,
+  "code": "97typeSMod",
+  "name": "97式霰（三改）",
+  "en_name": "Type 97 S",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/97typeSMod.webp",
+  "kind": "doll",
+  "aliases": [
+   "97typeSMod",
+   "97式霰（三改）",
+   "Type 97 S"
+  ]
+ },
+ {
+  "id": 20162,
+  "code": "SPAS12Mod",
+  "name": "SPAS-12（三改）",
+  "en_name": "SPAS-12",
+  "type": 6,
+  "rank": 5,
+  "avatar": "assets/avatars/dolls/SPAS12Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "SPAS12Mod",
+   "SPAS-12（三改）"
+  ]
+ },
+ {
+  "id": 20282,
+  "code": "DP12Mod",
+  "name": "DP-12（三改）",
+  "en_name": "DP-12",
+  "type": 6,
+  "rank": 6,
+  "avatar": "assets/avatars/dolls/DP12Mod.webp",
+  "kind": "doll",
+  "aliases": [
+   "DP12Mod",
+   "DP-12（三改）"
+  ]
+ }
+]

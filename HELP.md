@@ -71,6 +71,19 @@
 
 当前账号可在窗口右上角点 **「导出账号」**，把载入的原始快照 JSON 另存为文件；之后可用「导入快照」恢复。
 
+### WebUI / PWA / Android
+
+同一套页面也可在手机 / 平板上用：
+
+```powershell
+.\run_web.ps1
+```
+
+打开 `http://127.0.0.1:8770/`；手机安装 PWA 用 `adb reverse tcp:8770 tcp:8770` 后访问 `http://localhost:8770/`。
+组件页需要快照带 `vehicle_component_with_user_info`：点 **「连接」**（默认 `/api/latest`，由 `web/serve.py` 自动合并
+同 UID 的 `index_*.json`），或用 `python tools\export_web_snapshot.py` 导出 `web_snapshot.json` 再导入。
+`android/` 是离线 WebView 套壳工程，构建方法见 `android/README.md`。
+
 人形 / 妖精 / 融合势力支持：
 
 - 三改与原型合并为同一单位，点开明细可看到原型 / 三改的逐条记录

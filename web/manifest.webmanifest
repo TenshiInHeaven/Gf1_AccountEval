@@ -1,0 +1,26 @@
+{
+  "name": "GF Account Forge · 少前账号强度工坊",
+  "short_name": "GF Forge",
+  "description": "少女前线账号四维强度评估 + 机动装甲组件方案（归海 / 秋水）",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F3F8FE",
+  "theme_color": "#2474E5",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

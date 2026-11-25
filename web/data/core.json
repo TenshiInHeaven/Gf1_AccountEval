@@ -1,0 +1,23 @@
+[
+ "./index.html",
+ "./styles.css",
+ "./app.js",
+ "./modules.js",
+ "./manifest.webmanifest",
+ "./icons/icon-192.png",
+ "./icons/icon-512.png",
+ "./data/codex/dolls.json",
+ "./data/codex/fairies.json",
+ "./data/codex/sangvis.json",
+ "./data/components.json",
+ "./data/equipment_activities.json",
+ "./data/equipment_items.json",
+ "./data/equipment_targets.json",
+ "./data/guihai_weapons.json",
+ "./data/qiushui_components.json",
+ "./data/sample_account.json",
+ "./data/tierlists/dolls.json",
+ "./data/tierlists/fairies.json",
+ "./data/tierlists/sangvis.json",
+ "./data/vehicle_components.json"
+]

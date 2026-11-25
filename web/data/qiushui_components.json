@@ -1,0 +1,1428 @@
+{
+  "version": "2026-11-25",
+  "title": "秋水Ameth 各积分关卡组件词条",
+  "source": "秋水Ameth 排行关卡表格合集（腾讯文档，8 个活动的主战坦克 / 战术人型机甲页）",
+  "note": "每张表 9 件组件。匹配要求组件名 + 属性词条1 + 属性词条2；任意词条是推荐项，不强制。",
+  "coverage": {
+    "included": [
+      "飓风营救Plus",
+      "终焉花海Plus",
+      "谜境守卫Plus",
+      "三维流形G-4",
+      "自画像-厚涂",
+      "从潘洛斯阶梯跃下",
+      "静默沙盘",
+      "铁雨礼赞"
+    ],
+    "login_required": [
+      "坠入兔洞Plus",
+      "混沌落幕Plus"
+    ],
+    "no_component_tabs": [
+      "虚数迷宫Plus",
+      "马蜂窝Plus",
+      "秘密涡点Plus",
+      "驱雾行动Plus",
+      "噩梦迷城Plus",
+      "逃亡圣咏"
+    ]
+  },
+  "activities": [
+    {
+      "id": "DYVlDZGtacXRqQ3pv",
+      "name": "飓风营救Plus",
+      "url": "https://docs.qq.com/sheet/DYVlDZGtacXRqQ3pv",
+      "tables": [
+        {
+          "id": "DYVlDZGtacXRqQ3pv-1",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "精度",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "弱点突破"
+            },
+            {
+              "name": "导弹发射器MK2",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "反装甲狙击枪",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击概率",
+              "stat2": "破防",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "相控阵雷达",
+              "stat1": "暴击伤害",
+              "stat2": "破防",
+              "optional": "护盾预防"
+            }
+          ]
+        },
+        {
+          "id": "DYVlDZGtacXRqQ3pv-2",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "回避芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "旋转炮台",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "轻武护盾"
+            },
+            {
+              "name": "装甲加农炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "通用机枪MK-I",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "轻武弱化"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "护盾预防"
+            },
+            {
+              "name": "相控阵雷达",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "蓄能转化"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DYUtRa25ScW5obWdT",
+      "name": "终焉花海Plus",
+      "url": "https://docs.qq.com/sheet/DYUtRa25ScW5obWdT",
+      "tables": [
+        {
+          "id": "DYUtRa25ScW5obWdT-1",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "精度芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "鹰眼芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "应急护盾"
+            },
+            {
+              "name": "导弹发射器MK2",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "有甲特化"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "应急增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "重武穿甲",
+              "stat2": "破防",
+              "optional": "正规军增幅"
+            },
+            {
+              "name": "相控阵雷达",
+              "stat1": "重武穿甲",
+              "stat2": "破防",
+              "optional": "护盾预防"
+            }
+          ]
+        },
+        {
+          "id": "DYUtRa25ScW5obWdT-2",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "命中",
+              "optional": ""
+            },
+            {
+              "name": "回避芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "单编特化"
+            },
+            {
+              "name": "榴弹发射器",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "相控阵雷达",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "蓄能转化"
+            },
+            {
+              "name": "迷彩网",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "应急护盾"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DYXFmZ2x4QUtLcFJ3",
+      "name": "谜境守卫Plus",
+      "url": "https://docs.qq.com/sheet/DYXFmZ2x4QUtLcFJ3",
+      "tables": [
+        {
+          "id": "DYXFmZ2x4QUtLcFJ3-1",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "精度芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "鹰眼芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "重武支援"
+            },
+            {
+              "name": "导弹发射器MK2",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": "弱点突破"
+            },
+            {
+              "name": "反装甲狙击枪",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "应急增幅"
+            },
+            {
+              "name": "迷彩网",
+              "stat1": "护甲",
+              "stat2": "暴击概率",
+              "optional": "护盾增伤"
+            }
+          ]
+        },
+        {
+          "id": "DYXFmZ2x4QUtLcFJ3-2",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "火力芯片",
+              "stat1": "轻武伤害",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "攻速芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "预防压制"
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "反装甲狙击枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "应急增幅"
+            },
+            {
+              "name": "顶部格栅装甲",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "应急护盾"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DYUpYcGtqVkpGWEtV",
+      "name": "三维流形G-4",
+      "url": "https://docs.qq.com/sheet/DYUpYcGtqVkpGWEtV",
+      "tables": [
+        {
+          "id": "DYUpYcGtqVkpGWEtV-1",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "精度芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "鹰眼芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "重武支援"
+            },
+            {
+              "name": "导弹发射器MK2",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": "弱点突破"
+            },
+            {
+              "name": "反装甲狙击枪",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "应急增幅"
+            },
+            {
+              "name": "迷彩网",
+              "stat1": "护甲",
+              "stat2": "暴击概率",
+              "optional": "护盾增伤"
+            }
+          ]
+        },
+        {
+          "id": "DYUpYcGtqVkpGWEtV-2",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "火力芯片",
+              "stat1": "轻武伤害",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "攻速芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "预防压制"
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "反装甲狙击枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "应急增幅"
+            },
+            {
+              "name": "顶部格栅装甲",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "应急护盾"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DYW1JUHJIVkZRWUx1",
+      "name": "自画像-厚涂",
+      "url": "https://docs.qq.com/sheet/DYW1JUHJIVkZRWUx1",
+      "tables": [
+        {
+          "id": "DYW1JUHJIVkZRWUx1-1",
+          "side": "主战坦克",
+          "variant": "远程-ID21",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "应急护盾"
+            },
+            {
+              "name": "导弹发射器MK2",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击概率",
+              "stat2": "破防",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "相控阵雷达",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "护盾预防"
+            }
+          ]
+        },
+        {
+          "id": "DYW1JUHJIVkZRWUx1-2",
+          "side": "主战坦克",
+          "variant": "远程-ID33,34",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "精度芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "鹰眼芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "重武支援"
+            },
+            {
+              "name": "导弹发射器MK2",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": "弱点突破"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击概率",
+              "stat2": "破防",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "应急增幅"
+            }
+          ]
+        },
+        {
+          "id": "DYW1JUHJIVkZRWUx1-3",
+          "side": "主战坦克",
+          "variant": "远程-ID40",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "精度芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "鹰眼芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "有甲特化"
+            },
+            {
+              "name": "激光武器",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": "机械特化"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击概率",
+              "stat2": "破防",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "破防",
+              "optional": "精英增幅"
+            }
+          ]
+        },
+        {
+          "id": "DYW1JUHJIVkZRWUx1-4",
+          "side": "主战坦克",
+          "variant": "远程-ID27,28,39,45,46",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "精度芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "鹰眼芯片",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "重武支援"
+            },
+            {
+              "name": "导弹发射器MK2",
+              "stat1": "重武伤害",
+              "stat2": "重武穿甲",
+              "optional": "弱点突破"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击概率",
+              "stat2": "破防",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "破防",
+              "optional": "精英增幅"
+            }
+          ]
+        },
+        {
+          "id": "DYW1JUHJIVkZRWUx1-5",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "回避芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "导弹发射器MK1",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "应急护盾"
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "护盾预防"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": "护盾偏折"
+            }
+          ]
+        },
+        {
+          "id": "DYW1JUHJIVkZRWUx1-6",
+          "side": "战术人型机甲",
+          "variant": "迷彩网",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "火力芯片",
+              "stat1": "轻武伤害",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "单编特化"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "轻武穿甲",
+              "stat2": "暴击伤害",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "迷彩网",
+              "stat1": "暴击概率",
+              "stat2": "护甲",
+              "optional": "护盾增伤"
+            }
+          ]
+        },
+        {
+          "id": "DYW1JUHJIVkZRWUx1-7",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "火力芯片",
+              "stat1": "轻武伤害",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "单编特化"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "轻武穿甲",
+              "stat2": "暴击伤害",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "护盾偏折"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DYWNweUlUUXVYWnRt",
+      "name": "从潘洛斯阶梯跃下",
+      "url": "https://docs.qq.com/sheet/DYWNweUlUUXVYWnRt",
+      "tables": [
+        {
+          "id": "DYWNweUlUUXVYWnRt-1",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "机械特化"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "应急护盾"
+            },
+            {
+              "name": "重机枪",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "预防压制"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "回避",
+              "stat2": "破防",
+              "optional": "护盾预防"
+            }
+          ]
+        },
+        {
+          "id": "DYWNweUlUUXVYWnRt-2",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "火力芯片",
+              "stat1": "轻武伤害",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "命中",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "急速强化"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "干扰枪",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "晕眩打击"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "应急增幅"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DYU5wUGxLTkR5bnVp",
+      "name": "静默沙盘",
+      "url": "https://docs.qq.com/sheet/DYU5wUGxLTkR5bnVp",
+      "tables": [
+        {
+          "id": "DYU5wUGxLTkR5bnVp-1",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "重武芯片",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": ""
+            },
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "小型迫击炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "机械特化"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "应急护盾"
+            },
+            {
+              "name": "重机枪",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "预防压制"
+            },
+            {
+              "name": "信号塔",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "回避",
+              "stat2": "破防",
+              "optional": "护盾预防"
+            }
+          ]
+        },
+        {
+          "id": "DYU5wUGxLTkR5bnVp-2",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "火力芯片",
+              "stat1": "轻武伤害",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "命中",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "急速强化"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "干扰枪",
+              "stat1": "暴击伤害",
+              "stat2": "暴击概率",
+              "optional": "晕眩打击"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "应急增幅"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DYWNjWkRSQXN4QVdw",
+      "name": "铁雨礼赞",
+      "url": "https://docs.qq.com/sheet/DYWNjWkRSQXN4QVdw",
+      "tables": [
+        {
+          "id": "DYWNjWkRSQXN4QVdw-1",
+          "side": "主战坦克",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "火力芯片",
+              "stat1": "重武伤害",
+              "stat2": "轻武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "回避芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "导弹发射器MK1",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "破防",
+              "optional": "应急护盾"
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "破防",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "护盾预防"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": "护盾偏折"
+            }
+          ]
+        },
+        {
+          "id": "DYWNjWkRSQXN4QVdw-2",
+          "side": "战术人型机甲",
+          "variant": "自用",
+          "components": [
+            {
+              "name": "轻武芯片",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": ""
+            },
+            {
+              "name": "火力芯片",
+              "stat1": "轻武伤害",
+              "stat2": "重武伤害",
+              "optional": ""
+            },
+            {
+              "name": "护甲芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "防御芯片",
+              "stat1": "护甲",
+              "stat2": "回避",
+              "optional": ""
+            },
+            {
+              "name": "轻型速射电磁枪",
+              "stat1": "轻武伤害",
+              "stat2": "攻速",
+              "optional": "单编特化"
+            },
+            {
+              "name": "加农炮",
+              "stat1": "重武伤害",
+              "stat2": "精度",
+              "optional": "重武护盾"
+            },
+            {
+              "name": "烈焰喷射器",
+              "stat1": "轻武伤害",
+              "stat2": "轻武穿甲",
+              "optional": "减益增幅"
+            },
+            {
+              "name": "车载夜视仪",
+              "stat1": "轻武穿甲",
+              "stat2": "暴击伤害",
+              "optional": "帕拉蒂斯增幅"
+            },
+            {
+              "name": "防护发生器",
+              "stat1": "暴击概率",
+              "stat2": "暴击伤害",
+              "optional": "护盾偏折"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "reference": {
+    "title": "图1 主战坦克 - 组件词条（旧版总表）",
+    "components": [
+      {
+        "name": "火力芯片",
+        "stat1": "重武伤害",
+        "stat2": "重武穿甲",
+        "optional": ""
+      },
+      {
+        "name": "重武芯片",
+        "stat1": "重武伤害",
+        "stat2": "精度",
+        "optional": ""
+      },
+      {
+        "name": "精度芯片",
+        "stat1": "重武伤害",
+        "stat2": "精度",
+        "optional": ""
+      },
+      {
+        "name": "鹰眼芯片",
+        "stat1": "重武伤害",
+        "stat2": "重武穿甲",
+        "optional": ""
+      },
+      {
+        "name": "小型迫击炮",
+        "stat1": "重武伤害",
+        "stat2": "破防",
+        "optional": "重武支援"
+      },
+      {
+        "name": "导弹发射器MK2",
+        "stat1": "重武伤害",
+        "stat2": "重武穿甲",
+        "optional": "弱点突破"
+      },
+      {
+        "name": "烈焰喷射器",
+        "stat1": "轻武伤害",
+        "stat2": "破防",
+        "optional": "减益增幅"
+      },
+      {
+        "name": "车载夜视仪",
+        "stat1": "暴击概率",
+        "stat2": "破防",
+        "optional": "帕拉蒂斯增幅"
+      },
+      {
+        "name": "信号塔",
+        "stat1": "暴击概率",
+        "stat2": "暴击伤害",
+        "optional": "应急增幅"
+      }
+    ]
+  }
+}

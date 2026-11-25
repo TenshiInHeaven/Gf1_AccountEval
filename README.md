@@ -54,6 +54,7 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 - **平滑过渡**：Qt `QPropertyAnimation` + `QGraphicsOpacityEffect` 做页面淡入和筛选结果淡入，不依赖第三方动画库。
 - **Android 一键抓包**：自动检测 MuMu / LDPlayer / BlueStacks / Nox / Android SDK 的 `adb`，并自动探测 MuMu 12 的 `16384 / 16416 / 16448 / 16480` 与旧版 `7555 / 7556` ADB 端口；选择台服 / 日服 / 美服 / 国服复活版后自动选端口、配置代理和 `adb reverse`；国服复活版额外处理 `18765/18766` 桥接。国服复活版需要退出登录 / 切换账号并重新输入账密；其他区服重启游戏即可。成功后直接载入账号，也支持从 `/sdcard/Download/` 拉取显式导出的快照。
 - **头像标识**：人形/妖精优先使用游戏 `resourceiconspinehead` / `resourcefairy` 资源包中的头像；融合势力改为提取 `character*spine.ab` 的战场 Q 版 Spine 小人并渲染成小全身头像，活动皮肤也使用对应皮肤的 Q 版模型；只有缺少 Q 版模型时才回退官方小图/占位图。
+- **WebUI / PWA / Android**：同一套静态页面可跑在 PC 浏览器、Android PWA 和 WebView APK；头像、榜单、归海 / 秋水组件表全部内置，运行时只需要账号快照。支持 `/api/latest` 连接 PC 端最新快照、文件导入、离线缓存。
 - **本地优先**：不上传账号数据，不写入游戏，不修改内存；快照默认保存在项目目录。
 
 ## 界面
@@ -314,6 +315,30 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 - 老吴沿用原表的两条词条匹配。
 - 「组件」页显示账号实际持有的组件并支持金 / 绿 / 灰筛选，行尾标注归海 / 秋水各自命中条数；「方案」页分「归海一图流」「秋水各积分关卡」两个标签，前者列 183 条组合，后者列 21 张表 / 189 条需求，均按仓库标「已拥有 / 缺失」，支持组、活动、类型、状态和关键词筛选（界面见 `docs/screenshots/schemes.png`、`docs/screenshots/qiushui.png` 与 `docs/screenshots/components.png`）。
 
+## WebUI / PWA / Android
+
+同一套 `web/` 静态页面，三种用法：
+
+1. **PC WebUI**：`.\run_web.ps1` → `http://127.0.0.1:8770/`
+2. **Android PWA**：`adb reverse tcp:8770 tcp:8770` 后手机 Chrome 打开 `http://localhost:8770/` → 安装应用
+3. **Android APK**：`android/` WebView 套壳，资源全内置、离线可用（需 Android Studio 构建）
+
+关键设计：
+
+- 头像、图鉴、榜单、装备、归海 / 秋水组件表全部内置，运行时只需要**账号登录后的快照 JSON**。
+- `web/serve.py` 提供 `/api/latest`：自动读取 `snapshots/account_*.json`，并合并同 UID 的 `index_*.json` 组件数据。
+- PWA 支持文件导入、URL 连接（`?snapshot=`）、离线缓存；`data/core.json` 是 Service Worker 预缓存清单。
+- `tools/build_web.py` 生成 `web/data` 与头像副本；`tools/export_web_snapshot.py` 导出合并快照；`tools/build_android_assets.py` 生成 APK 资源。
+- 详细说明见 [`web/README.md`](web/README.md) 与 [`android/README.md`](android/README.md)。
+
+| WebUI 总览 | PWA 组件 |
+|---|---|
+| ![WebUI 总览](docs/screenshots/pwa_dashboard.png) | ![PWA 组件](docs/screenshots/pwa_components.png) |
+
+| PWA 方案（秋水各关卡） |
+|---|
+| ![PWA 方案](docs/screenshots/pwa_schemes.png) |
+
 ## 数据与目录
 
 ```
@@ -337,20 +362,16 @@ account_evaluate/
 ├─ tools/                     # 数据构建、头像提取、示例快照生成
 ├─ tests/                     # 纯标准库 unittest
 ├─ docs/                      # 截图 + 归海 / 秋水词条全表（md / csv）
-├─ 人形强度榜.jpeg
-├─ 妖精强度榜.png
-├─ 铁血强度榜.png
-├─ 铁血配队一图流.jpeg
-├─ 装备需求一图流.jpeg
-├─ 机动装甲武器.png
-├─ 秋水Ameth_组件词条.png
-├─ 老吴仙人_组件清单.png
-├─ 烧钱强度表.xlsx
+│  └─ repo/                    # 原始榜单图 / 组件来源图 / Excel（人工核对用）
+├─ web/                       # WebUI / PWA 静态页面 + serve.py
+├─ android/                   # Android WebView 套壳工程
+├─ run.ps1 / run.bat          # Qt 桌面端
+├─ run_web.ps1 / run_web.bat  # WebUI / PWA
 ├─ requirements.txt
-└─ run.ps1
+└─ pyproject.toml
 ```
 
-根目录这几张榜单图/Excel 只用于来源标注和人工核对，**不是运行时依赖**；运行 app 读取的是 `app/data/tierlists/*.json` 和 `app/data/equipment_targets.json`。如果删掉它们，程序仍可运行，但建议同步更新 `ASSETS_LICENSE.md` 和上面的来源说明。
+`docs/repo/` 里的榜单图/Excel 只用于来源标注和人工核对，**不是运行时依赖**；运行 app 读取的是 `app/data/tierlists/*.json` 和 `app/data/equipment_targets.json`。如果删掉它们，程序仍可运行，但建议同步更新 `ASSETS_LICENSE.md` 和上面的来源说明。
 
 ## 重建数据 / 头像
 
