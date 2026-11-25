@@ -41,6 +41,8 @@ python tools\build_android_assets.py
 启动默认进入「图鉴」；导航只保留「图鉴 / JSON」。没有 JSON 时图鉴仍可正常查看。
 「JSON」页显示导入数据的账号摘要与原始 JSON 文本。
 
+![Android 只读模式](../docs/screenshots/pwa_android.png)
+
 ## 与 PWA 的关系
 
 `web/` 本身也是可安装的 PWA。用 Chrome 打开 `http://localhost:8770/`（配合

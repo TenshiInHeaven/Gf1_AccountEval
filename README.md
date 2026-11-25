@@ -357,6 +357,10 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 |---|
 | ![PWA 设置](docs/screenshots/pwa_settings.png) |
 
+| Android 只读模式（图鉴 + JSON） |
+|---|
+| ![Android 只读](docs/screenshots/pwa_android.png) |
+
 ## 数据与目录
 
 ```
