@@ -108,6 +108,7 @@ android/                 # WebView 套壳工程
 ## 限制
 
 - PWA 不能直接读取游戏进程或 Android 私有目录；快照必须由 PC 端抓取/导出。
+- 不要指望“开一个 VPN 就能抓账号”：VPN 只改道，TLS 信任 / 证书固定 / 游戏封包解密都在后面，非 root 真机基本走不通。详见 [`../docs/android_vpn_capture.md`](../docs/android_vpn_capture.md)。
 - 快照包含 UID / 昵称 / 仓库，请勿公开分享。
 - 组件数据依赖 `index_*.json`；只导入 `account_*.json` 时「组件 / 方案」会提示缺少组件。
 - 秋水的 2 个活动文档（坠入兔洞Plus、混沌落幕Plus）当前需要登录，未收录；其余 6 个活动没有组件页。

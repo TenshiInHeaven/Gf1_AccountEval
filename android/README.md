@@ -36,6 +36,12 @@ python tools\build_android_assets.py
   `http://<PC IP>:8770/api/latest`（需要同一 Wi-Fi；`usesCleartextTraffic` 已开启）。
 - App 不会保存游戏账号密码；快照包含 UID / 昵称，请勿公开分享。
 
+## 为什么不做「纯 VPN 抓包」
+
+VPN 只能把流量改道，不能绕过 Android 的 CA 信任、游戏证书固定和 `gf_authcode` 封包；
+非 root 真机基本读不到 `Index/index`。可行路径与取舍见
+[`../docs/android_vpn_capture.md`](../docs/android_vpn_capture.md)。
+
 ## 与 PWA 的关系
 
 `web/` 本身也是可安装的 PWA。用 Chrome 打开 `http://localhost:8770/`（配合
