@@ -428,7 +428,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
 - **榜单是主观的**：人形档位来自表格作者，融合势力 A- / A / B / C 是按图内层级与配队图归并的；本项目只做落库和评分，不代表官方。
 - **装备「低穿 / 高穿」是社区口径**：本版把「高穿」明确为 **500 穿甲值**，当前对应 **第三方穿甲弹**（唯一 500 穿装备）；装备页「调整对应规则」可分三个区（配件 / 子弹 / 人形）编辑 match JSON 与目标数量，也支持导入 / 导出规则 JSON，保存到本地 `equipment_rules.local.json` 并立即重算。
 - **机动装甲组件**：「组件」页显示账号实际持有的组件（名字 / 词条 / `×N`），按通用组件 / 其他组件分栏；归海按 183 条完整词条组合逐条校验，秋水按 21 张积分关卡表逐条校验，行尾标注「归N 秋M」命中条数。「方案」页分两个标签：归海列 183 条组合，秋水列 8 个活动 / 21 张表 / 189 条需求，都按仓库标记已拥有 / 缺失并支持筛选。秋水表按活动分散在腾讯文档的「主战坦克 / 战术人型机甲」页，每张表 9 件；旧版图1 总表作为参考单独保留。
-- **安卓纯 VPN 抓包**：VPN 只能改道，不能绕过 TLS 信任 / 证书固定；非 root 真机基本读不到 `Index/index`。想完全脱离 PC，优先 root + Frida 读 `CS.GameData`，其次 root/模拟器 + 系统 CA + 本地 mitmproxy；国服复活版的 HTTP 本地桥还缺桥协议实现。详见 `docs/android_vpn_capture.md`。
+- **安卓纯 VPN 抓包**：VPN 只能改道，不能绕过 TLS 信任 / 证书固定；非 root 真机基本读不到 `Index/index`。本机 APK 审计：台服 `tw.txwy.and.snqx` 未发现 CertificatePinner，root/模拟器 + 系统 CA 可 MITM；国服复活版 `com.sunborn.girlsfrontline.pt` 带 OkHttp + 21 个 `sha1/` 固定值，需 Frida 绕过或走客户端本地 HTTP 桥。详见 `docs/android_vpn_capture.md`。
 - **账号隐私**：快照包含 UID、昵称、仓库；默认只写本地 `snapshots/`，请不要把快照公开上传。
 
 ## 致谢

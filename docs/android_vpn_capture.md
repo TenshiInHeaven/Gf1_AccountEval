@@ -11,7 +11,7 @@
   │  ① 流量改道：VpnService / Wi-Fi 代理 / adb reverse
   ▼
 本地代理（mitmproxy / 透明代理）
-  │  ② TLS：需要游戏信任你的 CA；很多游戏还有证书固定
+  │  ② TLS：需要游戏信任你的 CA；部分客户端还有证书固定
   ▼
 明文 HTTP
   │  ③ 游戏封包：gf_authcode（XXTEA）+ 每次登录的 sign
@@ -22,7 +22,7 @@ Index/index JSON → 账号快照 → PWA
 - **① 改道**：`VpnService` 能拿到 IP 包，但要把 TCP 流接到本地 HTTP 代理，需要
   tun2socks 之类的用户态 TCP/IP 栈；不是 `VpnService` 一开就能读 HTTP。
 - **② TLS**：Android 7+ 默认不信任用户安装的 CA（targetSdk ≥ 24 的 App）。
-  游戏通常 targetSdk 很高，且不少客户端有证书固定。没有 root / 系统 CA / Frida 绕过，
+  游戏通常 targetSdk 很高，部分客户端还有证书固定。没有 root / 系统 CA / Frida 绕过，
   代理只能看到 TLS 握手，看不到 `Index/index`。
 - **③ 封包**：`tools/android_proxy_capture.py` 用 `gflzirc.gf_authcode` 解 XXTEA，
   先用静态 key `yundoudou`，失败再用登录时抓到的 `sign`。所以必须抓到**本次登录**的
@@ -31,10 +31,25 @@ Index/index JSON → 账号快照 → PWA
 当前 PC 抓包之所以能跑，是因为：
 
 - 模拟器可以 `adb root`，把 CA 塞进 `/system/etc/security/cacerts`（系统 CA）；
-- 或者国服复活版走 `127.0.0.1:18765/18766` 的 HTTP 本地桥，不需要 TLS CA；
+- 或者国服复活版走客户端自带的 `127.0.0.1:18765/18766` 本地桥，不需要 TLS CA；
 - 登录时 PC 代理能同时看到请求里的 `outdatacode/signcode`，从而拿到 `sign`。
 
-## 2. 纯 VPN App 在真机上的现实
+## 2. 本机 APK 审计（只读取证）
+
+用 `androguard` 读了工作区里的两个客户端（只读，不改包）：
+
+| 客户端 | package | targetSdk | network-security-config | CertificatePinner | 结论 |
+|---|---|---:|---|---|---|
+| 台服 3.0810_324 | `tw.txwy.and.snqx` | 34 | `cleartextTrafficPermitted=true`，无自定义 trust-anchors | **0**（无 OkHttp） | 没有发现证书固定；root/模拟器装系统 CA 后 MITM 可行 |
+| 国服复活版 base | `com.sunborn.girlsfrontline.pt` | 35 | 同上 | **OkHttp + 21 个 `sha1/` 固定值** | 有证书固定；即使系统 CA 也会被 pin 拦，需要 Frida/objection 绕过或走本地 HTTP 桥 |
+
+两点很关键：
+
+- 两者 `targetSdk` 都 ≥ 34，**默认不信任用户安装的 CA**；非 root 真机装用户 CA 没用。
+- 台服没有 pinning，root/模拟器 + 系统 CA 就能读 HTTPS；国服复活版有 pinning，
+  “只读”也一样会被拦，必须绕过 pinning 或改走客户端自己的本地桥。
+
+## 3. 纯 VPN App 在真机上的现实
 
 | 方案 | 免 PC | 免 root | 能读账号 | 说明 |
 |---|---|---|---|---|
@@ -43,7 +58,7 @@ Index/index JSON → 账号快照 → PWA
 | 手机 VPN + 本地 mitmproxy | ✅ | ❌ | 仅 root/系统 CA 可行 | 需 tun2socks + mitmproxy + CA |
 | 手机 VPN + 转发到 PC 代理 | ❌ | ✅ | ✅ | VPN 只是替代 Wi-Fi 代理设置，仍要 PC |
 | root + Frida 读 `CS.GameData` | ✅ | ❌ | ✅ | 不走网络，最直接 |
-| 国服复活版本地 HTTP 桥 | ✅ | ✅? | 需实现桥协议 | 游戏连 `127.0.0.1:18765`，桥不是现成的 |
+| 国服复活版本地 HTTP 桥 | ✅? | ✅? | 需实测 | 自带 `127.0.0.1:18765/18766` 桥；桥协议/上游不在仓库 |
 
 ### 为什么「VPN 转发到 PC」仍然要 PC
 
@@ -61,7 +76,7 @@ tun2socks 之类的实现，且 PC 代理仍要监听 LAN、手机要信任 CA�
 `Index/index`。但**桥协议、上游地址、鉴权都不在本仓库**，仓库里的 `adb forward` 只是端口转发；
 要做成手机端全离线，需要先把本地桥的行为实测/复刻出来，不是“开 VPN”就能完成。
 
-## 3. 如果一定要做「手机端全离线抓包」
+## 4. 如果一定要做「手机端全离线抓包」
 
 推荐顺序：
 
@@ -70,7 +85,7 @@ tun2socks 之类的实现，且 PC 代理仍要监听 LAN、手机要信任 CA�
    - 用 `VpnService` + tun2socks 把游戏流量导到 `127.0.0.1:8080`；
    - 把 `gflzirc` 的 `gf_authcode` 移植成 Kotlin/Python，解 `Index/index`；
    - 用现有 `app.capture.android_proxy.build_snapshot` 转快照。
-2. **root + Frida**（更简单）
+2. **root + Frida**（更简单，且不受 pinning 影响）
    - 手机跑 `frida-server`，把 `app/capture/lua_eval.py` 的只读 Lua 注入 `LuaEnv.Tick`；
    - 直接读 `CS.GameData`，完全不走网络，不受 TLS/证书影响；
    - 需要 root、游戏未检测 Frida；风险与 PC 端 Frida 相同。
@@ -78,18 +93,18 @@ tun2socks 之类的实现，且 PC 代理仍要监听 LAN、手机要信任 CA�
    - 不建议投入：TLS 信任 + 证书固定基本堵死；
    - 可行替代是「PC 抓包 + 手机 PWA 通过 LAN 拉 `/api/latest`」，体验上已经接近“打开就能看”。
 
-## 4. 风险与边界
+## 5. 风险与边界
 
 - 只处理**自己的账号**；不要做多账号批量、代练、交易。
 - 抓包 / 改包可能违反游戏服务条款，存在封号风险；本项目只读、不修改游戏数据。
 - 快照包含 UID / 昵称 / 仓库，不要公开上传。
 - 不要在公共 Wi-Fi 上开透明代理；CA 私钥只留在本机。
 
-## 5. 现阶段建议
+## 6. 现阶段建议
 
 - 日常使用：**PC 端抓包 + `run_web.ps1 --host 0.0.0.0` + 手机 PWA「连接」**。
   这已经是“手机上看账号”的最低成本方案。
-- 想在手机上完全离线：优先考虑 **root + Frida**，其次 **root + 本地 mitmproxy**；
-  纯 VPN 只在能装系统 CA 的设备上有意义。
+- 想在手机上完全离线：优先考虑 **root + Frida**；台服（无 pinning）也可以
+  **root/模拟器 + 系统 CA + 本地 mitmproxy**。国服复活版有 pinning，纯 MITM 需先绕过 pinning。
 - 如果要做，我可以下一步把 `VpnService + tun2socks + Chaquopy(mitmproxy/gflzirc)`
   做成一个独立的 `android-capture` 模块；但需要一台 root 设备/模拟器做联调，当前环境没有。
