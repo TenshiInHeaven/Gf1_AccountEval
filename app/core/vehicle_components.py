@@ -1,9 +1,9 @@
 """Owned vehicle-component inventory and recommendations."""
 from __future__ import annotations
 
-import json
 from pathlib import Path
 
+from . import scheme_catalog
 from .paths import DATA_DIR, PROJECT_ROOT, read_json
 
 CATALOG_FILE = DATA_DIR / "vehicle_components.json"
@@ -24,6 +24,16 @@ def latest_index_path() -> Path | None:
     return candidates[0] if candidates else None
 
 
+def index_path_for_account(state) -> Path | None:
+    """Map an account snapshot (``account_android_*``) to its ``index_*`` file."""
+    source = getattr(state, "source_path", None) if state is not None else None
+    if source is not None:
+        candidate = SNAPSHOT_DIR / Path(source).name.replace("account_android_", "index_")
+        if candidate.is_file():
+            return candidate
+    return latest_index_path()
+
+
 def _roll_parts(value: str, names: dict[str, str], skill_names: dict[str, str] | None = None) -> str:
     text = str(value or "").strip()
     if not text:
@@ -34,6 +44,28 @@ def _roll_parts(value: str, names: dict[str, str], skill_names: dict[str, str] |
     if code == "skill":
         return f"技能 {((skill_names or {}).get(number) or number)}"
     return f"{names.get(code, code)} {number}"
+
+
+def _match_rule(words: str, rules) -> bool:
+    if isinstance(rules, dict):
+        main_words = rules.get("main") or []
+        required = rules.get("required") or []
+        any_words = rules.get("any") or []
+        if main_words and not any(str(word) in words for word in main_words):
+            return False
+        if required and not all(str(word) in words for word in required):
+            return False
+        if any_words and not any(str(word) in words for word in any_words):
+            return False
+        return True
+    return all(str(rule) in words for rule in rules or [])
+
+
+def _guihai_by_weapon() -> dict[str, list[dict]]:
+    grouped: dict[str, list[dict]] = {}
+    for entry in scheme_catalog.catalog_entries():
+        grouped.setdefault(entry["weapon"], []).append(entry)
+    return grouped
 
 
 def build_inventory(index_path: Path | None = None) -> list[dict]:
@@ -56,6 +88,7 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
         for item in guide.get("components") or []
     }
     requirements = guide.get("requirements") or {}
+    guihai_by_weapon = _guihai_by_weapon()
     grouped: dict[tuple, dict] = {}
     for row in rows:
         if not isinstance(row, dict):
@@ -81,33 +114,33 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
                 "schemes": recommended.get(name, []),
                 "count": 0,
                 "level": 0,
+                "guihai_matches": [],
             }
             grouped[key] = entry
         entry["count"] += 1
     for entry in grouped.values():
-        scheme_rules = requirements
-        matches = []
-        for scheme in recommended.get(str(entry.get("name") or ""), []):
-            scheme_reqs = scheme_rules.get(scheme)
-            if scheme_reqs is None:
-                matches.append(scheme)
+        name = str(entry.get("name") or "")
+        words = str(entry.get("words") or "")
+        matches: list[str] = []
+        guihai_matches: list[str] = []
+        for scheme in recommended.get(name, []):
+            if scheme == "guihai":
+                hit = [
+                    combo
+                    for combo in guihai_by_weapon.get(name, [])
+                    if scheme_catalog.combo_matches(words, combo["words"])
+                ]
+                if hit:
+                    matches.append(scheme)
+                    guihai_matches = [combo["label"] for combo in hit]
                 continue
-            rules = scheme_reqs.get(str(entry.get("name") or ""))
+            scheme_reqs = requirements.get(scheme) or {}
+            rules = scheme_reqs.get(name)
             if rules is None:
-                continue
-            words = str(entry.get("words") or "")
-            if isinstance(rules, dict):
-                main_words = rules.get("main") or []
-                required = rules.get("required") or []
-                any_words = rules.get("any") or []
-                if main_words and not any(word in words for word in main_words):
-                    continue
-                if required and not all(word in words for word in required):
-                    continue
-                if any_words and not any(word in words for word in any_words):
-                    continue
                 matches.append(scheme)
-            elif all(str(rule) in words for rule in rules):
+                continue
+            if _match_rule(words, rules):
                 matches.append(scheme)
         entry["schemes"] = matches
+        entry["guihai_matches"] = guihai_matches
     return list(grouped.values())

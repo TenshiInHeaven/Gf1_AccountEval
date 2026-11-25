@@ -1,7 +1,7 @@
-"""Owned vehicle-component library, split into common / other columns."""
+"""Owned vehicle-component library page."""
 from __future__ import annotations
 
-from PySide6.QtCore import Qt
+from PySide6.QtCore import Qt, Signal
 from PySide6.QtWidgets import (
     QComboBox,
     QFrame,
@@ -13,12 +13,13 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from ..core.paths import PROJECT_ROOT
-from ..core.vehicle_components import build_inventory, load_guide
+from ..core.vehicle_components import build_inventory, index_path_for_account, load_guide
 from .theme import GOLD, MUTED, TEXT, TEXT_SOFT
 
 
 class ComponentPage(QWidget):
+    open_schemes = Signal()
+
     def __init__(self, state=None, parent: QWidget | None = None):
         super().__init__(parent)
         self.state = state
@@ -42,11 +43,19 @@ class ComponentPage(QWidget):
         title = QLabel("机动装甲组件库")
         title.setStyleSheet(f"color: {TEXT}; font-size: 25px; font-weight: 800;")
         title_box.addWidget(title)
-        sub = QLabel("当前账号全部组件；金框 = 所有方案要求，绿框 = 部分方案，灰框 = 无方案。左右两栏各自翻页。")
+        sub = QLabel(
+            "当前账号全部组件；金框 = 所有方案要求，绿框 = 部分方案，灰框 = 无方案。"
+            "归海按 183 条词条组合逐条校验。"
+        )
         sub.setWordWrap(True)
         sub.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
         title_box.addWidget(sub)
         header_layout.addLayout(title_box, 1)
+        catalog_button = QPushButton("归海方案全表")
+        catalog_button.setObjectName("Ghost")
+        catalog_button.setToolTip("列出 机动装甲武器.png 中全部 25 件组件 / 183 条词条组合")
+        catalog_button.clicked.connect(self.open_schemes.emit)
+        header_layout.addWidget(catalog_button)
         self.filter_combo = QComboBox()
         self.filter_combo.addItem("全部组件库", "all")
         self.filter_combo.addItem("全量评价（并集）", "union")
@@ -103,14 +112,7 @@ class ComponentPage(QWidget):
         return column, title, rows, (prev, nxt), label
 
     def _load_entries(self) -> list[dict]:
-        index_path = None
-        if self.state is not None and getattr(self.state, "source_path", None):
-            candidate = (PROJECT_ROOT / "snapshots") / self.state.source_path.name.replace(
-                "account_android_", "index_"
-            )
-            if candidate.is_file():
-                index_path = candidate
-        return build_inventory(index_path)
+        return build_inventory(index_path_for_account(self.state))
 
     def refresh(self, _evaluation=None) -> None:
         self.entries = self._load_entries()
@@ -164,6 +166,11 @@ class ComponentPage(QWidget):
             item = layout.takeAt(0)
             widget = item.widget()
             if widget is not None:
+                # Hide/detach immediately: deleteLater alone leaves the old
+                # frame painted at its default 640x480 position until the
+                # event loop runs, which overlaps the column title.
+                widget.hide()
+                widget.setParent(None)
                 widget.deleteLater()
 
     def _render(self) -> None:
@@ -219,8 +226,17 @@ class ComponentPage(QWidget):
         words.setWordWrap(True)
         words.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 10px;")
         layout.addWidget(words, 1)
+        hits = entry.get("guihai_matches") or []
+        if hits:
+            combo = QLabel(f"✓{len(hits)}")
+            combo.setFixedWidth(30)
+            combo.setToolTip("\n".join(hits))
+            combo.setStyleSheet("color: #2F7D4F; font-size: 10px; font-weight: 700;")
+            layout.addWidget(combo)
         type_name = QLabel(str(entry.get("type_name") or "其他"))
         type_name.setFixedWidth(56)
         type_name.setStyleSheet(f"color: {MUTED}; font-size: 10px;")
         layout.addWidget(type_name)
+        if hits:
+            row.setToolTip("归海命中：\n" + "\n".join(hits))
         return row

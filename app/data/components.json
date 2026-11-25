@@ -1,37 +1,172 @@
 {
- "version": "2026-11-24",
- "title": "秋水Ameth 全活动组件总表",
+ "version": "2026-11-25",
+ "title": "机动装甲组件方案总表",
  "schemes": [
   {
    "id": "laowu",
    "name": "老吴仙人的咸鱼养成法",
    "short": "老吴",
-   "source": "图2"
+   "source": "图2（主战坦克组件清单，9 件）"
   },
   {
    "id": "guihai",
    "name": "归海临渊的一图流",
    "short": "归海",
-   "source": "图3"
+   "source": "图3 / 机动装甲武器.png（25 件 / 183 条词条组合）"
   },
   {
    "id": "qiushui",
    "name": "秋水Ameth的不同积分关卡养成集成",
    "short": "秋水",
-   "source": "图1 / 腾讯文档"
+   "source": "图1（主战坦克 - 组件词条，9 件）"
   }
  ],
+ "catalogs": {
+  "guihai": "guihai_weapons.json"
+ },
  "components": [
   {
-   "name": "火力芯片",
-   "category": "通用组件",
-   "words": "重武伤害 / 重武穿甲",
+   "name": "导弹发射器MK2",
+   "category": "重武器",
+   "words": "重武护盾 / 机械特化 / 有甲特化 / 多编特化 / 重武支援 / 弱点突破 / 重武伤害 / 精度 / 破防 / 重武穿甲",
    "schemes": [
-    "guihai",
+    "qiushui",
+    "guihai"
+   ]
+  },
+  {
+   "name": "小型迫击炮",
+   "category": "重武器",
+   "words": "重武护盾 / 应急护盾 / 机械特化 / 有甲特化 / 多编特化 / 重武支援 / 弱点突破 / 重武伤害 / 精度 / 破防 / 重武穿甲",
+   "schemes": [
     "laowu",
-    "qiushui"
-   ],
-   "count": 3
+    "qiushui",
+    "guihai"
+   ]
+  },
+  {
+   "name": "激光武器",
+   "category": "重武器",
+   "words": "机械特化 / 有甲特化 / 重武伤害 / 精度 / 破防 / 重武穿甲",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "榴弹发射器",
+   "category": "重武器",
+   "words": "重武护盾 / 重武伤害 / 精度 / 破防 / 重武穿甲 / 装填",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "导弹发射器MK1",
+   "category": "重武器",
+   "words": "重武护盾 / 重武伤害 / 精度 / 破防 / 重武穿甲",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "反装甲狙击枪",
+   "category": "轻武器",
+   "words": "减益增幅 / 应急增幅 / 单编特化 / 轻武支援 / 轻武伤害 / 攻速 / 破防 / 轻武穿甲 / 命中",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "烈焰喷射器",
+   "category": "轻武器",
+   "words": "减益增幅 / 应急增幅 / 轻武伤害 / 破防 / 轻武穿甲",
+   "schemes": [
+    "qiushui",
+    "guihai"
+   ]
+  },
+  {
+   "name": "轻型速射电磁枪",
+   "category": "轻武器",
+   "words": "单编特化 / 轻武伤害 / 攻速 / 破防 / 轻武穿甲 / 命中",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "车载霰弹枪",
+   "category": "轻武器",
+   "words": "人形特化 / 轻武伤害 / 破防 / 轻武穿甲 / 命中",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "重机枪",
+   "category": "轻武器",
+   "words": "急速强化 / 轻武伤害 / 攻速 / 破防 / 轻武穿甲 / 命中",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "车载夜视仪",
+   "category": "功能组件",
+   "words": "正规军增幅 / 帕拉蒂斯增幅 / 护盾预防 / 破防 / 重武穿甲 / 轻武穿甲 / 暴击概率 / 暴击伤害",
+   "schemes": [
+    "qiushui",
+    "guihai"
+   ]
+  },
+  {
+   "name": "相控阵雷达",
+   "category": "功能组件",
+   "words": "正规军增幅 / 帕拉蒂斯增幅 / 护盾预防 / 破防 / 重武穿甲 / 轻武穿甲 / 暴击概率 / 暴击伤害",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "信号塔",
+   "category": "功能组件",
+   "words": "减益增幅 / 应急增幅 / 精英增幅 / 破防 / 重武穿甲 / 轻武穿甲 / 暴击概率 / 暴击伤害",
+   "schemes": [
+    "laowu",
+    "qiushui",
+    "guihai"
+   ]
+  },
+  {
+   "name": "迷彩网",
+   "category": "防护组件",
+   "words": "护盾预防 / 应急护盾 / 护盾增伤 / 护甲 / 暴击概率 / 破防 / 暴击伤害 / 回避",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "防护发生器",
+   "category": "防护组件",
+   "words": "连携减伤 / 应急护盾 / 护甲 / 暴击概率 / 破防 / 暴击伤害 / 回避",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "爆炸反应装甲",
+   "category": "防护组件",
+   "words": "护盾增伤 / 护甲 / 暴击概率 / 破防 / 暴击伤害 / 回避",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "顶部格栅装甲",
+   "category": "防护组件",
+   "words": "护盾增伤 / 护甲 / 暴击概率 / 破防 / 暴击伤害 / 回避",
+   "schemes": [
+    "guihai"
+   ]
   },
   {
    "name": "重武芯片",
@@ -39,82 +174,71 @@
    "words": "重武伤害 / 重武穿甲 / 精度",
    "schemes": [
     "laowu",
-    "guihai",
-    "qiushui"
-   ],
-   "count": 3
+    "qiushui",
+    "guihai"
+   ]
+  },
+  {
+   "name": "轻武芯片",
+   "category": "通用组件",
+   "words": "轻武伤害 / 攻速 / 轻武穿甲",
+   "schemes": [
+    "guihai"
+   ]
+  },
+  {
+   "name": "火力芯片",
+   "category": "通用组件",
+   "words": "重武伤害 / 轻武伤害 / 重武穿甲",
+   "schemes": [
+    "laowu",
+    "qiushui",
+    "guihai"
+   ]
   },
   {
    "name": "精度芯片",
    "category": "通用组件",
-   "words": "重武伤害 / 精度",
+   "words": "重武伤害 / 重武穿甲 / 精度",
    "schemes": [
-    "guihai",
-    "qiushui"
-   ],
-   "count": 3
+    "qiushui",
+    "guihai"
+   ]
   },
   {
    "name": "鹰眼芯片",
    "category": "通用组件",
-   "words": "重武伤害 / 重武穿甲",
+   "words": "重武伤害 / 重武穿甲 / 轻武伤害",
    "schemes": [
-    "guihai",
-    "qiushui"
-   ],
-   "count": 3
+    "qiushui",
+    "guihai"
+   ]
   },
   {
-   "name": "小型迫击炮",
-   "category": "重武器",
-   "words": "重武伤害 / 破防 / 任意词条：重武支援",
+   "name": "护甲芯片",
+   "category": "通用组件",
+   "words": "护甲 / 回避 / 精度 / 命中",
    "schemes": [
     "laowu",
-    "guihai",
-    "qiushui"
-   ],
-   "count": 4
+    "guihai"
+   ]
   },
   {
-   "name": "导弹发射器MK2",
-   "category": "重/轻武器",
-   "words": "重武伤害 / 重武穿甲 / 任意词条：弱点突破",
-   "schemes": [
-    "guihai",
-    "qiushui"
-   ],
-   "count": 4
-  },
-  {
-   "name": "烈焰喷射器",
-   "category": "轻武器",
-   "words": "轻武伤害 / 破防 / 任意词条：减益增幅",
-   "schemes": [
-    "guihai",
-    "qiushui"
-   ],
-   "count": 5
-  },
-  {
-   "name": "车载夜视仪",
-   "category": "功能",
-   "words": "暴击概率 / 破防 / 任意词条：帕拉蒂斯增幅",
-   "schemes": [
-    "guihai",
-    "qiushui"
-   ],
-   "count": 3
-  },
-  {
-   "name": "信号塔",
-   "category": "防护/功能",
-   "words": "暴击概率 / 暴击伤害 / 任意词条：应急增幅",
+   "name": "防御芯片",
+   "category": "通用组件",
+   "words": "护甲 / 回避 / 命中",
    "schemes": [
     "laowu",
-    "guihai",
-    "qiushui"
-   ],
-   "count": 3
+    "guihai"
+   ]
+  },
+  {
+   "name": "攻速芯片",
+   "category": "通用组件",
+   "words": "轻武伤害 / 攻速",
+   "schemes": [
+    "guihai"
+   ]
   },
   {
    "name": "加农炮",
@@ -122,8 +246,7 @@
    "words": "重武护盾；重武伤害",
    "schemes": [
     "laowu"
-   ],
-   "count": 5
+   ]
   },
   {
    "name": "电磁枪",
@@ -131,128 +254,15 @@
    "words": "单编增幅",
    "schemes": [
     "laowu"
-   ],
-   "count": 0
+   ]
   },
   {
    "name": "护盾发生器",
-   "category": "防护",
+   "category": "防护组件",
    "words": "护盾偏折",
    "schemes": [
     "laowu"
-   ],
-   "count": 0
-  },
-  {
-   "name": "护甲芯片",
-   "category": "芯片",
-   "words": "护甲 + 回避",
-   "schemes": [
-    "guihai",
-    "laowu"
-   ],
-   "count": 3
-  },
-  {
-   "name": "防御芯片",
-   "category": "芯片",
-   "words": "护甲 + 回避",
-   "schemes": [
-    "guihai",
-    "laowu"
-   ],
-   "count": 3
-  },
-  {
-   "name": "相控阵雷达",
-   "category": "功能",
-   "words": "暴击概率 / 暴击伤害 / 减益增幅",
-   "schemes": [
-    "guihai"
-   ],
-   "count": 3
-  },
-  {
-   "name": "防护发生器",
-   "category": "防护",
-   "words": "护盾 / 护盾偏折",
-   "schemes": [
-    "guihai"
-   ],
-   "count": 3
-  },
-  {
-   "name": "爆炸反应装甲",
-   "category": "防护",
-   "words": "护盾 / 减伤",
-   "schemes": [
-    "guihai"
-   ],
-   "count": 2
-  },
-  {
-   "name": "顶部格栅装甲",
-   "category": "防护",
-   "words": "护盾 / 减伤",
-   "schemes": [
-    "guihai"
-   ],
-   "count": 3
-  },
-  {
-   "name": "攻击芯片",
-   "category": "芯片",
-   "words": "轻武伤害 / 攻击（暂无方案记录）",
-   "schemes": [],
-   "count": 0
-  },
-  {
-   "name": "轻武芯片",
-   "category": "通用组件",
-   "words": "轻武伤害 / 轻武穿甲",
-   "schemes": [
-    "guihai"
-   ],
-   "count": 3
-  },
-  {
-   "name": "轻型速射电磁枪",
-   "category": "轻武器",
-   "words": "轻武伤害 / 攻速",
-   "schemes": [
-    "guihai"
-   ],
-   "count": 5
-  },
-  {
-   "name": "迷彩网",
-   "category": "防护/功能",
-   "words": "闪避 / 减伤",
-   "schemes": [
-    "guihai"
-   ],
-   "count": 3
-  },
-  {
-   "name": "小迫击炮",
-   "category": "组件",
-   "words": "（表内词条待补充）",
-   "schemes": [],
-   "count": 0
-  },
-  {
-   "name": "护盾芯片",
-   "category": "组件",
-   "words": "（表内词条待补充）",
-   "schemes": [],
-   "count": 0
-  },
-  {
-   "name": "激光发生器",
-   "category": "组件",
-   "words": "（表内词条待补充）",
-   "schemes": [],
-   "count": 0
+   ]
   }
  ],
  "requirements": {
@@ -260,7 +270,6 @@
    "加农炮": [
     "重武护盾"
    ],
-   "小迫击炮": [],
    "小型迫击炮": [],
    "电磁枪": [
     "单编增幅"
@@ -325,145 +334,6 @@
     "暴击概率",
     "暴击伤害"
    ]
-  },
-  "guihai": {
-   "导弹发射器MK2": {
-    "main": [
-     "重武护盾",
-     "机械特化",
-     "有甲特化",
-     "多编特化",
-     "重武支援",
-     "弱点突破"
-    ],
-    "required": [
-     "重武伤害"
-    ],
-    "any": [
-     "精度",
-     "破防",
-     "重武穿甲"
-    ]
-   },
-   "小型迫击炮": {
-    "main": [
-     "重武护盾",
-     "应急护盾",
-     "机械特化",
-     "有甲特化",
-     "多编特化",
-     "重武支援",
-     "弱点突破"
-    ],
-    "required": [
-     "重武伤害"
-    ],
-    "any": [
-     "精度",
-     "破防",
-     "重武穿甲"
-    ]
-   },
-   "激光发生器": {
-    "main": [
-     "机械特化",
-     "有甲特化"
-    ],
-    "required": [
-     "重武伤害"
-    ],
-    "any": [
-     "精度",
-     "破防",
-     "重武穿甲"
-    ]
-   },
-   "信号塔": {
-    "main": [
-     "减益增幅",
-     "应急增幅",
-     "精英增幅"
-    ],
-    "any": [
-     "破防",
-     "暴击概率",
-     "重武穿甲",
-     "轻武穿甲",
-     "暴击伤害"
-    ]
-   },
-   "重武芯片": {
-    "main": [
-     "重武伤害"
-    ],
-    "any": [
-     "重武穿甲",
-     "精度"
-    ]
-   },
-   "轻武芯片": {
-    "main": [
-     "轻武伤害"
-    ],
-    "any": [
-     "攻速",
-     "轻武穿甲"
-    ]
-   },
-   "火力芯片": {
-    "main": [
-     "重武伤害"
-    ],
-    "any": [
-     "轻武伤害",
-     "重武穿甲"
-    ]
-   },
-   "精度芯片": {
-    "main": [
-     "重武伤害"
-    ],
-    "any": [
-     "重武穿甲",
-     "精度"
-    ]
-   },
-   "鹰眼芯片": {
-    "main": [
-     "重武伤害"
-    ],
-    "any": [
-     "重武穿甲",
-     "轻武伤害"
-    ]
-   },
-   "护甲芯片": {
-    "main": [
-     "护甲"
-    ],
-    "any": [
-     "回避",
-     "精度",
-     "命中"
-    ]
-   },
-   "防御芯片": {
-    "main": [
-     "护甲"
-    ],
-    "any": [
-     "回避",
-     "命中"
-    ]
-   },
-   "攻击芯片": {
-    "main": [
-     "轻武伤害"
-    ],
-    "any": [
-     "攻击"
-    ]
-   }
   }
  }
 }

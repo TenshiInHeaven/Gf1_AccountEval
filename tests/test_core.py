@@ -291,5 +291,73 @@ class LiveParserTests(unittest.TestCase):
         self.assertEqual(len(payload["vehicles"]), 1)
 
 
+class SchemeCatalogTests(unittest.TestCase):
+    def test_guihai_catalog_shape(self):
+        from app.core import scheme_catalog
+
+        summary = scheme_catalog.catalog_summary()
+        self.assertEqual(summary["weapons"], 25)
+        self.assertEqual(summary["main_rows"], 42)
+        self.assertEqual(summary["entries"], 183)
+        entries = scheme_catalog.catalog_entries()
+        self.assertEqual(len({entry["id"] for entry in entries}), 183)
+        self.assertEqual(
+            {group: sum(1 for entry in entries if entry["group"] == group) for group in summary["groups"]},
+            {"重武": 52, "轻武": 31, "功能": 42, "防护": 42, "芯片": 16},
+        )
+        by_weapon = {}
+        for entry in entries:
+            by_weapon[entry["weapon"]] = by_weapon.get(entry["weapon"], 0) + 1
+        self.assertEqual(by_weapon["导弹发射器MK2"], 18)
+        self.assertEqual(by_weapon["小型迫击炮"], 21)
+        self.assertEqual(by_weapon["激光武器"], 6)
+        self.assertEqual(by_weapon["榴弹发射器"], 4)
+        self.assertEqual(by_weapon["攻速芯片"], 1)
+
+    def test_guihai_component_scheme_counts(self):
+        guide = read_json(ROOT / "app" / "data" / "components.json")
+        components = guide["components"]
+        for scheme, expected in (("guihai", 25), ("qiushui", 9), ("laowu", 9)):
+            names = [item["name"] for item in components if scheme in item["schemes"]]
+            self.assertEqual(len(names), expected, scheme)
+        names = {item["name"] for item in components}
+        self.assertIn("激光武器", names)
+        self.assertIn("榴弹发射器", names)
+        self.assertIn("攻速芯片", names)
+        self.assertNotIn("激光发生器", names)
+        self.assertNotIn("攻击芯片", names)
+
+    def test_combo_matching_is_word_exact(self):
+        from app.core import scheme_catalog
+
+        combo = ["重武护盾", "重武伤害", "精度"]
+        self.assertTrue(scheme_catalog.combo_matches("技能 重武护盾 / 重武伤害 48 / 精度 32", combo))
+        self.assertFalse(scheme_catalog.combo_matches("技能 重武护盾 / 重武伤害 48 / 破防 76", combo))
+        self.assertFalse(scheme_catalog.combo_matches("技能 精英打击 / 重武伤害 48 / 精度 32", combo))
+
+    def test_match_inventory_aggregates_owned_combos(self):
+        from app.core import scheme_catalog
+
+        inventory = [
+            {"name": "导弹发射器MK2", "words": "技能 重武护盾 / 重武伤害 48 / 精度 32", "count": 2},
+            {"name": "导弹发射器MK2", "words": "技能 精英打击 / 重武伤害 48 / 精度 32", "count": 5},
+            {"name": "攻速芯片", "words": "轻武伤害 48 / 攻速 10", "count": 1},
+        ]
+        matches = scheme_catalog.match_inventory(inventory)
+        hit = next(
+            entry
+            for entry in scheme_catalog.catalog_entries()
+            if entry["weapon"] == "导弹发射器MK2" and entry["label"] == "重武护盾 + 重武伤害 + 精度"
+        )
+        self.assertEqual(matches[hit["id"]]["count"], 2)
+        chip = next(
+            entry
+            for entry in scheme_catalog.catalog_entries()
+            if entry["weapon"] == "攻速芯片" and entry["label"] == "轻武伤害 + 攻速"
+        )
+        self.assertEqual(matches[chip["id"]]["count"], 1)
+        self.assertEqual(len(matches), 2)
+
+
 if __name__ == "__main__":
     unittest.main()

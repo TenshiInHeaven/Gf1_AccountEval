@@ -29,6 +29,7 @@ from .components_page import ComponentPage
 from .dashboard import DashboardPage
 from .equipment_page import EquipmentPage
 from .help_dialog import HelpDialog
+from .scheme_page import SchemePage
 from .settings_page import SettingsPage
 from .theme import (
     BG,
@@ -64,8 +65,9 @@ class MainWindow(QMainWindow):
         ("sangvis", "融合势力", "铁血捕获单位", "04"),
         ("equipment", "装备", "目标个数 vs 当前个数", "05"),
         ("components", "组件", "机动装甲组件与三套方案", "06"),
-        ("codex", "图鉴", "全量单位与拥有状态", "07"),
-        ("settings", "设置", "数据来源与评分口径", "08"),
+        ("schemes", "方案", "归海 183 条词条组合与缺口", "07"),
+        ("codex", "图鉴", "全量单位与拥有状态", "08"),
+        ("settings", "设置", "数据来源与评分口径", "09"),
     )
 
     def __init__(self, state: AppState, parent: QWidget | None = None):
@@ -285,6 +287,8 @@ class MainWindow(QMainWindow):
         self.sangvis = SangvisPage()
         self.equipment = EquipmentPage(self.state)
         self.components = ComponentPage(self.state)
+        self.scheme_page = SchemePage(self.state)
+        self.components.open_schemes.connect(lambda: self.show_page("schemes"))
         self.codex = CodexPage()
         self.settings = SettingsPage(self.state)
         self.pages = {
@@ -294,6 +298,7 @@ class MainWindow(QMainWindow):
             "sangvis": self.sangvis,
             "equipment": self.equipment,
             "components": self.components,
+            "schemes": self.scheme_page,
             "codex": self.codex,
             "settings": self.settings,
         }
@@ -418,6 +423,7 @@ class MainWindow(QMainWindow):
         self.sangvis.refresh(evaluation)
         self.equipment.refresh(evaluation)
         self.components.refresh(evaluation)
+        self.scheme_page.refresh(evaluation)
         self.codex.refresh(evaluation)
         self.settings.refresh(evaluation)
         self.status_label.setText(f"评分 {evaluation.overall_score:.1f} · {evaluation.overall_grade}")

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gf-account-forge"
-version = "0.2.21"
+version = "0.2.22"
 description = "Girls' Frontline 1 account roster extraction and four-dimension tier evaluation (Qt)."
 readme = "README.md"
 requires-python = ">=3.10"

@@ -299,6 +299,20 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 - 单项完成度 = `min(当前, 目标) / 目标`；总分 = 分类完成度按权重加权。
 - 当前个数按 `listEquip` 的 `info.id` 匹配 STC 装备表的 `category/type/code/name` 统计；高穿等特殊子类按名称/代码区分，规则见 `app/data/equipment_targets.json`。
 
+### 机动装甲组件方案
+
+来源与规模：
+
+- **归海临渊**：`机动装甲武器.png`（2025/11/16）。逐行抄录为 **25 件组件 / 42 条主词条方案 / 183 条词条组合**，数据在 `app/data/guihai_weapons.json`，人读版在 `docs/guihai_weapons.md`（另附 `docs/guihai_weapons.csv`）。
+- **秋水Ameth**：`主战坦克 - 组件词条` 表只有 **9 件**（4 个通用芯片 + 小型迫击炮 / 导弹发射器MK2 / 烈焰喷射器 / 车载夜视仪 / 信号塔），全部是主战坦克口径。手头这张原图没有机甲分表，所以在这张表的范围内 9 件就是全部；若另有机甲表需另行补录。
+- **老吴仙人**：组件清单同样 **9 件**，其中加农炮 / 电磁枪 / 护盾发生器只出现在老吴方案。
+
+匹配口径：
+
+- 归海按整条组合校验：组件名相同，且词条里同时包含「主词条 + 副词条1 + 副词条2」才算命中；芯片只校验两条词条。同一件组件最多可命中多条组合。
+- 秋水 / 老吴沿用原表的「词条1 + 词条2（+ 任意词条）」粗匹配，不强制第三条。
+- 「组件」页显示账号实际持有的组件并支持金 / 绿 / 灰筛选；「方案」页列出归海全表 183 条组合，按仓库标「已拥有 ×N / 缺失」，支持组 / 组件 / 状态 / 关键词筛选。
+
 ## 数据与目录
 
 ```
@@ -313,18 +327,22 @@ account_evaluate/
 │  │  ├─ tierlists/           # 四张榜单的落库 JSON
 │  │  ├─ equipment_items.json # STC 装备目录
 │  │  ├─ equipment_targets.json
+│  │  ├─ components.json       # 三套方案清单与秋水 / 老吴词条规则
+│  │  ├─ guihai_weapons.json   # 归海 25 件 / 183 条词条组合
 │  │  └─ sample_account.json  # 内置示例快照
 │  └─ ui/                     # Qt 页面 / 主题 / 组件
 ├─ assets/avatars/            # 已提取的人形 / 妖精 / 融合势力头像
 ├─ tools/                     # 数据构建、头像提取、示例快照生成
 ├─ tests/                     # 纯标准库 unittest
-├─ docs/screenshots/          # README 截图
+├─ docs/                      # 截图 + 归海词条全表（md / csv）
 ├─ 人形强度榜.jpeg
 ├─ 妖精强度榜.png
 ├─ 铁血强度榜.png
 ├─ 铁血配队一图流.jpeg
 ├─ 装备需求一图流.jpeg
 ├─ 机动装甲武器.png
+├─ 秋水Ameth_组件词条.png
+├─ 老吴仙人_组件清单.png
 ├─ 烧钱强度表.xlsx
 ├─ requirements.txt
 └─ run.ps1
@@ -342,6 +360,9 @@ python tools\build_data.py --workspace E:\python\gf_forge
 
 # 2) 示例账号快照
 python tools\build_sample.py --workspace E:\python\gf_forge
+
+# 2b) 归海词条全表（改 tools\build_guihai_catalog.py 后重跑）
+python tools\build_guihai_catalog.py
 
 # 3) 人形 / 妖精头像（需要 UnityPy；可直接用工作区 .sim 的 Python）
 E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_avatars.py ^
@@ -365,7 +386,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-覆盖：名称归一化、图鉴规模、榜单解析、四维评分、装备目标计数、XLua TSV 解析。
+覆盖：名称归一化、图鉴规模、榜单解析、四维评分、装备目标计数、归海词条全表（183 条 / 25 件）、词条组合匹配、XLua TSV 解析。
 
 ## 已知限制
 
@@ -375,7 +396,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
 - **融合势力 Q 版头像**：大部分单位使用 `character*spine.ab` 的战场 Q 版小人；`Striker_SWAP`、`Dragoon_SWAP`、`Aegis_SWAP`、`Jaeger_SWAP` 没有可用 Spine 骨架，已改为从对应 `character*swap.ab` 提取官方 `_SS` 立绘/战斗 sprite，不再裁切头像。
 - **榜单是主观的**：人形档位来自表格作者，融合势力 A- / A / B / C 是按图内层级与配队图归并的；本项目只做落库和评分，不代表官方。
 - **装备「低穿 / 高穿」是社区口径**：本版把「高穿」明确为 **500 穿甲值**，当前对应 **第三方穿甲弹**（唯一 500 穿装备）；装备页「调整对应规则」可分三个区（配件 / 子弹 / 人形）编辑 match JSON 与目标数量，也支持导入 / 导出规则 JSON，保存到本地 `equipment_rules.local.json` 并立即重算。
-- **机动装甲组件**：新增「组件」页，读取当前账号的全部组件实例，按通用组件 / 其他组件左右两栏独立翻页；显示名字、实际词条（技能显示名称）和 `×N` 重复数量。方案筛选会同时校验组件名和词条组合（例如老吴的信号塔必须是「减益增幅」，归海的导弹发射器 MK2 按主词条 + 重武伤害 + 精度/破防/重武穿甲匹配）；金框 = 所有方案都要求，绿框 = 部分方案，灰框 = 无方案。
+- **机动装甲组件**：「组件」页显示账号实际持有的组件（名字 / 词条 / `×N`），按通用组件 / 其他组件分栏；归海方案按 183 条完整词条组合逐条校验，行尾 `✓N` 标注命中条数。「方案」页把归海全表 183 条完整列出，并按仓库标记已拥有 / 缺失，可按组 / 组件 / 状态 / 关键词筛选。秋水Ameth 与老吴仙人的来源表都只有 9 件，数量少是资料范围而非漏读；秋水表是主战坦克口径，没有机甲分表。
 - **账号隐私**：快照包含 UID、昵称、仓库；默认只写本地 `snapshots/`，请不要把快照公开上传。
 
 ## 致谢
