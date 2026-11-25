@@ -15,7 +15,7 @@ if (-not (Test-Path -LiteralPath $python)) {
 $check = & $python -c "import PySide6, PIL, frida; print('ok')" 2>$null
 if ($check -ne "ok") {
     Write-Host "Installing dependencies ..." -ForegroundColor Cyan
-    & $python -m pip install -r (Join-Path $PSScriptRoot "requirements.txt")
+    & $python -m pip install -r (Join-Path $PSScriptRoot "requirements\base.txt")
     if ($LASTEXITCODE -ne 0) { throw "dependency installation failed" }
 }
 

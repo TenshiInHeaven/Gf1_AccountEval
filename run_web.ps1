@@ -16,7 +16,7 @@ if (-not (Test-Path -LiteralPath $python)) {
 $check = & $python -c "import PIL, qrcode; print('ok')" 2>$null
 if ($check -ne "ok") {
     Write-Host "Installing web dependencies ..." -ForegroundColor Cyan
-    & $python -m pip install -r (Join-Path $PSScriptRoot "requirements-web.txt")
+    & $python -m pip install -r (Join-Path $PSScriptRoot "requirements\web.txt")
     if ($LASTEXITCODE -ne 0) { throw "web dependency installation failed" }
 }
 

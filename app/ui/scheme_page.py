@@ -18,7 +18,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from ..core import qiushui_catalog, scheme_catalog
+from ..core import qiushui_catalog, scheme_catalog, vehicle_components
 from ..core.vehicle_components import build_inventory, index_path_for_account
 from .theme import GOLD, MUTED, TEXT
 
@@ -369,6 +369,155 @@ class QiushuiPanel(QWidget):
         self.table.setUpdatesEnabled(True)
 
 
+class LaowuPanel(QWidget):
+    """老吴仙人认可的 9 件主战坦克组件与可接受词条。"""
+
+    def __init__(self, state=None, parent: QWidget | None = None):
+        super().__init__(parent)
+        self.state = state
+        guide = vehicle_components.load_guide()
+        requirements = (guide.get("requirements") or {}).get("laowu") or {}
+        self.entries = [
+            {"id": f"lw-{index + 1}", "name": str(name), "rules": rules,
+             "accepted": self._rules_label(rules)}
+            for index, (name, rules) in enumerate(requirements.items())
+        ]
+        self.matches: dict[str, dict] = {}
+
+        root = QVBoxLayout(self)
+        root.setContentsMargins(16, 10, 16, 8)
+        root.setSpacing(10)
+
+        header = QFrame()
+        header.setObjectName("HeroCard")
+        header_layout = QHBoxLayout(header)
+        header_layout.setContentsMargins(22, 14, 22, 14)
+        title_box = QVBoxLayout()
+        title_box.setSpacing(3)
+        title = QLabel("老吴仙人 · 咸鱼养成法")
+        title.setStyleSheet(f"color: {TEXT}; font-size: 25px; font-weight: 800;")
+        title_box.addWidget(title)
+        sub = QLabel(
+            f"图2 主战坦克组件清单 · {len(self.entries)} 件认可组件。"
+            " 绿底 = 仓库里有满足认可词条的组件；空词条表示任意词条均可。"
+        )
+        sub.setWordWrap(True)
+        sub.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
+        title_box.addWidget(sub)
+        header_layout.addLayout(title_box, 1)
+        self.count_label = QLabel()
+        self.count_label.setAlignment(Qt.AlignRight | Qt.AlignVCenter)
+        self.count_label.setStyleSheet(f"color: {GOLD}; font-size: 12px; font-weight: 700;")
+        header_layout.addWidget(self.count_label)
+        root.addWidget(header)
+
+        filters = QHBoxLayout()
+        filters.setSpacing(8)
+        self.status_combo = QComboBox()
+        self.status_combo.addItem("全部状态", "all")
+        self.status_combo.addItem("已拥有", "owned")
+        self.status_combo.addItem("缺口", "missing")
+        self.status_combo.currentIndexChanged.connect(self._apply_filters)
+        filters.addWidget(self.status_combo)
+        self.search_edit = QLineEdit()
+        self.search_edit.setPlaceholderText("搜索组件 / 认可词条")
+        self.search_edit.setClearButtonEnabled(True)
+        self.search_edit.textChanged.connect(self._apply_filters)
+        filters.addWidget(self.search_edit, 1)
+        root.addLayout(filters)
+
+        self.table = QTableWidget(0, 4)
+        self.table.setHorizontalHeaderLabels(["组件", "认可词条", "状态", "仓库词条"])
+        GuihaiPanel._setup_table(self.table)
+        header_view = self.table.horizontalHeader()
+        for column in range(3):
+            header_view.setSectionResizeMode(column, QHeaderView.ResizeToContents)
+        header_view.setSectionResizeMode(3, QHeaderView.Stretch)
+        root.addWidget(self.table, 1)
+
+        self.footer = QLabel(
+            "数据来源：图2（老吴仙人的咸鱼养成法）主战坦克组件清单，9 件。"
+            " 匹配只要求组件名 + 可接受词条，不要求完整组合；空词条表示任意。"
+        )
+        self.footer.setWordWrap(True)
+        self.footer.setStyleSheet(f"color: {MUTED}; font-size: 10px;")
+        root.addWidget(self.footer)
+
+        self.refresh()
+
+    @staticmethod
+    def _rules_label(rules) -> str:
+        if isinstance(rules, list):
+            return " / ".join(str(word) for word in rules) or "任意词条"
+        if isinstance(rules, dict):
+            parts = []
+            if rules.get("main"):
+                parts.append("主词条 " + " / ".join(map(str, rules["main"])))
+            if rules.get("required"):
+                parts.append("必需 " + " / ".join(map(str, rules["required"])))
+            if rules.get("any"):
+                parts.append("任意 " + " / ".join(map(str, rules["any"])))
+            return "；".join(parts) or "任意词条"
+        return "任意词条"
+
+    def refresh(self, _evaluation=None) -> None:
+        inventory = build_inventory(index_path_for_account(self.state))
+        matches: dict[str, dict] = {}
+        for entry in self.entries:
+            count = 0
+            sources: list[str] = []
+            for owned in inventory:
+                if owned.get("name") != entry["name"]:
+                    continue
+                if vehicle_components.rule_matches(str(owned.get("words") or ""), entry["rules"]):
+                    count += int(owned.get("count") or 0)
+                    sources.append(str(owned.get("words") or ""))
+            if count:
+                matches[entry["id"]] = {"count": count, "sources": list(dict.fromkeys(sources))}
+        self.matches = matches
+        self._apply_filters()
+
+    def _apply_filters(self, *_args) -> None:
+        status = str(self.status_combo.currentData() or "all")
+        needle = self.search_edit.text().strip()
+        rows = []
+        for entry in self.entries:
+            owned = entry["id"] in self.matches
+            if status == "owned" and not owned:
+                continue
+            if status == "missing" and owned:
+                continue
+            if needle and needle not in (entry["name"] + entry["accepted"]):
+                continue
+            rows.append((entry, owned))
+        self.table.setUpdatesEnabled(False)
+        self.table.setRowCount(len(rows))
+        palette_ok = QColor("#F2FBF5")
+        palette_no = QColor("#FFFFFF")
+        for row, (entry, owned) in enumerate(rows):
+            info = self.matches.get(entry["id"]) or {}
+            values = [
+                entry["name"],
+                entry["accepted"],
+                f"×{int(info.get('count') or 0)}" if owned else "缺失",
+                "；".join(info.get("sources") or []) if owned else "",
+            ]
+            for column, value in enumerate(values):
+                item = QTableWidgetItem(str(value))
+                item.setBackground(palette_ok if owned else palette_no)
+                if column == 2:
+                    item.setForeground(QColor("#2F7D4F" if owned else "#9AA8B6"))
+                if column == 3 and value:
+                    item.setToolTip(str(value))
+                self.table.setItem(row, column, item)
+            self.table.setRowHeight(row, 26)
+        self.table.setUpdatesEnabled(True)
+        self.count_label.setText(
+            f"显示 {len(rows)} / {len(self.entries)} 件\n"
+            f"已认可 {sum(1 for entry in self.entries if entry['id'] in self.matches)}/{len(self.entries)} 件"
+        )
+
+
 class SchemePage(QWidget):
     def __init__(self, state=None, parent: QWidget | None = None):
         super().__init__(parent)
@@ -379,10 +528,13 @@ class SchemePage(QWidget):
         self.tabs = QTabWidget()
         self.guihai = GuihaiPanel(state)
         self.qiushui = QiushuiPanel(state)
+        self.laowu = LaowuPanel(state)
         self.tabs.addTab(self.guihai, "归海一图流")
         self.tabs.addTab(self.qiushui, "秋水各积分关卡")
+        self.tabs.addTab(self.laowu, "老吴方案")
         root.addWidget(self.tabs, 1)
 
     def refresh(self, evaluation=None) -> None:
         self.guihai.refresh(evaluation)
         self.qiushui.refresh(evaluation)
+        self.laowu.refresh(evaluation)

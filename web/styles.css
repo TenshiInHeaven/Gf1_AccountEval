@@ -672,3 +672,8 @@ code { background: var(--panel-2); padding: 1px 5px; border-radius: 5px; }
 .unit-card.frame-gray:hover { border-color: #8D99A6; }
 .unit-badge-row { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 8px; }
 .unit-score { color: var(--muted); font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.scheme-head.laowu, .scheme-row.laowu { grid-template-columns: 150px minmax(0,1fr) 52px minmax(0,1fr); }
+@media (max-width: 720px) {
+  .scheme-row.laowu { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+[hidden] { display: none !important; }

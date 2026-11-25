@@ -26,8 +26,8 @@ GitHub: https://github.com/TenshiInHeaven/Gf1_AccountEval
 2. 双击 **`run.bat`** 打开桌面版
 3. 点右上角 **「提取账号」**：游戏已登录就选实时提取，否则导入 `account_snapshot.json`
 
-完整图文步骤（实时提取、快照导入、Android 抓包、常见问题）见 **[USAGE.md](USAGE.md)**。  
-应用内点右上角 **「帮助」**（或按 **F1**）可查看正常流程和 Android 抓包流程，对应文档：[HELP.md](HELP.md)。
+完整图文步骤（实时提取、快照导入、Android 抓包、常见问题）见 **[docs/USAGE.md](docs/USAGE.md)**。  
+应用内点右上角 **「帮助」**（或按 **F1**）可查看正常流程和 Android 抓包流程，对应文档：[docs/HELP.md](docs/HELP.md)。
 
 
 > 账号数据在服务器上，本地没有完整仓库存档。本工具不猜本地缓存，而是通过游戏自带的 **XLua 运行时** 只读读取 `CS.GameData`，一次提取、立即 detach；也可以导入之前保存的 JSON 快照。
@@ -89,7 +89,7 @@ build.bat
 
 1. 查找 Python 3.10+（优先 3.12；没有时会询问是否用 winget 自动安装）
 2. 创建或复用 `.venv`
-3. 安装 `requirements.txt` 和默认的 Android 抓包依赖
+3. 安装 `requirements/base.txt` 和默认的 Android 抓包依赖
 4. 运行 31 个单元测试
 
 > Android 抓包依赖默认安装。如果完全不需要 Android，可用 `build.bat --without-android` 跳过，启动会更快。
@@ -122,7 +122,7 @@ cd E:\python\gf_forge\account_evaluate
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements/base.txt
 .\.venv\Scripts\python.exe -m app.main
 ```
 
@@ -202,7 +202,7 @@ python tools\android_proxy_capture.py --port 18080 --push-ca
 python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 ```
 
-注意：这是 **协议层抓包**，不是 Frida 进程读取；它依赖客户端信任本地 CA。若客户端升级后启用证书固定，则需要改抓包方式。详见 [USAGE.md](USAGE.md)。
+注意：这是 **协议层抓包**，不是 Frida 进程读取；它依赖客户端信任本地 CA。若客户端升级后启用证书固定，则需要改抓包方式。详见 [docs/USAGE.md](docs/USAGE.md)。
 
 > **国服复活版 / PC 继承客户端支持，但必须“全新登录”。**  
 > 抓包运行期间要在游戏里退出登录 / 切换账号，再重新输入账密；日志里出现 `Index/getUidPC` 和 `[KEY] uid/sign` 后，`Index/index` 才能解密。台服 / 日服 / 美服只需要重启客户端。
@@ -290,7 +290,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 ```
 
 导入后会写入本地 `app/data/tierlists/*.local.json`，不修改仓库内置榜单；设置页也可以一键恢复内置评分。  
-启动时优先读取这些 `*.local.json`，没有本地覆盖时才读取内置 `dolls.json / fairies.json / sangvis.json`。`ratings_export.json` 只是手动导出的备份，**不会**在启动时自动加载，必须在设置页重新导入。
+启动时优先读取这些 `*.local.json`，没有本地覆盖时才读取内置 `dolls.json / fairies.json / sangvis.json`。`exports/ratings_export.json` 只是手动导出的备份，**不会**在启动时自动加载，必须在设置页重新导入。
 
 ### 装备
 
@@ -312,8 +312,8 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 - 归海按整条组合校验：组件名相同，且词条里同时包含「主词条 + 副词条1 + 副词条2」才算命中；芯片只校验两条词条。同一件组件最多可命中多条组合。
 - 秋水按每张积分关卡表校验：组件名相同且同时拥有「属性词条1 + 属性词条2」才算命中；「任意词条」是推荐项，不强制。跨活动取并集。
-- 老吴沿用原表的两条词条匹配。
-- 「组件」页显示账号实际持有的组件并支持金 / 绿 / 灰筛选，行尾标注归海 / 秋水各自命中条数；「方案」页分「归海一图流」「秋水各积分关卡」两个标签，前者列 183 条组合，后者列 21 张表 / 189 条需求，均按仓库标「已拥有 / 缺失」，支持组、活动、类型、状态和关键词筛选（界面见 `docs/screenshots/schemes.png`、`docs/screenshots/qiushui.png` 与 `docs/screenshots/components.png`）。
+- 老吴按图2 的 9 件认可组件 + 可接受词条校验（空词条 = 任意），方案页单独列出。
+- 「组件」页显示账号实际持有的组件并支持金 / 绿 / 灰筛选，行尾标注归海 / 秋水 / 老吴命中；「方案」页分「归海一图流」「秋水各积分关卡」「老吴方案」三个标签，分别列 183 条组合、21 张表 / 189 条需求、9 件认可组件，均按仓库标「已拥有 / 缺失」，支持组、活动、类型、状态和关键词筛选（界面见 `docs/screenshots/schemes.png`、`docs/screenshots/qiushui.png` 与 `docs/screenshots/components.png`）。
 
 ## WebUI / PWA / Android
 
@@ -345,6 +345,10 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 |---|
 | ![PWA 方案](docs/screenshots/pwa_schemes.png) |
 
+| PWA 老吴方案（9 件认可组件） |
+|---|
+| ![PWA 老吴](docs/screenshots/pwa_laowu.png) |
+
 | PWA 手机端（500px 视口） |
 |---|
 | ![PWA 手机](docs/screenshots/pwa_mobile.png) |
@@ -375,13 +379,19 @@ account_evaluate/
 ├─ assets/avatars/            # 已提取的人形 / 妖精 / 融合势力头像
 ├─ tools/                     # 数据构建、头像提取、示例快照生成
 ├─ tests/                     # 纯标准库 unittest
-├─ docs/                      # 截图 + 归海 / 秋水词条全表（md / csv）
-│  └─ repo/                    # 原始榜单图 / 组件来源图 / Excel（人工核对用）
+├─ docs/                      # 截图 / 帮助 / 方案全表 / 来源图
+│  ├─ HELP.md                 # 应用内帮助（F1）
+│  ├─ USAGE.md                # 安装与使用说明
+│  ├─ screenshots/            # README / 对照截图
+│  └─ repo/                   # 原始榜单图 / 组件来源图 / Excel（人工核对用）
 ├─ web/                       # WebUI / PWA 静态页面 + serve.py
-├─ android/                   # Android WebView 套壳工程
+├─ android/                   # Android WebView 只读套壳工程
+├─ exports/                   # 导出的快照 / 评分 / 收藏（gitignore，仅留 .gitkeep）
+├─ snapshots/                 # 本地账号 / 索引快照（gitignore）
 ├─ run.ps1 / run.bat          # Qt 桌面端
 ├─ run_web.ps1 / run_web.bat  # WebUI / PWA
-├─ requirements.txt
+├─ requirements/              # base / android / extract / web
+├─ build.bat                  # 打包 / 安装依赖
 └─ pyproject.toml
 ```
 
@@ -436,7 +446,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
 - **融合势力 Q 版头像**：大部分单位使用 `character*spine.ab` 的战场 Q 版小人；`Striker_SWAP`、`Dragoon_SWAP`、`Aegis_SWAP`、`Jaeger_SWAP` 没有可用 Spine 骨架，已改为从对应 `character*swap.ab` 提取官方 `_SS` 立绘/战斗 sprite，不再裁切头像。
 - **榜单是主观的**：人形档位来自表格作者，融合势力 A- / A / B / C 是按图内层级与配队图归并的；本项目只做落库和评分，不代表官方。
 - **装备「低穿 / 高穿」是社区口径**：本版把「高穿」明确为 **500 穿甲值**，当前对应 **第三方穿甲弹**（唯一 500 穿装备）；装备页「调整对应规则」可分三个区（配件 / 子弹 / 人形）编辑 match JSON 与目标数量，也支持导入 / 导出规则 JSON，保存到本地 `equipment_rules.local.json` 并立即重算。
-- **机动装甲组件**：「组件」页显示账号实际持有的组件（名字 / 词条 / `×N`），按通用组件 / 其他组件分栏；归海按 183 条完整词条组合逐条校验，秋水按 21 张积分关卡表逐条校验，行尾标注「归N 秋M」命中条数。「方案」页分两个标签：归海列 183 条组合，秋水列 8 个活动 / 21 张表 / 189 条需求，都按仓库标记已拥有 / 缺失并支持筛选。秋水表按活动分散在腾讯文档的「主战坦克 / 战术人型机甲」页，每张表 9 件；旧版图1 总表作为参考单独保留。
+- **机动装甲组件**：「组件」页显示账号实际持有的组件（名字 / 词条 / `×N`），按通用组件 / 其他组件分栏；归海按 183 条完整词条组合逐条校验，秋水按 21 张积分关卡表逐条校验，老吴按 9 件认可组件 + 可接受词条校验，行尾标注「归N 秋M 老吴」命中。「方案」页分三个标签：归海列 183 条组合，秋水列 8 个活动 / 21 张表 / 189 条需求，老吴列 9 件认可组件，都按仓库标记已拥有 / 缺失并支持筛选。秋水表按活动分散在腾讯文档的「主战坦克 / 战术人型机甲」页，每张表 9 件；旧版图1 总表作为参考单独保留。
 - **安卓端只读**：APK / PWA 只读取已有 JSON / 内置图鉴，不抓包、不代理、不登录游戏；账号快照由 PC 端生成后导入或连接。
 - **账号隐私**：快照包含 UID、昵称、仓库；默认只写本地 `snapshots/`，请不要把快照公开上传。
 

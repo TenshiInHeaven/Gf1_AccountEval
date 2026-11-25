@@ -348,7 +348,7 @@ async def run_proxy(args) -> int:
     except ImportError as exc:
         raise SystemExit(
             "缺少 mitmproxy；请运行 build.bat --with-android "
-            "或 pip install -r requirements-android.txt"
+            "或 pip install -r requirements/android.txt"
         ) from exc
 
     ca_path = ensure_ca()

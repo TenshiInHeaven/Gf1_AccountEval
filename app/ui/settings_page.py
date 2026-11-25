@@ -183,7 +183,7 @@ class SettingsPage(QWidget):
         path, _ = QFileDialog.getSaveFileName(
             self,
             "导出评分 JSON",
-            str(PROJECT_ROOT / "ratings_export.json"),
+            str(PROJECT_ROOT / "exports" / "ratings_export.json"),
             "JSON (*.json);;所有文件 (*.*)",
         )
         if not path:
@@ -192,6 +192,7 @@ class SettingsPage(QWidget):
         if target.suffix.lower() != ".json":
             target = target.with_suffix(".json")
         try:
+            target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(
                 json.dumps(export_bundle(), ensure_ascii=False, indent=1),
                 encoding="utf-8",
@@ -237,7 +238,7 @@ class SettingsPage(QWidget):
         path, _ = QFileDialog.getSaveFileName(
             self,
             "导出收藏 JSON",
-            str(PROJECT_ROOT / "favorites_export.json"),
+            str(PROJECT_ROOT / "exports" / "favorites_export.json"),
             "JSON (*.json);;所有文件 (*.*)",
         )
         if not path:
@@ -246,6 +247,7 @@ class SettingsPage(QWidget):
         if target.suffix.lower() != ".json":
             target = target.with_suffix(".json")
         try:
+            target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(
                 json.dumps(get_favorites().export_payload(), ensure_ascii=False, indent=1),
                 encoding="utf-8",
@@ -268,11 +270,11 @@ class SettingsPage(QWidget):
         if active:
             self.ratings_status.setText(
                 "当前生效：本地覆盖 " + " / ".join(active)
-                + "（启动时自动读取；ratings_export.json 不会自动加载，需手动导入）"
+                + "（启动时自动读取；exports/ratings_export.json 不会自动加载，需手动导入）"
             )
         else:
             self.ratings_status.setText(
-                "当前生效：内置榜单 app/data/tierlists/*.json（ratings_export.json 不会自动加载）"
+                "当前生效：内置榜单 app/data/tierlists/*.json（exports/ratings_export.json 不会自动加载）"
             )
         account = evaluation.account
         source = account.source or "未知"

@@ -31,7 +31,7 @@ python tools\build_android_assets.py
 
 ## 账号数据
 
-- **离线**：把 PC 端导出的 `web_snapshot.json` 放进手机，打开 App → 「导入快照」。
+- **离线**：把 PC 端导出的 `exports/web_snapshot.json` 放进手机，打开 App → 「导入快照」。
 - **局域网**：PC 运行 `run_web.ps1 --host 0.0.0.0`，手机 App 点「连接」，填
   `http://<PC IP>:8770/api/latest`（需要同一 Wi-Fi；`usesCleartextTraffic` 已开启）。
 - App 不会保存游戏账号密码；快照包含 UID / 昵称，请勿公开分享。

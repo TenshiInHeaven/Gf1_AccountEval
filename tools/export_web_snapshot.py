@@ -53,7 +53,7 @@ def merged(account_path: Path) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--account", help="account_*.json path; default: latest")
-    parser.add_argument("--out", default=str(ROOT / "web_snapshot.json"))
+    parser.add_argument("--out", default=str(ROOT / "exports" / "web_snapshot.json"))
     args = parser.parse_args()
     if args.account:
         account_path = Path(args.account)
@@ -64,6 +64,7 @@ def main() -> int:
         account_path = candidates[0]
     payload = merged(account_path)
     out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
     components = payload.get("vehicle_component_with_user_info") or {}
     print(f"wrote {out} ({out.stat().st_size / 1024:.0f} KB)")

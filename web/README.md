@@ -18,6 +18,7 @@
 - **方案**：
   - 归海一图流：25 件 / 42 条主词条 / 183 条词条组合，按仓库标「已拥有 / 缺失」
   - 秋水各关卡：8 个活动 / 21 张表 / 189 条需求 / 29 件组件，可按活动、主战坦克 / 机甲筛选
+  - 老吴方案：9 件认可组件 + 可接受词条（空词条 = 任意），按仓库标「已拥有 / 缺失」
 - 图鉴：全量单位与拥有状态
 - **设置**：快照导入/连接/导出、评分 JSON 导入/导出/恢复、收藏导入/导出、数据来源与版本
 - 离线：Service Worker 预缓存数据、按需缓存头像；已看过的单位断网可继续看
@@ -49,10 +50,10 @@ WebUI 不直接登录游戏，也不保存账号密码。三种方式：
 1. **PC 连接**：Qt 端抓包 / Frida 生成 `snapshots/account_*.json` 后，PWA 点「连接」，
    默认请求 `/api/latest`；`serve.py` 会自动合并同目录的 `index_*.json`（组件数据）。
    - 也支持 `?snapshot=http://.../api/latest` 或任意 URL。
-2. **文件导入**：点「导入快照」，选择 `account_*.json` 或合并后的 `web_snapshot.json`。
+2. **文件导入**：点「导入快照」，选择 `account_*.json` 或合并后的 `exports/web_snapshot.json`。
 3. **导出合并快照**：
    ```powershell
-   python tools\export_web_snapshot.py --out web_snapshot.json
+   python tools\export_web_snapshot.py --out exports/web_snapshot.json
    ```
    这个文件同时包含账号与组件，适合拷到手机离线导入。
 
@@ -78,7 +79,7 @@ API：
    ```
    PC 浏览器打开 `http://127.0.0.1:8770/` → 设置 → 手机配对，出现二维码；
    手机扫码打开 `http://<PC IP>:8770/?snapshot=/api/latest`，自动载入最新账号 + 组件。
-2. **文件**：`python tools\export_web_snapshot.py --out web_snapshot.json`，把文件传到手机，PWA「导入快照」。
+2. **文件**：`python tools\export_web_snapshot.py --out exports/web_snapshot.json`，把文件传到手机，PWA「导入快照」。
 3. **USB / localhost**：`adb reverse tcp:8770 tcp:8770`，手机 Chrome 打开 `http://localhost:8770/` 后可安装 PWA。
 
 > 局域网 HTTP 只能浏览，不能完整安装 PWA；要安装用 localhost 或 APK。

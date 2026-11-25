@@ -20,6 +20,8 @@ ratings_export.json
 .account_forge_settings.json
 favorites.json
 favorites_export.json
+exports/*
+!exports/.gitkeep
 
 # WebUI / PWA generated assets
 web/assets/avatars/

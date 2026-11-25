@@ -202,7 +202,7 @@ class HelpDialog(QDialog):
         if not sections:
             empty = QTextBrowser()
             empty.setPlainText(
-                "帮助文档缺失：HELP.md\n\n请确认项目根目录下存在 HELP.md，或查看 README.md / USAGE.md。"
+                "帮助文档缺失：docs/HELP.md\n\n请确认项目 docs 目录下存在 HELP.md，或查看 README.md / docs/USAGE.md。"
             )
             self.tabs.addTab(empty, "帮助")
         else:

@@ -80,6 +80,11 @@ def _match_rule(words: str, rules) -> bool:
     return all(str(rule) in words for rule in rules or [])
 
 
+def rule_matches(words: str, rules) -> bool:
+    """Public wrapper for the 老吴 accepted-affix rules."""
+    return _match_rule(words, rules)
+
+
 def _guihai_by_weapon() -> dict[str, list[dict]]:
     grouped: dict[str, list[dict]] = {}
     for entry in scheme_catalog.catalog_entries():

@@ -207,6 +207,13 @@ class TierDataTests(unittest.TestCase):
         self.assertEqual(dolls.tier_for(name="卡尔卡诺M91/38").id, "A-")
         self.assertTrue(dolls.is_crown(name="卡尔卡诺M91/38"))
 
+    def test_card_surface_overrides(self):
+        dolls = get_tierlists()["doll"]
+        # Qt and WebUI share these overrides: gold badge, alternate card surface.
+        self.assertEqual(dolls.recommend_level(code="SPAS12", name="SPAS-12"), "gold")
+        self.assertEqual(dolls.recommend_level(code="M1895", name="纳甘左轮"), "green")
+        self.assertEqual(dolls.tier_for(code="M1895", name="纳甘左轮").id, "SS")
+
     def test_ratings_bundle_contains_recommendation(self):
         bundle = export_bundle()
         validate_bundle(bundle)

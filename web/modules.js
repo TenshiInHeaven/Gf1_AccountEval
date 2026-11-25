@@ -12,6 +12,7 @@ function buildComponentIndexes() {
   );
   state.componentRequirements = guide.requirements || {};
   state.componentsMeta = catalog.components || {};
+  state.laowuRows = buildLaowuRows();
   state.guihaiRows = flattenGuihai(DATA.guihai || {});
   state.qiushuiRows = flattenQiushui(DATA.qiushui || {});
   state.guihaiByWeapon = groupByRows(state.guihaiRows, (row) => row.weapon);
@@ -143,6 +144,30 @@ function laowuMatches(words, rules) {
   return false;
 }
 
+function laowuRulesLabel(rules) {
+  if (Array.isArray(rules)) {
+    return rules.length ? rules.map(String).join(' / ') : '任意词条';
+  }
+  if (rules && typeof rules === 'object') {
+    const parts = [];
+    if (Array.isArray(rules.main) && rules.main.length) parts.push(`主词条 ${rules.main.join(' / ')}`);
+    if (Array.isArray(rules.required) && rules.required.length) parts.push(`必需 ${rules.required.join(' / ')}`);
+    if (Array.isArray(rules.any) && rules.any.length) parts.push(`任意 ${rules.any.join(' / ')}`);
+    return parts.join('；') || '任意词条';
+  }
+  return '任意词条';
+}
+
+function buildLaowuRows() {
+  const requirements = (state.componentRequirements || {}).laowu || {};
+  return Object.entries(requirements).map(([name, rules], index) => ({
+    id: `lw-${index + 1}`,
+    name,
+    rules,
+    accepted: laowuRulesLabel(rules),
+  }));
+}
+
 function buildComponentInventory(payload) {
   const raw = payload && payload.vehicle_component_with_user_info;
   let rows = [];
@@ -263,7 +288,7 @@ function componentSummary(inventory) {
 
 function renderComponentsPage() {
   const inventory = state.account ? state.account.components || [] : [];
-  const head = pageHead('组件', '机动装甲组件库 · 归海 / 秋水');
+  const head = pageHead('组件', '机动装甲组件库 · 归海 / 秋水 / 老吴');
   if (!inventory.length) {
     return `${head}
       <div class="card empty">
@@ -375,14 +400,28 @@ function ensureSchemeMatches() {
     }
     if (count) qiushui.set(row.id, { count, sources: [...new Set(sources)] });
   }
-  state.schemeMatches = { guihai, qiushui };
+  const laowu = new Map();
+  for (const row of state.laowuRows || []) {
+    let count = 0;
+    const sources = [];
+    for (const entry of byName.get(row.name) || []) {
+      if (laowuMatches(entry.words, row.rules)) {
+        count += entry.count;
+        sources.push(entry.words);
+      }
+    }
+    if (count) laowu.set(row.id, { count, sources: [...new Set(sources)] });
+  }
+  state.schemeMatches = { guihai, qiushui, laowu };
   state.schemeMatchAccount = state.account;
 }
 
 function schemeSummary(mode) {
   const rows = mode === 'guihai'
     ? state.guihaiRows || []
-    : (state.qiushuiRows || []).filter((row) => !row.reference);
+    : mode === 'laowu'
+      ? state.laowuRows || []
+      : (state.qiushuiRows || []).filter((row) => !row.reference);
   const matches = state.schemeMatches[mode] || new Map();
   const owned = rows.filter((row) => matches.has(row.id)).length;
   const covered = new Set(rows.filter((row) => matches.has(row.id)).map((row) => mode === 'guihai' ? row.weapon : row.name)).size;
@@ -397,7 +436,7 @@ function renderSchemesPage() {
   const cfg = state.schemeFilter;
   const summary = schemeSummary(cfg.mode);
   const modeButtons = [
-    ['guihai', '归海一图流'], ['qiushui', '秋水各关卡'],
+    ['guihai', '归海一图流'], ['qiushui', '秋水各关卡'], ['laowu', '老吴方案'],
   ].map(([value, label]) => `<button class="seg-btn ${cfg.mode === value ? 'active' : ''}" type="button" data-action="scheme-mode" data-mode="${value}">${label}</button>`).join('');
   let toolbar = '';
   if (cfg.mode === 'guihai') {
@@ -411,7 +450,7 @@ function renderSchemesPage() {
       ${statusSelect(cfg.status)}
       <input class="search-input" type="search" placeholder="搜索组件 / 主词条 / 词条…" value="${esc(cfg.query)}" data-action="scheme-search" autocomplete="off">
     </div>`;
-  } else {
+  } else if (cfg.mode === 'qiushui') {
     const activities = (DATA.qiushui && DATA.qiushui.activities || []);
     const activityOptions = [
       ['', '全部活动'],
@@ -426,11 +465,23 @@ function renderSchemesPage() {
       ${statusSelect(cfg.status)}
       <input class="search-input" type="search" placeholder="搜索活动 / 组件 / 词条…" value="${esc(cfg.query)}" data-action="scheme-search" autocomplete="off">
     </div>`;
+  } else {
+    toolbar = `<div class="filter-bar">
+      ${statusSelect(cfg.status)}
+      <input class="search-input" type="search" placeholder="搜索组件 / 认可词条…" value="${esc(cfg.query)}" data-action="scheme-search" autocomplete="off">
+    </div>`;
   }
   const label = cfg.mode === 'guihai'
     ? `归海 ${summary.rows} 条组合 · 已拥有 ${summary.owned} 条 · 覆盖 ${summary.covered}/${summary.totalComponents} 件`
-    : `秋水 ${summary.rows} 条需求（8 活动 / 21 表）· 已拥有 ${summary.owned} 条 · 覆盖 ${summary.covered}/${summary.totalComponents} 件`;
-  return `${pageHead('方案', cfg.mode === 'guihai' ? '归海一图流 183 条词条组合' : '秋水各积分关卡 8 活动 / 21 张表')}
+    : cfg.mode === 'laowu'
+      ? `老吴 ${summary.rows} 件认可组件 · 已拥有 ${summary.owned} 件`
+      : `秋水 ${summary.rows} 条需求（8 活动 / 21 表）· 已拥有 ${summary.owned} 条 · 覆盖 ${summary.covered}/${summary.totalComponents} 件`;
+  const subtitle = cfg.mode === 'guihai'
+    ? '归海一图流 183 条词条组合'
+    : cfg.mode === 'laowu'
+      ? '老吴仙人认可的主战坦克组件与词条'
+      : '秋水各积分关卡 8 活动 / 21 张表';
+  return `${pageHead('方案', subtitle)}
     <div class="segmented">${modeButtons}</div>
     ${toolbar}
     <div class="grid-count">${esc(label)}</div>
@@ -454,14 +505,18 @@ function renderSchemeRows() {
   if (!container) return;
   const matches = state.schemeMatches[cfg.mode] || new Map();
   const query = cfg.query.trim().toLowerCase();
-  let rows = cfg.mode === 'guihai' ? (state.guihaiRows || []) : (state.qiushuiRows || []);
+  let rows = cfg.mode === 'guihai'
+    ? (state.guihaiRows || [])
+    : cfg.mode === 'laowu'
+      ? (state.laowuRows || [])
+      : (state.qiushuiRows || []);
   rows = rows.filter((row) => {
     if (cfg.mode === 'qiushui') {
       if (cfg.activity === 'reference') { if (!row.reference) return false; }
       else if (row.reference) return false;
       if (cfg.activity && cfg.activity !== 'reference' && row.activityId !== cfg.activity) return false;
       if (cfg.side && row.side !== cfg.side) return false;
-    } else {
+    } else if (cfg.mode === 'guihai') {
       if (cfg.group && row.group !== cfg.group) return false;
       if (cfg.weapon && row.weapon !== cfg.weapon) return false;
     }
@@ -470,7 +525,9 @@ function renderSchemeRows() {
     if (cfg.status === 'missing' && owned) return false;
     const haystack = cfg.mode === 'guihai'
       ? `${row.weapon}${row.main}${row.label}`
-      : `${row.activity}${row.name}${row.stat1}${row.stat2}${row.optional}`;
+      : cfg.mode === 'laowu'
+        ? `${row.name}${row.accepted}`
+        : `${row.activity}${row.name}${row.stat1}${row.stat2}${row.optional}`;
     if (query && !haystack.toLowerCase().includes(query)) return false;
     return true;
   });
@@ -488,7 +545,9 @@ function renderSchemeRows() {
 function schemeHeadHTML(mode) {
   const columns = mode === 'guihai'
     ? ['组', '组件', '主词条', '词条组合', '状态', '仓库词条']
-    : ['活动', '表', '组件', '词条1', '词条2', '任意', '状态', '仓库词条'];
+    : mode === 'laowu'
+      ? ['组件', '认可词条', '状态', '仓库词条']
+      : ['活动', '表', '组件', '词条1', '词条2', '任意', '状态', '仓库词条'];
   return columns.map((label) => `<span>${label}</span>`).join('');
 }
 
@@ -497,10 +556,14 @@ function schemeRowHTML(row, mode, matches) {
   const owned = Boolean(info);
   const cells = mode === 'guihai'
     ? [row.group, row.weapon, row.main || '—', row.label, owned ? `×${info.count}` : '缺失', owned ? info.sources.join('；') : '']
-    : [row.activity, `${row.side}·${row.variant}`, row.name, row.stat1, row.stat2, row.optional || '—', owned ? `×${info.count}` : '缺失', owned ? info.sources.join('；') : ''];
+    : mode === 'laowu'
+      ? [row.name, row.accepted, owned ? `×${info.count}` : '缺失', owned ? info.sources.join('；') : '']
+      : [row.activity, `${row.side}·${row.variant}`, row.name, row.stat1, row.stat2, row.optional || '—', owned ? `×${info.count}` : '缺失', owned ? info.sources.join('；') : ''];
   const labels = mode === 'guihai'
     ? ['组', '组件', '主词条', '词条组合', '状态', '仓库词条']
-    : ['活动', '表', '组件', '词条1', '词条2', '任意', '状态', '仓库词条'];
+    : mode === 'laowu'
+      ? ['组件', '认可词条', '状态', '仓库词条']
+      : ['活动', '表', '组件', '词条1', '词条2', '任意', '状态', '仓库词条'];
   return `<div class="scheme-row ${owned ? 'owned' : ''} ${mode}">
     ${cells.map((value, index) => `<span data-label="${labels[index]}" class="${index === cells.length - 2 ? 'status' : ''}" title="${esc(value)}">${esc(value)}</span>`).join('')}
   </div>`;
@@ -572,7 +635,8 @@ function onFeatureEvent(event) {
     return true;
   }
   if (action === 'scheme-mode') {
-    state.schemeFilter.mode = node.dataset.mode === 'qiushui' ? 'qiushui' : 'guihai';
+    const mode = node.dataset.mode;
+    if (['guihai', 'qiushui', 'laowu'].includes(mode)) state.schemeFilter.mode = mode;
     state.schemeFilter.limit = 120;
     renderPage();
     return true;

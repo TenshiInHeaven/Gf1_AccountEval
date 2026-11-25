@@ -60,16 +60,16 @@ set "PY=%VENV%\Scripts\python.exe"
 echo [3/4] Installing dependencies ...
 "%PY%" -m pip install --upgrade pip setuptools wheel
 if errorlevel 1 goto fail
-"%PY%" -m pip install -r "%ROOT%\requirements.txt"
+"%PY%" -m pip install -r "%ROOT%\requirements\base.txt"
 if errorlevel 1 goto fail
 if "%WITH_EXTRACT%"=="1" (
   echo      Installing optional UnityPy extraction dependencies ...
-  "%PY%" -m pip install -r "%ROOT%\requirements-extract.txt"
+  "%PY%" -m pip install -r "%ROOT%\requirements\extract.txt"
   if errorlevel 1 goto fail
 )
 if "%WITH_ANDROID%"=="1" (
   echo      Installing Android capture dependencies ...
-  "%PY%" -m pip install -r "%ROOT%\requirements-android.txt"
+  "%PY%" -m pip install -r "%ROOT%\requirements\android.txt"
   if errorlevel 1 goto fail
 ) else (
   echo      Android capture dependencies skipped by --without-android

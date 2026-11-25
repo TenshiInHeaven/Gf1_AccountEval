@@ -110,7 +110,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         try:
             import qrcode
         except ImportError:
-            self._error("缺少 qrcode 依赖，请 pip install -r requirements-web.txt", 503)
+            self._error("缺少 qrcode 依赖，请 pip install -r requirements/web.txt", 503)
             return
         image = qrcode.make(target)
         buffer = io.BytesIO()

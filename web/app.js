@@ -1303,7 +1303,7 @@ async function init() {
     const deepTab = params.get('tab');
     if (deepTab && TITLES[deepTab]) state.tab = deepTab;
     const deepScheme = params.get('scheme');
-    if (deepScheme === 'qiushui' || deepScheme === 'guihai') {
+    if (deepScheme === 'qiushui' || deepScheme === 'guihai' || deepScheme === 'laowu') {
       state.schemeFilter.mode = deepScheme;
     }
     const deepActivity = params.get('activity');

@@ -29,7 +29,7 @@ class AndroidProxySessionTests(unittest.TestCase):
 
 class HelpDocumentTests(unittest.TestCase):
     def test_help_has_expected_tabs(self):
-        text = (Path(__file__).resolve().parents[1] / "HELP.md").read_text(encoding="utf-8")
+        text = (Path(__file__).resolve().parents[1] / "docs" / "HELP.md").read_text(encoding="utf-8")
         sections = parse_help(text)
         titles = [section.title for section in sections]
         self.assertEqual(len(sections), 5)
