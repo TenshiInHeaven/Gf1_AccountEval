@@ -326,10 +326,11 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 关键设计：
 
 - 头像、图鉴、榜单、装备、归海 / 秋水组件表全部内置，运行时只需要**账号登录后的快照 JSON**。
-- `web/serve.py` 提供 `/api/latest`：自动读取 `snapshots/account_*.json`，并合并同 UID 的 `index_*.json` 组件数据。
+- `web/serve.py` 提供 `/api/latest`：自动读取 `snapshots/account_*.json`，并合并同 UID 的 `index_*.json` 组件数据；PWA 在 PC 同源环境会自动尝试。
 - PWA 支持文件导入、URL 连接（`?snapshot=`）、离线缓存；`data/core.json` 是 Service Worker 预缓存清单。
+- 单位页支持排序（综合 / 萌新 / 编号 / 星级）、收藏 + 只看收藏；装备页支持按活动切换；设置页支持评分 / 收藏 / 快照导入导出。
 - `tools/build_web.py` 生成 `web/data` 与头像副本；`tools/export_web_snapshot.py` 导出合并快照；`tools/build_android_assets.py` 生成 APK 资源。
-- 详细说明见 [`web/README.md`](web/README.md) 与 [`android/README.md`](android/README.md)。
+- 与 Qt 端的功能对照见 [`docs/webui_parity.md`](docs/webui_parity.md)；详细说明见 [`web/README.md`](web/README.md) 与 [`android/README.md`](android/README.md)。
 - 「纯 VPN 抓包」的可行性与限制见 [`docs/android_vpn_capture.md`](docs/android_vpn_capture.md)：VPN 只改道，TLS 信任 / 证书固定 / `gf_authcode` 才是难点。
 
 | WebUI 总览 | PWA 组件 |
@@ -343,6 +344,10 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 | PWA 手机端（500px 视口） |
 |---|
 | ![PWA 手机](docs/screenshots/pwa_mobile.png) |
+
+| PWA 设置（评分 / 收藏 / 快照） |
+|---|
+| ![PWA 设置](docs/screenshots/pwa_settings.png) |
 
 ## 数据与目录
 

@@ -85,15 +85,39 @@ class AppState(QObject):
 
     # ------------------------------------------------------------------
     def export_payload(self) -> dict | None:
-        """Return the raw snapshot payload currently used by the app."""
+        """Return a PWA-ready snapshot (account + vehicle components).
+
+        ``account_*.json`` never contains the component inventory; it lives in
+        the matching ``index_*.json``.  Attach it here so "导出账号" can be
+        imported directly into the WebUI/PWA.
+        """
+        payload: dict | None = None
         if isinstance(self.last_payload, dict):
-            return self.last_payload
-        if self.source_path and self.source_path.is_file():
-            payload = read_json(self.source_path, None)
-            if isinstance(payload, dict):
-                self.last_payload = payload
-                return payload
-        return None
+            payload = self.last_payload
+        elif self.source_path and self.source_path.is_file():
+            value = read_json(self.source_path, None)
+            if isinstance(value, dict):
+                self.last_payload = value
+                payload = value
+        if not isinstance(payload, dict):
+            return None
+        result = dict(payload)
+        if "vehicle_component_with_user_info" not in result:
+            try:
+                from .core.vehicle_components import index_path_for_account
+
+                index_path = index_path_for_account(self)
+                if index_path is not None:
+                    index = read_json(index_path, {}) or {}
+                    rows = index.get("vehicle_component_with_user_info")
+                    index_uid = str((index.get("user_info") or {}).get("user_id") or "")
+                    uid = str((result.get("meta") or {}).get("uid") or "")
+                    if rows and (not index_uid or not uid or index_uid == uid):
+                        result["vehicle_component_with_user_info"] = rows
+                        result.setdefault("meta", {})["component_source"] = index_path.name
+            except Exception:  # pragma: no cover - export must never break
+                pass
+        return result
 
     def save_last_path(self, path: Path) -> None:
         try:

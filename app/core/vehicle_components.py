@@ -25,13 +25,32 @@ def latest_index_path() -> Path | None:
 
 
 def index_path_for_account(state) -> Path | None:
-    """Map an account snapshot (``account_android_*``) to its ``index_*`` file."""
+    """Map an account snapshot to a compatible component ``index_*`` file.
+
+    Imported ``account_*.json`` files often have no sibling index; fall back to
+    the newest index only when its ``user_info.user_id`` matches the loaded
+    account (otherwise a different user's components would leak in).
+    """
     source = getattr(state, "source_path", None) if state is not None else None
+    account = getattr(state, "account", None) if state is not None else None
+    account_uid = str(getattr(account, "uid", "") or "")
+
+    def compatible(path: Path) -> bool:
+        try:
+            payload = read_json(path, {}) or {}
+        except Exception:
+            return True
+        index_uid = str((payload.get("user_info") or {}).get("user_id") or "")
+        return not (account_uid and index_uid and account_uid != index_uid)
+
     if source is not None:
-        candidate = SNAPSHOT_DIR / Path(source).name.replace("account_android_", "index_")
-        if candidate.is_file():
+        candidate = SNAPSHOT_DIR / Path(source).name.replace("account_android_", "index_").replace("account_", "index_")
+        if candidate.is_file() and compatible(candidate):
             return candidate
-    return latest_index_path()
+    latest = latest_index_path()
+    if latest is None:
+        return None
+    return latest if compatible(latest) else None
 
 
 def _roll_parts(value: str, names: dict[str, str], skill_names: dict[str, str] | None = None) -> str:

@@ -364,6 +364,29 @@ class SchemeCatalogTests(unittest.TestCase):
         self.assertFalse(scheme_catalog.combo_matches("技能 重武护盾 / 重武伤害 48 / 破防 76", combo))
         self.assertFalse(scheme_catalog.combo_matches("技能 精英打击 / 重武伤害 48 / 精度 32", combo))
 
+    def test_index_lookup_matches_uid(self):
+        from unittest import mock
+
+        from app.core import vehicle_components as vc
+
+        class DummyState:
+            source_path = None
+            account = None
+
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            index = folder / "index_20260101_000000.json"
+            index.write_text(json.dumps({"user_info": {"user_id": "1"}, "vehicle_component_with_user_info": {}}), encoding="utf-8")
+            account = folder / "account_20260101_000000.json"
+            account.write_text(json.dumps({"meta": {"uid": "1"}}), encoding="utf-8")
+            state = DummyState()
+            state.source_path = account
+            state.account = type("A", (), {"uid": "1"})()
+            with mock.patch.object(vc, "SNAPSHOT_DIR", folder):
+                self.assertEqual(vc.index_path_for_account(state), index)
+                state.account = type("A", (), {"uid": "2"})()
+                self.assertIsNone(vc.index_path_for_account(state))
+
     def test_match_inventory_aggregates_owned_combos(self):
         from app.core import scheme_catalog
 

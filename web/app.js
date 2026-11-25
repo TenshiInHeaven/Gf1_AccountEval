@@ -4,6 +4,8 @@
 /* Constants / state                                                   */
 /* ------------------------------------------------------------------ */
 const STORAGE_KEY = 'gf-account-forge-snapshot-v1';
+const FAVORITES_KEY = 'gf-account-forge-favorites-v1';
+const TIERS_KEY = 'gf-account-forge-tiers-v1';
 const KIND_LABEL = { doll: '人形', fairy: '妖精', sangvis: '融合势力' };
 const TYPE_LABEL = { 1: 'HG', 2: 'SMG', 3: 'RF', 4: 'AR', 5: 'MG', 6: 'SG' };
 const UNIT_TABS = new Set(['doll', 'fairy', 'sangvis']);
@@ -15,13 +17,14 @@ const TITLES = {
   equipment: ['装备', '目标个数 vs 当前个数'],
   components: ['组件', '机动装甲组件库 · 归海 / 秋水'],
   schemes: ['方案', '归海一图流 / 秋水各积分关卡'],
+  settings: ['设置', '数据源 / 评分 / 快照'],
   codex: ['图鉴', '全量单位与拥有状态'],
 };
 
 const DATA = {
-  codex: {}, tiers: {}, equipmentItems: [], equipmentTargets: null, sample: null,
+  codex: {}, tiers: {}, baseTiers: {}, equipmentItems: [], equipmentTargets: null, sample: null,
   equipmentActivities: null, components: null, vehicleCatalog: null,
-  guihai: null, qiushui: null,
+  guihai: null, qiushui: null, buildInfo: null,
 };
 const state = {
   tab: 'dashboard',
@@ -33,6 +36,9 @@ const state = {
   alias: new Map(),
   tierLookup: {},
   equipment: null,
+  equipmentActivity: '',
+  favoriteOnly: false,
+  favorites: new Set(),
   grid: {
     doll: makeGrid(true),
     fairy: makeGrid(true),
@@ -44,7 +50,7 @@ const state = {
 };
 
 function makeGrid(ownedOnly) {
-  return { query: '', tiers: new Set(), ownedOnly, limit: 120, type: 0 };
+  return { query: '', tiers: new Set(), ownedOnly, favoritesOnly: false, limit: 120, type: 0, sort: 'default' };
 }
 
 /* ------------------------------------------------------------------ */
@@ -117,6 +123,28 @@ function toast(message) {
   toast._timer = setTimeout(() => { node.hidden = true; }, 2200);
 }
 
+function loadFavorites() {
+  try {
+    const raw = localStorage.getItem(FAVORITES_KEY);
+    state.favorites = new Set(raw ? JSON.parse(raw) : []);
+  } catch (_error) {
+    state.favorites = new Set();
+  }
+}
+
+function saveFavorites() {
+  try {
+    localStorage.setItem(FAVORITES_KEY, JSON.stringify([...state.favorites]));
+  } catch (_error) { /* private mode */ }
+}
+
+function toggleFavorite(kind, code) {
+  const key = `${kind}:${code}`;
+  if (state.favorites.has(key)) state.favorites.delete(key);
+  else state.favorites.add(key);
+  saveFavorites();
+}
+
 /* ------------------------------------------------------------------ */
 /* Data loading / indexes                                              */
 /* ------------------------------------------------------------------ */
@@ -131,7 +159,7 @@ async function loadData() {
     dolls, fairies, sangvis,
     dollTiers, fairyTiers, sangvisTiers,
     equipmentItems, equipmentTargets, equipmentActivities, sample,
-    components, vehicleCatalog, guihai, qiushui,
+    components, vehicleCatalog, guihai, qiushui, buildInfo,
   ] = await Promise.all([
     fetchJSON('data/codex/dolls.json'),
     fetchJSON('data/codex/fairies.json'),
@@ -147,6 +175,7 @@ async function loadData() {
     fetchJSON('data/vehicle_components.json'),
     fetchJSON('data/guihai_weapons.json'),
     fetchJSON('data/qiushui_components.json'),
+    fetchJSON('data/build_info.json'),
   ]);
   DATA.codex = { doll: dolls, fairy: fairies, sangvis: sangvis };
   DATA.tiers = { doll: dollTiers, fairy: fairyTiers, sangvis: sangvisTiers };
@@ -158,6 +187,8 @@ async function loadData() {
   DATA.vehicleCatalog = vehicleCatalog;
   DATA.guihai = guihai;
   DATA.qiushui = qiushui;
+  DATA.buildInfo = buildInfo;
+  DATA.baseTiers = JSON.parse(JSON.stringify({ doll: dollTiers, fairy: fairyTiers, sangvis: sangvisTiers }));
   buildCodexIndexes();
   buildTierLookup();
   buildEquipmentIndex();
@@ -191,22 +222,43 @@ function buildTierLookup() {
     for (const tier of raw.tiers || []) tierById.set(tier.id, tier);
     const codeTier = new Map();
     const nameTier = new Map();
+    const codeRecommend = new Map();
+    const nameRecommend = new Map();
     for (const entry of raw.entries || []) {
       const tierId = entry.tier || raw.default_tier || 'C';
       if (!tierById.has(tierId)) continue;
       const names = [entry.name, ...(entry.aliases || [])].filter(Boolean);
+      const recommend = entry.recommend ? String(entry.recommend).toLowerCase() : '';
       for (const name of names) {
         const norm = normalize(name);
         if (norm) nameTier.set(norm, tierId);
+        if (recommend) nameRecommend.set(norm, recommend);
         for (const item of (state.alias.get(norm) || [])) {
-          if (item.kind === kind) codeTier.set(item.code, tierId);
+          if (item.kind === kind) {
+            codeTier.set(item.code, tierId);
+            if (recommend) codeRecommend.set(item.code, recommend);
+          }
         }
       }
-      if (entry.code) codeTier.set(entry.code, tierId);
+      if (entry.code) {
+        codeTier.set(entry.code, tierId);
+        if (recommend) codeRecommend.set(entry.code, recommend);
+      }
     }
     const fallback = tierById.get(raw.default_tier || 'C') || tierById.values().next().value;
-    state.tierLookup[kind] = { tierById, codeTier, nameTier, fallback, list: raw };
+    state.tierLookup[kind] = {
+      tierById, codeTier, nameTier, fallback, list: raw, codeRecommend, nameRecommend,
+    };
   }
+}
+
+const RECOMMEND_RANK = { gold: 5, green: 4, blue: 3, white: 2, gray: 1 };
+
+function recommendFor(kind, code, name = '') {
+  const lookup = state.tierLookup[kind];
+  if (!lookup) return 0;
+  const value = lookup.codeRecommend.get(code) || lookup.nameRecommend.get(normalize(name)) || '';
+  return RECOMMEND_RANK[value] || 0;
 }
 
 function findCodex(kind, code, name = '') {
@@ -267,7 +319,7 @@ function buildEquipmentIndex() {
   state.equipment = { payload, hits };
 }
 
-function evaluateEquipment(rows) {
+function evaluateEquipment(rows, targetCounts = null) {
   const payload = state.equipment.payload;
   const hits = state.equipment.hits;
   const categories = (payload.categories || []).map((cat) => ({
@@ -277,7 +329,7 @@ function evaluateEquipment(rows) {
     targets: (cat.items || []).map((target) => ({
       id: target.id,
       name: target.name,
-      target: Number(target.target || 0),
+      target: targetCounts ? Number(targetCounts[target.id] || 0) : Number(target.target || 0),
       current: 0,
     })),
   }));
@@ -455,6 +507,7 @@ function buildAccount(payload) {
     sangvis,
     units: { doll: dolls, fairy: fairies, sangvis },
     equipment: evaluateEquipment(payload.equipment || []),
+    equipmentRows: payload.equipment || [],
     components: buildComponentInventory(payload),
     teams: payload.teams || [],
     squads: payload.squads || [],
@@ -576,6 +629,7 @@ function setAccount(payload, sourceLabel = '快照', persist = true) {
     throw new Error('快照缺少 dolls / fairies / sangvis / equipment 字段');
   }
   const account = buildAccount(payload);
+  state.rawPayload = payload;
   state.account = account;
   state.evaluation = evaluateAccount(account);
   if (persist) {
@@ -721,11 +775,16 @@ function filterBarHTML(key, kind, codexMode) {
     <option value="0"${cfg.type === 0 ? ' selected' : ''}>全部类型</option>
     ${[[1, 'HG 手枪'], [2, 'SMG 冲锋枪'], [3, 'RF 步枪'], [4, 'AR 突击步枪'], [5, 'MG 机枪'], [6, 'SG 霰弹枪']].map(([id, label]) => `<option value="${id}"${cfg.type === id ? ' selected' : ''}>${label}</option>`).join('')}
   </select>` : '';
+  const sortSelect = `<select class="type-select" data-action="sort" data-key="${esc(key)}">
+    ${[['default', '默认排序'], ['overall', '综合推荐度'], ['newbie', '萌新推荐度'], ['id', '游戏编号'], ['rarity', '星级']].map(([value, label]) => `<option value="${value}"${cfg.sort === value ? ' selected' : ''}>${label}</option>`).join('')}
+  </select>`;
   return `<div class="filter-bar">
     <input class="search-input" type="search" placeholder="搜索名称 / 代号…" value="${esc(cfg.query)}" data-action="search" data-key="${esc(key)}" autocomplete="off">
     ${chips}
     ${typeSelect}
+    ${sortSelect}
     <label class="owned-label"><input type="checkbox" data-action="owned" data-key="${esc(key)}" ${cfg.ownedOnly ? 'checked' : ''}>只看已拥有</label>
+    <label class="owned-label"><input type="checkbox" data-action="favorites" data-key="${esc(key)}" ${cfg.favoritesOnly ? 'checked' : ''}>只看收藏</label>
   </div>`;
 }
 
@@ -751,7 +810,25 @@ function renderUnitPage(kind, codexMode = false) {
 function renderEquipmentPage() {
   const ev = state.evaluation;
   if (!ev) return pageHead('装备', '目标个数 vs 当前个数') + '<div class="card empty">尚未载入快照</div>';
-  const report = ev.account.equipment;
+  const activityId = state.equipmentActivity || '';
+  const activities = (DATA.equipmentActivities && DATA.equipmentActivities.activities) || [];
+  const activity = activities.find((item) => String(item.id) === activityId) || null;
+  const targetCounts = activity ? (activity.counts || {}) : null;
+  const report = evaluateEquipment(ev.account.equipmentRows || [], targetCounts);
+  const unavailable = Boolean(activity && activity.available === false);
+  const grade = unavailable ? 'C' : (activity ? gradeFor(report.score) : ev.equipment.grade);
+  const activityOptions = [
+    `<option value=""${activityId === '' ? ' selected' : ''}>全量最大（所有活动取并集）</option>`,
+    ...activities.map((item) => {
+      const suffix = item.available === false ? '（无数据）' : '';
+      return `<option value="${esc(item.id)}"${activityId === String(item.id) ? ' selected' : ''}>${esc(item.name || item.id)}${suffix}</option>`;
+    }),
+  ].join('');
+  const subtitle = unavailable
+    ? '该活动没有可读取的配置表数据'
+    : (activity
+      ? `${activity.name} · ${report.currentTotal}/${report.targetTotal} 件 · 完成度 ${report.completion.toFixed(0)}%`
+      : `${report.currentTotal}/${report.targetTotal} 件 · 完成度 ${report.completion.toFixed(0)}% · ${report.allTargets.filter((item) => item.current >= item.target).length}/${report.allTargets.length} 项达标`);
   const categories = report.categories.map((category) => {
     const color = category.completion >= 100 ? 'var(--green)' : category.completion >= 70 ? 'var(--orange)' : 'var(--red)';
     return `<div class="card equip-cat"><h3>${esc(category.name)}<span class="cat-pct" style="color:${color}">${category.completion.toFixed(0)}%</span></h3><div class="cat-value">${category.currentTotal} / ${category.targetTotal} 目标 · 权重 ${(category.weight * 100).toFixed(0)}%</div><div class="stat-bar"><i style="width:${pct(category.completion).toFixed(1)}%;background:${color}"></i></div></div>`;
@@ -765,7 +842,7 @@ function renderEquipmentPage() {
     return `<section class="card equip-section"><h3>${esc(category.name)} · ${category.currentTotal}/${category.targetTotal}</h3>${rows}</section>`;
   }).join('');
   return `${pageHead('装备', '目标个数 vs 当前个数')}
-    <section class="card equip-hero"><div class="left"><div class="eyebrow">EQUIPMENT RESERVE</div><h1>装备储备</h1><div class="hero-meta">${report.currentTotal}/${report.targetTotal} 件 · 完成度 ${report.completion.toFixed(0)}% · ${report.allTargets.filter((item) => item.current >= item.target).length}/${report.allTargets.length} 项达标</div></div><div><div class="equip-score">${report.score.toFixed(0)}</div><div class="equip-grade">${tierBadge(ev.equipment.grade)}</div></div></section>
+    <section class="card equip-hero"><div class="left"><div class="eyebrow">EQUIPMENT RESERVE</div><h1>装备储备</h1><div class="equip-activity"><label>评价范围</label><select class="type-select" data-action="eq-activity">${activityOptions}</select></div><div class="hero-meta">${esc(subtitle)}</div></div><div><div class="equip-score">${report.score.toFixed(0)}</div><div class="equip-grade">${tierBadge(grade)}</div></div></section>
     <section class="equip-cats">${categories}</section>${sections}`;
 }
 
@@ -807,28 +884,52 @@ function renderGrid(key) {
   const query = cfg.query.trim().toLowerCase();
   rows = rows.filter(({ item, unit }) => {
     if (cfg.ownedOnly && !unit) return false;
+    if (cfg.favoritesOnly && !state.favorites.has(`${kind}:${item.code}`)) return false;
     const itemTier = unit ? unit.tier : tierFor(kind, item.code, item.name);
     if (cfg.tiers.size && !cfg.tiers.has(itemTier.id)) return false;
     if (kind === 'doll' && cfg.type && Number(item.type || 0) !== cfg.type) return false;
     if (query && !`${item.name || ''} ${item.code || ''}`.toLowerCase().includes(query)) return false;
     return true;
   });
+  const mode = cfg.sort || 'default';
   rows.sort((a, b) => {
+    const itemA = a.item;
+    const itemB = b.item;
+    const tierA = a.unit ? a.unit.tier : tierFor(kind, itemA.code, itemA.name);
+    const tierB = b.unit ? b.unit.tier : tierFor(kind, itemB.code, itemB.name);
+    const recA = recommendFor(kind, itemA.code, itemA.name);
+    const recB = recommendFor(kind, itemB.code, itemB.name);
+    const levelA = a.unit ? a.unit.level || 0 : 0;
+    const levelB = b.unit ? b.unit.level || 0 : 0;
+    if (mode === 'overall') {
+      return (tierB.score || 0) - (tierA.score || 0) || recB - recA || levelB - levelA
+        || String(itemA.name || '').localeCompare(String(itemB.name || ''), 'zh-Hans-CN');
+    }
+    if (mode === 'newbie') {
+      return recB - recA || (tierB.score || 0) - (tierA.score || 0) || levelB - levelA
+        || String(itemA.name || '').localeCompare(String(itemB.name || ''), 'zh-Hans-CN');
+    }
+    if (mode === 'id') {
+      return Number(itemA.id || 999999) - Number(itemB.id || 999999)
+        || String(itemA.name || '').localeCompare(String(itemB.name || ''), 'zh-Hans-CN');
+    }
+    if (mode === 'rarity') {
+      return Number(itemB.rank || 0) - Number(itemA.rank || 0) || (tierB.score || 0) - (tierA.score || 0)
+        || levelB - levelA || String(itemA.name || '').localeCompare(String(itemB.name || ''), 'zh-Hans-CN');
+    }
     const ao = a.unit ? 0 : 1;
     const bo = b.unit ? 0 : 1;
     if (ao !== bo) return ao - bo;
-    const at = a.unit ? a.unit.tier?.score || 0 : tierFor(kind, a.item.code, a.item.name).score || 0;
-    const bt = b.unit ? b.unit.tier?.score || 0 : tierFor(kind, b.item.code, b.item.name).score || 0;
-    if (at !== bt) return bt - at;
-    const al = a.unit ? a.unit.level || 0 : 0;
-    const bl = b.unit ? b.unit.level || 0 : 0;
-    if (al !== bl) return bl - al;
-    return String(a.item.name || '').localeCompare(String(b.item.name || ''), 'zh-Hans-CN');
+    return (tierB.score || 0) - (tierA.score || 0) || levelB - levelA
+      || String(itemA.name || '').localeCompare(String(itemB.name || ''), 'zh-Hans-CN');
   });
   const total = rows.length;
   const shown = rows.slice(0, cfg.limit);
   if (count) count.textContent = `${total} 条 · ${unitFilterText(cfg)} · 显示 ${shown.length}`;
   grid.innerHTML = shown.length ? shown.map(({ item, unit }) => unitCardHTML(kind, key, item, unit)).join('') : '<div class="empty">没有符合条件的单位</div>';
+  if (grid.animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    grid.animate([{ opacity: .55, transform: 'translateY(4px)' }, { opacity: 1, transform: 'none' }], { duration: 160, easing: 'ease-out' });
+  }
   if (more) {
     more.hidden = total <= shown.length;
     more.textContent = `加载更多（剩余 ${Math.max(0, total - shown.length)}）`;
@@ -838,6 +939,7 @@ function renderGrid(key) {
 function unitCardHTML(kind, key, item, unit) {
   const owned = Boolean(unit);
   const tier = unit ? unit.tier : tierFor(kind, item.code, item.name);
+  const favorite = state.favorites.has(`${kind}:${item.code}`);
   let subtitle = '';
   let footer = '未拥有 · 图鉴';
   if (kind === 'doll') {
@@ -851,6 +953,7 @@ function unitCardHTML(kind, key, item, unit) {
     if (owned) footer = `Lv.${unit.level} · 解析 ${unit.resolution_level}`;
   }
   return `<article class="unit-card ${owned ? '' : 'unowned'}" data-action="unit" data-kind="${kind}" data-key="${key}" data-code="${esc(item.code)}">
+    <button class="fav-btn ${favorite ? 'active' : ''}" type="button" data-action="favorite" data-kind="${kind}" data-key="${esc(key)}" data-code="${esc(item.code)}" aria-label="收藏" title="收藏">★</button>
     ${avatarMarkup(item, item.name)}
     <div class="unit-name" title="${esc(item.name)}">${esc(item.name)}</div>
     <div class="unit-sub">${esc(subtitle)}</div>
@@ -933,12 +1036,20 @@ function renderPage() {
   else if (state.tab === 'equipment') main.innerHTML = renderEquipmentPage();
   else if (state.tab === 'components') main.innerHTML = renderComponentsPage();
   else if (state.tab === 'schemes') main.innerHTML = renderSchemesPage();
+  else if (state.tab === 'settings') main.innerHTML = renderSettingsPage();
   else if (state.tab === 'codex') main.innerHTML = renderUnitPage(state.codexKind, true);
   syncTabs();
   if (UNIT_TABS.has(state.tab)) renderGrid(state.tab);
   if (state.tab === 'codex') renderGrid(`codex_${state.codexKind}`);
   if (state.tab === 'components' && typeof renderComponentRows === 'function') renderComponentRows();
   if (state.tab === 'schemes' && typeof renderSchemeRows === 'function') renderSchemeRows();
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && main.animate) {
+    main.animate(
+      [{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 220, easing: 'cubic-bezier(.2,.7,.3,1)' }
+    );
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -977,7 +1088,13 @@ function onGridEvent(event) {
   const actionNode = event.target.closest('[data-action]');
   if (!actionNode) return;
   const action = actionNode.dataset.action;
-  if (action === 'unit') {
+  if (action === 'favorite') {
+    event.stopPropagation();
+    toggleFavorite(actionNode.dataset.kind, actionNode.dataset.code);
+    const key = actionNode.dataset.key || actionNode.dataset.kind;
+    if (state.grid[key]) renderGrid(key);
+    else renderPage();
+  } else if (action === 'unit') {
     openDetail(actionNode.dataset.kind, actionNode.dataset.code);
   } else if (action === 'tier') {
     onTierClick(actionNode);
@@ -1002,6 +1119,14 @@ function onGridChange(event) {
     state.grid[node.dataset.key].ownedOnly = node.checked;
     state.grid[node.dataset.key].limit = 120;
     renderGrid(node.dataset.key);
+  } else if (action === 'favorites') {
+    state.grid[node.dataset.key].favoritesOnly = node.checked;
+    state.grid[node.dataset.key].limit = 120;
+    renderGrid(node.dataset.key);
+  } else if (action === 'sort') {
+    state.grid[node.dataset.key].sort = node.value;
+    state.grid[node.dataset.key].limit = 120;
+    renderGrid(node.dataset.key);
   } else if (action === 'type') {
     state.grid[node.dataset.key].type = Number(node.value || 0);
     state.grid[node.dataset.key].limit = 120;
@@ -1024,6 +1149,16 @@ async function onFile(event) {
   try {
     const text = await file.text();
     const payload = JSON.parse(text);
+    if (!payload.dolls && payload.vehicle_component_with_user_info && state.rawPayload) {
+      const merged = {
+        ...state.rawPayload,
+        vehicle_component_with_user_info: payload.vehicle_component_with_user_info,
+      };
+      merged.meta = { ...(state.rawPayload.meta || {}), ...(payload.user_info ? { component_uid: String(payload.user_info.user_id || '') } : {}) };
+      setAccount(merged, `组件索引：${file.name}`);
+      toast('组件数据已合并');
+      return;
+    }
     setAccount(payload, `导入：${file.name}`);
     toast('快照已导入');
   } catch (error) {
@@ -1076,16 +1211,58 @@ function registerSW() {
   }
 }
 
-function loadInitialAccount() {
+function hasComponents(payload) {
+  return Boolean(payload && payload.vehicle_component_with_user_info);
+}
+
+function canUseServer() {
+  return location.protocol.startsWith('http') && location.hostname !== 'appassets.androidplatform.net';
+}
+
+async function upgradeLocalComponents(local) {
+  if (!canUseServer()) return;
+  try {
+    const response = await fetch('/api/latest', { cache: 'no-store' });
+    if (!response.ok) return;
+    const server = await response.json();
+    if (!hasComponents(server)) return;
+    const localUid = String((local.meta || {}).uid || '');
+    const serverUid = String((server.meta || {}).uid || '');
+    if (localUid && serverUid && localUid !== serverUid) return;
+    const merged = { ...local, vehicle_component_with_user_info: server.vehicle_component_with_user_info };
+    merged.meta = { ...(local.meta || {}), ...(server.meta || {}) };
+    setAccount(merged, '本地快照 + PC 组件', true);
+    toast('已从 PC 补全组件数据');
+  } catch (error) {
+    console.warn('component upgrade failed', error);
+  }
+}
+
+async function loadInitialAccount() {
+  let local = null;
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const payload = JSON.parse(raw);
-      setAccount(payload, '本地快照', false);
-      return;
-    }
+    if (raw) local = JSON.parse(raw);
   } catch (error) {
     console.warn('localStorage snapshot failed', error);
+  }
+  if (local) {
+    setAccount(local, '本地快照', false);
+    if (!hasComponents(local)) upgradeLocalComponents(local);
+    return;
+  }
+  if (canUseServer()) {
+    try {
+      const response = await fetch('/api/latest', { cache: 'no-store' });
+      if (response.ok) {
+        const payload = await response.json();
+        setAccount(payload, 'PC 最新快照', false);
+        toast('已自动载入 PC 最新快照');
+        return;
+      }
+    } catch (error) {
+      console.warn('api/latest unavailable', error);
+    }
   }
   setAccount(DATA.sample, '内置示例', false);
 }
@@ -1094,6 +1271,8 @@ async function init() {
   const main = $('#main');
   try {
     await loadData();
+    loadFavorites();
+    if (typeof applySavedRatings === 'function') applySavedRatings();
     const params = new URLSearchParams(location.search);
     const deepTab = params.get('tab');
     if (deepTab && TITLES[deepTab]) state.tab = deepTab;
@@ -1101,11 +1280,9 @@ async function init() {
     if (deepScheme === 'qiushui' || deepScheme === 'guihai') {
       state.schemeFilter.mode = deepScheme;
     }
-    try { loadInitialAccount(); } catch (error) {
-      console.error(error);
-      main.innerHTML = `<div class="card empty">数据初始化失败：${esc(error.message)}</div>`;
-      return;
-    }
+    const deepActivity = params.get('activity');
+    if (deepActivity) state.equipmentActivity = deepActivity;
+    await loadInitialAccount();
     $('#importButton').addEventListener('click', () => $('#fileInput').click());
     $('#fileInput').addEventListener('change', onFile);
     $('#exampleButton').addEventListener('click', applyExample);

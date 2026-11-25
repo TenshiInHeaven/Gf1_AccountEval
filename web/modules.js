@@ -514,6 +514,54 @@ function onFeatureEvent(event) {
   const node = event.target.closest('[data-action]');
   if (!node) return false;
   const action = node.dataset.action;
+  if (action === 'settings-import-snapshot') {
+    const input = $('#fileInput');
+    if (input) input.click();
+    return true;
+  }
+  if (action === 'settings-connect') {
+    connectSnapshot();
+    return true;
+  }
+  if (action === 'settings-export-snapshot') {
+    if (!state.rawPayload) return true;
+    downloadJSON('gf_snapshot.json', state.rawPayload);
+    toast('快照已导出');
+    return true;
+  }
+  if (action === 'settings-export-ratings') {
+    downloadJSON('gf_ratings_export.json', { schema: 1, kinds: DATA.tiers });
+    toast('评分 JSON 已导出');
+    return true;
+  }
+  if (action === 'settings-import-ratings') {
+    const input = document.querySelector('[data-action="settings-ratings-file"]');
+    if (input) input.click();
+    return true;
+  }
+  if (action === 'settings-reset-ratings') {
+    resetRatings();
+    return true;
+  }
+  if (action === 'settings-export-favorites') {
+    const grouped = { doll: [], fairy: [], sangvis: [] };
+    for (const key of state.favorites) {
+      const [kind, code] = String(key).split(':');
+      if (grouped[kind] && code) grouped[kind].push(code);
+    }
+    downloadJSON('gf_favorites.json', {
+      version: 1,
+      exported_at: new Date().toISOString(),
+      favorites: grouped,
+    });
+    toast('收藏 JSON 已导出');
+    return true;
+  }
+  if (action === 'settings-import-favorites') {
+    const input = document.querySelector('[data-action="settings-favorites-file"]');
+    if (input) input.click();
+    return true;
+  }
   if (action === 'comp-more') {
     state.componentFilter.limit += 120;
     renderComponentRows();
@@ -537,6 +585,19 @@ function onFeatureChange(event) {
   const node = event.target.closest('[data-action]');
   if (!node) return false;
   const action = node.dataset.action;
+  if (action === 'settings-ratings-file') {
+    importRatingsFile(node);
+    return true;
+  }
+  if (action === 'settings-favorites-file') {
+    importFavoritesFile(node);
+    return true;
+  }
+  if (action === 'eq-activity') {
+    state.equipmentActivity = node.value;
+    renderPage();
+    return true;
+  }
   if (action === 'comp-scheme') {
     state.componentFilter.scheme = node.value;
     state.componentFilter.limit = 120;
@@ -594,4 +655,169 @@ function onFeatureInput(event) {
     return true;
   }
   return false;
+}
+
+/* ------------------------------------------------------------------ */
+/* Settings / ratings / favorites                                      */
+/* ------------------------------------------------------------------ */
+
+function applySavedRatings() {
+  try {
+    const raw = localStorage.getItem(TIERS_KEY);
+    if (!raw) return;
+    const kinds = JSON.parse(raw);
+    applyRatings(kinds, { persist: false, rerender: false });
+  } catch (error) {
+    console.warn('saved ratings failed', error);
+  }
+}
+
+function validRatings(kinds) {
+  if (!kinds || typeof kinds !== 'object') return false;
+  return ['doll', 'fairy', 'sangvis'].some((kind) => {
+    const value = kinds[kind];
+    return value && Array.isArray(value.tiers) && Array.isArray(value.entries);
+  });
+}
+
+function applyRatings(kinds, options = {}) {
+  if (!validRatings(kinds)) throw new Error('评分 JSON 缺少 kinds.doll/fairy/sangvis');
+  for (const kind of ['doll', 'fairy', 'sangvis']) {
+    if (kinds[kind] && Array.isArray(kinds[kind].tiers) && Array.isArray(kinds[kind].entries)) {
+      DATA.tiers[kind] = kinds[kind];
+    }
+  }
+  buildTierLookup();
+  if (options.persist !== false) {
+    try { localStorage.setItem(TIERS_KEY, JSON.stringify(DATA.tiers)); } catch (_error) { /* ignore */ }
+  }
+  if (options.rerender !== false) reapplyAccount();
+}
+
+function resetRatings() {
+  DATA.tiers = JSON.parse(JSON.stringify(DATA.baseTiers));
+  try { localStorage.removeItem(TIERS_KEY); } catch (_error) { /* ignore */ }
+  buildTierLookup();
+  reapplyAccount();
+  toast('已恢复内置评分');
+}
+
+function reapplyAccount() {
+  if (!state.rawPayload) return;
+  state.account = buildAccount(state.rawPayload);
+  state.evaluation = evaluateAccount(state.account);
+  if (state.tab === 'settings') renderPage();
+  else renderPage();
+}
+
+function downloadJSON(name, payload) {
+  const blob = new Blob([JSON.stringify(payload, null, 1)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = name;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 3000);
+}
+
+function renderSettingsPage() {
+  const meta = (state.rawPayload && state.rawPayload.meta) || {};
+  const components = state.account ? state.account.components || [] : [];
+  const favorites = state.favorites.size;
+  const version = (DATA.buildInfo && DATA.buildInfo.version) || '—';
+  const tierSources = ['doll', 'fairy', 'sangvis']
+    .map((kind) => `<div class="source-row"><strong>${KIND_LABEL[kind]}</strong><span>${esc((DATA.tiers[kind] || {}).source || '内置榜单')}</span></div>`)
+    .join('');
+  const componentNote = components.length
+    ? `${components.reduce((sum, entry) => sum + entry.count, 0)} 个实例 / ${components.length} 条去重`
+    : '当前快照不含组件（导入含 vehicle_component_with_user_info 的合并快照，或连接 PC）';
+  return `${pageHead('设置', '数据源 / 评分 / 快照 / 缓存')}
+    <div class="settings-grid">
+      <section class="card settings-card">
+        <h3>当前账号</h3>
+        <div class="hero-meta">${esc(meta.nickname || '未载入')} · UID ${esc(meta.uid || '—')} · Lv.${esc(meta.level || '—')}</div>
+        <div class="hero-meta">${esc(meta.source || '')}</div>
+        <div class="settings-note">组件：${esc(componentNote)}${meta.component_stale ? `（来自 ${esc(meta.component_source || '旧索引')}）` : ''}<br>可先导入 account 快照，再单独导入 index_*.json 合并组件。</div>
+        <div class="settings-actions">
+          <button class="btn primary" type="button" data-action="settings-import-snapshot">导入快照</button>
+          <button class="btn ghost" type="button" data-action="settings-connect">连接 PC</button>
+          <button class="btn ghost" type="button" data-action="settings-export-snapshot">导出快照</button>
+        </div>
+      </section>
+      <section class="card settings-card">
+        <h3>评分数据</h3>
+        <div class="settings-note">修改 JSON 后导入即可覆盖内置榜单；导出格式与桌面端「评分数据」一致。</div>
+        <div class="settings-actions">
+          <button class="btn ghost" type="button" data-action="settings-export-ratings">导出评分 JSON</button>
+          <button class="btn ghost" type="button" data-action="settings-import-ratings">导入评分 JSON</button>
+          <button class="btn ghost" type="button" data-action="settings-reset-ratings">恢复内置评分</button>
+        </div>
+        <input type="file" accept=".json,application/json" data-action="settings-ratings-file" hidden>
+      </section>
+      <section class="card settings-card">
+        <h3>收藏</h3>
+        <div class="settings-note">已收藏 ${favorites} 个单位；收藏保存在本机 localStorage。</div>
+        <div class="settings-actions">
+          <button class="btn ghost" type="button" data-action="settings-export-favorites">导出收藏 JSON</button>
+          <button class="btn ghost" type="button" data-action="settings-import-favorites">导入收藏 JSON</button>
+        </div>
+        <input type="file" accept=".json,application/json" data-action="settings-favorites-file" hidden>
+      </section>
+      <section class="card settings-card">
+        <h3>数据来源</h3>
+        ${tierSources}
+        <div class="source-row"><strong>装备</strong><span>${esc((DATA.equipmentTargets || {}).source || '')}</span></div>
+        <div class="source-row"><strong>归海</strong><span>机动装甲武器.png（2025/11/16）</span></div>
+        <div class="source-row"><strong>秋水</strong><span>腾讯文档 8 个活动 / 21 张积分关卡表</span></div>
+        <div class="settings-note">版本 ${esc(version)} · PWA 静态数据 · 头像按需缓存</div>
+      </section>
+    </div>
+    <div class="settings-note" style="margin-top:12px">
+      快照包含 UID / 昵称 / 仓库，请勿公开分享。离线缓存由 Service Worker 管理；清理站点数据会同时清空本地快照和收藏。
+    </div>`;
+}
+
+async function importRatingsFile(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
+  try {
+    const payload = JSON.parse(await file.text());
+    const kinds = payload.kinds || payload;
+    applyRatings(kinds);
+    toast('评分 JSON 已导入');
+  } catch (error) {
+    toast(`评分导入失败：${error.message}`);
+  } finally {
+    input.value = '';
+  }
+}
+
+async function importFavoritesFile(input) {
+  const file = input.files && input.files[0];
+  if (!file) return;
+  try {
+    const payload = JSON.parse(await file.text());
+    const rows = new Set();
+    if (Array.isArray(payload)) {
+      for (const value of payload) rows.add(String(value));
+    } else if (payload && typeof payload.favorites === 'object' && !Array.isArray(payload.favorites)) {
+      for (const kind of ['doll', 'fairy', 'sangvis']) {
+        for (const code of payload.favorites[kind] || []) rows.add(`${kind}:${code}`);
+      }
+    } else if (payload && Array.isArray(payload.favorites)) {
+      for (const value of payload.favorites) rows.add(String(value));
+    } else {
+      throw new Error('收藏 JSON 格式不支持');
+    }
+    state.favorites = rows;
+    saveFavorites();
+    renderPage();
+    toast('收藏已导入');
+  } catch (error) {
+    toast(`收藏导入失败：${error.message}`);
+  } finally {
+    input.value = '';
+  }
 }
