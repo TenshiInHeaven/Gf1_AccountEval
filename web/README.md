@@ -63,8 +63,6 @@ API：
 - `GET /api/latest`：最新账号 + 最新组件索引（UID 不一致则不混用）
 - `GET /api/snapshots`：列出可用快照
 - `GET /api/snapshot/<name>`
-- `GET /api/pair`：手机配对 URL
-- `GET /api/qr`：配对 URL 的二维码 PNG
 
 ## 手机端只读
 
@@ -73,16 +71,18 @@ API：
 
 ### 电脑抓完，手机怎么读
 
-1. **同一 Wi-Fi + 二维码（最省事）**
-   ```powershell
-   .\run_web.ps1 --host 0.0.0.0
-   ```
-   PC 浏览器打开 `http://127.0.0.1:8770/` → 设置 → 手机配对，出现二维码；
-   手机扫码打开 `http://<PC IP>:8770/?snapshot=/api/latest`，自动载入最新账号 + 组件。
-2. **文件**：`python tools\export_web_snapshot.py --out exports/web_snapshot.json`，把文件传到手机，PWA「导入快照」。
-3. **USB / localhost**：`adb reverse tcp:8770 tcp:8770`，手机 Chrome 打开 `http://localhost:8770/` 后可安装 PWA。
+```powershell
+python tools\export_web_snapshot.py --out exports/web_snapshot.json
+```
 
-> 局域网 HTTP 只能浏览，不能完整安装 PWA；要安装用 localhost 或 APK。
+把 `exports/web_snapshot.json` 拷到手机（USB / 网盘 / 聊天工具均可），
+打开 App →「导入快照」即可。不需要扫码、局域网或手机端抓包。
+
+USB 调试也可以直接推送：
+
+```powershell
+adb push exports\web_snapshot.json /sdcard/Download/web_snapshot.json
+```
 
 ## Android PWA（推荐先试）
 

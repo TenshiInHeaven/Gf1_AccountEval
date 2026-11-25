@@ -31,15 +31,15 @@ python tools\build_android_assets.py
 
 ## 账号数据
 
-- **离线**：把 PC 端导出的 `exports/web_snapshot.json` 放进手机，打开 App → 「导入快照」。
-- **局域网**：PC 运行 `run_web.ps1 --host 0.0.0.0`，手机 App 点「连接」，填
-  `http://<PC IP>:8770/api/latest`（需要同一 Wi-Fi；`usesCleartextTraffic` 已开启）。
+- **唯一入口**：把 PC 端导出的 `exports/web_snapshot.json` 放进手机，打开 App → 「导入快照」。
 - App 不会保存游戏账号密码；快照包含 UID / 昵称，请勿公开分享。
+- 不做局域网连接、扫码或手机端抓包；电脑只负责导出 JSON。
 
 ## 只读设计
 
 安卓端只做**只读查看器**：读取已有 JSON / 内置图鉴，不抓包、不代理、不登录游戏。
-启动默认进入「图鉴」（固定数据）；账号快照由 PC 端生成后，通过「导入快照」/「连接」载入。
+启动默认进入「图鉴」；导航只保留「图鉴 / JSON」。没有 JSON 时图鉴仍可正常查看。
+「JSON」页显示导入数据的账号摘要与原始 JSON 文本。
 
 ## 与 PWA 的关系
 

@@ -1,2 +1,1 @@
 Pillow>=11
-qrcode>=8

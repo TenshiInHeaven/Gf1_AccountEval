@@ -577,6 +577,11 @@ function onFeatureEvent(event) {
   const node = event.target.closest('[data-action]');
   if (!node) return false;
   const action = node.dataset.action;
+  if (action === 'json-import') {
+    const input = $('#fileInput');
+    if (input) input.click();
+    return true;
+  }
   if (action === 'settings-import-snapshot') {
     const input = $('#fileInput');
     if (input) input.click();
@@ -623,10 +628,6 @@ function onFeatureEvent(event) {
   if (action === 'settings-import-favorites') {
     const input = document.querySelector('[data-action="settings-favorites-file"]');
     if (input) input.click();
-    return true;
-  }
-  if (action === 'settings-copy-pair') {
-    copyPairing();
     return true;
   }
   if (action === 'comp-more') {
@@ -834,17 +835,6 @@ function renderSettingsPage() {
         <input type="file" accept=".json,application/json" data-action="settings-favorites-file" hidden>
       </section>
       <section class="card settings-card">
-        <h3>手机配对</h3>
-        <div class="settings-note">手机与电脑同一 Wi-Fi；PC 用 <code>run_web.ps1 --host 0.0.0.0</code> 启动，手机扫码即可打开 PWA 并自动载入最新快照。</div>
-        <div class="pair-box">
-          <img class="pair-qr" src="/api/qr" alt="手机配对二维码" onerror="this.closest('.pair-box').hidden=true">
-          <div class="settings-note" id="pair-url">/api/latest</div>
-        </div>
-        <div class="settings-actions">
-          <button class="btn ghost" type="button" data-action="settings-copy-pair">复制配对链接</button>
-        </div>
-      </section>
-      <section class="card settings-card">
         <h3>数据来源</h3>
         ${tierSources}
         <div class="source-row"><strong>装备</strong><span>${esc((DATA.equipmentTargets || {}).source || '')}</span></div>
@@ -898,38 +888,5 @@ async function importFavoritesFile(input) {
     toast(`收藏导入失败：${error.message}`);
   } finally {
     input.value = '';
-  }
-}
-
-async function hydratePairing() {
-  const node = $('#pair-url');
-  if (!node) return;
-  try {
-    const response = await fetch('/api/pair', { cache: 'no-store' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    const suffix = data.reachable_from_phone ? '' : '（当前绑定 127.0.0.1，手机访问不到，请用 --host 0.0.0.0）';
-    node.textContent = `${data.url}${suffix}`;
-    node.dataset.pairUrl = data.url;
-  } catch (_error) {
-    node.textContent = '当前不是 serve.py 环境；可用「连接」手动填 http://<PC IP>:8770/api/latest';
-  }
-}
-
-async function copyPairing() {
-  const node = $('#pair-url');
-  let url = (node && node.dataset.pairUrl) || '';
-  if (!url) {
-    try {
-      const response = await fetch('/api/pair', { cache: 'no-store' });
-      if (response.ok) url = (await response.json()).url || '';
-    } catch (_error) { /* ignore */ }
-  }
-  if (!url) url = `${location.origin}/?snapshot=/api/latest`;
-  try {
-    await navigator.clipboard.writeText(url);
-    toast('配对链接已复制');
-  } catch (_error) {
-    window.prompt('复制配对链接', url);
   }
 }

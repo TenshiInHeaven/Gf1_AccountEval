@@ -630,9 +630,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .fav-btn.active { opacity: 1; }
 }
 
-.pair-box { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
-.pair-qr { width: 132px; height: 132px; image-rendering: pixelated; border: 1px solid var(--border-soft); border-radius: 10px; background: #fff; }
-.pair-box .settings-note { word-break: break-all; }
+
 code { background: var(--panel-2); padding: 1px 5px; border-radius: 5px; }
 .tier-SS { background: #D4AF37; color: #3B2C00; }
 .tier-S { background: #2E9E6B; color: #fff; }
@@ -677,3 +675,9 @@ code { background: var(--panel-2); padding: 1px 5px; border-radius: 5px; }
   .scheme-row.laowu { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 }
 [hidden] { display: none !important; }
+.json-summary h3 { margin: 0 0 4px; font-size: 18px; }
+.json-counts { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 12px 0 4px; color: var(--muted); font-size: 12px; }
+.json-counts strong { color: var(--text); font-size: 14px; }
+.json-details { padding: 0; overflow: hidden; }
+.json-details summary { padding: 12px 16px; cursor: pointer; font-weight: 700; color: var(--text-soft); }
+.json-view { margin: 0; padding: 14px 16px; max-height: 60vh; overflow: auto; background: #0f1720; color: #d7e3f1; font-size: 11px; line-height: 1.55; }

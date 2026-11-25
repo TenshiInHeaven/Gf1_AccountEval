@@ -6,6 +6,8 @@
 const STORAGE_KEY = 'gf-account-forge-snapshot-v1';
 const FAVORITES_KEY = 'gf-account-forge-favorites-v1';
 const TIERS_KEY = 'gf-account-forge-tiers-v1';
+const ANDROID_MODE = new URLSearchParams(location.search).get('mode') === 'android'
+  || location.hostname === 'appassets.androidplatform.net';
 const KIND_LABEL = { doll: '人形', fairy: '妖精', sangvis: '融合势力' };
 const TYPE_LABEL = { 1: 'HG', 2: 'SMG', 3: 'RF', 4: 'AR', 5: 'MG', 6: 'SG' };
 const UNIT_TABS = new Set(['doll', 'fairy', 'sangvis']);
@@ -18,6 +20,7 @@ const TITLES = {
   components: ['组件', '机动装甲组件库 · 归海 / 秋水'],
   schemes: ['方案', '归海一图流 / 秋水各积分关卡'],
   settings: ['设置', '数据源 / 评分 / 快照'],
+  json: ['JSON', '导入的账号 JSON'],
   codex: ['图鉴', '全量单位与拥有状态'],
 };
 
@@ -872,7 +875,7 @@ function renderEquipmentPage() {
 /* Unit grid                                                           */
 /* ------------------------------------------------------------------ */
 function gridRows(key, kind, codexMode, cfg) {
-  const owned = new Map(state.account.units[kind].map((unit) => [unit.code, unit]));
+  const owned = new Map((state.account ? state.account.units[kind] : []).map((unit) => [unit.code, unit]));
   const rows = [];
   if (codexMode || !cfg.ownedOnly) {
     for (const item of state.codexByKind[kind]) {
@@ -894,7 +897,7 @@ function unitFilterText(cfg) {
 }
 
 function renderGrid(key) {
-  if (!state.account) return;
+  if (!key.startsWith('codex_') && !state.account) return;
   const codexMode = key.startsWith('codex_');
   const kind = codexMode ? key.slice(6) : key;
   const cfg = state.grid[key];
@@ -1052,22 +1055,63 @@ function syncTabs() {
   }
 }
 
+function renderJsonPage() {
+  const payload = state.rawPayload;
+  const head = pageHead('JSON', '只读查看导入的账号数据');
+  if (!payload) {
+    return `${head}
+      <div class="card empty">
+        还没有导入 JSON。<br><br>
+        在电脑端导出 <code>exports/web_snapshot.json</code>，传到手机后点下方按钮导入。
+        <div style="margin-top:14px"><button class="btn primary" type="button" data-action="json-import">导入 JSON</button></div>
+      </div>`;
+  }
+  const meta = payload.meta || {};
+  const count = (value) => {
+    if (Array.isArray(value)) return value.length;
+    if (value && typeof value === 'object') return Object.keys(value).length;
+    return 0;
+  };
+  const components = count(payload.vehicle_component_with_user_info);
+  const text = JSON.stringify(payload, null, 2);
+  const limit = 160000;
+  const preview = text.length > limit ? `${text.slice(0, limit)}\n…（已截断，共 ${(text.length / 1024).toFixed(0)} KB）` : text;
+  return `${head}
+    <section class="card json-summary">
+      <h3>${esc(meta.nickname || '未命名账号')} · UID ${esc(meta.uid || '—')}</h3>
+      <div class="hero-meta">Lv.${esc(meta.level || '—')} · ${esc(meta.source || '导入 JSON')}</div>
+      <div class="json-counts">
+        <span>人形 <strong>${count(payload.dolls)}</strong></span>
+        <span>妖精 <strong>${count(payload.fairies)}</strong></span>
+        <span>融合 <strong>${count(payload.sangvis)}</strong></span>
+        <span>装备 <strong>${count(payload.equipment)}</strong></span>
+        <span>组件 <strong>${components}</strong></span>
+      </div>
+      <div class="settings-actions"><button class="btn ghost" type="button" data-action="json-import">重新导入 JSON</button></div>
+    </section>
+    <details class="card json-details">
+      <summary>原始 JSON（${(text.length / 1024).toFixed(0)} KB）</summary>
+      <pre class="json-view">${esc(preview)}</pre>
+    </details>`;
+}
+
 function renderPage() {
   const main = $('#main');
-  if (!main || !state.evaluation) return;
+  if (!main) return;
+  if (!state.evaluation && state.tab !== 'codex' && state.tab !== 'json') return;
   if (state.tab === 'dashboard') main.innerHTML = renderDashboard();
   else if (UNIT_TABS.has(state.tab)) main.innerHTML = renderUnitPage(state.tab, false);
   else if (state.tab === 'equipment') main.innerHTML = renderEquipmentPage();
   else if (state.tab === 'components') main.innerHTML = renderComponentsPage();
   else if (state.tab === 'schemes') main.innerHTML = renderSchemesPage();
   else if (state.tab === 'settings') main.innerHTML = renderSettingsPage();
+  else if (state.tab === 'json') main.innerHTML = renderJsonPage();
   else if (state.tab === 'codex') main.innerHTML = renderUnitPage(state.codexKind, true);
   syncTabs();
   if (UNIT_TABS.has(state.tab)) renderGrid(state.tab);
   if (state.tab === 'codex') renderGrid(`codex_${state.codexKind}`);
   if (state.tab === 'components' && typeof renderComponentRows === 'function') renderComponentRows();
   if (state.tab === 'schemes' && typeof renderSchemeRows === 'function') renderSchemeRows();
-  if (state.tab === 'settings' && typeof hydratePairing === 'function') hydratePairing();
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (state.rendered && !reduce && main.animate) {
     main.animate(
@@ -1080,6 +1124,7 @@ function renderPage() {
 }
 
 function showTab(tab) {
+  if (ANDROID_MODE && !['codex', 'json'].includes(tab)) tab = 'codex';
   if (!TITLES[tab] && tab !== 'codex') return;
   state.tab = tab;
   renderPage();
@@ -1242,7 +1287,7 @@ function hasComponents(payload) {
 }
 
 function canUseServer() {
-  return location.protocol.startsWith('http') && location.hostname !== 'appassets.androidplatform.net';
+  return !ANDROID_MODE && location.protocol.startsWith('http') && location.hostname !== 'appassets.androidplatform.net';
 }
 
 async function upgradeLocalComponents(local) {
@@ -1277,6 +1322,7 @@ async function loadInitialAccount() {
     if (!hasComponents(local)) upgradeLocalComponents(local);
     return;
   }
+  if (ANDROID_MODE) return;
   if (canUseServer()) {
     try {
       const response = await fetch('/api/latest', { cache: 'no-store' });
@@ -1299,9 +1345,11 @@ async function init() {
     await loadData();
     loadFavorites();
     if (typeof applySavedRatings === 'function') applySavedRatings();
+    if (ANDROID_MODE) state.tab = 'codex';
     const params = new URLSearchParams(location.search);
     const deepTab = params.get('tab');
-    if (deepTab && TITLES[deepTab]) state.tab = deepTab;
+    const androidTabs = ['codex', 'json'];
+    if (deepTab && TITLES[deepTab] && (!ANDROID_MODE || androidTabs.includes(deepTab))) state.tab = deepTab;
     const deepScheme = params.get('scheme');
     if (deepScheme === 'qiushui' || deepScheme === 'guihai' || deepScheme === 'laowu') {
       state.schemeFilter.mode = deepScheme;
@@ -1309,12 +1357,21 @@ async function init() {
     const deepActivity = params.get('activity');
     if (deepActivity) state.equipmentActivity = deepActivity;
     await loadInitialAccount();
+    if (!state.account) renderPage();
     $('#importButton').addEventListener('click', () => $('#fileInput').click());
     $('#fileInput').addEventListener('change', onFile);
     $('#exampleButton').addEventListener('click', applyExample);
     const connect = $('#connectButton');
     if (connect) connect.addEventListener('click', connectSnapshot);
-    if (!loadFromQuery()) { /* keep the localStorage / sample account */ }
+    if (ANDROID_MODE) {
+      for (const button of $$('[data-tab]')) {
+        if (!androidTabs.includes(button.dataset.tab)) button.hidden = true;
+      }
+      if (connect) connect.hidden = true;
+      const example = $('#exampleButton');
+      if (example) example.hidden = true;
+    }
+    if (!ANDROID_MODE && !loadFromQuery()) { /* keep the localStorage / sample account */ }
     for (const button of $$('[data-tab]')) {
       button.addEventListener('click', () => showTab(button.dataset.tab));
     }
