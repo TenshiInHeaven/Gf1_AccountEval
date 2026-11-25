@@ -325,7 +325,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 关键设计：
 
-- 头像、图鉴、榜单、装备、归海 / 秋水组件表全部内置，运行时只需要**账号登录后的快照 JSON**。
+- 头像、图鉴、榜单、装备、归海 / 秋水组件表全部内置，运行时只需要**账号登录后的快照 JSON**；另带本地 **组件图鉴**（141 件组件的词条池 / 配件池），不导入 JSON 也能看。
 - `web/serve.py` 提供 `/api/latest`：自动读取 `snapshots/account_*.json`，并合并同 UID 的 `index_*.json` 组件数据；PWA 在 PC 同源环境会自动尝试。
 - 手机/电脑配合：电脑（模拟器 / root 设备）负责抓取并导出 JSON，手机只读导入；手机端不抓包、不代理、不需要扫码或局域网配对。
 - PWA 支持文件导入、URL 连接（`?snapshot=`）、离线缓存；`data/core.json` 是 Service Worker 预缓存清单。
@@ -340,6 +340,10 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 | 人形仓库（金/绿/蓝卡 + 评分） |
 |---|
 | ![PWA 人形](docs/screenshots/pwa_dolls.png) |
+
+| 组件图鉴（141 件 / 词条 / 配件） |
+|---|
+| ![组件图鉴](docs/screenshots/pwa_component_codex.png) |
 
 | PWA 方案（秋水各关卡） |
 |---|
@@ -357,7 +361,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 |---|
 | ![PWA 设置](docs/screenshots/pwa_settings.png) |
 
-| Android 只读模式（图鉴 + JSON） |
+| Android 只读模式（图鉴 / 当前 / JSON） |
 |---|
 | ![Android 只读](docs/screenshots/pwa_android.png) |
 
@@ -417,6 +421,9 @@ python tools\build_guihai_catalog.py
 
 # 2c) 秋水各积分关卡组件表（先抓取腾讯文档原始 JSON，再生成）
 python tools\build_qiushui_catalog.py --raw Tmp\qiushui_raw.json
+
+# 2d) 全量组件图鉴：141 件组件 / 17 类词条池 / 配件池（从 STC + 文本表生成）
+python tools\build_component_codex.py --workspace E:\python\gf_forge
 
 # 3) 人形 / 妖精头像（需要 UnityPy；可直接用工作区 .sim 的 Python）
 E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_avatars.py ^

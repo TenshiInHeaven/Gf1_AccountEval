@@ -35,6 +35,7 @@ JSON_FILES = [
     ("guihai_weapons.json", "guihai_weapons.json"),
     ("qiushui_components.json", "qiushui_components.json"),
     ("vehicle_components.json", "vehicle_components.json"),
+    ("component_codex.json", "component_codex.json"),
     ("sample_account.json", "sample_account.json"),
 ]
 

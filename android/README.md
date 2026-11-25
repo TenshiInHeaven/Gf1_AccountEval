@@ -38,8 +38,13 @@ python tools\build_android_assets.py
 ## 只读设计
 
 安卓端只做**只读查看器**：读取已有 JSON / 内置图鉴，不抓包、不代理、不登录游戏。
-启动默认进入「图鉴」；导航只保留「图鉴 / JSON」。没有 JSON 时图鉴仍可正常查看。
-「JSON」页显示导入数据的账号摘要与原始 JSON 文本。
+导航只有「图鉴 / 当前 / JSON」：
+
+- **图鉴**：人形 / 妖精 / 融合势力 / **组件**；组件的全部词条和配件来自本地 `component_codex.json`，不导入 JSON 也能看。
+- **当前**：导入 JSON 后显示账号摘要、四维评分和装备缺口。
+- **JSON**：导入 `exports/web_snapshot.json`，查看账号摘要与原始 JSON 文本。
+
+没有 JSON 时图鉴和组件图鉴仍可正常浏览。
 
 ![Android 只读模式](../docs/screenshots/pwa_android.png)
 

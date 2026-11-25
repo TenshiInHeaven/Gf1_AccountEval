@@ -9,6 +9,7 @@
  "./data/codex/dolls.json",
  "./data/codex/fairies.json",
  "./data/codex/sangvis.json",
+ "./data/component_codex.json",
  "./data/components.json",
  "./data/equipment_activities.json",
  "./data/equipment_items.json",

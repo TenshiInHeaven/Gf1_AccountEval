@@ -681,3 +681,15 @@ code { background: var(--panel-2); padding: 1px 5px; border-radius: 5px; }
 .json-details { padding: 0; overflow: hidden; }
 .json-details summary { padding: 12px 16px; cursor: pointer; font-weight: 700; color: var(--text-soft); }
 .json-view { margin: 0; padding: 14px 16px; max-height: 60vh; overflow: auto; background: #0f1720; color: #d7e3f1; font-size: 11px; line-height: 1.55; }
+.comp-codex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 10px; }
+.comp-codex-card { background: var(--panel); border: 1px solid var(--border-soft); border-radius: 12px; padding: 12px 14px; box-shadow: 0 4px 14px rgba(36,116,229,.04); }
+.comp-codex-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.comp-codex-head strong { font-size: 14px; }
+.comp-codex-head span { color: var(--muted); font-size: 10px; white-space: nowrap; }
+.comp-codex-line { display: flex; gap: 6px; margin-top: 6px; font-size: 11px; line-height: 1.5; }
+.comp-codex-line b { flex: 0 0 38px; color: var(--text-soft); font-weight: 700; }
+.comp-codex-line span { color: var(--muted); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.comp-codex-foot { display: flex; justify-content: space-between; gap: 8px; align-items: center; margin-top: 9px; }
+.comp-owned { color: var(--muted); font-size: 10px; white-space: nowrap; }
+.comp-owned.ok { color: #2f7d4f; font-weight: 700; }
+@media (max-width: 720px) { .comp-codex-grid { grid-template-columns: 1fr; } }

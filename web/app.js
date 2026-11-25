@@ -8,7 +8,8 @@ const FAVORITES_KEY = 'gf-account-forge-favorites-v1';
 const TIERS_KEY = 'gf-account-forge-tiers-v1';
 const ANDROID_MODE = new URLSearchParams(location.search).get('mode') === 'android'
   || location.hostname === 'appassets.androidplatform.net';
-const KIND_LABEL = { doll: '人形', fairy: '妖精', sangvis: '融合势力' };
+const KIND_LABEL = { doll: '人形', fairy: '妖精', sangvis: '融合势力', component: '组件' };
+const CODEX_KINDS = ['doll', 'fairy', 'sangvis', 'component'];
 const TYPE_LABEL = { 1: 'HG', 2: 'SMG', 3: 'RF', 4: 'AR', 5: 'MG', 6: 'SG' };
 const UNIT_TABS = new Set(['doll', 'fairy', 'sangvis']);
 const TITLES = {
@@ -21,13 +22,14 @@ const TITLES = {
   schemes: ['方案', '归海一图流 / 秋水各积分关卡'],
   settings: ['设置', '数据源 / 评分 / 快照'],
   json: ['JSON', '导入的账号 JSON'],
+  current: ['当前', '当前账号概览'],
   codex: ['图鉴', '全量单位与拥有状态'],
 };
 
 const DATA = {
   codex: {}, tiers: {}, baseTiers: {}, equipmentItems: [], equipmentTargets: null, sample: null,
   equipmentActivities: null, components: null, vehicleCatalog: null,
-  guihai: null, qiushui: null, buildInfo: null,
+  guihai: null, qiushui: null, componentCodex: null, buildInfo: null,
 };
 const state = {
   tab: 'dashboard',
@@ -163,7 +165,7 @@ async function loadData() {
     dolls, fairies, sangvis,
     dollTiers, fairyTiers, sangvisTiers,
     equipmentItems, equipmentTargets, equipmentActivities, sample,
-    components, vehicleCatalog, guihai, qiushui, buildInfo,
+    components, vehicleCatalog, guihai, qiushui, componentCodex, buildInfo,
   ] = await Promise.all([
     fetchJSON('data/codex/dolls.json'),
     fetchJSON('data/codex/fairies.json'),
@@ -179,6 +181,7 @@ async function loadData() {
     fetchJSON('data/vehicle_components.json'),
     fetchJSON('data/guihai_weapons.json'),
     fetchJSON('data/qiushui_components.json'),
+    fetchJSON('data/component_codex.json'),
     fetchJSON('data/build_info.json'),
   ]);
   DATA.codex = { doll: dolls, fairy: fairies, sangvis: sangvis };
@@ -191,6 +194,7 @@ async function loadData() {
   DATA.vehicleCatalog = vehicleCatalog;
   DATA.guihai = guihai;
   DATA.qiushui = qiushui;
+  DATA.componentCodex = componentCodex;
   DATA.buildInfo = buildInfo;
   DATA.baseTiers = JSON.parse(JSON.stringify({ doll: dollTiers, fairy: fairyTiers, sangvis: sangvisTiers }));
   buildCodexIndexes();
@@ -755,9 +759,9 @@ function radarSVG(evaluation) {
     <polygon points="${dataPoints}" fill="rgba(36,116,229,.10)" stroke="#2474e5" stroke-width="2"/>${dots}${labels}</svg>`;
 }
 
-function renderDashboard() {
+function renderDashboard(title = '总览') {
   const ev = state.evaluation;
-  if (!ev) return pageHead('总览', '等待账号数据') + '<div class="card empty">尚未载入快照</div>';
+  if (!ev) return pageHead(title, '等待账号数据') + '<div class="card empty">尚未载入快照</div>';
   const account = ev.account;
   const topAvatars = ev.doll.topUnits.slice(0, 7).map((unit) => avatarMarkup(unit.item, unit.name, 'hero-avatar')).join('');
   const tips = ev.recommendations.map((tip) => `<li>${esc(tip)}</li>`).join('');
@@ -770,7 +774,7 @@ function renderDashboard() {
       <span class="gap-left">差 ${item.target - item.current}</span>
     </div>`;
   }).join('') || '<div class="empty" style="padding:20px 0">全部达标</div>';
-  return `${pageHead('总览', '四维评分与下一步建议')}
+  return `${pageHead(title, '四维评分与下一步建议')}
   <section class="hero">
     <div class="hero-card">
       <div class="eyebrow">ACCOUNT OVERVIEW</div>
@@ -787,6 +791,15 @@ function renderDashboard() {
     <div class="card tips-card"><h3 class="section-title">下一步建议</h3><div class="section-sub">按四维评分自动生成，优先补短板</div><ul class="tips-list">${tips}</ul></div>
     <div class="card gaps-card"><h3 class="section-title">装备缺口</h3><div class="section-sub">目标来自「装备需求一图流」</div>${gaps}</div>
   </section>`;
+}
+
+function renderCurrentPage() {
+  if (!state.evaluation) {
+    return `${pageHead('当前', '当前账号概览')}
+      <div class="card empty">还没有导入 JSON。<br><br>导入后这里会显示四维评分、账号摘要和装备缺口。
+      <div style="margin-top:14px"><button class="btn primary" type="button" data-action="json-import">导入 JSON</button></div></div>`;
+  }
+  return renderDashboard('当前');
 }
 
 function filterBarHTML(key, kind, codexMode) {
@@ -813,13 +826,17 @@ function filterBarHTML(key, kind, codexMode) {
   </div>`;
 }
 
+function codexKindTabsHTML() {
+  return `<div class="codex-kinds">
+    ${CODEX_KINDS.map((k) => `<button class="chip ${state.codexKind === k ? 'active' : ''}" type="button" data-action="codex-kind" data-kind="${k}">${KIND_LABEL[k]}</button>`).join('')}
+  </div>`;
+}
+
 function unitPageHTML(kind, codexMode = false) {
   const key = codexMode ? `codex_${kind}` : kind;
   const title = codexMode ? '全量图鉴' : (KIND_LABEL[kind] + '仓库');
   const subtitle = codexMode ? '不依赖仓库快照：所有人形 / 妖精 / 融合势力，含未拥有单位。' : (TITLES[kind][1]);
-  const kindTabs = codexMode ? `<div class="codex-kinds">
-    ${['doll', 'fairy', 'sangvis'].map((k) => `<button class="chip ${state.codexKind === k ? 'active' : ''}" type="button" data-action="codex-kind" data-kind="${k}">${KIND_LABEL[k]}</button>`).join('')}
-  </div>` : '';
+  const kindTabs = codexMode ? codexKindTabsHTML() : '';
   return `${pageHead(title, subtitle)}
     ${kindTabs}
     ${filterBarHTML(key, kind, codexMode)}
@@ -1098,18 +1115,26 @@ function renderJsonPage() {
 function renderPage() {
   const main = $('#main');
   if (!main) return;
-  if (!state.evaluation && state.tab !== 'codex' && state.tab !== 'json') return;
+  if (!state.evaluation && !['codex', 'json', 'current'].includes(state.tab)) return;
   if (state.tab === 'dashboard') main.innerHTML = renderDashboard();
+  else if (state.tab === 'current') main.innerHTML = renderCurrentPage();
   else if (UNIT_TABS.has(state.tab)) main.innerHTML = renderUnitPage(state.tab, false);
   else if (state.tab === 'equipment') main.innerHTML = renderEquipmentPage();
   else if (state.tab === 'components') main.innerHTML = renderComponentsPage();
   else if (state.tab === 'schemes') main.innerHTML = renderSchemesPage();
   else if (state.tab === 'settings') main.innerHTML = renderSettingsPage();
   else if (state.tab === 'json') main.innerHTML = renderJsonPage();
-  else if (state.tab === 'codex') main.innerHTML = renderUnitPage(state.codexKind, true);
+  else if (state.tab === 'codex') {
+    main.innerHTML = state.codexKind === 'component'
+      ? renderComponentCodexPage()
+      : renderUnitPage(state.codexKind, true);
+  }
   syncTabs();
   if (UNIT_TABS.has(state.tab)) renderGrid(state.tab);
-  if (state.tab === 'codex') renderGrid(`codex_${state.codexKind}`);
+  if (state.tab === 'codex' && state.codexKind !== 'component') renderGrid(`codex_${state.codexKind}`);
+  if (state.tab === 'codex' && state.codexKind === 'component' && typeof renderComponentCodexRows === 'function') {
+    renderComponentCodexRows();
+  }
   if (state.tab === 'components' && typeof renderComponentRows === 'function') renderComponentRows();
   if (state.tab === 'schemes' && typeof renderSchemeRows === 'function') renderSchemeRows();
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1124,7 +1149,7 @@ function renderPage() {
 }
 
 function showTab(tab) {
-  if (ANDROID_MODE && !['codex', 'json'].includes(tab)) tab = 'codex';
+  if (ANDROID_MODE && !['codex', 'current', 'json'].includes(tab)) tab = 'codex';
   if (!TITLES[tab] && tab !== 'codex') return;
   state.tab = tab;
   renderPage();
@@ -1348,8 +1373,10 @@ async function init() {
     if (ANDROID_MODE) state.tab = 'codex';
     const params = new URLSearchParams(location.search);
     const deepTab = params.get('tab');
-    const androidTabs = ['codex', 'json'];
+    const androidTabs = ['codex', 'current', 'json'];
     if (deepTab && TITLES[deepTab] && (!ANDROID_MODE || androidTabs.includes(deepTab))) state.tab = deepTab;
+    const deepKind = params.get('kind');
+    if (deepKind && CODEX_KINDS.includes(deepKind)) state.codexKind = deepKind;
     const deepScheme = params.get('scheme');
     if (deepScheme === 'qiushui' || deepScheme === 'guihai' || deepScheme === 'laowu') {
       state.schemeFilter.mode = deepScheme;
@@ -1370,6 +1397,8 @@ async function init() {
       if (connect) connect.hidden = true;
       const example = $('#exampleButton');
       if (example) example.hidden = true;
+    } else {
+      for (const button of $$('[data-tab="current"]')) button.hidden = true;
     }
     if (!ANDROID_MODE && !loadFromQuery()) { /* keep the localStorage / sample account */ }
     for (const button of $$('[data-tab]')) {

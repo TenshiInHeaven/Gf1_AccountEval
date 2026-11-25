@@ -18,6 +18,7 @@ function buildComponentIndexes() {
   state.guihaiByWeapon = groupByRows(state.guihaiRows, (row) => row.weapon);
   state.qiushuiByName = groupByRows(state.qiushuiRows, (row) => row.name);
   state.componentFilter = { scheme: 'all', query: '', limit: 120 };
+  state.componentCodexFilter = { query: '', type: '', limit: 60 };
   state.schemeFilter = {
     mode: 'guihai', group: '', weapon: '', activity: '', side: '',
     status: 'all', query: '', limit: 120,
@@ -369,8 +370,78 @@ function componentCardHTML(entry) {
 }
 
 /* ------------------------------------------------------------------ */
-/* Scheme page (Guihai / Qiushui)                                      */
+/* Component codex                                                     */
 /* ------------------------------------------------------------------ */
+
+function componentCodexOwned() {
+  const map = new Map();
+  for (const entry of (state.account && state.account.components) || []) {
+    map.set(entry.name, (map.get(entry.name) || 0) + entry.count);
+  }
+  return map;
+}
+
+function renderComponentCodexPage() {
+  const codex = DATA.componentCodex || { components: [], types: {} };
+  const types = codex.types || {};
+  const typeOptions = [`<option value="">全部类型</option>`]
+    .concat(Object.entries(types).map(([id, name]) => `<option value="${esc(id)}">${esc(name)}</option>`))
+    .join('');
+  return `${pageHead('组件图鉴', '全部组件 · 词条池 · 配件 / 技能池')}
+    ${codexKindTabsHTML()}
+    <div class="filter-bar">
+      <input class="search-input" type="search" placeholder="搜索组件 / 词条 / 配件…" data-action="cc-search" autocomplete="off">
+      <select class="type-select" data-action="cc-type">${typeOptions}</select>
+      <span class="grid-count" id="cc-count"></span>
+    </div>
+    <div class="comp-codex-grid" id="cc-grid"></div>
+    <button class="btn ghost more-button" type="button" data-action="cc-more" hidden>加载更多</button>
+    <div class="settings-note" style="margin-top:10px">本地资源：共 ${codex.components.length} 件组件 / ${Object.keys(codex.roll_types || {}).length} 类词条池；无账号时也可浏览。</div>`;
+}
+
+function renderComponentCodexRows() {
+  const grid = $('#cc-grid');
+  if (!grid) return;
+  const codex = DATA.componentCodex || { components: [] };
+  const filter = state.componentCodexFilter || (state.componentCodexFilter = { query: '', type: '', limit: 60 });
+  const owned = componentCodexOwned();
+  const query = filter.query.trim().toLowerCase();
+  const rows = (codex.components || []).filter((item) => {
+    if (filter.type && String(item.type) !== String(filter.type)) return false;
+    if (!query) return true;
+    const haystack = [
+      item.name, item.code, item.type_name, item.group_name, item.roll_name, item.main_skill,
+      ...(item.stats || []).map((stat) => stat.name),
+      ...(item.attachments || []).map((att) => att.name),
+    ].join(' ').toLowerCase();
+    return haystack.includes(query);
+  });
+  const shown = rows.slice(0, filter.limit);
+  grid.innerHTML = shown.length ? shown.map((item) => componentCodexCardHTML(item, owned.get(item.name) || 0)).join('') : '<div class="empty">没有符合条件的组件</div>';
+  const count = $('#cc-count');
+  if (count) count.textContent = `${rows.length} 件 · 显示 ${shown.length}`;
+  const more = $('[data-action="cc-more"]');
+  if (more) {
+    more.hidden = rows.length <= shown.length;
+    more.textContent = `加载更多（剩余 ${Math.max(0, rows.length - shown.length)}）`;
+  }
+}
+
+function componentCodexCardHTML(item, count) {
+  const stats = (item.stats || []).map((stat) => stat.name).join(' / ') || '—';
+  const attachments = (item.attachments || []).map((att) => att.name);
+  const attachmentText = attachments.length ? attachments.slice(0, 6).join(' / ') + (attachments.length > 6 ? ` 等 ${attachments.length} 项` : '') : '—';
+  const schemes = (item.schemes || []).map((scheme) => `<span class="scheme-badge ${scheme === 'guihai' ? 'gh' : scheme === 'qiushui' ? 'qs' : 'lw'}">${scheme === 'guihai' ? '归海' : scheme === 'qiushui' ? '秋水' : '老吴'}</span>`).join('');
+  return `<article class="comp-codex-card">
+    <div class="comp-codex-head"><strong>${esc(item.name)}</strong><span>${esc(item.type_name)} · ${'★'.repeat(Math.max(0, Math.min(5, Number(item.rank) || 0)))}</span></div>
+    <div class="comp-codex-line"><b>词条</b><span>${esc(stats)}</span></div>
+    <div class="comp-codex-line"><b>配件</b><span title="${esc(attachments.join(' / '))}">${esc(attachmentText)}</span></div>
+    <div class="comp-codex-line"><b>主技能</b><span>${esc(item.main_skill || '—')}</span></div>
+    <div class="comp-codex-foot"><span class="comp-badges">${schemes || '<span class="scheme-badge none">无方案</span>'}</span><span class="comp-owned ${count ? 'ok' : ''}">${count ? `拥有 ×${count}` : '未拥有'}</span></div>
+  </article>`;
+}
+
+
 
 function ensureSchemeMatches() {
   if (state.schemeMatchAccount === state.account) return;
@@ -635,6 +706,11 @@ function onFeatureEvent(event) {
     renderComponentRows();
     return true;
   }
+  if (action === 'cc-more') {
+    state.componentCodexFilter.limit += 60;
+    renderComponentCodexRows();
+    return true;
+  }
   if (action === 'scheme-mode') {
     const mode = node.dataset.mode;
     if (['guihai', 'qiushui', 'laowu'].includes(mode)) state.schemeFilter.mode = mode;
@@ -665,6 +741,12 @@ function onFeatureChange(event) {
   if (action === 'eq-activity') {
     state.equipmentActivity = node.value;
     renderPage();
+    return true;
+  }
+  if (action === 'cc-type') {
+    state.componentCodexFilter.type = node.value;
+    state.componentCodexFilter.limit = 60;
+    renderComponentCodexRows();
     return true;
   }
   if (action === 'comp-scheme') {
@@ -721,6 +803,12 @@ function onFeatureInput(event) {
     state.schemeFilter.query = node.value;
     state.schemeFilter.limit = 120;
     renderSchemeRows();
+    return true;
+  }
+  if (action === 'cc-search') {
+    state.componentCodexFilter.query = node.value;
+    state.componentCodexFilter.limit = 60;
+    renderComponentCodexRows();
     return true;
   }
   return false;

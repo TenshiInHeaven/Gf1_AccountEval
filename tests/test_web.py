@@ -49,6 +49,11 @@ class WebAssetsTests(unittest.TestCase):
         components = json.loads((WEB / "data" / "components.json").read_text(encoding="utf-8"))
         self.assertEqual(len(components["components"]), 33)
 
+        codex = json.loads((WEB / "data" / "component_codex.json").read_text(encoding="utf-8"))
+        self.assertEqual(len(codex["components"]), 141)
+        self.assertEqual(len(codex["roll_types"]), 17)
+        self.assertTrue(any(item["attachments"] for item in codex["components"]))
+
     def test_core_manifest_covers_data(self):
         core = json.loads((WEB / "data" / "core.json").read_text(encoding="utf-8"))
         data_files = sorted(path.relative_to(WEB).as_posix() for path in (WEB / "data").rglob("*.json"))

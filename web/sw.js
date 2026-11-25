@@ -1,5 +1,5 @@
 /* GF Account Forge PWA service worker */
-const CACHE = 'gf-account-forge-v11-20261125';
+const CACHE = 'gf-account-forge-v12-20261125';
 const SHELL = [
   './',
   './index.html',
