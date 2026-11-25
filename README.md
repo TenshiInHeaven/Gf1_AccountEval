@@ -327,6 +327,7 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 
 - 头像、图鉴、榜单、装备、归海 / 秋水组件表全部内置，运行时只需要**账号登录后的快照 JSON**。
 - `web/serve.py` 提供 `/api/latest`：自动读取 `snapshots/account_*.json`，并合并同 UID 的 `index_*.json` 组件数据；PWA 在 PC 同源环境会自动尝试。
+- 手机/电脑配合：电脑（或 PC 上的模拟器）负责登录抓包，手机 PWA 只读；`--host 0.0.0.0` 后设置页会显示「手机配对」二维码，手机扫码即载入 `/api/latest`。非 root 真机受 CA / pinning 限制，无法让 PC 代理解密，详见 [`docs/android_vpn_capture.md`](docs/android_vpn_capture.md)。
 - PWA 支持文件导入、URL 连接（`?snapshot=`）、离线缓存；`data/core.json` 是 Service Worker 预缓存清单。
 - 单位页支持排序（综合 / 萌新 / 编号 / 星级）、收藏 + 只看收藏；装备页支持按活动切换；设置页支持评分 / 收藏 / 快照导入导出。
 - `tools/build_web.py` 生成 `web/data` 与头像副本；`tools/export_web_snapshot.py` 导出合并快照；`tools/build_android_assets.py` 生成 APK 资源。

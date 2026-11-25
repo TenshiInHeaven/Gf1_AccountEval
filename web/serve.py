@@ -9,12 +9,13 @@ from __future__ import annotations
 
 import argparse
 import http.server
+import io
 import json
 import socket
 import socketserver
 import webbrowser
 from pathlib import Path
-from urllib.parse import unquote, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_SNAPSHOT_DIR = ROOT.parent / "snapshots"
@@ -92,10 +93,54 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def _error(self, message: str, status: int = 400) -> None:
         self._json({"ok": False, "error": message}, status)
 
+    def _pair_url(self) -> str:
+        host = local_ip()
+        port = self.server.server_address[1]
+        return f"http://{host}:{port}/?snapshot=/api/latest&tab=dashboard"
+
+    def _png(self, payload: bytes) -> None:
+        self.send_response(200)
+        self.send_header("Content-Type", "image/png")
+        self.send_header("Content-Length", str(len(payload)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        self.wfile.write(payload)
+
+    def _qr(self, target: str) -> None:
+        try:
+            import qrcode
+        except ImportError:
+            self._error("缺少 qrcode 依赖，请 pip install -r requirements-web.txt", 503)
+            return
+        image = qrcode.make(target)
+        buffer = io.BytesIO()
+        image.save(buffer, format="PNG")
+        self._png(buffer.getvalue())
+
     def do_GET(self) -> None:  # noqa: N802 - http.server API
-        path = unquote(urlparse(self.path).path)
+        parsed = urlparse(self.path)
+        path = unquote(parsed.path)
         if path == "/api/health":
             self._json({"ok": True, "service": "gf-account-forge", "snapshot_dir": str(self.snapshot_dir)})
+            return
+        if path == "/api/pair":
+            bind_host = str(self.server.server_address[0])
+            url = self._pair_url()
+            self._json({
+                "ok": True,
+                "url": url,
+                "bind_host": bind_host,
+                "reachable_from_phone": bind_host not in ("127.0.0.1", "localhost"),
+                "note": "手机与电脑同一 Wi-Fi；serve.py 需 --host 0.0.0.0 才能从手机访问。",
+            })
+            return
+        if path == "/api/qr":
+            query = parse_qs(parsed.query)
+            target = (query.get("url") or [self._pair_url()])[0]
+            if not str(target).startswith(("http://", "https://")):
+                self._error("url 必须是 http(s) 地址", 400)
+                return
+            self._qr(str(target))
             return
         if path == "/api/snapshots":
             rows = []

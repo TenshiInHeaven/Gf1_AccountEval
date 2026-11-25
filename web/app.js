@@ -37,6 +37,7 @@ const state = {
   tierLookup: {},
   equipment: null,
   equipmentActivity: '',
+  rendered: false,
   favoriteOnly: false,
   favorites: new Set(),
   grid: {
@@ -1043,13 +1044,15 @@ function renderPage() {
   if (state.tab === 'codex') renderGrid(`codex_${state.codexKind}`);
   if (state.tab === 'components' && typeof renderComponentRows === 'function') renderComponentRows();
   if (state.tab === 'schemes' && typeof renderSchemeRows === 'function') renderSchemeRows();
+  if (state.tab === 'settings' && typeof hydratePairing === 'function') hydratePairing();
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!reduce && main.animate) {
+  if (state.rendered && !reduce && main.animate) {
     main.animate(
       [{ opacity: 0, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }],
       { duration: 220, easing: 'cubic-bezier(.2,.7,.3,1)' }
     );
   }
+  state.rendered = true;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 

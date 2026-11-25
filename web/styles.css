@@ -629,3 +629,8 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .fav-btn { opacity: .55; transform: none; }
   .fav-btn.active { opacity: 1; }
 }
+
+.pair-box { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+.pair-qr { width: 132px; height: 132px; image-rendering: pixelated; border: 1px solid var(--border-soft); border-radius: 10px; background: #fff; }
+.pair-box .settings-note { word-break: break-all; }
+code { background: var(--panel-2); padding: 1px 5px; border-radius: 5px; }

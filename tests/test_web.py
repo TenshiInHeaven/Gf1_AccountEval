@@ -22,7 +22,7 @@ def load_serve():
 class WebAssetsTests(unittest.TestCase):
     def test_static_shell(self):
         index = (WEB / "index.html").read_text(encoding="utf-8")
-        for tab in ("components", "schemes", "codex"):
+        for tab in ("components", "schemes", "codex", "settings"):
             self.assertIn(f'data-tab="{tab}"', index)
         self.assertIn("modules.js", index)
         self.assertTrue((WEB / "modules.js").is_file())

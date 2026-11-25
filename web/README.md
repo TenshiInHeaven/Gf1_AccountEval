@@ -62,6 +62,36 @@ API：
 - `GET /api/latest`：最新账号 + 最新组件索引（UID 不一致则不混用）
 - `GET /api/snapshots`：列出可用快照
 - `GET /api/snapshot/<name>`
+- `GET /api/pair`：手机配对 URL
+- `GET /api/qr`：配对 URL 的二维码 PNG
+
+## 手机登录 + 电脑抓取 + 手机读取
+
+可以，但要先区分「手机」是什么：
+
+| 手机形态 | 手机登录 | 电脑抓取 | 说明 |
+|---|---|---|---|
+| PC 上的安卓模拟器（MuMu / LDPlayer） | ✅ 在模拟器里登录 | ✅ 一键代理 / 系统 CA | **最推荐**，当前 Qt 端一键抓包就是这条路 |
+| root 真机 + USB adb | ✅ | ✅ adb root + 系统 CA + 代理 | 需要 root；Frida 也可 |
+| 非 root 真机（台服） | ✅ | ❌ 用户 CA 不被 targetSdk 34 信任 | 没有 pinning，但 CA 这关过不去 |
+| 非 root 真机（国服复活版） | ✅ | ❌ 有 OkHttp pinning | 除非 Frida 绕过或走本地 HTTP 桥 |
+
+所以「手机负责登录、电脑负责抓取」的最佳落地是：**在 PC 上跑安卓模拟器，游戏在模拟器里登录，电脑抓包**；
+抓完得到 `account_*.json` + `index_*.json`，手机只负责看。
+
+### 电脑抓完，手机怎么读
+
+1. **同一 Wi-Fi + 二维码（最省事）**
+   ```powershell
+   .\run_web.ps1 --host 0.0.0.0
+   ```
+   PC 浏览器打开 `http://127.0.0.1:8770/` → 设置 → 手机配对，出现二维码；
+   手机扫码打开 `http://<PC IP>:8770/?snapshot=/api/latest`，自动载入最新账号 + 组件。
+2. **文件**：`python tools\export_web_snapshot.py --out web_snapshot.json`，把文件传到手机，PWA「导入快照」。
+3. **USB / localhost**：`adb reverse tcp:8770 tcp:8770`，手机 Chrome 打开 `http://localhost:8770/` 后可安装 PWA。
+
+> 局域网 HTTP 只能浏览，不能完整安装 PWA；要安装用 localhost 或 APK。
+> 二维码只是把「带 `?snapshot=/api/latest` 的页面」发给手机，不改变抓包仍由 PC 完成的事实。
 
 ## Android PWA（推荐先试）
 
