@@ -339,6 +339,10 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 |---|
 | ![PWA 方案](docs/screenshots/pwa_schemes.png) |
 
+| PWA 手机端（500px 视口） |
+|---|
+| ![PWA 手机](docs/screenshots/pwa_mobile.png) |
+
 ## 数据与目录
 
 ```
