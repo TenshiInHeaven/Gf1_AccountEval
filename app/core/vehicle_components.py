@@ -95,7 +95,19 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
             rules = scheme_reqs.get(str(entry.get("name") or ""))
             if rules is None:
                 continue
-            if all(str(rule) in str(entry.get("words") or "") for rule in rules):
+            words = str(entry.get("words") or "")
+            if isinstance(rules, dict):
+                main_words = rules.get("main") or []
+                required = rules.get("required") or []
+                any_words = rules.get("any") or []
+                if main_words and not any(word in words for word in main_words):
+                    continue
+                if required and not all(word in words for word in required):
+                    continue
+                if any_words and not any(word in words for word in any_words):
+                    continue
+                matches.append(scheme)
+            elif all(str(rule) in words for rule in rules):
                 matches.append(scheme)
         entry["schemes"] = matches
     return list(grouped.values())
