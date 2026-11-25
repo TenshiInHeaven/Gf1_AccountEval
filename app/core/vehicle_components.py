@@ -55,6 +55,7 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
         str(item.get("name") or ""): list(item.get("schemes") or [])
         for item in guide.get("components") or []
     }
+    requirements = guide.get("requirements") or {}
     grouped: dict[tuple, dict] = {}
     for row in rows:
         if not isinstance(row, dict):
@@ -83,4 +84,18 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
             }
             grouped[key] = entry
         entry["count"] += 1
+    for entry in grouped.values():
+        scheme_rules = requirements
+        matches = []
+        for scheme in recommended.get(str(entry.get("name") or ""), []):
+            scheme_reqs = scheme_rules.get(scheme)
+            if scheme_reqs is None:
+                matches.append(scheme)
+                continue
+            rules = scheme_reqs.get(str(entry.get("name") or ""))
+            if rules is None:
+                continue
+            if all(str(rule) in str(entry.get("words") or "") for rule in rules):
+                matches.append(scheme)
+        entry["schemes"] = matches
     return list(grouped.values())
