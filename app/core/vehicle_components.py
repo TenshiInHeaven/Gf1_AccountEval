@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from . import scheme_catalog
+from . import qiushui_catalog, scheme_catalog
 from .paths import DATA_DIR, PROJECT_ROOT, read_json
 
 CATALOG_FILE = DATA_DIR / "vehicle_components.json"
@@ -115,6 +115,7 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
                 "count": 0,
                 "level": 0,
                 "guihai_matches": [],
+                "qiushui_matches": [],
             }
             grouped[key] = entry
         entry["count"] += 1
@@ -123,6 +124,7 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
         words = str(entry.get("words") or "")
         matches: list[str] = []
         guihai_matches: list[str] = []
+        qiushui_matches: list[str] = []
         for scheme in recommended.get(name, []):
             if scheme == "guihai":
                 hit = [
@@ -134,6 +136,16 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
                     matches.append(scheme)
                     guihai_matches = [combo["label"] for combo in hit]
                 continue
+            if scheme == "qiushui":
+                hit = qiushui_catalog.match_component(name, words)
+                if hit:
+                    matches.append(scheme)
+                    qiushui_matches = [
+                        f"{item['activity']} / {item['side']}（{item['variant']}）："
+                        f"{item['stat1']} + {item['stat2']}"
+                        for item in hit
+                    ]
+                continue
             scheme_reqs = requirements.get(scheme) or {}
             rules = scheme_reqs.get(name)
             if rules is None:
@@ -143,4 +155,5 @@ def build_inventory(index_path: Path | None = None) -> list[dict]:
                 matches.append(scheme)
         entry["schemes"] = matches
         entry["guihai_matches"] = guihai_matches
+        entry["qiushui_matches"] = qiushui_matches
     return list(grouped.values())

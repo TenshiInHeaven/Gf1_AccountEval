@@ -45,7 +45,7 @@ class ComponentPage(QWidget):
         title_box.addWidget(title)
         sub = QLabel(
             "当前账号全部组件；金框 = 所有方案要求，绿框 = 部分方案，灰框 = 无方案。"
-            "归海按 183 条词条组合逐条校验。"
+            "归海按 183 条词条组合、秋水按 21 张积分关卡表逐条校验。"
         )
         sub.setWordWrap(True)
         sub.setStyleSheet(f"color: {MUTED}; font-size: 12px;")
@@ -227,16 +227,32 @@ class ComponentPage(QWidget):
         words.setStyleSheet(f"color: {TEXT_SOFT}; font-size: 10px;")
         layout.addWidget(words, 1)
         hits = entry.get("guihai_matches") or []
-        if hits:
-            combo = QLabel(f"✓{len(hits)}")
-            combo.setFixedWidth(30)
-            combo.setToolTip("\n".join(hits))
+        qiushui_hits = entry.get("qiushui_matches") or []
+        if hits or qiushui_hits:
+            parts = []
+            if hits:
+                parts.append(f"归{len(hits)}")
+            if qiushui_hits:
+                parts.append(f"秋{len(qiushui_hits)}")
+            combo = QLabel(" ".join(parts))
+            combo.setFixedWidth(48)
+            tip = []
+            if hits:
+                tip.append("归海命中：\n" + "\n".join(hits))
+            if qiushui_hits:
+                tip.append("秋水命中：\n" + "\n".join(qiushui_hits))
+            combo.setToolTip("\n\n".join(tip))
             combo.setStyleSheet("color: #2F7D4F; font-size: 10px; font-weight: 700;")
             layout.addWidget(combo)
         type_name = QLabel(str(entry.get("type_name") or "其他"))
         type_name.setFixedWidth(56)
         type_name.setStyleSheet(f"color: {MUTED}; font-size: 10px;")
         layout.addWidget(type_name)
-        if hits:
-            row.setToolTip("归海命中：\n" + "\n".join(hits))
+        if hits or qiushui_hits:
+            tip = []
+            if hits:
+                tip.append("归海命中：\n" + "\n".join(hits))
+            if qiushui_hits:
+                tip.append("秋水命中：\n" + "\n".join(qiushui_hits))
+            row.setToolTip("\n\n".join(tip))
         return row

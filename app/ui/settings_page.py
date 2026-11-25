@@ -298,7 +298,8 @@ class SettingsPage(QWidget):
             "融合势力强度榜：铁血强度榜.png\n"
             "装备需求：秋水Ameth 排行关卡表格合集（27 项）+ 装备需求一图流.jpeg 历史值\n"
             "机动装甲：归海临渊 机动装甲武器.png（25 件 / 183 条词条组合）；"
-            "秋水Ameth 主战坦克组件表（9 件）；老吴仙人组件清单（9 件）\n"
+            "秋水Ameth 腾讯文档 8 个活动 / 21 张积分关卡表（189 条需求 / 29 件组件）；"
+            "老吴仙人组件清单（9 件）\n"
             "头像：游戏 resourceiconspinehead / resourcefairy / resourceiconenemy 资源包；"
             "缺失时使用 Portrait_showcase 默认立绘上半身裁切或占位图。"
         )

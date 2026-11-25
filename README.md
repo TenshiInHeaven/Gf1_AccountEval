@@ -304,14 +304,15 @@ python tools\android_proxy_capture.py --from-index snapshots\index_xxx.json
 来源与规模：
 
 - **归海临渊**：`机动装甲武器.png`（2025/11/16）。逐行抄录为 **25 件组件 / 42 条主词条方案 / 183 条词条组合**，数据在 `app/data/guihai_weapons.json`，人读版在 `docs/guihai_weapons.md`（另附 `docs/guihai_weapons.csv`）。
-- **秋水Ameth**：`主战坦克 - 组件词条` 表只有 **9 件**（4 个通用芯片 + 小型迫击炮 / 导弹发射器MK2 / 烈焰喷射器 / 车载夜视仪 / 信号塔），全部是主战坦克口径。手头这张原图没有机甲分表，所以在这张表的范围内 9 件就是全部；若另有机甲表需另行补录。
+- **秋水Ameth**：组件表不是一张总表，而是按积分关卡分散在各活动腾讯文档的「主战坦克 / 战术人型机甲」页。当前收录 **8 个活动 / 21 张表 / 189 条组件需求 / 29 件去重组件**，每张表固定 **9 件**（4 个通用芯片 + 5 个其他组件），数据在 `app/data/qiushui_components.json`，人读版在 `docs/qiushui_components.md`（另附 csv）。旧版「图1 主战坦克 - 组件词条」作为参考表保留在 JSON 的 `reference` 字段。未覆盖：坠入兔洞Plus、混沌落幕Plus 的文档当前要求登录；虚数迷宫Plus、马蜂窝Plus、秘密涡点Plus、驱雾行动Plus、噩梦迷城Plus、逃亡圣咏 没有组件页。
 - **老吴仙人**：组件清单同样 **9 件**，其中加农炮 / 电磁枪 / 护盾发生器只出现在老吴方案。
 
 匹配口径：
 
 - 归海按整条组合校验：组件名相同，且词条里同时包含「主词条 + 副词条1 + 副词条2」才算命中；芯片只校验两条词条。同一件组件最多可命中多条组合。
-- 秋水 / 老吴沿用原表的「词条1 + 词条2（+ 任意词条）」粗匹配，不强制第三条。
-- 「组件」页显示账号实际持有的组件并支持金 / 绿 / 灰筛选；「方案」页列出归海全表 183 条组合，按仓库标「已拥有 ×N / 缺失」，支持组 / 组件 / 状态 / 关键词筛选（界面见 `docs/screenshots/schemes.png` 与 `docs/screenshots/components.png`）。
+- 秋水按每张积分关卡表校验：组件名相同且同时拥有「属性词条1 + 属性词条2」才算命中；「任意词条」是推荐项，不强制。跨活动取并集。
+- 老吴沿用原表的两条词条匹配。
+- 「组件」页显示账号实际持有的组件并支持金 / 绿 / 灰筛选，行尾标注归海 / 秋水各自命中条数；「方案」页分「归海一图流」「秋水各积分关卡」两个标签，前者列 183 条组合，后者列 21 张表 / 189 条需求，均按仓库标「已拥有 / 缺失」，支持组、活动、类型、状态和关键词筛选（界面见 `docs/screenshots/schemes.png`、`docs/screenshots/qiushui.png` 与 `docs/screenshots/components.png`）。
 
 ## 数据与目录
 
@@ -327,14 +328,15 @@ account_evaluate/
 │  │  ├─ tierlists/           # 四张榜单的落库 JSON
 │  │  ├─ equipment_items.json # STC 装备目录
 │  │  ├─ equipment_targets.json
-│  │  ├─ components.json       # 三套方案清单与秋水 / 老吴词条规则
+│  │  ├─ components.json       # 三套方案清单
 │  │  ├─ guihai_weapons.json   # 归海 25 件 / 183 条词条组合
+│  │  ├─ qiushui_components.json # 秋水 8 活动 / 21 张表 / 189 条需求
 │  │  └─ sample_account.json  # 内置示例快照
 │  └─ ui/                     # Qt 页面 / 主题 / 组件
 ├─ assets/avatars/            # 已提取的人形 / 妖精 / 融合势力头像
 ├─ tools/                     # 数据构建、头像提取、示例快照生成
 ├─ tests/                     # 纯标准库 unittest
-├─ docs/                      # 截图 + 归海词条全表（md / csv）
+├─ docs/                      # 截图 + 归海 / 秋水词条全表（md / csv）
 ├─ 人形强度榜.jpeg
 ├─ 妖精强度榜.png
 ├─ 铁血强度榜.png
@@ -364,6 +366,9 @@ python tools\build_sample.py --workspace E:\python\gf_forge
 # 2b) 归海词条全表（改 tools\build_guihai_catalog.py 后重跑）
 python tools\build_guihai_catalog.py
 
+# 2c) 秋水各积分关卡组件表（先抓取腾讯文档原始 JSON，再生成）
+python tools\build_qiushui_catalog.py --raw Tmp\qiushui_raw.json
+
 # 3) 人形 / 妖精头像（需要 UnityPy；可直接用工作区 .sim 的 Python）
 E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_avatars.py ^
   --workspace E:\python\gf_forge ^
@@ -386,7 +391,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-覆盖：名称归一化、图鉴规模、榜单解析、四维评分、装备目标计数、归海词条全表（183 条 / 25 件）、词条组合匹配、XLua TSV 解析。
+覆盖：名称归一化、图鉴规模、榜单解析、四维评分、装备目标计数、归海词条全表（183 条 / 25 件）、秋水各积分关卡表（8 活动 / 21 表 / 189 条）、词条组合匹配、XLua TSV 解析。
 
 ## 已知限制
 
@@ -396,7 +401,7 @@ E:\python\gf_forge\.sim\Scripts\python.exe tools\extract_sf_static_avatars.py ^
 - **融合势力 Q 版头像**：大部分单位使用 `character*spine.ab` 的战场 Q 版小人；`Striker_SWAP`、`Dragoon_SWAP`、`Aegis_SWAP`、`Jaeger_SWAP` 没有可用 Spine 骨架，已改为从对应 `character*swap.ab` 提取官方 `_SS` 立绘/战斗 sprite，不再裁切头像。
 - **榜单是主观的**：人形档位来自表格作者，融合势力 A- / A / B / C 是按图内层级与配队图归并的；本项目只做落库和评分，不代表官方。
 - **装备「低穿 / 高穿」是社区口径**：本版把「高穿」明确为 **500 穿甲值**，当前对应 **第三方穿甲弹**（唯一 500 穿装备）；装备页「调整对应规则」可分三个区（配件 / 子弹 / 人形）编辑 match JSON 与目标数量，也支持导入 / 导出规则 JSON，保存到本地 `equipment_rules.local.json` 并立即重算。
-- **机动装甲组件**：「组件」页显示账号实际持有的组件（名字 / 词条 / `×N`），按通用组件 / 其他组件分栏；归海方案按 183 条完整词条组合逐条校验，行尾 `✓N` 标注命中条数。「方案」页把归海全表 183 条完整列出，并按仓库标记已拥有 / 缺失，可按组 / 组件 / 状态 / 关键词筛选。秋水Ameth 与老吴仙人的来源表都只有 9 件，数量少是资料范围而非漏读；秋水表是主战坦克口径，没有机甲分表。
+- **机动装甲组件**：「组件」页显示账号实际持有的组件（名字 / 词条 / `×N`），按通用组件 / 其他组件分栏；归海按 183 条完整词条组合逐条校验，秋水按 21 张积分关卡表逐条校验，行尾标注「归N 秋M」命中条数。「方案」页分两个标签：归海列 183 条组合，秋水列 8 个活动 / 21 张表 / 189 条需求，都按仓库标记已拥有 / 缺失并支持筛选。秋水表按活动分散在腾讯文档的「主战坦克 / 战术人型机甲」页，每张表 9 件；旧版图1 总表作为参考单独保留。
 - **账号隐私**：快照包含 UID、昵称、仓库；默认只写本地 `snapshots/`，请不要把快照公开上传。
 
 ## 致谢

@@ -317,15 +317,44 @@ class SchemeCatalogTests(unittest.TestCase):
     def test_guihai_component_scheme_counts(self):
         guide = read_json(ROOT / "app" / "data" / "components.json")
         components = guide["components"]
-        for scheme, expected in (("guihai", 25), ("qiushui", 9), ("laowu", 9)):
+        for scheme, expected in (("guihai", 25), ("qiushui", 29), ("laowu", 9)):
             names = [item["name"] for item in components if scheme in item["schemes"]]
             self.assertEqual(len(names), expected, scheme)
         names = {item["name"] for item in components}
         self.assertIn("激光武器", names)
         self.assertIn("榴弹发射器", names)
         self.assertIn("攻速芯片", names)
+        self.assertIn("回避芯片", names)
+        self.assertIn("旋转炮台", names)
         self.assertNotIn("激光发生器", names)
         self.assertNotIn("攻击芯片", names)
+
+    def test_qiushui_catalog_shape(self):
+        from app.core import qiushui_catalog
+
+        summary = qiushui_catalog.summary()
+        self.assertEqual(summary["activities"], 8)
+        self.assertEqual(summary["tables"], 21)
+        self.assertEqual(summary["rows"], 189)
+        self.assertEqual(summary["components"], 29)
+        entries = qiushui_catalog.table_entries()
+        self.assertEqual(len(entries), 189)
+        self.assertEqual(len({entry["id"] for entry in entries}), 189)
+        tables = qiushui_catalog.tables()
+        self.assertEqual({table["side"] for table in tables}, {"主战坦克", "战术人型机甲"})
+        # 自画像 has 5 tank variants + 2 mecha variants.
+        self.assertEqual(sum(1 for table in tables if table["activity"] == "自画像-厚涂"), 7)
+
+    def test_qiushui_component_matching(self):
+        from app.core import qiushui_catalog
+
+        hits = qiushui_catalog.match_component("火力芯片", "技能 重武伤害 48 / 轻武伤害 48")
+        self.assertTrue(hits)
+        self.assertTrue(any(entry["activity"] == "飓风营救Plus" for entry in hits))
+        self.assertFalse(qiushui_catalog.match_component("火力芯片", "技能 重武伤害 48 / 破防 76"))
+        hits = qiushui_catalog.match_component("回避芯片", "护甲 6 / 回避 6")
+        self.assertTrue(hits)
+        self.assertFalse(qiushui_catalog.match_component("回避芯片", "护甲 6 / 命中 10"))
 
     def test_combo_matching_is_word_exact(self):
         from app.core import scheme_catalog
