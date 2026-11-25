@@ -273,6 +273,10 @@ function renderComponentsPage() {
       </div>`;
   }
   const summary = componentSummary(inventory);
+  const meta = (state.account && state.account.meta) || {};
+  const stale = meta.component_stale && meta.component_source
+    ? `<div class="grid-count">组件数据来自 ${esc(meta.component_source)}（早于账号快照）</div>`
+    : '';
   const stats = [
     ['实例', summary.instances],
     ['去重', summary.unique],
@@ -286,6 +290,7 @@ function renderComponentsPage() {
     ['gray', '灰框（无方案）'], ['guihai', '归海'], ['qiushui', '秋水'], ['laowu', '老吴'],
   ].map(([value, label]) => `<option value="${value}"${state.componentFilter.scheme === value ? ' selected' : ''}>${label}</option>`).join('');
   return `${head}
+    ${stale}
     <section class="comp-stats">${stats}</section>
     <div class="filter-bar">
       <select class="type-select" data-action="comp-scheme">${options}</select>
