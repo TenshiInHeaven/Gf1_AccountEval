@@ -36,11 +36,10 @@ python tools\build_android_assets.py
   `http://<PC IP>:8770/api/latest`（需要同一 Wi-Fi；`usesCleartextTraffic` 已开启）。
 - App 不会保存游戏账号密码；快照包含 UID / 昵称，请勿公开分享。
 
-## 为什么不做「纯 VPN 抓包」
+## 只读设计
 
-VPN 只能把流量改道，不能绕过 Android 的 CA 信任、游戏证书固定和 `gf_authcode` 封包；
-非 root 真机基本读不到 `Index/index`。可行路径与取舍见
-[`../docs/android_vpn_capture.md`](../docs/android_vpn_capture.md)。
+安卓端只做**只读查看器**：读取已有 JSON / 内置图鉴，不抓包、不代理、不登录游戏。
+启动默认进入「图鉴」（固定数据）；账号快照由 PC 端生成后，通过「导入快照」/「连接」载入。
 
 ## 与 PWA 的关系
 

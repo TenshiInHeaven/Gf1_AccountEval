@@ -225,41 +225,62 @@ function buildTierLookup() {
     const nameTier = new Map();
     const codeRecommend = new Map();
     const nameRecommend = new Map();
+    const codeFrame = new Map();
+    const nameFrame = new Map();
     for (const entry of raw.entries || []) {
       const tierId = entry.tier || raw.default_tier || 'C';
       if (!tierById.has(tierId)) continue;
       const names = [entry.name, ...(entry.aliases || [])].filter(Boolean);
       const recommend = entry.recommend ? String(entry.recommend).toLowerCase() : '';
+      const frame = entry.frame ? String(entry.frame) : '';
       for (const name of names) {
         const norm = normalize(name);
         if (norm) nameTier.set(norm, tierId);
         if (recommend) nameRecommend.set(norm, recommend);
+        if (frame) nameFrame.set(norm, frame);
         for (const item of (state.alias.get(norm) || [])) {
           if (item.kind === kind) {
             codeTier.set(item.code, tierId);
             if (recommend) codeRecommend.set(item.code, recommend);
+            if (frame) codeFrame.set(item.code, frame);
           }
         }
       }
       if (entry.code) {
         codeTier.set(entry.code, tierId);
         if (recommend) codeRecommend.set(entry.code, recommend);
+        if (frame) codeFrame.set(entry.code, frame);
       }
     }
     const fallback = tierById.get(raw.default_tier || 'C') || tierById.values().next().value;
     state.tierLookup[kind] = {
-      tierById, codeTier, nameTier, fallback, list: raw, codeRecommend, nameRecommend,
+      tierById, codeTier, nameTier, fallback, list: raw,
+      codeRecommend, nameRecommend, codeFrame, nameFrame,
     };
   }
 }
 
 const RECOMMEND_RANK = { gold: 5, green: 4, blue: 3, white: 2, gray: 1 };
 
-function recommendFor(kind, code, name = '') {
+function recommendLevel(kind, code, name = '') {
   const lookup = state.tierLookup[kind];
-  if (!lookup) return 0;
-  const value = lookup.codeRecommend.get(code) || lookup.nameRecommend.get(normalize(name)) || '';
-  return RECOMMEND_RANK[value] || 0;
+  if (!lookup) return 'gray';
+  const explicit = lookup.codeRecommend.get(code) || lookup.nameRecommend.get(normalize(name));
+  if (explicit) return explicit;
+  const tier = tierFor(kind, code, name);
+  if (!tier) return 'gray';
+  if (tier.id === 'SS') return 'gold';
+  if (tier.id === 'S') {
+    const frame = lookup.codeFrame.get(code) || lookup.nameFrame.get(normalize(name));
+    return frame === 'A-' ? 'blue' : 'green';
+  }
+  if (tier.id === 'A-' || tier.id === 'A') return 'blue';
+  if (tier.id === 'B') return 'white';
+  return 'gray';
+}
+
+function recommendFor(kind, code, name = '') {
+  return RECOMMEND_RANK[recommendLevel(kind, code, name)] || 0;
 }
 
 function findCodex(kind, code, name = '') {
@@ -941,6 +962,8 @@ function unitCardHTML(kind, key, item, unit) {
   const owned = Boolean(unit);
   const tier = unit ? unit.tier : tierFor(kind, item.code, item.name);
   const favorite = state.favorites.has(`${kind}:${item.code}`);
+  const recommend = recommendLevel(kind, item.code, item.name);
+  const score = Number(tier.score || 0);
   let subtitle = '';
   let footer = '未拥有 · 图鉴';
   if (kind === 'doll') {
@@ -953,12 +976,12 @@ function unitCardHTML(kind, key, item, unit) {
     subtitle = `融合势力 · ${item.code}`;
     if (owned) footer = `Lv.${unit.level} · 解析 ${unit.resolution_level}`;
   }
-  return `<article class="unit-card ${owned ? '' : 'unowned'}" data-action="unit" data-kind="${kind}" data-key="${key}" data-code="${esc(item.code)}">
+  return `<article class="unit-card frame-${recommend} ${owned ? '' : 'unowned'}" data-action="unit" data-kind="${kind}" data-key="${key}" data-code="${esc(item.code)}" data-recommend="${recommend}" title="推荐：${{ gold: '金', green: '绿', blue: '蓝', white: '白', gray: '灰' }[recommend]}">
     <button class="fav-btn ${favorite ? 'active' : ''}" type="button" data-action="favorite" data-kind="${kind}" data-key="${esc(key)}" data-code="${esc(item.code)}" aria-label="收藏" title="收藏">★</button>
     ${avatarMarkup(item, item.name)}
     <div class="unit-name" title="${esc(item.name)}">${esc(item.name)}</div>
     <div class="unit-sub">${esc(subtitle)}</div>
-    ${tierBadge(tier.id)}
+    <div class="unit-badge-row">${tierBadge(tier.id)}<span class="unit-score">${score.toFixed(0)}</span></div>
     <div class="unit-footer">${esc(footer)}</div>
   </article>`;
 }

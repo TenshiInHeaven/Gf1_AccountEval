@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        webView.loadUrl("https://appassets.androidplatform.net/assets/www/index.html")
+        webView.loadUrl("https://appassets.androidplatform.net/assets/www/index.html?tab=codex")
     }
 
     override fun onDestroy() {

@@ -65,19 +65,10 @@ API：
 - `GET /api/pair`：手机配对 URL
 - `GET /api/qr`：配对 URL 的二维码 PNG
 
-## 手机登录 + 电脑抓取 + 手机读取
+## 手机端只读
 
-可以，但要先区分「手机」是什么：
-
-| 手机形态 | 手机登录 | 电脑抓取 | 说明 |
-|---|---|---|---|
-| PC 上的安卓模拟器（MuMu / LDPlayer） | ✅ 在模拟器里登录 | ✅ 一键代理 / 系统 CA | **最推荐**，当前 Qt 端一键抓包就是这条路 |
-| root 真机 + USB adb | ✅ | ✅ adb root + 系统 CA + 代理 | 需要 root；Frida 也可 |
-| 非 root 真机（台服） | ✅ | ❌ 用户 CA 不被 targetSdk 34 信任 | 没有 pinning，但 CA 这关过不去 |
-| 非 root 真机（国服复活版） | ✅ | ❌ 有 OkHttp pinning | 除非 Frida 绕过或走本地 HTTP 桥 |
-
-所以「手机负责登录、电脑负责抓取」的最佳落地是：**在 PC 上跑安卓模拟器，游戏在模拟器里登录，电脑抓包**；
-抓完得到 `account_*.json` + `index_*.json`，手机只负责看。
+安卓端只做**只读查看器**：读取已有 JSON / 内置图鉴，不抓包、不代理、不登录游戏。
+账号快照仍由 PC 端（模拟器 / root 设备 / Frida）生成；手机只负责看。
 
 ### 电脑抓完，手机怎么读
 
@@ -91,7 +82,6 @@ API：
 3. **USB / localhost**：`adb reverse tcp:8770 tcp:8770`，手机 Chrome 打开 `http://localhost:8770/` 后可安装 PWA。
 
 > 局域网 HTTP 只能浏览，不能完整安装 PWA；要安装用 localhost 或 APK。
-> 二维码只是把「带 `?snapshot=/api/latest` 的页面」发给手机，不改变抓包仍由 PC 完成的事实。
 
 ## Android PWA（推荐先试）
 
@@ -142,7 +132,7 @@ android/                 # WebView 套壳工程
 ## 限制
 
 - PWA 不能直接读取游戏进程或 Android 私有目录；快照必须由 PC 端抓取/导出。
-- 不要指望“开一个 VPN 就能抓账号”：VPN 只改道，TLS 信任 / 证书固定 / 游戏封包解密都在后面，非 root 真机基本走不通。详见 [`../docs/android_vpn_capture.md`](../docs/android_vpn_capture.md)。
+- 手机端不做抓包/VPN，只读已有 JSON；抓包在 PC 端完成。
 - 快照包含 UID / 昵称 / 仓库，请勿公开分享。
 - 组件数据依赖 `index_*.json`；只导入 `account_*.json` 时「组件 / 方案」会提示缺少组件。
 - 秋水的 2 个活动文档（坠入兔洞Plus、混沌落幕Plus）当前需要登录，未收录；其余 6 个活动没有组件页。
